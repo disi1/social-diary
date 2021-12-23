@@ -1,6 +1,7 @@
 import Link from "next/link";
 import { SpinnerFullPage } from "../../components/Spinner";
 import { useAuth } from "../../lib/auth";
+import { useCategory } from "../../lib/category";
 import Layout from "../../components/layout/Layout";
 import {ContactList} from "../../components/contacts/ContactList";
 
@@ -9,6 +10,10 @@ const ContactsPage = () => {
     user, // The logged-in user object
     loading, // loading state
   } = useAuth();
+
+  const {
+    categories
+  } = useCategory();
 
   if (loading) {
     return <SpinnerFullPage />;
@@ -29,7 +34,7 @@ const ContactsPage = () => {
       )}
       {user && (
         <Layout>
-            <ContactList/>
+            <ContactList categories={categories}/>
         </Layout>
       )}
     </>

@@ -1,6 +1,6 @@
 import { useFormFields } from "../../lib/utils";
 import { useRef } from "react";
-import { Category } from "../../types/contact";
+import { Category } from "../../lib/category";
 
 interface NewCategoryFormProps {
   onSubmit: (category: Category) => void;
@@ -29,7 +29,7 @@ export const NewCategoryForm: React.FC<NewCategoryFormProps> = ({
   const handleSubmit = async (event: React.FormEvent) => {
     event.preventDefault();
 
-    const category: Category = {
+    const category = {
       name: nameInputRef.current?.value ?? "",
     };
 

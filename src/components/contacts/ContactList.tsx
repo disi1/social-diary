@@ -1,9 +1,10 @@
-import { Category, Contact } from "../../types/contact";
+import { Contact } from "../../types/contact";
 import { ContactItem } from "./ContactItem";
+import { Category } from "../../lib/category";
 
 const dummyContacts = [
   {
-    id: "1",
+    id: 4,
     name: "Ana Niculescu",
     relationship: "Friend",
     location: "Friend",
@@ -12,7 +13,7 @@ const dummyContacts = [
     lastEntry: "23 August",
   } as Contact,
   {
-    id: "2",
+    id: 3,
     name: "Ana Niculescu",
     relationship: "Friend",
     location: "Friend",
@@ -21,7 +22,7 @@ const dummyContacts = [
     lastEntry: "23 August",
   } as Contact,
   {
-    id: "1",
+    id: 2,
     name: "Ana Niculescu",
     relationship: "Friend",
     location: "",
@@ -30,7 +31,7 @@ const dummyContacts = [
     lastEntry: "23 August",
   } as Contact,
   {
-    id: "1",
+    id: 1,
     name: "Ana Niculescu",
     relationship: "Colleague",
     location: "",
@@ -40,25 +41,14 @@ const dummyContacts = [
   } as Contact,
 ];
 
-const dummyCategories = [
-  {
-    id: "1",
-    name: "Friends",
-  } as Category,
-  {
-    id: "2",
-    name: "Family",
-  } as Category,
-  {
-    id: "3",
-    name: "WorkBuddies",
-  } as Category,
-];
+interface ContactListProps {
+  categories: Category[] | undefined;
+}
 
-export const ContactList = () => {
+export const ContactList: React.FC<ContactListProps> = ({ categories }) => {
   return (
     <div className="grid grid-cols-4 gap-2">
-      {dummyCategories.map((category) => (
+      {categories?.map((category) => (
         <div className="grid grid-cols-1 gap-2 p-5" key={category.id}>
           <div>{category.name}</div>
           {dummyContacts.map(

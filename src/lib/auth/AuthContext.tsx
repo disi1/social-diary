@@ -20,41 +20,41 @@ export const AuthContext = createContext<Partial<AuthContextProps>>({});
 
 export const AuthProvider: FunctionComponent = ({ children }) => {
   const [loading, setLoading] = useState(false);
-  const [user, setUser] = useState<User | undefined   >(undefined);
+  const [user, setUser] = useState<User | undefined>(undefined);
   const [userLoading, setUserLoading] = useState(true);
   const [loggedIn, setLoggedin] = useState(false);
 
   useEffect(() => {
-    const user = supabase.auth.user()
+    const user = supabase.auth.user();
 
     if (user) {
-      setUser(user)
-      setUserLoading(false)
-      setLoggedin(true)
-      Router.push(ROUTE_HOME)
+      setUser(user);
+      setUserLoading(false);
+      setLoggedin(true);
+      Router.push(ROUTE_HOME);
     } else {
-      setUserLoading(false)
+      setUserLoading(false);
     }
 
     const { data: authListener } = supabase.auth.onAuthStateChange(
-        async (event, session) => {
-          const user = session?.user! ?? null
-          setUserLoading(false)
-          if (user) {
-            setUser(user)
-            setLoggedin(true)
-            Router.push(ROUTE_HOME)
-          } else {
-            setUser(undefined)
-            Router.push(ROUTE_AUTH)
-          }
+      async (event, session) => {
+        const user = session?.user! ?? null;
+        setUserLoading(false);
+        if (user) {
+          setUser(user);
+          setLoggedin(true);
+          Router.push(ROUTE_HOME);
+        } else {
+          setUser(undefined);
+          Router.push(ROUTE_AUTH);
         }
-    )
+      }
+    );
 
     return () => {
-      authListener?.unsubscribe()
-    }
-  }, [])
+      authListener?.unsubscribe();
+    };
+  }, []);
 
   // sing-out the user
   const signOut = async () => await supabase.auth.signOut();
@@ -81,7 +81,7 @@ export const AuthProvider: FunctionComponent = ({ children }) => {
   const signIn = async (payload: SupabaseAuthPayload) => {
     try {
       setLoading(true);
-      const { error } = await supabase.auth.signIn(payload)
+      const { error } = await supabase.auth.signIn(payload);
       if (error) {
         alert(error.message);
       }
