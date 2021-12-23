@@ -4,24 +4,31 @@
 
 "@babel/code-frame@7.12.11":
   version "7.12.11"
-  resolved "https://bin.ti8m.ch:443/artifactory/api/npm/channelsuite-npm/@babel/code-frame/-/code-frame-7.12.11.tgz#f4ad435aa263db935b8f10f2c552d23fb716a63f"
+  resolved "https://bin.ti8m.ch:443/artifactory/api/npm/channelsuite-npm/@babel/code-frame/-/code-frame-7.12.11.tgz"
   integrity sha1-9K1DWqJj25NbjxDyxVLSP7cWpj8=
   dependencies:
     "@babel/highlight" "^7.10.4"
 
+"@babel/code-frame@^7.0.0":
+  version "7.16.0"
+  resolved "https://bin.ti8m.ch:443/artifactory/api/npm/channelsuite-npm/@babel/code-frame/-/code-frame-7.16.0.tgz"
+  integrity sha1-DfyAMJvuyEEeZecGRhxAiwu5tDE=
+  dependencies:
+    "@babel/highlight" "^7.16.0"
+
 "@babel/helper-plugin-utils@^7.14.5":
   version "7.14.5"
-  resolved "https://bin.ti8m.ch:443/artifactory/api/npm/channelsuite-npm/@babel/helper-plugin-utils/-/helper-plugin-utils-7.14.5.tgz#5ac822ce97eec46741ab70a517971e443a70c5a9"
+  resolved "https://bin.ti8m.ch:443/artifactory/api/npm/channelsuite-npm/@babel/helper-plugin-utils/-/helper-plugin-utils-7.14.5.tgz"
   integrity sha1-WsgizpfuxGdBq3ClF5ceRDpwxak=
 
 "@babel/helper-validator-identifier@^7.14.9", "@babel/helper-validator-identifier@^7.15.7":
   version "7.15.7"
-  resolved "https://bin.ti8m.ch:443/artifactory/api/npm/channelsuite-npm/@babel/helper-validator-identifier/-/helper-validator-identifier-7.15.7.tgz#220df993bfe904a4a6b02ab4f3385a5ebf6e2389"
+  resolved "https://bin.ti8m.ch:443/artifactory/api/npm/channelsuite-npm/@babel/helper-validator-identifier/-/helper-validator-identifier-7.15.7.tgz"
   integrity sha1-Ig35k7/pBKSmsCq08zhaXr9uI4k=
 
-"@babel/highlight@^7.10.4":
+"@babel/highlight@^7.10.4", "@babel/highlight@^7.16.0":
   version "7.16.0"
-  resolved "https://bin.ti8m.ch:443/artifactory/api/npm/channelsuite-npm/@babel/highlight/-/highlight-7.16.0.tgz#6ceb32b2ca4b8f5f361fb7fd821e3fddf4a1725a"
+  resolved "https://bin.ti8m.ch:443/artifactory/api/npm/channelsuite-npm/@babel/highlight/-/highlight-7.16.0.tgz"
   integrity sha1-bOsysspLj182H7f9gh4/3fShclo=
   dependencies:
     "@babel/helper-validator-identifier" "^7.15.7"
@@ -30,36 +37,21 @@
 
 "@babel/plugin-syntax-jsx@7.14.5":
   version "7.14.5"
-  resolved "https://bin.ti8m.ch:443/artifactory/api/npm/channelsuite-npm/@babel/plugin-syntax-jsx/-/plugin-syntax-jsx-7.14.5.tgz#000e2e25d8673cce49300517a3eda44c263e4201"
+  resolved "https://bin.ti8m.ch:443/artifactory/api/npm/channelsuite-npm/@babel/plugin-syntax-jsx/-/plugin-syntax-jsx-7.14.5.tgz"
   integrity sha1-AA4uJdhnPM5JMAUXo+2kTCY+QgE=
   dependencies:
     "@babel/helper-plugin-utils" "^7.14.5"
 
-"@babel/runtime-corejs3@^7.10.2":
-  version "7.16.3"
-  resolved "https://bin.ti8m.ch:443/artifactory/api/npm/channelsuite-npm/@babel/runtime-corejs3/-/runtime-corejs3-7.16.3.tgz#1e25de4fa994c57c18e5fdda6cc810dac70f5590"
-  integrity sha1-HiXeT6mUxXwY5f3abMgQ2scPVZA=
-  dependencies:
-    core-js-pure "^3.19.0"
-    regenerator-runtime "^0.13.4"
-
 "@babel/runtime@7.15.4":
   version "7.15.4"
-  resolved "https://bin.ti8m.ch:443/artifactory/api/npm/channelsuite-npm/@babel/runtime/-/runtime-7.15.4.tgz#fd17d16bfdf878e6dd02d19753a39fa8a8d9c84a"
+  resolved "https://bin.ti8m.ch:443/artifactory/api/npm/channelsuite-npm/@babel/runtime/-/runtime-7.15.4.tgz"
   integrity sha1-/RfRa/34eObdAtGXU6OfqKjZyEo=
-  dependencies:
-    regenerator-runtime "^0.13.4"
-
-"@babel/runtime@^7.10.2", "@babel/runtime@^7.16.3":
-  version "7.16.3"
-  resolved "https://bin.ti8m.ch:443/artifactory/api/npm/channelsuite-npm/@babel/runtime/-/runtime-7.16.3.tgz#b86f0db02a04187a3c17caa77de69840165d42d5"
-  integrity sha1-uG8NsCoEGHo8F8qnfeaYQBZdQtU=
   dependencies:
     regenerator-runtime "^0.13.4"
 
 "@babel/types@7.15.0":
   version "7.15.0"
-  resolved "https://bin.ti8m.ch:443/artifactory/api/npm/channelsuite-npm/@babel/types/-/types-7.15.0.tgz#61af11f2286c4e9c69ca8deb5f4375a73c72dcbd"
+  resolved "https://bin.ti8m.ch:443/artifactory/api/npm/channelsuite-npm/@babel/types/-/types-7.15.0.tgz"
   integrity sha1-Ya8R8ihsTpxpyo3rX0N1pzxy3L0=
   dependencies:
     "@babel/helper-validator-identifier" "^7.14.9"
@@ -67,7 +59,7 @@
 
 "@eslint/eslintrc@^1.0.5":
   version "1.0.5"
-  resolved "https://bin.ti8m.ch:443/artifactory/api/npm/channelsuite-npm/@eslint/eslintrc/-/eslintrc-1.0.5.tgz#33f1b838dbf1f923bfa517e008362b78ddbbf318"
+  resolved "https://bin.ti8m.ch:443/artifactory/api/npm/channelsuite-npm/@eslint/eslintrc/-/eslintrc-1.0.5.tgz"
   integrity sha1-M/G4ONvx+SO/pRfgCDYreN278xg=
   dependencies:
     ajv "^6.12.4"
@@ -80,9 +72,42 @@
     minimatch "^3.0.4"
     strip-json-comments "^3.1.1"
 
+"@fortawesome/fontawesome-common-types@^0.2.36":
+  version "0.2.36"
+  resolved "https://bin.ti8m.ch:443/artifactory/api/npm/channelsuite-npm/@fortawesome/fontawesome-common-types/-/fontawesome-common-types-0.2.36.tgz#b44e52db3b6b20523e0c57ef8c42d315532cb903"
+  integrity sha1-tE5S2ztrIFI+DFfvjELTFVMsuQM=
+
+"@fortawesome/fontawesome-svg-core@^1.2.36":
+  version "1.2.36"
+  resolved "https://bin.ti8m.ch:443/artifactory/api/npm/channelsuite-npm/@fortawesome/fontawesome-svg-core/-/fontawesome-svg-core-1.2.36.tgz#4f2ea6f778298e0c47c6524ce2e7fd58eb6930e3"
+  integrity sha1-Ty6m93gpjgxHxlJM4uf9WOtpMOM=
+  dependencies:
+    "@fortawesome/fontawesome-common-types" "^0.2.36"
+
+"@fortawesome/free-brands-svg-icons@^5.15.4":
+  version "5.15.4"
+  resolved "https://bin.ti8m.ch:443/artifactory/api/npm/channelsuite-npm/@fortawesome/free-brands-svg-icons/-/free-brands-svg-icons-5.15.4.tgz#ec8a44dd383bcdd58aa7d1c96f38251e6fec9733"
+  integrity sha1-7IpE3Tg7zdWKp9HJbzglHm/slzM=
+  dependencies:
+    "@fortawesome/fontawesome-common-types" "^0.2.36"
+
+"@fortawesome/free-solid-svg-icons@^5.15.4":
+  version "5.15.4"
+  resolved "https://bin.ti8m.ch:443/artifactory/api/npm/channelsuite-npm/@fortawesome/free-solid-svg-icons/-/free-solid-svg-icons-5.15.4.tgz#2a68f3fc3ddda12e52645654142b9e4e8fbb6cc5"
+  integrity sha1-Kmjz/D3doS5SZFZUFCueTo+7bMU=
+  dependencies:
+    "@fortawesome/fontawesome-common-types" "^0.2.36"
+
+"@fortawesome/react-fontawesome@^0.1.16":
+  version "0.1.16"
+  resolved "https://bin.ti8m.ch:443/artifactory/api/npm/channelsuite-npm/@fortawesome/react-fontawesome/-/react-fontawesome-0.1.16.tgz#ce7665490214e20f929368d6b65f68884a99276a"
+  integrity sha1-znZlSQIU4g+Sk2jWtl9oiEqZJ2o=
+  dependencies:
+    prop-types "^15.7.2"
+
 "@hapi/accept@5.0.2":
   version "5.0.2"
-  resolved "https://bin.ti8m.ch:443/artifactory/api/npm/channelsuite-npm/@hapi/accept/-/accept-5.0.2.tgz#ab7043b037e68b722f93f376afb05e85c0699523"
+  resolved "https://bin.ti8m.ch:443/artifactory/api/npm/channelsuite-npm/@hapi/accept/-/accept-5.0.2.tgz"
   integrity sha1-q3BDsDfmi3Ivk/N2r7BehcBplSM=
   dependencies:
     "@hapi/boom" "9.x.x"
@@ -90,19 +115,19 @@
 
 "@hapi/boom@9.x.x":
   version "9.1.4"
-  resolved "https://bin.ti8m.ch:443/artifactory/api/npm/channelsuite-npm/@hapi/boom/-/boom-9.1.4.tgz#1f9dad367c6a7da9f8def24b4a986fc5a7bd9db6"
+  resolved "https://bin.ti8m.ch:443/artifactory/api/npm/channelsuite-npm/@hapi/boom/-/boom-9.1.4.tgz"
   integrity sha1-H52tNnxqfan43vJLSphvxae9nbY=
   dependencies:
     "@hapi/hoek" "9.x.x"
 
 "@hapi/hoek@9.x.x":
   version "9.2.1"
-  resolved "https://bin.ti8m.ch:443/artifactory/api/npm/channelsuite-npm/@hapi/hoek/-/hoek-9.2.1.tgz#9551142a1980503752536b5050fd99f4a7f13b17"
+  resolved "https://bin.ti8m.ch:443/artifactory/api/npm/channelsuite-npm/@hapi/hoek/-/hoek-9.2.1.tgz"
   integrity sha1-lVEUKhmAUDdSU2tQUP2Z9KfxOxc=
 
 "@humanwhocodes/config-array@^0.9.2":
   version "0.9.2"
-  resolved "https://bin.ti8m.ch:443/artifactory/api/npm/channelsuite-npm/@humanwhocodes/config-array/-/config-array-0.9.2.tgz#68be55c737023009dfc5fe245d51181bb6476914"
+  resolved "https://bin.ti8m.ch:443/artifactory/api/npm/channelsuite-npm/@humanwhocodes/config-array/-/config-array-0.9.2.tgz"
   integrity sha1-aL5VxzcCMAnfxf4kXVEYG7ZHaRQ=
   dependencies:
     "@humanwhocodes/object-schema" "^1.2.1"
@@ -111,34 +136,34 @@
 
 "@humanwhocodes/object-schema@^1.2.1":
   version "1.2.1"
-  resolved "https://bin.ti8m.ch:443/artifactory/api/npm/channelsuite-npm/@humanwhocodes/object-schema/-/object-schema-1.2.1.tgz#b520529ec21d8e5945a1851dfd1c32e94e39ff45"
+  resolved "https://bin.ti8m.ch:443/artifactory/api/npm/channelsuite-npm/@humanwhocodes/object-schema/-/object-schema-1.2.1.tgz"
   integrity sha1-tSBSnsIdjllFoYUd/Rwy6U45/0U=
 
 "@napi-rs/triples@1.0.3":
   version "1.0.3"
-  resolved "https://bin.ti8m.ch:443/artifactory/api/npm/channelsuite-npm/@napi-rs/triples/-/triples-1.0.3.tgz#76d6d0c3f4d16013c61e45dfca5ff1e6c31ae53c"
+  resolved "https://bin.ti8m.ch:443/artifactory/api/npm/channelsuite-npm/@napi-rs/triples/-/triples-1.0.3.tgz"
   integrity sha1-dtbQw/TRYBPGHkXfyl/x5sMa5Tw=
 
 "@next/env@12.0.7":
   version "12.0.7"
-  resolved "https://bin.ti8m.ch:443/artifactory/api/npm/channelsuite-npm/@next/env/-/env-12.0.7.tgz#316f7bd1b6b69f554d2676cfc91a16bc7e32ee79"
+  resolved "https://bin.ti8m.ch:443/artifactory/api/npm/channelsuite-npm/@next/env/-/env-12.0.7.tgz"
   integrity sha1-MW970ba2n1VNJnbPyRoWvH4y7nk=
 
-"@next/eslint-plugin-next@12.0.7":
-  version "12.0.7"
-  resolved "https://bin.ti8m.ch:443/artifactory/api/npm/channelsuite-npm/@next/eslint-plugin-next/-/eslint-plugin-next-12.0.7.tgz#2c71bb66b8f8ff1080086342113406aa3156976f"
-  integrity sha1-LHG7Zrj4/xCACGNCETQGqjFWl28=
+"@next/eslint-plugin-next@^11.1.0":
+  version "11.1.3"
+  resolved "https://bin.ti8m.ch:443/artifactory/api/npm/channelsuite-npm/@next/eslint-plugin-next/-/eslint-plugin-next-11.1.3.tgz#3d1c5be05dea39a59549ce624711d114c39f6a78"
+  integrity sha1-PRxb4F3qOaWVSc5iRxHRFMOfang=
   dependencies:
     glob "7.1.7"
 
 "@next/polyfill-module@12.0.7":
   version "12.0.7"
-  resolved "https://bin.ti8m.ch:443/artifactory/api/npm/channelsuite-npm/@next/polyfill-module/-/polyfill-module-12.0.7.tgz#140e698557113cd3a3c0833f15ca8af1b608f2dc"
+  resolved "https://bin.ti8m.ch:443/artifactory/api/npm/channelsuite-npm/@next/polyfill-module/-/polyfill-module-12.0.7.tgz"
   integrity sha1-FA5phVcRPNOjwIM/FcqK8bYI8tw=
 
 "@next/react-dev-overlay@12.0.7":
   version "12.0.7"
-  resolved "https://bin.ti8m.ch:443/artifactory/api/npm/channelsuite-npm/@next/react-dev-overlay/-/react-dev-overlay-12.0.7.tgz#ae8f9bd14b1786e52330b729ff63061735d21c77"
+  resolved "https://bin.ti8m.ch:443/artifactory/api/npm/channelsuite-npm/@next/react-dev-overlay/-/react-dev-overlay-12.0.7.tgz"
   integrity sha1-ro+b0UsXhuUjMLcp/2MGFzXSHHc=
   dependencies:
     "@babel/code-frame" "7.12.11"
@@ -155,7 +180,7 @@
 
 "@next/react-refresh-utils@12.0.7":
   version "12.0.7"
-  resolved "https://bin.ti8m.ch:443/artifactory/api/npm/channelsuite-npm/@next/react-refresh-utils/-/react-refresh-utils-12.0.7.tgz#921c403798e188b4f1d9e609283c0e8d3e532f89"
+  resolved "https://bin.ti8m.ch:443/artifactory/api/npm/channelsuite-npm/@next/react-refresh-utils/-/react-refresh-utils-12.0.7.tgz"
   integrity sha1-khxAN5jhiLTx2eYJKDwOjT5TL4k=
 
 "@next/swc-android-arm64@12.0.7":
@@ -170,7 +195,7 @@
 
 "@next/swc-darwin-x64@12.0.7":
   version "12.0.7"
-  resolved "https://bin.ti8m.ch:443/artifactory/api/npm/channelsuite-npm/@next/swc-darwin-x64/-/swc-darwin-x64-12.0.7.tgz#b3016503caa5ed5cc6a20051517d5b2a79cfdc58"
+  resolved "https://bin.ti8m.ch:443/artifactory/api/npm/channelsuite-npm/@next/swc-darwin-x64/-/swc-darwin-x64-12.0.7.tgz"
   integrity sha1-swFlA8ql7VzGogBRUX1bKnnP3Fg=
 
 "@next/swc-linux-arm-gnueabihf@12.0.7":
@@ -215,7 +240,7 @@
 
 "@nodelib/fs.scandir@2.1.5":
   version "2.1.5"
-  resolved "https://bin.ti8m.ch:443/artifactory/api/npm/channelsuite-npm/@nodelib/fs.scandir/-/fs.scandir-2.1.5.tgz#7619c2eb21b25483f6d167548b4cfd5a7488c3d5"
+  resolved "https://bin.ti8m.ch:443/artifactory/api/npm/channelsuite-npm/@nodelib/fs.scandir/-/fs.scandir-2.1.5.tgz"
   integrity sha1-dhnC6yGyVIP20WdUi0z9WnSIw9U=
   dependencies:
     "@nodelib/fs.stat" "2.0.5"
@@ -223,40 +248,101 @@
 
 "@nodelib/fs.stat@2.0.5", "@nodelib/fs.stat@^2.0.2":
   version "2.0.5"
-  resolved "https://bin.ti8m.ch:443/artifactory/api/npm/channelsuite-npm/@nodelib/fs.stat/-/fs.stat-2.0.5.tgz#5bd262af94e9d25bd1e71b05deed44876a222e8b"
+  resolved "https://bin.ti8m.ch:443/artifactory/api/npm/channelsuite-npm/@nodelib/fs.stat/-/fs.stat-2.0.5.tgz"
   integrity sha1-W9Jir5Tp0lvR5xsF3u1Eh2oiLos=
 
 "@nodelib/fs.walk@^1.2.3":
   version "1.2.8"
-  resolved "https://bin.ti8m.ch:443/artifactory/api/npm/channelsuite-npm/@nodelib/fs.walk/-/fs.walk-1.2.8.tgz#e95737e8bb6746ddedf69c556953494f196fe69a"
+  resolved "https://bin.ti8m.ch:443/artifactory/api/npm/channelsuite-npm/@nodelib/fs.walk/-/fs.walk-1.2.8.tgz"
   integrity sha1-6Vc36LtnRt3t9pxVaVNJTxlv5po=
   dependencies:
     "@nodelib/fs.scandir" "2.1.5"
     fastq "^1.6.0"
 
-"@rushstack/eslint-patch@^1.0.8":
-  version "1.1.0"
-  resolved "https://bin.ti8m.ch:443/artifactory/api/npm/channelsuite-npm/@rushstack/eslint-patch/-/eslint-patch-1.1.0.tgz#7f698254aadf921e48dda8c0a6b304026b8a9323"
-  integrity sha1-f2mCVKrfkh5I3ajAprMEAmuKkyM=
+"@supabase/gotrue-js@^1.21.7":
+  version "1.21.7"
+  resolved "https://bin.ti8m.ch:443/artifactory/api/npm/channelsuite-npm/@supabase/gotrue-js/-/gotrue-js-1.21.7.tgz"
+  integrity sha1-7D/fIZmij7ZcGulKPBADJTbAqk4=
+  dependencies:
+    cross-fetch "^3.0.6"
 
-"@types/json5@^0.0.29":
-  version "0.0.29"
-  resolved "https://bin.ti8m.ch:443/artifactory/api/npm/channelsuite-npm/@types/json5/-/json5-0.0.29.tgz#ee28707ae94e11d2b827bcbe5270bcea7f3e71ee"
-  integrity sha1-7ihweulOEdK4J7y+UnC86n8+ce4=
+"@supabase/postgrest-js@^0.35.0":
+  version "0.35.0"
+  resolved "https://bin.ti8m.ch:443/artifactory/api/npm/channelsuite-npm/@supabase/postgrest-js/-/postgrest-js-0.35.0.tgz"
+  integrity sha1-oAvaOgr3Xir26zG0d0K6ES50aGw=
+  dependencies:
+    cross-fetch "^3.0.6"
 
-"@types/node@*", "@types/node@16.11.11":
+"@supabase/realtime-js@^1.3.3":
+  version "1.3.3"
+  resolved "https://bin.ti8m.ch:443/artifactory/api/npm/channelsuite-npm/@supabase/realtime-js/-/realtime-js-1.3.3.tgz"
+  integrity sha1-lzxMrPgGK08eQ1oLJQonWOFuFfE=
+  dependencies:
+    "@types/websocket" "^1.0.3"
+    websocket "^1.0.34"
+
+"@supabase/storage-js@^1.5.0":
+  version "1.5.0"
+  resolved "https://bin.ti8m.ch:443/artifactory/api/npm/channelsuite-npm/@supabase/storage-js/-/storage-js-1.5.0.tgz"
+  integrity sha1-WoOQ4xAuqrgNOU4XNLC6bFKjwsw=
+  dependencies:
+    cross-fetch "^3.1.0"
+
+"@supabase/supabase-js@^1.28.5":
+  version "1.28.5"
+  resolved "https://bin.ti8m.ch:443/artifactory/api/npm/channelsuite-npm/@supabase/supabase-js/-/supabase-js-1.28.5.tgz"
+  integrity sha1-NZckztpjD1Sk/UA+IltoEowpsac=
+  dependencies:
+    "@supabase/gotrue-js" "^1.21.7"
+    "@supabase/postgrest-js" "^0.35.0"
+    "@supabase/realtime-js" "^1.3.3"
+    "@supabase/storage-js" "^1.5.0"
+
+"@supabase/ui@^0.36.1":
+  version "0.36.2"
+  resolved "https://bin.ti8m.ch:443/artifactory/api/npm/channelsuite-npm/@supabase/ui/-/ui-0.36.2.tgz"
+  integrity sha1-THr5yUSm2BJN0r7Ag+ptaIqFkyg=
+  dependencies:
+    lodash "^4.17.20"
+    prop-types "^15.7.2"
+  optionalDependencies:
+    fsevents "^2.3.2"
+
+"@types/json-schema@^7.0.9":
+  version "7.0.9"
+  resolved "https://bin.ti8m.ch:443/artifactory/api/npm/channelsuite-npm/@types/json-schema/-/json-schema-7.0.9.tgz#97edc9037ea0c38585320b28964dde3b39e4660d"
+  integrity sha1-l+3JA36gw4WFMgsolk3eOznkZg0=
+
+"@types/node@*":
   version "16.11.11"
-  resolved "https://bin.ti8m.ch:443/artifactory/api/npm/channelsuite-npm/@types/node/-/node-16.11.11.tgz#6ea7342dfb379ea1210835bada87b3c512120234"
+  resolved "https://bin.ti8m.ch:443/artifactory/api/npm/channelsuite-npm/@types/node/-/node-16.11.11.tgz"
   integrity sha1-bqc0Lfs3nqEhCDW62oezxRISAjQ=
+
+"@types/node@^16.11.12":
+  version "16.11.12"
+  resolved "https://bin.ti8m.ch:443/artifactory/api/npm/channelsuite-npm/@types/node/-/node-16.11.12.tgz"
+  integrity sha1-rH+2k6xYfuGCw3gMJutlVGoaPBA=
+
+"@types/parse-json@^4.0.0":
+  version "4.0.0"
+  resolved "https://bin.ti8m.ch:443/artifactory/api/npm/channelsuite-npm/@types/parse-json/-/parse-json-4.0.0.tgz"
+  integrity sha1-L4u0QUNNFjs1+4/9zNcTiSf/uMA=
 
 "@types/prop-types@*":
   version "15.7.4"
-  resolved "https://bin.ti8m.ch:443/artifactory/api/npm/channelsuite-npm/@types/prop-types/-/prop-types-15.7.4.tgz#fcf7205c25dff795ee79af1e30da2c9790808f11"
+  resolved "https://bin.ti8m.ch:443/artifactory/api/npm/channelsuite-npm/@types/prop-types/-/prop-types-15.7.4.tgz"
   integrity sha1-/PcgXCXf95Xuea8eMNosl5CAjxE=
 
-"@types/react@17.0.37":
+"@types/react-dom@16.9.3":
+  version "16.9.3"
+  resolved "https://bin.ti8m.ch:443/artifactory/api/npm/channelsuite-npm/@types/react-dom/-/react-dom-16.9.3.tgz#4006ff0e13958af91313869077c04cb20d9b9d04"
+  integrity sha1-QAb/DhOVivkTE4aQd8BMsg2bnQQ=
+  dependencies:
+    "@types/react" "*"
+
+"@types/react@*", "@types/react@^17.0.37":
   version "17.0.37"
-  resolved "https://bin.ti8m.ch:443/artifactory/api/npm/channelsuite-npm/@types/react/-/react-17.0.37.tgz#6884d0aa402605935c397ae689deed115caad959"
+  resolved "https://bin.ti8m.ch:443/artifactory/api/npm/channelsuite-npm/@types/react/-/react-17.0.37.tgz"
   integrity sha1-aITQqkAmBZNcOXrmid7tEVyq2Vk=
   dependencies:
     "@types/prop-types" "*"
@@ -265,71 +351,131 @@
 
 "@types/scheduler@*":
   version "0.16.2"
-  resolved "https://bin.ti8m.ch:443/artifactory/api/npm/channelsuite-npm/@types/scheduler/-/scheduler-0.16.2.tgz#1a62f89525723dde24ba1b01b092bf5df8ad4d39"
+  resolved "https://bin.ti8m.ch:443/artifactory/api/npm/channelsuite-npm/@types/scheduler/-/scheduler-0.16.2.tgz"
   integrity sha1-GmL4lSVyPd4kuhsBsJK/XfitTTk=
 
-"@typescript-eslint/parser@^5.0.0":
-  version "5.6.0"
-  resolved "https://bin.ti8m.ch:443/artifactory/api/npm/channelsuite-npm/@typescript-eslint/parser/-/parser-5.6.0.tgz#11677324659641400d653253c03dcfbed468d199"
-  integrity sha1-EWdzJGWWQUANZTJTwD3PvtRo0Zk=
+"@types/websocket@^1.0.3":
+  version "1.0.4"
+  resolved "https://bin.ti8m.ch:443/artifactory/api/npm/channelsuite-npm/@types/websocket/-/websocket-1.0.4.tgz"
+  integrity sha1-HcSXKA2ASaVFCFTdaY7n5uqeYLg=
   dependencies:
-    "@typescript-eslint/scope-manager" "5.6.0"
-    "@typescript-eslint/types" "5.6.0"
-    "@typescript-eslint/typescript-estree" "5.6.0"
+    "@types/node" "*"
+
+"@typescript-eslint/eslint-plugin@^5.8.0":
+  version "5.8.0"
+  resolved "https://bin.ti8m.ch:443/artifactory/api/npm/channelsuite-npm/@typescript-eslint/eslint-plugin/-/eslint-plugin-5.8.0.tgz#52cd9305ceef98a5333f9492d519e6c6c7fe7d43"
+  integrity sha1-Us2TBc7vmKUzP5SS1Rnmxsf+fUM=
+  dependencies:
+    "@typescript-eslint/experimental-utils" "5.8.0"
+    "@typescript-eslint/scope-manager" "5.8.0"
+    debug "^4.3.2"
+    functional-red-black-tree "^1.0.1"
+    ignore "^5.1.8"
+    regexpp "^3.2.0"
+    semver "^7.3.5"
+    tsutils "^3.21.0"
+
+"@typescript-eslint/experimental-utils@5.8.0":
+  version "5.8.0"
+  resolved "https://bin.ti8m.ch:443/artifactory/api/npm/channelsuite-npm/@typescript-eslint/experimental-utils/-/experimental-utils-5.8.0.tgz#0916ffe98d34b3c95e3652efa0cace61a7b25728"
+  integrity sha1-CRb/6Y00s8leNlLvoMrOYaeyVyg=
+  dependencies:
+    "@types/json-schema" "^7.0.9"
+    "@typescript-eslint/scope-manager" "5.8.0"
+    "@typescript-eslint/types" "5.8.0"
+    "@typescript-eslint/typescript-estree" "5.8.0"
+    eslint-scope "^5.1.1"
+    eslint-utils "^3.0.0"
+
+"@typescript-eslint/parser@^5.8.0":
+  version "5.8.0"
+  resolved "https://bin.ti8m.ch:443/artifactory/api/npm/channelsuite-npm/@typescript-eslint/parser/-/parser-5.8.0.tgz#b39970b21c1d7bc4a6018507fb29b380328d2587"
+  integrity sha1-s5lwshwde8SmAYUH+ymzgDKNJYc=
+  dependencies:
+    "@typescript-eslint/scope-manager" "5.8.0"
+    "@typescript-eslint/types" "5.8.0"
+    "@typescript-eslint/typescript-estree" "5.8.0"
     debug "^4.3.2"
 
-"@typescript-eslint/scope-manager@5.6.0":
-  version "5.6.0"
-  resolved "https://bin.ti8m.ch:443/artifactory/api/npm/channelsuite-npm/@typescript-eslint/scope-manager/-/scope-manager-5.6.0.tgz#9dd7f007dc8f3a34cdff6f79f5eaab27ae05157e"
-  integrity sha1-ndfwB9yPOjTN/2959eqrJ64FFX4=
+"@typescript-eslint/scope-manager@5.8.0":
+  version "5.8.0"
+  resolved "https://bin.ti8m.ch:443/artifactory/api/npm/channelsuite-npm/@typescript-eslint/scope-manager/-/scope-manager-5.8.0.tgz#2371095b4fa4c7be6a80b380f4e1b49c715e16f4"
+  integrity sha1-I3EJW0+kx75qgLOA9OG0nHFeFvQ=
   dependencies:
-    "@typescript-eslint/types" "5.6.0"
-    "@typescript-eslint/visitor-keys" "5.6.0"
+    "@typescript-eslint/types" "5.8.0"
+    "@typescript-eslint/visitor-keys" "5.8.0"
 
-"@typescript-eslint/types@5.6.0":
-  version "5.6.0"
-  resolved "https://bin.ti8m.ch:443/artifactory/api/npm/channelsuite-npm/@typescript-eslint/types/-/types-5.6.0.tgz#745cb1b59daadcc1f32f7be95f0f68accf38afdd"
-  integrity sha1-dFyxtZ2q3MHzL3vpXw9orM84r90=
+"@typescript-eslint/types@5.8.0":
+  version "5.8.0"
+  resolved "https://bin.ti8m.ch:443/artifactory/api/npm/channelsuite-npm/@typescript-eslint/types/-/types-5.8.0.tgz#e7fa74ec35d9dbe3560d039d3d8734986c3971e0"
+  integrity sha1-5/p07DXZ2+NWDQOdPYc0mGw5ceA=
 
-"@typescript-eslint/typescript-estree@5.6.0":
-  version "5.6.0"
-  resolved "https://bin.ti8m.ch:443/artifactory/api/npm/channelsuite-npm/@typescript-eslint/typescript-estree/-/typescript-estree-5.6.0.tgz#dfbb19c9307fdd81bd9c650c67e8397821d7faf0"
-  integrity sha1-37sZyTB/3YG9nGUMZ+g5eCHX+vA=
+"@typescript-eslint/typescript-estree@5.8.0":
+  version "5.8.0"
+  resolved "https://bin.ti8m.ch:443/artifactory/api/npm/channelsuite-npm/@typescript-eslint/typescript-estree/-/typescript-estree-5.8.0.tgz#900469ba9d5a37f4482b014ecce4a5dbb86cb4dd"
+  integrity sha1-kARpup1aN/RIKwFOzOSl27hstN0=
   dependencies:
-    "@typescript-eslint/types" "5.6.0"
-    "@typescript-eslint/visitor-keys" "5.6.0"
+    "@typescript-eslint/types" "5.8.0"
+    "@typescript-eslint/visitor-keys" "5.8.0"
     debug "^4.3.2"
     globby "^11.0.4"
     is-glob "^4.0.3"
     semver "^7.3.5"
     tsutils "^3.21.0"
 
-"@typescript-eslint/visitor-keys@5.6.0":
-  version "5.6.0"
-  resolved "https://bin.ti8m.ch:443/artifactory/api/npm/channelsuite-npm/@typescript-eslint/visitor-keys/-/visitor-keys-5.6.0.tgz#3e36509e103fe9713d8f035ac977235fd63cb6e6"
-  integrity sha1-PjZQnhA/6XE9jwNayXcjX9Y8tuY=
+"@typescript-eslint/visitor-keys@5.8.0":
+  version "5.8.0"
+  resolved "https://bin.ti8m.ch:443/artifactory/api/npm/channelsuite-npm/@typescript-eslint/visitor-keys/-/visitor-keys-5.8.0.tgz#22d4ed96fe2451135299239feedb9fe1dcec780c"
+  integrity sha1-ItTtlv4kURNSmSOf7tuf4dzseAw=
   dependencies:
-    "@typescript-eslint/types" "5.6.0"
+    "@typescript-eslint/types" "5.8.0"
     eslint-visitor-keys "^3.0.0"
 
 acorn-jsx@^5.3.1:
   version "5.3.2"
-  resolved "https://bin.ti8m.ch:443/artifactory/api/npm/channelsuite-npm/acorn-jsx/-/acorn-jsx-5.3.2.tgz#7ed5bb55908b3b2f1bc55c6af1653bada7f07937"
+  resolved "https://bin.ti8m.ch:443/artifactory/api/npm/channelsuite-npm/acorn-jsx/-/acorn-jsx-5.3.2.tgz"
   integrity sha1-ftW7VZCLOy8bxVxq8WU7rafweTc=
+
+acorn-node@^1.6.1:
+  version "1.8.2"
+  resolved "https://bin.ti8m.ch:443/artifactory/api/npm/channelsuite-npm/acorn-node/-/acorn-node-1.8.2.tgz"
+  integrity sha1-EUyV1kU55T3t4j3oudlt98euKvg=
+  dependencies:
+    acorn "^7.0.0"
+    acorn-walk "^7.0.0"
+    xtend "^4.0.2"
+
+acorn-walk@^7.0.0:
+  version "7.2.0"
+  resolved "https://bin.ti8m.ch:443/artifactory/api/npm/channelsuite-npm/acorn-walk/-/acorn-walk-7.2.0.tgz"
+  integrity sha1-DeiJpgEgOQmw++B7iTjcIdLpZ7w=
 
 acorn@8.5.0:
   version "8.5.0"
-  resolved "https://bin.ti8m.ch:443/artifactory/api/npm/channelsuite-npm/acorn/-/acorn-8.5.0.tgz#4512ccb99b3698c752591e9bb4472e38ad43cee2"
+  resolved "https://bin.ti8m.ch:443/artifactory/api/npm/channelsuite-npm/acorn/-/acorn-8.5.0.tgz"
   integrity sha1-RRLMuZs2mMdSWR6btEcuOK1DzuI=
+
+acorn@^7.0.0:
+  version "7.4.1"
+  resolved "https://bin.ti8m.ch:443/artifactory/api/npm/channelsuite-npm/acorn/-/acorn-7.4.1.tgz"
+  integrity sha1-/q7SVZc9LndVW4PbwIhRpsY1IPo=
 
 acorn@^8.6.0:
   version "8.6.0"
-  resolved "https://bin.ti8m.ch:443/artifactory/api/npm/channelsuite-npm/acorn/-/acorn-8.6.0.tgz#e3692ba0eb1a0c83eaa4f37f5fa7368dd7142895"
+  resolved "https://bin.ti8m.ch:443/artifactory/api/npm/channelsuite-npm/acorn/-/acorn-8.6.0.tgz"
   integrity sha1-42kroOsaDIPqpPN/X6c2jdcUKJU=
+
+aggregate-error@^3.0.0:
+  version "3.1.0"
+  resolved "https://bin.ti8m.ch:443/artifactory/api/npm/channelsuite-npm/aggregate-error/-/aggregate-error-3.1.0.tgz"
+  integrity sha1-kmcP9Q9TWb23o+DUDQ7DDFc3aHo=
+  dependencies:
+    clean-stack "^2.0.0"
+    indent-string "^4.0.0"
 
 ajv@^6.10.0, ajv@^6.12.4:
   version "6.12.6"
-  resolved "https://bin.ti8m.ch:443/artifactory/api/npm/channelsuite-npm/ajv/-/ajv-6.12.6.tgz#baf5a62e802b07d977034586f8c3baf5adf26df4"
+  resolved "https://bin.ti8m.ch:443/artifactory/api/npm/channelsuite-npm/ajv/-/ajv-6.12.6.tgz"
   integrity sha1-uvWmLoArB9l3A0WG+MO69a3ybfQ=
   dependencies:
     fast-deep-equal "^3.1.1"
@@ -339,57 +485,71 @@ ajv@^6.10.0, ajv@^6.12.4:
 
 anser@1.4.9:
   version "1.4.9"
-  resolved "https://bin.ti8m.ch:443/artifactory/api/npm/channelsuite-npm/anser/-/anser-1.4.9.tgz#1f85423a5dcf8da4631a341665ff675b96845760"
+  resolved "https://bin.ti8m.ch:443/artifactory/api/npm/channelsuite-npm/anser/-/anser-1.4.9.tgz"
   integrity sha1-H4VCOl3PjaRjGjQWZf9nW5aEV2A=
 
 ansi-colors@^4.1.1:
   version "4.1.1"
-  resolved "https://bin.ti8m.ch:443/artifactory/api/npm/channelsuite-npm/ansi-colors/-/ansi-colors-4.1.1.tgz#cbb9ae256bf750af1eab344f229aa27fe94ba348"
+  resolved "https://bin.ti8m.ch:443/artifactory/api/npm/channelsuite-npm/ansi-colors/-/ansi-colors-4.1.1.tgz"
   integrity sha1-y7muJWv3UK8eqzRPIpqif+lLo0g=
+
+ansi-escapes@^4.3.0:
+  version "4.3.2"
+  resolved "https://bin.ti8m.ch:443/artifactory/api/npm/channelsuite-npm/ansi-escapes/-/ansi-escapes-4.3.2.tgz"
+  integrity sha1-ayKR0dt9mLZSHV8e+kLQ86n+tl4=
+  dependencies:
+    type-fest "^0.21.3"
 
 ansi-regex@^5.0.1:
   version "5.0.1"
-  resolved "https://bin.ti8m.ch:443/artifactory/api/npm/channelsuite-npm/ansi-regex/-/ansi-regex-5.0.1.tgz#082cb2c89c9fe8659a311a53bd6a4dc5301db304"
+  resolved "https://bin.ti8m.ch:443/artifactory/api/npm/channelsuite-npm/ansi-regex/-/ansi-regex-5.0.1.tgz"
   integrity sha1-CCyyyJyf6GWaMRpTvWpNxTAdswQ=
+
+ansi-regex@^6.0.1:
+  version "6.0.1"
+  resolved "https://bin.ti8m.ch:443/artifactory/api/npm/channelsuite-npm/ansi-regex/-/ansi-regex-6.0.1.tgz"
+  integrity sha1-MYPjj66aZdfLXlOUXNWJfQJgoGo=
 
 ansi-styles@^3.2.1:
   version "3.2.1"
-  resolved "https://bin.ti8m.ch:443/artifactory/api/npm/channelsuite-npm/ansi-styles/-/ansi-styles-3.2.1.tgz#41fbb20243e50b12be0f04b8dedbf07520ce841d"
+  resolved "https://bin.ti8m.ch:443/artifactory/api/npm/channelsuite-npm/ansi-styles/-/ansi-styles-3.2.1.tgz"
   integrity sha1-QfuyAkPlCxK+DwS43tvwdSDOhB0=
   dependencies:
     color-convert "^1.9.0"
 
-ansi-styles@^4.1.0:
+ansi-styles@^4.0.0, ansi-styles@^4.1.0:
   version "4.3.0"
-  resolved "https://bin.ti8m.ch:443/artifactory/api/npm/channelsuite-npm/ansi-styles/-/ansi-styles-4.3.0.tgz#edd803628ae71c04c85ae7a0906edad34b648937"
+  resolved "https://bin.ti8m.ch:443/artifactory/api/npm/channelsuite-npm/ansi-styles/-/ansi-styles-4.3.0.tgz"
   integrity sha1-7dgDYornHATIWuegkG7a00tkiTc=
   dependencies:
     color-convert "^2.0.1"
 
-anymatch@~3.1.1:
+ansi-styles@^6.0.0:
+  version "6.1.0"
+  resolved "https://bin.ti8m.ch:443/artifactory/api/npm/channelsuite-npm/ansi-styles/-/ansi-styles-6.1.0.tgz"
+  integrity sha1-hzE8ECuBGKvVc3GvqzRhi/c1DtM=
+
+anymatch@~3.1.1, anymatch@~3.1.2:
   version "3.1.2"
-  resolved "https://bin.ti8m.ch:443/artifactory/api/npm/channelsuite-npm/anymatch/-/anymatch-3.1.2.tgz#c0557c096af32f106198f4f4e2a383537e378716"
+  resolved "https://bin.ti8m.ch:443/artifactory/api/npm/channelsuite-npm/anymatch/-/anymatch-3.1.2.tgz"
   integrity sha1-wFV8CWrzLxBhmPT04qODU343hxY=
   dependencies:
     normalize-path "^3.0.0"
     picomatch "^2.0.4"
 
+arg@^5.0.1:
+  version "5.0.1"
+  resolved "https://bin.ti8m.ch:443/artifactory/api/npm/channelsuite-npm/arg/-/arg-5.0.1.tgz"
+  integrity sha1-6wyaj3d4bK0q+P8rhiiZhC17ats=
+
 argparse@^2.0.1:
   version "2.0.1"
-  resolved "https://bin.ti8m.ch:443/artifactory/api/npm/channelsuite-npm/argparse/-/argparse-2.0.1.tgz#246f50f3ca78a3240f6c997e8a9bd1eac49e4b38"
+  resolved "https://bin.ti8m.ch:443/artifactory/api/npm/channelsuite-npm/argparse/-/argparse-2.0.1.tgz"
   integrity sha1-JG9Q88p4oyQPbJl+ipvR6sSeSzg=
-
-aria-query@^4.2.2:
-  version "4.2.2"
-  resolved "https://bin.ti8m.ch:443/artifactory/api/npm/channelsuite-npm/aria-query/-/aria-query-4.2.2.tgz#0d2ca6c9aceb56b8977e9fed6aed7e15bbd2f83b"
-  integrity sha1-DSymyazrVriXfp/tau1+FbvS+Ds=
-  dependencies:
-    "@babel/runtime" "^7.10.2"
-    "@babel/runtime-corejs3" "^7.10.2"
 
 array-includes@^3.1.3, array-includes@^3.1.4:
   version "3.1.4"
-  resolved "https://bin.ti8m.ch:443/artifactory/api/npm/channelsuite-npm/array-includes/-/array-includes-3.1.4.tgz#f5b493162c760f3539631f005ba2bb46acb45ba9"
+  resolved "https://bin.ti8m.ch:443/artifactory/api/npm/channelsuite-npm/array-includes/-/array-includes-3.1.4.tgz"
   integrity sha1-9bSTFix2DzU5Yx8AW6K7Rqy0W6k=
   dependencies:
     call-bind "^1.0.2"
@@ -400,21 +560,12 @@ array-includes@^3.1.3, array-includes@^3.1.4:
 
 array-union@^2.1.0:
   version "2.1.0"
-  resolved "https://bin.ti8m.ch:443/artifactory/api/npm/channelsuite-npm/array-union/-/array-union-2.1.0.tgz#b798420adbeb1de828d84acd8a2e23d3efe85e8d"
+  resolved "https://bin.ti8m.ch:443/artifactory/api/npm/channelsuite-npm/array-union/-/array-union-2.1.0.tgz"
   integrity sha1-t5hCCtvrHego2ErNii4j0+/oXo0=
-
-array.prototype.flat@^1.2.5:
-  version "1.2.5"
-  resolved "https://bin.ti8m.ch:443/artifactory/api/npm/channelsuite-npm/array.prototype.flat/-/array.prototype.flat-1.2.5.tgz#07e0975d84bbc7c48cd1879d609e682598d33e13"
-  integrity sha1-B+CXXYS7x8SM0YedYJ5oJZjTPhM=
-  dependencies:
-    call-bind "^1.0.2"
-    define-properties "^1.1.3"
-    es-abstract "^1.19.0"
 
 array.prototype.flatmap@^1.2.5:
   version "1.2.5"
-  resolved "https://bin.ti8m.ch:443/artifactory/api/npm/channelsuite-npm/array.prototype.flatmap/-/array.prototype.flatmap-1.2.5.tgz#908dc82d8a406930fdf38598d51e7411d18d4446"
+  resolved "https://bin.ti8m.ch:443/artifactory/api/npm/channelsuite-npm/array.prototype.flatmap/-/array.prototype.flatmap-1.2.5.tgz"
   integrity sha1-kI3ILYpAaTD984WY1R50EdGNREY=
   dependencies:
     call-bind "^1.0.0"
@@ -423,7 +574,7 @@ array.prototype.flatmap@^1.2.5:
 
 asn1.js@^5.2.0:
   version "5.4.1"
-  resolved "https://bin.ti8m.ch:443/artifactory/api/npm/channelsuite-npm/asn1.js/-/asn1.js-5.4.1.tgz#11a980b84ebb91781ce35b0fdc2ee294e3783f07"
+  resolved "https://bin.ti8m.ch:443/artifactory/api/npm/channelsuite-npm/asn1.js/-/asn1.js-5.4.1.tgz"
   integrity sha1-EamAuE67kXgc41sP3C7ilON4Pwc=
   dependencies:
     bn.js "^4.0.0"
@@ -433,7 +584,7 @@ asn1.js@^5.2.0:
 
 assert@2.0.0:
   version "2.0.0"
-  resolved "https://bin.ti8m.ch:443/artifactory/api/npm/channelsuite-npm/assert/-/assert-2.0.0.tgz#95fc1c616d48713510680f2eaf2d10dd22e02d32"
+  resolved "https://bin.ti8m.ch:443/artifactory/api/npm/channelsuite-npm/assert/-/assert-2.0.0.tgz"
   integrity sha1-lfwcYW1IcTUQaA8ury0Q3SLgLTI=
   dependencies:
     es6-object-assign "^1.1.0"
@@ -441,59 +592,61 @@ assert@2.0.0:
     object-is "^1.0.1"
     util "^0.12.0"
 
-ast-types-flow@^0.0.7:
-  version "0.0.7"
-  resolved "https://bin.ti8m.ch:443/artifactory/api/npm/channelsuite-npm/ast-types-flow/-/ast-types-flow-0.0.7.tgz#f70b735c6bca1a5c9c22d982c3e39e7feba3bdad"
-  integrity sha1-9wtzXGvKGlycItmCw+Oef+ujva0=
+astral-regex@^2.0.0:
+  version "2.0.0"
+  resolved "https://bin.ti8m.ch:443/artifactory/api/npm/channelsuite-npm/astral-regex/-/astral-regex-2.0.0.tgz"
+  integrity sha1-SDFDxWeu7UeFdZwIZXhtx319LjE=
+
+autoprefixer@^10.4.0:
+  version "10.4.0"
+  resolved "https://bin.ti8m.ch:443/artifactory/api/npm/channelsuite-npm/autoprefixer/-/autoprefixer-10.4.0.tgz"
+  integrity sha1-w1d+syoQeaRA7CU+QE6vHrITiMg=
+  dependencies:
+    browserslist "^4.17.5"
+    caniuse-lite "^1.0.30001272"
+    fraction.js "^4.1.1"
+    normalize-range "^0.1.2"
+    picocolors "^1.0.0"
+    postcss-value-parser "^4.1.0"
 
 available-typed-arrays@^1.0.5:
   version "1.0.5"
-  resolved "https://bin.ti8m.ch:443/artifactory/api/npm/channelsuite-npm/available-typed-arrays/-/available-typed-arrays-1.0.5.tgz#92f95616501069d07d10edb2fc37d3e1c65123b7"
+  resolved "https://bin.ti8m.ch:443/artifactory/api/npm/channelsuite-npm/available-typed-arrays/-/available-typed-arrays-1.0.5.tgz"
   integrity sha1-kvlWFlAQadB9EO2y/DfT4cZRI7c=
-
-axe-core@^4.3.5:
-  version "4.3.5"
-  resolved "https://bin.ti8m.ch:443/artifactory/api/npm/channelsuite-npm/axe-core/-/axe-core-4.3.5.tgz#78d6911ba317a8262bfee292aeafcc1e04b49cc5"
-  integrity sha1-eNaRG6MXqCYr/uKSrq/MHgS0nMU=
-
-axobject-query@^2.2.0:
-  version "2.2.0"
-  resolved "https://bin.ti8m.ch:443/artifactory/api/npm/channelsuite-npm/axobject-query/-/axobject-query-2.2.0.tgz#943d47e10c0b704aa42275e20edf3722648989be"
-  integrity sha1-lD1H4QwLcEqkInXiDt83ImSJib4=
 
 balanced-match@^1.0.0:
   version "1.0.2"
-  resolved "https://bin.ti8m.ch:443/artifactory/api/npm/channelsuite-npm/balanced-match/-/balanced-match-1.0.2.tgz#e83e3a7e3f300b34cb9d87f615fa0cbf357690ee"
+  resolved "https://bin.ti8m.ch:443/artifactory/api/npm/channelsuite-npm/balanced-match/-/balanced-match-1.0.2.tgz"
   integrity sha1-6D46fj8wCzTLnYf2FfoMvzV2kO4=
 
 base64-js@^1.0.2:
   version "1.5.1"
-  resolved "https://bin.ti8m.ch:443/artifactory/api/npm/channelsuite-npm/base64-js/-/base64-js-1.5.1.tgz#1b1b440160a5bf7ad40b650f095963481903930a"
+  resolved "https://bin.ti8m.ch:443/artifactory/api/npm/channelsuite-npm/base64-js/-/base64-js-1.5.1.tgz"
   integrity sha1-GxtEAWClv3rUC2UPCVljSBkDkwo=
 
 big.js@^5.2.2:
   version "5.2.2"
-  resolved "https://bin.ti8m.ch:443/artifactory/api/npm/channelsuite-npm/big.js/-/big.js-5.2.2.tgz#65f0af382f578bcdc742bd9c281e9cb2d7768328"
+  resolved "https://bin.ti8m.ch:443/artifactory/api/npm/channelsuite-npm/big.js/-/big.js-5.2.2.tgz"
   integrity sha1-ZfCvOC9Xi83HQr2cKB6cstd2gyg=
 
 binary-extensions@^2.0.0:
   version "2.2.0"
-  resolved "https://bin.ti8m.ch:443/artifactory/api/npm/channelsuite-npm/binary-extensions/-/binary-extensions-2.2.0.tgz#75f502eeaf9ffde42fc98829645be4ea76bd9e2d"
+  resolved "https://bin.ti8m.ch:443/artifactory/api/npm/channelsuite-npm/binary-extensions/-/binary-extensions-2.2.0.tgz"
   integrity sha1-dfUC7q+f/eQvyYgpZFvk6na9ni0=
 
 bn.js@^4.0.0, bn.js@^4.1.0, bn.js@^4.11.9:
   version "4.12.0"
-  resolved "https://bin.ti8m.ch:443/artifactory/api/npm/channelsuite-npm/bn.js/-/bn.js-4.12.0.tgz#775b3f278efbb9718eec7361f483fb36fbbfea88"
+  resolved "https://bin.ti8m.ch:443/artifactory/api/npm/channelsuite-npm/bn.js/-/bn.js-4.12.0.tgz"
   integrity sha1-d1s/J477uXGO7HNh9IP7Nvu/6og=
 
 bn.js@^5.0.0, bn.js@^5.1.1:
   version "5.2.0"
-  resolved "https://bin.ti8m.ch:443/artifactory/api/npm/channelsuite-npm/bn.js/-/bn.js-5.2.0.tgz#358860674396c6997771a9d051fcc1b57d4ae002"
+  resolved "https://bin.ti8m.ch:443/artifactory/api/npm/channelsuite-npm/bn.js/-/bn.js-5.2.0.tgz"
   integrity sha1-NYhgZ0OWxpl3canQUfzBtX1K4AI=
 
 brace-expansion@^1.1.7:
   version "1.1.11"
-  resolved "https://bin.ti8m.ch:443/artifactory/api/npm/channelsuite-npm/brace-expansion/-/brace-expansion-1.1.11.tgz#3c7fcbf529d87226f3d2f52b966ff5271eb441dd"
+  resolved "https://bin.ti8m.ch:443/artifactory/api/npm/channelsuite-npm/brace-expansion/-/brace-expansion-1.1.11.tgz"
   integrity sha1-PH/L9SnYcibz0vUrlm/1Jx60Qd0=
   dependencies:
     balanced-match "^1.0.0"
@@ -501,19 +654,19 @@ brace-expansion@^1.1.7:
 
 braces@^3.0.1, braces@~3.0.2:
   version "3.0.2"
-  resolved "https://bin.ti8m.ch:443/artifactory/api/npm/channelsuite-npm/braces/-/braces-3.0.2.tgz#3454e1a462ee8d599e236df336cd9ea4f8afe107"
+  resolved "https://bin.ti8m.ch:443/artifactory/api/npm/channelsuite-npm/braces/-/braces-3.0.2.tgz"
   integrity sha1-NFThpGLujVmeI23zNs2epPiv4Qc=
   dependencies:
     fill-range "^7.0.1"
 
 brorand@^1.0.1, brorand@^1.1.0:
   version "1.1.0"
-  resolved "https://bin.ti8m.ch:443/artifactory/api/npm/channelsuite-npm/brorand/-/brorand-1.1.0.tgz#12c25efe40a45e3c323eb8675a0a0ce57b22371f"
+  resolved "https://bin.ti8m.ch:443/artifactory/api/npm/channelsuite-npm/brorand/-/brorand-1.1.0.tgz"
   integrity sha1-EsJe/kCkXjwyPrhnWgoM5XsiNx8=
 
 browserify-aes@^1.0.0, browserify-aes@^1.0.4:
   version "1.2.0"
-  resolved "https://bin.ti8m.ch:443/artifactory/api/npm/channelsuite-npm/browserify-aes/-/browserify-aes-1.2.0.tgz#326734642f403dabc3003209853bb70ad428ef48"
+  resolved "https://bin.ti8m.ch:443/artifactory/api/npm/channelsuite-npm/browserify-aes/-/browserify-aes-1.2.0.tgz"
   integrity sha1-Mmc0ZC9APavDADIJhTu3CtQo70g=
   dependencies:
     buffer-xor "^1.0.3"
@@ -525,7 +678,7 @@ browserify-aes@^1.0.0, browserify-aes@^1.0.4:
 
 browserify-cipher@^1.0.0:
   version "1.0.1"
-  resolved "https://bin.ti8m.ch:443/artifactory/api/npm/channelsuite-npm/browserify-cipher/-/browserify-cipher-1.0.1.tgz#8d6474c1b870bfdabcd3bcfcc1934a10e94f15f0"
+  resolved "https://bin.ti8m.ch:443/artifactory/api/npm/channelsuite-npm/browserify-cipher/-/browserify-cipher-1.0.1.tgz"
   integrity sha1-jWR0wbhwv9q807z8wZNKEOlPFfA=
   dependencies:
     browserify-aes "^1.0.4"
@@ -534,7 +687,7 @@ browserify-cipher@^1.0.0:
 
 browserify-des@^1.0.0:
   version "1.0.2"
-  resolved "https://bin.ti8m.ch:443/artifactory/api/npm/channelsuite-npm/browserify-des/-/browserify-des-1.0.2.tgz#3af4f1f59839403572f1c66204375f7a7f703e9c"
+  resolved "https://bin.ti8m.ch:443/artifactory/api/npm/channelsuite-npm/browserify-des/-/browserify-des-1.0.2.tgz"
   integrity sha1-OvTx9Zg5QDVy8cZiBDdfen9wPpw=
   dependencies:
     cipher-base "^1.0.1"
@@ -544,7 +697,7 @@ browserify-des@^1.0.0:
 
 browserify-rsa@^4.0.0, browserify-rsa@^4.0.1:
   version "4.1.0"
-  resolved "https://bin.ti8m.ch:443/artifactory/api/npm/channelsuite-npm/browserify-rsa/-/browserify-rsa-4.1.0.tgz#b2fd06b5b75ae297f7ce2dc651f918f5be158c8d"
+  resolved "https://bin.ti8m.ch:443/artifactory/api/npm/channelsuite-npm/browserify-rsa/-/browserify-rsa-4.1.0.tgz"
   integrity sha1-sv0Gtbda4pf3zi3GUfkY9b4VjI0=
   dependencies:
     bn.js "^5.0.0"
@@ -552,7 +705,7 @@ browserify-rsa@^4.0.0, browserify-rsa@^4.0.1:
 
 browserify-sign@^4.0.0:
   version "4.2.1"
-  resolved "https://bin.ti8m.ch:443/artifactory/api/npm/channelsuite-npm/browserify-sign/-/browserify-sign-4.2.1.tgz#eaf4add46dd54be3bb3b36c0cf15abbeba7956c3"
+  resolved "https://bin.ti8m.ch:443/artifactory/api/npm/channelsuite-npm/browserify-sign/-/browserify-sign-4.2.1.tgz"
   integrity sha1-6vSt1G3VS+O7OzbAzxWrvrp5VsM=
   dependencies:
     bn.js "^5.1.1"
@@ -567,14 +720,14 @@ browserify-sign@^4.0.0:
 
 browserify-zlib@0.2.0:
   version "0.2.0"
-  resolved "https://bin.ti8m.ch:443/artifactory/api/npm/channelsuite-npm/browserify-zlib/-/browserify-zlib-0.2.0.tgz#2869459d9aa3be245fe8fe2ca1f46e2e7f54d73f"
+  resolved "https://bin.ti8m.ch:443/artifactory/api/npm/channelsuite-npm/browserify-zlib/-/browserify-zlib-0.2.0.tgz"
   integrity sha1-KGlFnZqjviRf6P4sofRuLn9U1z8=
   dependencies:
     pako "~1.0.5"
 
 browserslist@4.16.6:
   version "4.16.6"
-  resolved "https://bin.ti8m.ch:443/artifactory/api/npm/channelsuite-npm/browserslist/-/browserslist-4.16.6.tgz#d7901277a5a88e554ed305b183ec9b0c08f66fa2"
+  resolved "https://bin.ti8m.ch:443/artifactory/api/npm/channelsuite-npm/browserslist/-/browserslist-4.16.6.tgz"
   integrity sha1-15ASd6WojlVO0wWxg+ybDAj2b6I=
   dependencies:
     caniuse-lite "^1.0.30001219"
@@ -583,32 +736,50 @@ browserslist@4.16.6:
     escalade "^3.1.1"
     node-releases "^1.1.71"
 
+browserslist@^4.17.5:
+  version "4.18.1"
+  resolved "https://bin.ti8m.ch:443/artifactory/api/npm/channelsuite-npm/browserslist/-/browserslist-4.18.1.tgz"
+  integrity sha1-YNOSDyW2hg65F8bHsYVXb02LAX8=
+  dependencies:
+    caniuse-lite "^1.0.30001280"
+    electron-to-chromium "^1.3.896"
+    escalade "^3.1.1"
+    node-releases "^2.0.1"
+    picocolors "^1.0.0"
+
 buffer-xor@^1.0.3:
   version "1.0.3"
-  resolved "https://bin.ti8m.ch:443/artifactory/api/npm/channelsuite-npm/buffer-xor/-/buffer-xor-1.0.3.tgz#26e61ed1422fb70dd42e6e36729ed51d855fe8d9"
+  resolved "https://bin.ti8m.ch:443/artifactory/api/npm/channelsuite-npm/buffer-xor/-/buffer-xor-1.0.3.tgz"
   integrity sha1-JuYe0UIvtw3ULm42cp7VHYVf6Nk=
 
 buffer@5.6.0:
   version "5.6.0"
-  resolved "https://bin.ti8m.ch:443/artifactory/api/npm/channelsuite-npm/buffer/-/buffer-5.6.0.tgz#a31749dc7d81d84db08abf937b6b8c4033f62786"
+  resolved "https://bin.ti8m.ch:443/artifactory/api/npm/channelsuite-npm/buffer/-/buffer-5.6.0.tgz"
   integrity sha1-oxdJ3H2B2E2wir+Te2uMQDP2J4Y=
   dependencies:
     base64-js "^1.0.2"
     ieee754 "^1.1.4"
 
+bufferutil@^4.0.1:
+  version "4.0.5"
+  resolved "https://bin.ti8m.ch:443/artifactory/api/npm/channelsuite-npm/bufferutil/-/bufferutil-4.0.5.tgz"
+  integrity sha1-2p6oFmkRzCdr9ne4rtLQLTH1kCg=
+  dependencies:
+    node-gyp-build "^4.3.0"
+
 builtin-status-codes@^3.0.0:
   version "3.0.0"
-  resolved "https://bin.ti8m.ch:443/artifactory/api/npm/channelsuite-npm/builtin-status-codes/-/builtin-status-codes-3.0.0.tgz#85982878e21b98e1c66425e03d0174788f569ee8"
+  resolved "https://bin.ti8m.ch:443/artifactory/api/npm/channelsuite-npm/builtin-status-codes/-/builtin-status-codes-3.0.0.tgz"
   integrity sha1-hZgoeOIbmOHGZCXgPQF0eI9Wnug=
 
 bytes@3.1.0:
   version "3.1.0"
-  resolved "https://bin.ti8m.ch:443/artifactory/api/npm/channelsuite-npm/bytes/-/bytes-3.1.0.tgz#f6cf7933a360e0588fa9fde85651cdc7f805d1f6"
+  resolved "https://bin.ti8m.ch:443/artifactory/api/npm/channelsuite-npm/bytes/-/bytes-3.1.0.tgz"
   integrity sha1-9s95M6Ng4FiPqf3oVlHNx/gF0fY=
 
 call-bind@^1.0.0, call-bind@^1.0.2:
   version "1.0.2"
-  resolved "https://bin.ti8m.ch:443/artifactory/api/npm/channelsuite-npm/call-bind/-/call-bind-1.0.2.tgz#b1d4e89e688119c3c9a903ad30abb2f6a919be3c"
+  resolved "https://bin.ti8m.ch:443/artifactory/api/npm/channelsuite-npm/call-bind/-/call-bind-1.0.2.tgz"
   integrity sha1-sdTonmiBGcPJqQOtMKuy9qkZvjw=
   dependencies:
     function-bind "^1.1.1"
@@ -616,17 +787,27 @@ call-bind@^1.0.0, call-bind@^1.0.2:
 
 callsites@^3.0.0:
   version "3.1.0"
-  resolved "https://bin.ti8m.ch:443/artifactory/api/npm/channelsuite-npm/callsites/-/callsites-3.1.0.tgz#b3630abd8943432f54b3f0519238e33cd7df2f73"
+  resolved "https://bin.ti8m.ch:443/artifactory/api/npm/channelsuite-npm/callsites/-/callsites-3.1.0.tgz"
   integrity sha1-s2MKvYlDQy9Us/BRkjjjPNffL3M=
+
+camelcase-css@^2.0.1:
+  version "2.0.1"
+  resolved "https://bin.ti8m.ch:443/artifactory/api/npm/channelsuite-npm/camelcase-css/-/camelcase-css-2.0.1.tgz"
+  integrity sha1-7pePaUeRTMMMa0R0G27R338EP9U=
 
 caniuse-lite@^1.0.30001202, caniuse-lite@^1.0.30001219, caniuse-lite@^1.0.30001228:
   version "1.0.30001285"
-  resolved "https://bin.ti8m.ch:443/artifactory/api/npm/channelsuite-npm/caniuse-lite/-/caniuse-lite-1.0.30001285.tgz#fe1e52229187e11d6670590790d669b9e03315b7"
+  resolved "https://bin.ti8m.ch:443/artifactory/api/npm/channelsuite-npm/caniuse-lite/-/caniuse-lite-1.0.30001285.tgz"
   integrity sha1-/h5SIpGH4R1mcFkHkNZpueAzFbc=
+
+caniuse-lite@^1.0.30001272, caniuse-lite@^1.0.30001280:
+  version "1.0.30001286"
+  resolved "https://bin.ti8m.ch:443/artifactory/api/npm/channelsuite-npm/caniuse-lite/-/caniuse-lite-1.0.30001286.tgz"
+  integrity sha1-Pp3rrUIEGWGM/fUtybZXKyio//Y=
 
 chalk@2.4.2, chalk@^2.0.0:
   version "2.4.2"
-  resolved "https://bin.ti8m.ch:443/artifactory/api/npm/channelsuite-npm/chalk/-/chalk-2.4.2.tgz#cd42541677a54333cf541a49108c1432b44c9424"
+  resolved "https://bin.ti8m.ch:443/artifactory/api/npm/channelsuite-npm/chalk/-/chalk-2.4.2.tgz"
   integrity sha1-zUJUFnelQzPPVBpJEIwUMrRMlCQ=
   dependencies:
     ansi-styles "^3.2.1"
@@ -635,15 +816,15 @@ chalk@2.4.2, chalk@^2.0.0:
 
 chalk@4.0.0:
   version "4.0.0"
-  resolved "https://bin.ti8m.ch:443/artifactory/api/npm/channelsuite-npm/chalk/-/chalk-4.0.0.tgz#6e98081ed2d17faab615eb52ac66ec1fe6209e72"
+  resolved "https://bin.ti8m.ch:443/artifactory/api/npm/channelsuite-npm/chalk/-/chalk-4.0.0.tgz"
   integrity sha1-bpgIHtLRf6q2FetSrGbsH+YgnnI=
   dependencies:
     ansi-styles "^4.1.0"
     supports-color "^7.1.0"
 
-chalk@^4.0.0:
+chalk@^4.0.0, chalk@^4.1.2:
   version "4.1.2"
-  resolved "https://bin.ti8m.ch:443/artifactory/api/npm/channelsuite-npm/chalk/-/chalk-4.1.2.tgz#aac4e2b7734a740867aeb16bf02aad556a1e7a01"
+  resolved "https://bin.ti8m.ch:443/artifactory/api/npm/channelsuite-npm/chalk/-/chalk-4.1.2.tgz"
   integrity sha1-qsTit3NKdAhnrrFr8CqtVWoeegE=
   dependencies:
     ansi-styles "^4.1.0"
@@ -651,7 +832,7 @@ chalk@^4.0.0:
 
 chokidar@3.5.1:
   version "3.5.1"
-  resolved "https://bin.ti8m.ch:443/artifactory/api/npm/channelsuite-npm/chokidar/-/chokidar-3.5.1.tgz#ee9ce7bbebd2b79f49f304799d5468e31e14e68a"
+  resolved "https://bin.ti8m.ch:443/artifactory/api/npm/channelsuite-npm/chokidar/-/chokidar-3.5.1.tgz"
   integrity sha1-7pznu+vSt59J8wR5nVRo4x4U5oo=
   dependencies:
     anymatch "~3.1.1"
@@ -664,9 +845,24 @@ chokidar@3.5.1:
   optionalDependencies:
     fsevents "~2.3.1"
 
+chokidar@^3.5.2:
+  version "3.5.2"
+  resolved "https://bin.ti8m.ch:443/artifactory/api/npm/channelsuite-npm/chokidar/-/chokidar-3.5.2.tgz"
+  integrity sha1-26OXb8rbAW9m/TZQIdkWANAcHnU=
+  dependencies:
+    anymatch "~3.1.2"
+    braces "~3.0.2"
+    glob-parent "~5.1.2"
+    is-binary-path "~2.1.0"
+    is-glob "~4.0.1"
+    normalize-path "~3.0.0"
+    readdirp "~3.6.0"
+  optionalDependencies:
+    fsevents "~2.3.2"
+
 cipher-base@^1.0.0, cipher-base@^1.0.1, cipher-base@^1.0.3:
   version "1.0.4"
-  resolved "https://bin.ti8m.ch:443/artifactory/api/npm/channelsuite-npm/cipher-base/-/cipher-base-1.0.4.tgz#8760e4ecc272f4c363532f926d874aae2c1397de"
+  resolved "https://bin.ti8m.ch:443/artifactory/api/npm/channelsuite-npm/cipher-base/-/cipher-base-1.0.4.tgz"
   integrity sha1-h2Dk7MJy9MNjUy+SbYdKriwTl94=
   dependencies:
     inherits "^2.0.1"
@@ -674,68 +870,117 @@ cipher-base@^1.0.0, cipher-base@^1.0.1, cipher-base@^1.0.3:
 
 classnames@2.2.6:
   version "2.2.6"
-  resolved "https://bin.ti8m.ch:443/artifactory/api/npm/channelsuite-npm/classnames/-/classnames-2.2.6.tgz#43935bffdd291f326dad0a205309b38d00f650ce"
+  resolved "https://bin.ti8m.ch:443/artifactory/api/npm/channelsuite-npm/classnames/-/classnames-2.2.6.tgz"
   integrity sha1-Q5Nb/90pHzJtrQogUwmzjQD2UM4=
+
+classnames@^2.3.1:
+  version "2.3.1"
+  resolved "https://bin.ti8m.ch:443/artifactory/api/npm/channelsuite-npm/classnames/-/classnames-2.3.1.tgz"
+  integrity sha1-38+jiR4wbsHa0QXQ6I9EF7hTXo4=
+
+clean-stack@^2.0.0:
+  version "2.2.0"
+  resolved "https://bin.ti8m.ch:443/artifactory/api/npm/channelsuite-npm/clean-stack/-/clean-stack-2.2.0.tgz"
+  integrity sha1-7oRy27Ep5yezHooQpCfe6d/kAIs=
+
+cli-cursor@^3.1.0:
+  version "3.1.0"
+  resolved "https://bin.ti8m.ch:443/artifactory/api/npm/channelsuite-npm/cli-cursor/-/cli-cursor-3.1.0.tgz"
+  integrity sha1-JkMFp65JDR0Dvwybp8kl0XU68wc=
+  dependencies:
+    restore-cursor "^3.1.0"
+
+cli-truncate@^2.1.0:
+  version "2.1.0"
+  resolved "https://bin.ti8m.ch:443/artifactory/api/npm/channelsuite-npm/cli-truncate/-/cli-truncate-2.1.0.tgz"
+  integrity sha1-w54ovwXtzeW+O5iZKiLe7Vork8c=
+  dependencies:
+    slice-ansi "^3.0.0"
+    string-width "^4.2.0"
+
+cli-truncate@^3.1.0:
+  version "3.1.0"
+  resolved "https://bin.ti8m.ch:443/artifactory/api/npm/channelsuite-npm/cli-truncate/-/cli-truncate-3.1.0.tgz"
+  integrity sha1-PyOrElNePXPoObtD5zyd5IfbE4k=
+  dependencies:
+    slice-ansi "^5.0.0"
+    string-width "^5.0.0"
 
 color-convert@^1.9.0:
   version "1.9.3"
-  resolved "https://bin.ti8m.ch:443/artifactory/api/npm/channelsuite-npm/color-convert/-/color-convert-1.9.3.tgz#bb71850690e1f136567de629d2d5471deda4c1e8"
+  resolved "https://bin.ti8m.ch:443/artifactory/api/npm/channelsuite-npm/color-convert/-/color-convert-1.9.3.tgz"
   integrity sha1-u3GFBpDh8TZWfeYp0tVHHe2kweg=
   dependencies:
     color-name "1.1.3"
 
 color-convert@^2.0.1:
   version "2.0.1"
-  resolved "https://bin.ti8m.ch:443/artifactory/api/npm/channelsuite-npm/color-convert/-/color-convert-2.0.1.tgz#72d3a68d598c9bdb3af2ad1e84f21d896abd4de3"
+  resolved "https://bin.ti8m.ch:443/artifactory/api/npm/channelsuite-npm/color-convert/-/color-convert-2.0.1.tgz"
   integrity sha1-ctOmjVmMm9s68q0ehPIdiWq9TeM=
   dependencies:
     color-name "~1.1.4"
 
 color-name@1.1.3:
   version "1.1.3"
-  resolved "https://bin.ti8m.ch:443/artifactory/api/npm/channelsuite-npm/color-name/-/color-name-1.1.3.tgz#a7d0558bd89c42f795dd42328f740831ca53bc25"
+  resolved "https://bin.ti8m.ch:443/artifactory/api/npm/channelsuite-npm/color-name/-/color-name-1.1.3.tgz"
   integrity sha1-p9BVi9icQveV3UIyj3QIMcpTvCU=
 
-color-name@~1.1.4:
+color-name@^1.1.4, color-name@~1.1.4:
   version "1.1.4"
-  resolved "https://bin.ti8m.ch:443/artifactory/api/npm/channelsuite-npm/color-name/-/color-name-1.1.4.tgz#c2a09a87acbde69543de6f63fa3995c826c536a2"
+  resolved "https://bin.ti8m.ch:443/artifactory/api/npm/channelsuite-npm/color-name/-/color-name-1.1.4.tgz"
   integrity sha1-wqCah6y95pVD3m9j+jmVyCbFNqI=
 
 colorette@^1.2.2:
   version "1.4.0"
-  resolved "https://bin.ti8m.ch:443/artifactory/api/npm/channelsuite-npm/colorette/-/colorette-1.4.0.tgz#5190fbb87276259a86ad700bff2c6d6faa3fca40"
+  resolved "https://bin.ti8m.ch:443/artifactory/api/npm/channelsuite-npm/colorette/-/colorette-1.4.0.tgz"
   integrity sha1-UZD7uHJ2JZqGrXAL/yxtb6o/ykA=
+
+colorette@^2.0.16:
+  version "2.0.16"
+  resolved "https://bin.ti8m.ch:443/artifactory/api/npm/channelsuite-npm/colorette/-/colorette-2.0.16.tgz"
+  integrity sha1-cTua+E/bAAE58EVGvUqT9ipQhdo=
+
+commander@^8.3.0:
+  version "8.3.0"
+  resolved "https://bin.ti8m.ch:443/artifactory/api/npm/channelsuite-npm/commander/-/commander-8.3.0.tgz"
+  integrity sha1-SDfqGy2me5xhamevuw+v7lZ7ymY=
 
 commondir@^1.0.1:
   version "1.0.1"
-  resolved "https://bin.ti8m.ch:443/artifactory/api/npm/channelsuite-npm/commondir/-/commondir-1.0.1.tgz#ddd800da0c66127393cca5950ea968a3aaf1253b"
+  resolved "https://bin.ti8m.ch:443/artifactory/api/npm/channelsuite-npm/commondir/-/commondir-1.0.1.tgz"
   integrity sha1-3dgA2gxmEnOTzKWVDqloo6rxJTs=
 
 concat-map@0.0.1:
   version "0.0.1"
-  resolved "https://bin.ti8m.ch:443/artifactory/api/npm/channelsuite-npm/concat-map/-/concat-map-0.0.1.tgz#d8a96bd77fd68df7793a73036a3ba0d5405d477b"
+  resolved "https://bin.ti8m.ch:443/artifactory/api/npm/channelsuite-npm/concat-map/-/concat-map-0.0.1.tgz"
   integrity sha1-2Klr13/Wjfd5OnMDajug1UBdR3s=
 
 constants-browserify@1.0.0:
   version "1.0.0"
-  resolved "https://bin.ti8m.ch:443/artifactory/api/npm/channelsuite-npm/constants-browserify/-/constants-browserify-1.0.0.tgz#c20b96d8c617748aaf1c16021760cd27fcb8cb75"
+  resolved "https://bin.ti8m.ch:443/artifactory/api/npm/channelsuite-npm/constants-browserify/-/constants-browserify-1.0.0.tgz"
   integrity sha1-wguW2MYXdIqvHBYCF2DNJ/y4y3U=
 
 convert-source-map@1.7.0:
   version "1.7.0"
-  resolved "https://bin.ti8m.ch:443/artifactory/api/npm/channelsuite-npm/convert-source-map/-/convert-source-map-1.7.0.tgz#17a2cb882d7f77d3490585e2ce6c524424a3a442"
+  resolved "https://bin.ti8m.ch:443/artifactory/api/npm/channelsuite-npm/convert-source-map/-/convert-source-map-1.7.0.tgz"
   integrity sha1-F6LLiC1/d9NJBYXizmxSRCSjpEI=
   dependencies:
     safe-buffer "~5.1.1"
 
-core-js-pure@^3.19.0:
-  version "3.19.3"
-  resolved "https://bin.ti8m.ch:443/artifactory/api/npm/channelsuite-npm/core-js-pure/-/core-js-pure-3.19.3.tgz#c69b2b36b58927317824994b532ec3f0f7e49607"
-  integrity sha1-xpsrNrWJJzF4JJlLUy7D8Pfklgc=
+cosmiconfig@^7.0.1:
+  version "7.0.1"
+  resolved "https://bin.ti8m.ch:443/artifactory/api/npm/channelsuite-npm/cosmiconfig/-/cosmiconfig-7.0.1.tgz"
+  integrity sha1-cU11ZSLKzoZ4Z8y0R0xdAbuuXW0=
+  dependencies:
+    "@types/parse-json" "^4.0.0"
+    import-fresh "^3.2.1"
+    parse-json "^5.0.0"
+    path-type "^4.0.0"
+    yaml "^1.10.0"
 
 create-ecdh@^4.0.0:
   version "4.0.4"
-  resolved "https://bin.ti8m.ch:443/artifactory/api/npm/channelsuite-npm/create-ecdh/-/create-ecdh-4.0.4.tgz#d6e7f4bffa66736085a0762fd3a632684dabcc4e"
+  resolved "https://bin.ti8m.ch:443/artifactory/api/npm/channelsuite-npm/create-ecdh/-/create-ecdh-4.0.4.tgz"
   integrity sha1-1uf0v/pmc2CFoHYv06YyaE2rzE4=
   dependencies:
     bn.js "^4.1.0"
@@ -743,7 +988,7 @@ create-ecdh@^4.0.0:
 
 create-hash@^1.1.0, create-hash@^1.1.2, create-hash@^1.2.0:
   version "1.2.0"
-  resolved "https://bin.ti8m.ch:443/artifactory/api/npm/channelsuite-npm/create-hash/-/create-hash-1.2.0.tgz#889078af11a63756bcfb59bd221996be3a9ef196"
+  resolved "https://bin.ti8m.ch:443/artifactory/api/npm/channelsuite-npm/create-hash/-/create-hash-1.2.0.tgz"
   integrity sha1-iJB4rxGmN1a8+1m9IhmWvjqe8ZY=
   dependencies:
     cipher-base "^1.0.1"
@@ -754,7 +999,7 @@ create-hash@^1.1.0, create-hash@^1.1.2, create-hash@^1.2.0:
 
 create-hmac@^1.1.0, create-hmac@^1.1.4, create-hmac@^1.1.7:
   version "1.1.7"
-  resolved "https://bin.ti8m.ch:443/artifactory/api/npm/channelsuite-npm/create-hmac/-/create-hmac-1.1.7.tgz#69170c78b3ab957147b2b8b04572e47ead2243ff"
+  resolved "https://bin.ti8m.ch:443/artifactory/api/npm/channelsuite-npm/create-hmac/-/create-hmac-1.1.7.tgz"
   integrity sha1-aRcMeLOrlXFHsriwRXLkfq0iQ/8=
   dependencies:
     cipher-base "^1.0.3"
@@ -764,9 +1009,16 @@ create-hmac@^1.1.0, create-hmac@^1.1.4, create-hmac@^1.1.7:
     safe-buffer "^5.0.1"
     sha.js "^2.4.8"
 
-cross-spawn@^7.0.2:
+cross-fetch@^3.0.6, cross-fetch@^3.1.0:
+  version "3.1.4"
+  resolved "https://bin.ti8m.ch:443/artifactory/api/npm/channelsuite-npm/cross-fetch/-/cross-fetch-3.1.4.tgz"
+  integrity sha1-lyPzo6JHv4uJA586OAqSROj6Lzk=
+  dependencies:
+    node-fetch "2.6.1"
+
+cross-spawn@^7.0.2, cross-spawn@^7.0.3:
   version "7.0.3"
-  resolved "https://bin.ti8m.ch:443/artifactory/api/npm/channelsuite-npm/cross-spawn/-/cross-spawn-7.0.3.tgz#f73a85b9d5d41d045551c177e2882d4ac85728a6"
+  resolved "https://bin.ti8m.ch:443/artifactory/api/npm/channelsuite-npm/cross-spawn/-/cross-spawn-7.0.3.tgz"
   integrity sha1-9zqFudXUHQRVUcF34ogtSshXKKY=
   dependencies:
     path-key "^3.1.0"
@@ -775,7 +1027,7 @@ cross-spawn@^7.0.2:
 
 crypto-browserify@3.12.0:
   version "3.12.0"
-  resolved "https://bin.ti8m.ch:443/artifactory/api/npm/channelsuite-npm/crypto-browserify/-/crypto-browserify-3.12.0.tgz#396cf9f3137f03e4b8e532c58f698254e00f80ec"
+  resolved "https://bin.ti8m.ch:443/artifactory/api/npm/channelsuite-npm/crypto-browserify/-/crypto-browserify-3.12.0.tgz"
   integrity sha1-OWz58xN/A+S45TLFj2mCVOAPgOw=
   dependencies:
     browserify-cipher "^1.0.0"
@@ -792,87 +1044,107 @@ crypto-browserify@3.12.0:
 
 css.escape@1.5.1:
   version "1.5.1"
-  resolved "https://bin.ti8m.ch:443/artifactory/api/npm/channelsuite-npm/css.escape/-/css.escape-1.5.1.tgz#42e27d4fa04ae32f931a4b4d4191fa9cddee97cb"
+  resolved "https://bin.ti8m.ch:443/artifactory/api/npm/channelsuite-npm/css.escape/-/css.escape-1.5.1.tgz"
   integrity sha1-QuJ9T6BK4y+TGktNQZH6nN3ul8s=
+
+cssesc@^3.0.0:
+  version "3.0.0"
+  resolved "https://bin.ti8m.ch:443/artifactory/api/npm/channelsuite-npm/cssesc/-/cssesc-3.0.0.tgz"
+  integrity sha1-N3QZGZA7hoVl4cCep0dEXNGJg+4=
 
 cssnano-preset-simple@^3.0.0:
   version "3.0.0"
-  resolved "https://bin.ti8m.ch:443/artifactory/api/npm/channelsuite-npm/cssnano-preset-simple/-/cssnano-preset-simple-3.0.0.tgz#e95d0012699ca2c741306e9a3b8eeb495a348dbe"
+  resolved "https://bin.ti8m.ch:443/artifactory/api/npm/channelsuite-npm/cssnano-preset-simple/-/cssnano-preset-simple-3.0.0.tgz"
   integrity sha1-6V0AEmmcosdBMG6aO47rSVo0jb4=
   dependencies:
     caniuse-lite "^1.0.30001202"
 
 cssnano-simple@3.0.0:
   version "3.0.0"
-  resolved "https://bin.ti8m.ch:443/artifactory/api/npm/channelsuite-npm/cssnano-simple/-/cssnano-simple-3.0.0.tgz#a4b8ccdef4c7084af97e19bc5b93b4ecf211e90f"
+  resolved "https://bin.ti8m.ch:443/artifactory/api/npm/channelsuite-npm/cssnano-simple/-/cssnano-simple-3.0.0.tgz"
   integrity sha1-pLjM3vTHCEr5fhm8W5O07PIR6Q8=
   dependencies:
     cssnano-preset-simple "^3.0.0"
 
 csstype@^3.0.2:
   version "3.0.10"
-  resolved "https://bin.ti8m.ch:443/artifactory/api/npm/channelsuite-npm/csstype/-/csstype-3.0.10.tgz#2ad3a7bed70f35b965707c092e5f30b327c290e5"
+  resolved "https://bin.ti8m.ch:443/artifactory/api/npm/channelsuite-npm/csstype/-/csstype-3.0.10.tgz"
   integrity sha1-KtOnvtcPNbllcHwJLl8wsyfCkOU=
 
-damerau-levenshtein@^1.0.7:
-  version "1.0.7"
-  resolved "https://bin.ti8m.ch:443/artifactory/api/npm/channelsuite-npm/damerau-levenshtein/-/damerau-levenshtein-1.0.7.tgz#64368003512a1a6992593741a09a9d31a836f55d"
-  integrity sha1-ZDaAA1EqGmmSWTdBoJqdMag29V0=
+d@1, d@^1.0.1:
+  version "1.0.1"
+  resolved "https://bin.ti8m.ch:443/artifactory/api/npm/channelsuite-npm/d/-/d-1.0.1.tgz"
+  integrity sha1-hpgJU3LVjb7jRv/Qxwk/mfj561o=
+  dependencies:
+    es5-ext "^0.10.50"
+    type "^1.0.1"
 
 data-uri-to-buffer@3.0.1:
   version "3.0.1"
-  resolved "https://bin.ti8m.ch:443/artifactory/api/npm/channelsuite-npm/data-uri-to-buffer/-/data-uri-to-buffer-3.0.1.tgz#594b8973938c5bc2c33046535785341abc4f3636"
+  resolved "https://bin.ti8m.ch:443/artifactory/api/npm/channelsuite-npm/data-uri-to-buffer/-/data-uri-to-buffer-3.0.1.tgz"
   integrity sha1-WUuJc5OMW8LDMEZTV4U0GrxPNjY=
 
-debug@2, debug@^2.6.9:
+debug@2, debug@^2.2.0:
   version "2.6.9"
-  resolved "https://bin.ti8m.ch:443/artifactory/api/npm/channelsuite-npm/debug/-/debug-2.6.9.tgz#5d128515df134ff327e90a4c93f4e077a536341f"
+  resolved "https://bin.ti8m.ch:443/artifactory/api/npm/channelsuite-npm/debug/-/debug-2.6.9.tgz"
   integrity sha1-XRKFFd8TT/Mn6QpMk/Tgd6U2NB8=
   dependencies:
     ms "2.0.0"
 
-debug@^3.2.7:
-  version "3.2.7"
-  resolved "https://bin.ti8m.ch:443/artifactory/api/npm/channelsuite-npm/debug/-/debug-3.2.7.tgz#72580b7e9145fb39b6676f9c5e5fb100b934179a"
-  integrity sha1-clgLfpFF+zm2Z2+cXl+xALk0F5o=
-  dependencies:
-    ms "^2.1.1"
-
-debug@^4.1.1, debug@^4.3.1, debug@^4.3.2:
+debug@^4.1.1, debug@^4.3.2, debug@^4.3.3:
   version "4.3.3"
-  resolved "https://bin.ti8m.ch:443/artifactory/api/npm/channelsuite-npm/debug/-/debug-4.3.3.tgz#04266e0b70a98d4462e6e288e38259213332b664"
+  resolved "https://bin.ti8m.ch:443/artifactory/api/npm/channelsuite-npm/debug/-/debug-4.3.3.tgz"
   integrity sha1-BCZuC3CpjURi5uKI44JZITMytmQ=
   dependencies:
     ms "2.1.2"
 
 deep-is@^0.1.3:
   version "0.1.4"
-  resolved "https://bin.ti8m.ch:443/artifactory/api/npm/channelsuite-npm/deep-is/-/deep-is-0.1.4.tgz#a6f2dce612fadd2ef1f519b73551f17e85199831"
+  resolved "https://bin.ti8m.ch:443/artifactory/api/npm/channelsuite-npm/deep-is/-/deep-is-0.1.4.tgz"
   integrity sha1-pvLc5hL63S7x9Rm3NVHxfoUZmDE=
 
 define-properties@^1.1.3:
   version "1.1.3"
-  resolved "https://bin.ti8m.ch:443/artifactory/api/npm/channelsuite-npm/define-properties/-/define-properties-1.1.3.tgz#cf88da6cbee26fe6db7094f61d870cbd84cee9f1"
+  resolved "https://bin.ti8m.ch:443/artifactory/api/npm/channelsuite-npm/define-properties/-/define-properties-1.1.3.tgz"
   integrity sha1-z4jabL7ib+bbcJT2HYcMvYTO6fE=
   dependencies:
     object-keys "^1.0.12"
 
+defined@^1.0.0:
+  version "1.0.0"
+  resolved "https://bin.ti8m.ch:443/artifactory/api/npm/channelsuite-npm/defined/-/defined-1.0.0.tgz"
+  integrity sha1-yY2bzvdWdBiOEQlpFRGZ45sfppM=
+
 depd@~1.1.2:
   version "1.1.2"
-  resolved "https://bin.ti8m.ch:443/artifactory/api/npm/channelsuite-npm/depd/-/depd-1.1.2.tgz#9bcd52e14c097763e749b274c4346ed2e560b5a9"
+  resolved "https://bin.ti8m.ch:443/artifactory/api/npm/channelsuite-npm/depd/-/depd-1.1.2.tgz"
   integrity sha1-m81S4UwJd2PnSbJ0xDRu0uVgtak=
 
 des.js@^1.0.0:
   version "1.0.1"
-  resolved "https://bin.ti8m.ch:443/artifactory/api/npm/channelsuite-npm/des.js/-/des.js-1.0.1.tgz#5382142e1bdc53f85d86d53e5f4aa7deb91e0843"
+  resolved "https://bin.ti8m.ch:443/artifactory/api/npm/channelsuite-npm/des.js/-/des.js-1.0.1.tgz"
   integrity sha1-U4IULhvcU/hdhtU+X0qn3rkeCEM=
   dependencies:
     inherits "^2.0.1"
     minimalistic-assert "^1.0.0"
 
+detective@^5.2.0:
+  version "5.2.0"
+  resolved "https://bin.ti8m.ch:443/artifactory/api/npm/channelsuite-npm/detective/-/detective-5.2.0.tgz"
+  integrity sha1-/rKnfoW5BOzepFmtiXzJCpm9Kns=
+  dependencies:
+    acorn-node "^1.6.1"
+    defined "^1.0.0"
+    minimist "^1.1.1"
+
+didyoumean@^1.2.2:
+  version "1.2.2"
+  resolved "https://bin.ti8m.ch:443/artifactory/api/npm/channelsuite-npm/didyoumean/-/didyoumean-1.2.2.tgz"
+  integrity sha1-mJNG/+noObRVXs9WZu3qDT6K0Dc=
+
 diffie-hellman@^5.0.0:
   version "5.0.3"
-  resolved "https://bin.ti8m.ch:443/artifactory/api/npm/channelsuite-npm/diffie-hellman/-/diffie-hellman-5.0.3.tgz#40e8ee98f55a2149607146921c63e1ae5f3d2875"
+  resolved "https://bin.ti8m.ch:443/artifactory/api/npm/channelsuite-npm/diffie-hellman/-/diffie-hellman-5.0.3.tgz"
   integrity sha1-QOjumPVaIUlgcUaSHGPhrl89KHU=
   dependencies:
     bn.js "^4.1.0"
@@ -881,38 +1153,48 @@ diffie-hellman@^5.0.0:
 
 dir-glob@^3.0.1:
   version "3.0.1"
-  resolved "https://bin.ti8m.ch:443/artifactory/api/npm/channelsuite-npm/dir-glob/-/dir-glob-3.0.1.tgz#56dbf73d992a4a93ba1584f4534063fd2e41717f"
+  resolved "https://bin.ti8m.ch:443/artifactory/api/npm/channelsuite-npm/dir-glob/-/dir-glob-3.0.1.tgz"
   integrity sha1-Vtv3PZkqSpO6FYT0U0Bj/S5BcX8=
   dependencies:
     path-type "^4.0.0"
 
+dlv@^1.1.3:
+  version "1.1.3"
+  resolved "https://bin.ti8m.ch:443/artifactory/api/npm/channelsuite-npm/dlv/-/dlv-1.1.3.tgz"
+  integrity sha1-XBmKihFFNZbnUUlNSYdLx3MvLnk=
+
 doctrine@^2.1.0:
   version "2.1.0"
-  resolved "https://bin.ti8m.ch:443/artifactory/api/npm/channelsuite-npm/doctrine/-/doctrine-2.1.0.tgz#5cd01fc101621b42c4cd7f5d1a66243716d3f39d"
+  resolved "https://bin.ti8m.ch:443/artifactory/api/npm/channelsuite-npm/doctrine/-/doctrine-2.1.0.tgz"
   integrity sha1-XNAfwQFiG0LEzX9dGmYkNxbT850=
   dependencies:
     esutils "^2.0.2"
 
 doctrine@^3.0.0:
   version "3.0.0"
-  resolved "https://bin.ti8m.ch:443/artifactory/api/npm/channelsuite-npm/doctrine/-/doctrine-3.0.0.tgz#addebead72a6574db783639dc87a121773973961"
+  resolved "https://bin.ti8m.ch:443/artifactory/api/npm/channelsuite-npm/doctrine/-/doctrine-3.0.0.tgz"
   integrity sha1-rd6+rXKmV023g2OdyHoSF3OXOWE=
   dependencies:
     esutils "^2.0.2"
 
 domain-browser@4.19.0:
   version "4.19.0"
-  resolved "https://bin.ti8m.ch:443/artifactory/api/npm/channelsuite-npm/domain-browser/-/domain-browser-4.19.0.tgz#1093e17c0a17dbd521182fe90d49ac1370054af1"
+  resolved "https://bin.ti8m.ch:443/artifactory/api/npm/channelsuite-npm/domain-browser/-/domain-browser-4.19.0.tgz"
   integrity sha1-EJPhfAoX29UhGC/pDUmsE3AFSvE=
 
 electron-to-chromium@^1.3.723:
   version "1.4.12"
-  resolved "https://bin.ti8m.ch:443/artifactory/api/npm/channelsuite-npm/electron-to-chromium/-/electron-to-chromium-1.4.12.tgz#5f73d1278c6205fc41d7a0ebd75563046b77c5d8"
+  resolved "https://bin.ti8m.ch:443/artifactory/api/npm/channelsuite-npm/electron-to-chromium/-/electron-to-chromium-1.4.12.tgz"
   integrity sha1-X3PRJ4xiBfxB16Dr11VjBGt3xdg=
+
+electron-to-chromium@^1.3.896:
+  version "1.4.16"
+  resolved "https://bin.ti8m.ch:443/artifactory/api/npm/channelsuite-npm/electron-to-chromium/-/electron-to-chromium-1.4.16.tgz"
+  integrity sha1-ON3sxhY4Xm8QE1nRuXjIAmZBV9I=
 
 elliptic@^6.5.3:
   version "6.5.4"
-  resolved "https://bin.ti8m.ch:443/artifactory/api/npm/channelsuite-npm/elliptic/-/elliptic-6.5.4.tgz#da37cebd31e79a1367e941b592ed1fbebd58abbb"
+  resolved "https://bin.ti8m.ch:443/artifactory/api/npm/channelsuite-npm/elliptic/-/elliptic-6.5.4.tgz"
   integrity sha1-2jfOvTHnmhNn6UG1ku0fvr1Yq7s=
   dependencies:
     bn.js "^4.11.9"
@@ -923,33 +1205,45 @@ elliptic@^6.5.3:
     minimalistic-assert "^1.0.1"
     minimalistic-crypto-utils "^1.0.1"
 
+emoji-regex@^8.0.0:
+  version "8.0.0"
+  resolved "https://bin.ti8m.ch:443/artifactory/api/npm/channelsuite-npm/emoji-regex/-/emoji-regex-8.0.0.tgz"
+  integrity sha1-6Bj9ac5cz8tARZT4QpY79TFkzDc=
+
 emoji-regex@^9.2.2:
   version "9.2.2"
-  resolved "https://bin.ti8m.ch:443/artifactory/api/npm/channelsuite-npm/emoji-regex/-/emoji-regex-9.2.2.tgz#840c8803b0d8047f4ff0cf963176b32d4ef3ed72"
+  resolved "https://bin.ti8m.ch:443/artifactory/api/npm/channelsuite-npm/emoji-regex/-/emoji-regex-9.2.2.tgz"
   integrity sha1-hAyIA7DYBH9P8M+WMXazLU7z7XI=
 
 emojis-list@^2.0.0:
   version "2.1.0"
-  resolved "https://bin.ti8m.ch:443/artifactory/api/npm/channelsuite-npm/emojis-list/-/emojis-list-2.1.0.tgz#4daa4d9db00f9819880c79fa457ae5b09a1fd389"
+  resolved "https://bin.ti8m.ch:443/artifactory/api/npm/channelsuite-npm/emojis-list/-/emojis-list-2.1.0.tgz"
   integrity sha1-TapNnbAPmBmIDHn6RXrlsJof04k=
 
 encoding@0.1.13:
   version "0.1.13"
-  resolved "https://bin.ti8m.ch:443/artifactory/api/npm/channelsuite-npm/encoding/-/encoding-0.1.13.tgz#56574afdd791f54a8e9b2785c0582a2d26210fa9"
+  resolved "https://bin.ti8m.ch:443/artifactory/api/npm/channelsuite-npm/encoding/-/encoding-0.1.13.tgz"
   integrity sha1-VldK/deR9UqOmyeFwFgqLSYhD6k=
   dependencies:
     iconv-lite "^0.6.2"
 
 enquirer@^2.3.5:
   version "2.3.6"
-  resolved "https://bin.ti8m.ch:443/artifactory/api/npm/channelsuite-npm/enquirer/-/enquirer-2.3.6.tgz#2a7fe5dd634a1e4125a975ec994ff5456dc3734d"
+  resolved "https://bin.ti8m.ch:443/artifactory/api/npm/channelsuite-npm/enquirer/-/enquirer-2.3.6.tgz"
   integrity sha1-Kn/l3WNKHkElqXXsmU/1RW3Dc00=
   dependencies:
     ansi-colors "^4.1.1"
 
+error-ex@^1.3.1:
+  version "1.3.2"
+  resolved "https://bin.ti8m.ch:443/artifactory/api/npm/channelsuite-npm/error-ex/-/error-ex-1.3.2.tgz"
+  integrity sha1-tKxAZIEH/c3PriQvQovqihTU8b8=
+  dependencies:
+    is-arrayish "^0.2.1"
+
 es-abstract@^1.18.5, es-abstract@^1.19.0, es-abstract@^1.19.1:
   version "1.19.1"
-  resolved "https://bin.ti8m.ch:443/artifactory/api/npm/channelsuite-npm/es-abstract/-/es-abstract-1.19.1.tgz#d4885796876916959de78edaa0df456627115ec3"
+  resolved "https://bin.ti8m.ch:443/artifactory/api/npm/channelsuite-npm/es-abstract/-/es-abstract-1.19.1.tgz"
   integrity sha1-1IhXlodpFpWd547aoN9FZicRXsM=
   dependencies:
     call-bind "^1.0.2"
@@ -975,119 +1269,70 @@ es-abstract@^1.18.5, es-abstract@^1.19.0, es-abstract@^1.19.1:
 
 es-to-primitive@^1.2.1:
   version "1.2.1"
-  resolved "https://bin.ti8m.ch:443/artifactory/api/npm/channelsuite-npm/es-to-primitive/-/es-to-primitive-1.2.1.tgz#e55cd4c9cdc188bcefb03b366c736323fc5c898a"
+  resolved "https://bin.ti8m.ch:443/artifactory/api/npm/channelsuite-npm/es-to-primitive/-/es-to-primitive-1.2.1.tgz"
   integrity sha1-5VzUyc3BiLzvsDs2bHNjI/xciYo=
   dependencies:
     is-callable "^1.1.4"
     is-date-object "^1.0.1"
     is-symbol "^1.0.2"
 
+es5-ext@^0.10.35, es5-ext@^0.10.50:
+  version "0.10.53"
+  resolved "https://bin.ti8m.ch:443/artifactory/api/npm/channelsuite-npm/es5-ext/-/es5-ext-0.10.53.tgz"
+  integrity sha1-k8WjrP2+8nUiCtcmRK0C7hg2jeE=
+  dependencies:
+    es6-iterator "~2.0.3"
+    es6-symbol "~3.1.3"
+    next-tick "~1.0.0"
+
+es6-iterator@~2.0.3:
+  version "2.0.3"
+  resolved "https://bin.ti8m.ch:443/artifactory/api/npm/channelsuite-npm/es6-iterator/-/es6-iterator-2.0.3.tgz"
+  integrity sha1-p96IkUGgWpSwhUQDstCg+/qY87c=
+  dependencies:
+    d "1"
+    es5-ext "^0.10.35"
+    es6-symbol "^3.1.1"
+
 es6-object-assign@^1.1.0:
   version "1.1.0"
-  resolved "https://bin.ti8m.ch:443/artifactory/api/npm/channelsuite-npm/es6-object-assign/-/es6-object-assign-1.1.0.tgz#c2c3582656247c39ea107cb1e6652b6f9f24523c"
+  resolved "https://bin.ti8m.ch:443/artifactory/api/npm/channelsuite-npm/es6-object-assign/-/es6-object-assign-1.1.0.tgz"
   integrity sha1-wsNYJlYkfDnqEHyx5mUrb58kUjw=
+
+es6-symbol@^3.1.1, es6-symbol@~3.1.3:
+  version "3.1.3"
+  resolved "https://bin.ti8m.ch:443/artifactory/api/npm/channelsuite-npm/es6-symbol/-/es6-symbol-3.1.3.tgz"
+  integrity sha1-utXTwbzawoJp9MszHkMceKxwXRg=
+  dependencies:
+    d "^1.0.1"
+    ext "^1.1.2"
 
 escalade@^3.1.1:
   version "3.1.1"
-  resolved "https://bin.ti8m.ch:443/artifactory/api/npm/channelsuite-npm/escalade/-/escalade-3.1.1.tgz#d8cfdc7000965c5a0174b4a82eaa5c0552742e40"
+  resolved "https://bin.ti8m.ch:443/artifactory/api/npm/channelsuite-npm/escalade/-/escalade-3.1.1.tgz"
   integrity sha1-2M/ccACWXFoBdLSoLqpcBVJ0LkA=
 
 escape-string-regexp@^1.0.5:
   version "1.0.5"
-  resolved "https://bin.ti8m.ch:443/artifactory/api/npm/channelsuite-npm/escape-string-regexp/-/escape-string-regexp-1.0.5.tgz#1b61c0562190a8dff6ae3bb2cf0200ca130b86d4"
+  resolved "https://bin.ti8m.ch:443/artifactory/api/npm/channelsuite-npm/escape-string-regexp/-/escape-string-regexp-1.0.5.tgz"
   integrity sha1-G2HAViGQqN/2rjuyzwIAyhMLhtQ=
 
 escape-string-regexp@^4.0.0:
   version "4.0.0"
-  resolved "https://bin.ti8m.ch:443/artifactory/api/npm/channelsuite-npm/escape-string-regexp/-/escape-string-regexp-4.0.0.tgz#14ba83a5d373e3d311e5afca29cf5bfad965bf34"
+  resolved "https://bin.ti8m.ch:443/artifactory/api/npm/channelsuite-npm/escape-string-regexp/-/escape-string-regexp-4.0.0.tgz"
   integrity sha1-FLqDpdNz49MR5a/KKc9b+tllvzQ=
 
-eslint-config-next@12.0.7:
-  version "12.0.7"
-  resolved "https://bin.ti8m.ch:443/artifactory/api/npm/channelsuite-npm/eslint-config-next/-/eslint-config-next-12.0.7.tgz#985f06c3d749673f6b4b214db6b9321da1bf0b5f"
-  integrity sha1-mF8Gw9dJZz9rSyFNtrkyHaG/C18=
-  dependencies:
-    "@next/eslint-plugin-next" "12.0.7"
-    "@rushstack/eslint-patch" "^1.0.8"
-    "@typescript-eslint/parser" "^5.0.0"
-    eslint-import-resolver-node "^0.3.4"
-    eslint-import-resolver-typescript "^2.4.0"
-    eslint-plugin-import "^2.25.2"
-    eslint-plugin-jsx-a11y "^6.5.1"
-    eslint-plugin-react "^7.27.0"
-    eslint-plugin-react-hooks "^4.3.0"
+eslint-config-prettier@^8.3.0:
+  version "8.3.0"
+  resolved "https://bin.ti8m.ch:443/artifactory/api/npm/channelsuite-npm/eslint-config-prettier/-/eslint-config-prettier-8.3.0.tgz"
+  integrity sha1-90cbILb+ipqSVMxoRFQgKIai3Xo=
 
-eslint-import-resolver-node@^0.3.4, eslint-import-resolver-node@^0.3.6:
-  version "0.3.6"
-  resolved "https://bin.ti8m.ch:443/artifactory/api/npm/channelsuite-npm/eslint-import-resolver-node/-/eslint-import-resolver-node-0.3.6.tgz#4048b958395da89668252001dbd9eca6b83bacbd"
-  integrity sha1-QEi5WDldqJZoJSAB29nsprg7rL0=
-  dependencies:
-    debug "^3.2.7"
-    resolve "^1.20.0"
-
-eslint-import-resolver-typescript@^2.4.0:
-  version "2.5.0"
-  resolved "https://bin.ti8m.ch:443/artifactory/api/npm/channelsuite-npm/eslint-import-resolver-typescript/-/eslint-import-resolver-typescript-2.5.0.tgz#07661966b272d14ba97f597b51e1a588f9722f0a"
-  integrity sha1-B2YZZrJy0Uupf1l7UeGliPlyLwo=
-  dependencies:
-    debug "^4.3.1"
-    glob "^7.1.7"
-    is-glob "^4.0.1"
-    resolve "^1.20.0"
-    tsconfig-paths "^3.9.0"
-
-eslint-module-utils@^2.7.1:
-  version "2.7.1"
-  resolved "https://bin.ti8m.ch:443/artifactory/api/npm/channelsuite-npm/eslint-module-utils/-/eslint-module-utils-2.7.1.tgz#b435001c9f8dd4ab7f6d0efcae4b9696d4c24b7c"
-  integrity sha1-tDUAHJ+N1Kt/bQ78rkuWltTCS3w=
-  dependencies:
-    debug "^3.2.7"
-    find-up "^2.1.0"
-    pkg-dir "^2.0.0"
-
-eslint-plugin-import@^2.25.2:
-  version "2.25.3"
-  resolved "https://bin.ti8m.ch:443/artifactory/api/npm/channelsuite-npm/eslint-plugin-import/-/eslint-plugin-import-2.25.3.tgz#a554b5f66e08fb4f6dc99221866e57cfff824766"
-  integrity sha1-pVS19m4I+09tyZIhhm5Xz/+CR2Y=
-  dependencies:
-    array-includes "^3.1.4"
-    array.prototype.flat "^1.2.5"
-    debug "^2.6.9"
-    doctrine "^2.1.0"
-    eslint-import-resolver-node "^0.3.6"
-    eslint-module-utils "^2.7.1"
-    has "^1.0.3"
-    is-core-module "^2.8.0"
-    is-glob "^4.0.3"
-    minimatch "^3.0.4"
-    object.values "^1.1.5"
-    resolve "^1.20.0"
-    tsconfig-paths "^3.11.0"
-
-eslint-plugin-jsx-a11y@^6.5.1:
-  version "6.5.1"
-  resolved "https://bin.ti8m.ch:443/artifactory/api/npm/channelsuite-npm/eslint-plugin-jsx-a11y/-/eslint-plugin-jsx-a11y-6.5.1.tgz#cdbf2df901040ca140b6ec14715c988889c2a6d8"
-  integrity sha1-zb8t+QEEDKFAtuwUcVyYiInCptg=
-  dependencies:
-    "@babel/runtime" "^7.16.3"
-    aria-query "^4.2.2"
-    array-includes "^3.1.4"
-    ast-types-flow "^0.0.7"
-    axe-core "^4.3.5"
-    axobject-query "^2.2.0"
-    damerau-levenshtein "^1.0.7"
-    emoji-regex "^9.2.2"
-    has "^1.0.3"
-    jsx-ast-utils "^3.2.1"
-    language-tags "^1.0.5"
-    minimatch "^3.0.4"
-
-eslint-plugin-react-hooks@^4.3.0:
+eslint-plugin-react-hooks@^4.2.0:
   version "4.3.0"
-  resolved "https://bin.ti8m.ch:443/artifactory/api/npm/channelsuite-npm/eslint-plugin-react-hooks/-/eslint-plugin-react-hooks-4.3.0.tgz#318dbf312e06fab1c835a4abef00121751ac1172"
+  resolved "https://bin.ti8m.ch:443/artifactory/api/npm/channelsuite-npm/eslint-plugin-react-hooks/-/eslint-plugin-react-hooks-4.3.0.tgz"
   integrity sha1-MY2/MS4G+rHINaSr7wASF1GsEXI=
 
-eslint-plugin-react@^7.27.0:
+eslint-plugin-react@^7.26.1:
   version "7.27.1"
   resolved "https://bin.ti8m.ch:443/artifactory/api/npm/channelsuite-npm/eslint-plugin-react/-/eslint-plugin-react-7.27.1.tgz#469202442506616f77a854d91babaae1ec174b45"
   integrity sha1-RpICRCUGYW93qFTZG6uq4ewXS0U=
@@ -1107,9 +1352,17 @@ eslint-plugin-react@^7.27.0:
     semver "^6.3.0"
     string.prototype.matchall "^4.0.6"
 
+eslint-scope@^5.1.1:
+  version "5.1.1"
+  resolved "https://bin.ti8m.ch:443/artifactory/api/npm/channelsuite-npm/eslint-scope/-/eslint-scope-5.1.1.tgz#e786e59a66cb92b3f6c1fb0d508aab174848f48c"
+  integrity sha1-54blmmbLkrP2wfsNUIqrF0hI9Iw=
+  dependencies:
+    esrecurse "^4.3.0"
+    estraverse "^4.1.1"
+
 eslint-scope@^7.1.0:
   version "7.1.0"
-  resolved "https://bin.ti8m.ch:443/artifactory/api/npm/channelsuite-npm/eslint-scope/-/eslint-scope-7.1.0.tgz#c1f6ea30ac583031f203d65c73e723b01298f153"
+  resolved "https://bin.ti8m.ch:443/artifactory/api/npm/channelsuite-npm/eslint-scope/-/eslint-scope-7.1.0.tgz"
   integrity sha1-wfbqMKxYMDHyA9Zcc+cjsBKY8VM=
   dependencies:
     esrecurse "^4.3.0"
@@ -1117,14 +1370,14 @@ eslint-scope@^7.1.0:
 
 eslint-utils@^3.0.0:
   version "3.0.0"
-  resolved "https://bin.ti8m.ch:443/artifactory/api/npm/channelsuite-npm/eslint-utils/-/eslint-utils-3.0.0.tgz#8aebaface7345bb33559db0a1f13a1d2d48c3672"
+  resolved "https://bin.ti8m.ch:443/artifactory/api/npm/channelsuite-npm/eslint-utils/-/eslint-utils-3.0.0.tgz"
   integrity sha1-iuuvrOc0W7M1WdsKHxOh0tSMNnI=
   dependencies:
     eslint-visitor-keys "^2.0.0"
 
 eslint-visitor-keys@^2.0.0:
   version "2.1.0"
-  resolved "https://bin.ti8m.ch:443/artifactory/api/npm/channelsuite-npm/eslint-visitor-keys/-/eslint-visitor-keys-2.1.0.tgz#f65328259305927392c938ed44eb0a5c9b2bd303"
+  resolved "https://bin.ti8m.ch:443/artifactory/api/npm/channelsuite-npm/eslint-visitor-keys/-/eslint-visitor-keys-2.1.0.tgz"
   integrity sha1-9lMoJZMFknOSyTjtROsKXJsr0wM=
 
 eslint-visitor-keys@^3.0.0, eslint-visitor-keys@^3.1.0:
@@ -1134,7 +1387,7 @@ eslint-visitor-keys@^3.0.0, eslint-visitor-keys@^3.1.0:
 
 eslint@8.4.0:
   version "8.4.0"
-  resolved "https://bin.ti8m.ch:443/artifactory/api/npm/channelsuite-npm/eslint/-/eslint-8.4.0.tgz#2fa01b271cafc28addc2719e551acff5e89f5230"
+  resolved "https://bin.ti8m.ch:443/artifactory/api/npm/channelsuite-npm/eslint/-/eslint-8.4.0.tgz"
   integrity sha1-L6AbJxyvwordwnGeVRrP9eifUjA=
   dependencies:
     "@eslint/eslintrc" "^1.0.5"
@@ -1178,7 +1431,7 @@ eslint@8.4.0:
 
 espree@^9.2.0:
   version "9.2.0"
-  resolved "https://bin.ti8m.ch:443/artifactory/api/npm/channelsuite-npm/espree/-/espree-9.2.0.tgz#c50814e01611c2d0f8bd4daa83c369eabba80dbc"
+  resolved "https://bin.ti8m.ch:443/artifactory/api/npm/channelsuite-npm/espree/-/espree-9.2.0.tgz"
   integrity sha1-xQgU4BYRwtD4vU2qg8Np6ruoDbw=
   dependencies:
     acorn "^8.6.0"
@@ -1187,54 +1440,81 @@ espree@^9.2.0:
 
 esquery@^1.4.0:
   version "1.4.0"
-  resolved "https://bin.ti8m.ch:443/artifactory/api/npm/channelsuite-npm/esquery/-/esquery-1.4.0.tgz#2148ffc38b82e8c7057dfed48425b3e61f0f24a5"
+  resolved "https://bin.ti8m.ch:443/artifactory/api/npm/channelsuite-npm/esquery/-/esquery-1.4.0.tgz"
   integrity sha1-IUj/w4uC6McFff7UhCWz5h8PJKU=
   dependencies:
     estraverse "^5.1.0"
 
 esrecurse@^4.3.0:
   version "4.3.0"
-  resolved "https://bin.ti8m.ch:443/artifactory/api/npm/channelsuite-npm/esrecurse/-/esrecurse-4.3.0.tgz#7ad7964d679abb28bee72cec63758b1c5d2c9921"
+  resolved "https://bin.ti8m.ch:443/artifactory/api/npm/channelsuite-npm/esrecurse/-/esrecurse-4.3.0.tgz"
   integrity sha1-eteWTWeauyi+5yzsY3WLHF0smSE=
   dependencies:
     estraverse "^5.2.0"
 
+estraverse@^4.1.1:
+  version "4.3.0"
+  resolved "https://bin.ti8m.ch:443/artifactory/api/npm/channelsuite-npm/estraverse/-/estraverse-4.3.0.tgz#398ad3f3c5a24948be7725e83d11a7de28cdbd1d"
+  integrity sha1-OYrT88WiSUi+dyXoPRGn3ijNvR0=
+
 estraverse@^5.1.0, estraverse@^5.2.0, estraverse@^5.3.0:
   version "5.3.0"
-  resolved "https://bin.ti8m.ch:443/artifactory/api/npm/channelsuite-npm/estraverse/-/estraverse-5.3.0.tgz#2eea5290702f26ab8fe5370370ff86c965d21123"
+  resolved "https://bin.ti8m.ch:443/artifactory/api/npm/channelsuite-npm/estraverse/-/estraverse-5.3.0.tgz"
   integrity sha1-LupSkHAvJquP5TcDcP+GyWXSESM=
 
 esutils@^2.0.2:
   version "2.0.3"
-  resolved "https://bin.ti8m.ch:443/artifactory/api/npm/channelsuite-npm/esutils/-/esutils-2.0.3.tgz#74d2eb4de0b8da1293711910d50775b9b710ef64"
+  resolved "https://bin.ti8m.ch:443/artifactory/api/npm/channelsuite-npm/esutils/-/esutils-2.0.3.tgz"
   integrity sha1-dNLrTeC42hKTcRkQ1Qd1ubcQ72Q=
 
 etag@1.8.1:
   version "1.8.1"
-  resolved "https://bin.ti8m.ch:443/artifactory/api/npm/channelsuite-npm/etag/-/etag-1.8.1.tgz#41ae2eeb65efa62268aebfea83ac7d79299b0887"
+  resolved "https://bin.ti8m.ch:443/artifactory/api/npm/channelsuite-npm/etag/-/etag-1.8.1.tgz"
   integrity sha1-Qa4u62XvpiJorr/qg6x9eSmbCIc=
 
 events@3.3.0:
   version "3.3.0"
-  resolved "https://bin.ti8m.ch:443/artifactory/api/npm/channelsuite-npm/events/-/events-3.3.0.tgz#31a95ad0a924e2d2c419a813aeb2c4e878ea7400"
+  resolved "https://bin.ti8m.ch:443/artifactory/api/npm/channelsuite-npm/events/-/events-3.3.0.tgz"
   integrity sha1-Mala0Kkk4tLEGagTrrLE6HjqdAA=
 
 evp_bytestokey@^1.0.0, evp_bytestokey@^1.0.3:
   version "1.0.3"
-  resolved "https://bin.ti8m.ch:443/artifactory/api/npm/channelsuite-npm/evp_bytestokey/-/evp_bytestokey-1.0.3.tgz#7fcbdb198dc71959432efe13842684e0525acb02"
+  resolved "https://bin.ti8m.ch:443/artifactory/api/npm/channelsuite-npm/evp_bytestokey/-/evp_bytestokey-1.0.3.tgz"
   integrity sha1-f8vbGY3HGVlDLv4ThCaE4FJaywI=
   dependencies:
     md5.js "^1.3.4"
     safe-buffer "^5.1.1"
 
+execa@^5.1.1:
+  version "5.1.1"
+  resolved "https://bin.ti8m.ch:443/artifactory/api/npm/channelsuite-npm/execa/-/execa-5.1.1.tgz"
+  integrity sha1-+ArZy/Qpj3vR1MlVXCHpN0HEEd0=
+  dependencies:
+    cross-spawn "^7.0.3"
+    get-stream "^6.0.0"
+    human-signals "^2.1.0"
+    is-stream "^2.0.0"
+    merge-stream "^2.0.0"
+    npm-run-path "^4.0.1"
+    onetime "^5.1.2"
+    signal-exit "^3.0.3"
+    strip-final-newline "^2.0.0"
+
+ext@^1.1.2:
+  version "1.6.0"
+  resolved "https://bin.ti8m.ch:443/artifactory/api/npm/channelsuite-npm/ext/-/ext-1.6.0.tgz"
+  integrity sha1-OHHVBkHodMwXLitT+RmELRnbTFI=
+  dependencies:
+    type "^2.5.0"
+
 fast-deep-equal@^3.1.1, fast-deep-equal@^3.1.3:
   version "3.1.3"
-  resolved "https://bin.ti8m.ch:443/artifactory/api/npm/channelsuite-npm/fast-deep-equal/-/fast-deep-equal-3.1.3.tgz#3a7d56b559d6cbc3eb512325244e619a65c6c525"
+  resolved "https://bin.ti8m.ch:443/artifactory/api/npm/channelsuite-npm/fast-deep-equal/-/fast-deep-equal-3.1.3.tgz"
   integrity sha1-On1WtVnWy8PrUSMlJE5hmmXGxSU=
 
-fast-glob@^3.1.1:
+fast-glob@^3.1.1, fast-glob@^3.2.7:
   version "3.2.7"
-  resolved "https://bin.ti8m.ch:443/artifactory/api/npm/channelsuite-npm/fast-glob/-/fast-glob-3.2.7.tgz#fd6cb7a2d7e9aa7a7846111e85a196d6b2f766a1"
+  resolved "https://bin.ti8m.ch:443/artifactory/api/npm/channelsuite-npm/fast-glob/-/fast-glob-3.2.7.tgz"
   integrity sha1-/Wy3otfpqnp4RhEehaGW1rL3ZqE=
   dependencies:
     "@nodelib/fs.stat" "^2.0.2"
@@ -1245,54 +1525,47 @@ fast-glob@^3.1.1:
 
 fast-json-stable-stringify@^2.0.0:
   version "2.1.0"
-  resolved "https://bin.ti8m.ch:443/artifactory/api/npm/channelsuite-npm/fast-json-stable-stringify/-/fast-json-stable-stringify-2.1.0.tgz#874bf69c6f404c2b5d99c481341399fd55892633"
+  resolved "https://bin.ti8m.ch:443/artifactory/api/npm/channelsuite-npm/fast-json-stable-stringify/-/fast-json-stable-stringify-2.1.0.tgz"
   integrity sha1-h0v2nG9ATCtdmcSBNBOZ/VWJJjM=
 
 fast-levenshtein@^2.0.6:
   version "2.0.6"
-  resolved "https://bin.ti8m.ch:443/artifactory/api/npm/channelsuite-npm/fast-levenshtein/-/fast-levenshtein-2.0.6.tgz#3d8a5c66883a16a30ca8643e851f19baa7797917"
+  resolved "https://bin.ti8m.ch:443/artifactory/api/npm/channelsuite-npm/fast-levenshtein/-/fast-levenshtein-2.0.6.tgz"
   integrity sha1-PYpcZog6FqMMqGQ+hR8Zuqd5eRc=
 
 fastq@^1.6.0:
   version "1.13.0"
-  resolved "https://bin.ti8m.ch:443/artifactory/api/npm/channelsuite-npm/fastq/-/fastq-1.13.0.tgz#616760f88a7526bdfc596b7cab8c18938c36b98c"
+  resolved "https://bin.ti8m.ch:443/artifactory/api/npm/channelsuite-npm/fastq/-/fastq-1.13.0.tgz"
   integrity sha1-YWdg+Ip1Jr38WWt8q4wYk4w2uYw=
   dependencies:
     reusify "^1.0.4"
 
 file-entry-cache@^6.0.1:
   version "6.0.1"
-  resolved "https://bin.ti8m.ch:443/artifactory/api/npm/channelsuite-npm/file-entry-cache/-/file-entry-cache-6.0.1.tgz#211b2dd9659cb0394b073e7323ac3c933d522027"
+  resolved "https://bin.ti8m.ch:443/artifactory/api/npm/channelsuite-npm/file-entry-cache/-/file-entry-cache-6.0.1.tgz"
   integrity sha1-IRst2WWcsDlLBz5zI6w8kz1SICc=
   dependencies:
     flat-cache "^3.0.4"
 
 fill-range@^7.0.1:
   version "7.0.1"
-  resolved "https://bin.ti8m.ch:443/artifactory/api/npm/channelsuite-npm/fill-range/-/fill-range-7.0.1.tgz#1919a6a7c75fe38b2c7c77e5198535da9acdda40"
+  resolved "https://bin.ti8m.ch:443/artifactory/api/npm/channelsuite-npm/fill-range/-/fill-range-7.0.1.tgz"
   integrity sha1-GRmmp8df44ssfHflGYU12prN2kA=
   dependencies:
     to-regex-range "^5.0.1"
 
 find-cache-dir@3.3.1:
   version "3.3.1"
-  resolved "https://bin.ti8m.ch:443/artifactory/api/npm/channelsuite-npm/find-cache-dir/-/find-cache-dir-3.3.1.tgz#89b33fad4a4670daa94f855f7fbe31d6d84fe880"
+  resolved "https://bin.ti8m.ch:443/artifactory/api/npm/channelsuite-npm/find-cache-dir/-/find-cache-dir-3.3.1.tgz"
   integrity sha1-ibM/rUpGcNqpT4Vff74x1thP6IA=
   dependencies:
     commondir "^1.0.1"
     make-dir "^3.0.2"
     pkg-dir "^4.1.0"
 
-find-up@^2.1.0:
-  version "2.1.0"
-  resolved "https://bin.ti8m.ch:443/artifactory/api/npm/channelsuite-npm/find-up/-/find-up-2.1.0.tgz#45d1b7e506c717ddd482775a2b77920a3c0c57a7"
-  integrity sha1-RdG35QbHF93UgndaK3eSCjwMV6c=
-  dependencies:
-    locate-path "^2.0.0"
-
 find-up@^4.0.0:
   version "4.1.0"
-  resolved "https://bin.ti8m.ch:443/artifactory/api/npm/channelsuite-npm/find-up/-/find-up-4.1.0.tgz#97afe7d6cdc0bc5928584b7c8d7b16e8a9aa5d19"
+  resolved "https://bin.ti8m.ch:443/artifactory/api/npm/channelsuite-npm/find-up/-/find-up-4.1.0.tgz"
   integrity sha1-l6/n1s3AvFkoWEt8jXsW6KmqXRk=
   dependencies:
     locate-path "^5.0.0"
@@ -1300,7 +1573,7 @@ find-up@^4.0.0:
 
 flat-cache@^3.0.4:
   version "3.0.4"
-  resolved "https://bin.ti8m.ch:443/artifactory/api/npm/channelsuite-npm/flat-cache/-/flat-cache-3.0.4.tgz#61b0338302b2fe9f957dcc32fc2a87f1c3048b11"
+  resolved "https://bin.ti8m.ch:443/artifactory/api/npm/channelsuite-npm/flat-cache/-/flat-cache-3.0.4.tgz"
   integrity sha1-YbAzgwKy/p+Vfcwy/CqH8cMEixE=
   dependencies:
     flatted "^3.1.0"
@@ -1308,37 +1581,42 @@ flat-cache@^3.0.4:
 
 flatted@^3.1.0:
   version "3.2.4"
-  resolved "https://bin.ti8m.ch:443/artifactory/api/npm/channelsuite-npm/flatted/-/flatted-3.2.4.tgz#28d9969ea90661b5134259f312ab6aa7929ac5e2"
+  resolved "https://bin.ti8m.ch:443/artifactory/api/npm/channelsuite-npm/flatted/-/flatted-3.2.4.tgz"
   integrity sha1-KNmWnqkGYbUTQlnzEqtqp5KaxeI=
 
 foreach@^2.0.5:
   version "2.0.5"
-  resolved "https://bin.ti8m.ch:443/artifactory/api/npm/channelsuite-npm/foreach/-/foreach-2.0.5.tgz#0bee005018aeb260d0a3af3ae658dd0136ec1b99"
+  resolved "https://bin.ti8m.ch:443/artifactory/api/npm/channelsuite-npm/foreach/-/foreach-2.0.5.tgz"
   integrity sha1-C+4AUBiusmDQo6865ljdATbsG5k=
+
+fraction.js@^4.1.1:
+  version "4.1.2"
+  resolved "https://bin.ti8m.ch:443/artifactory/api/npm/channelsuite-npm/fraction.js/-/fraction.js-4.1.2.tgz"
+  integrity sha1-E+QgqSQits8kTf+GkO2JQBAp++g=
 
 fs.realpath@^1.0.0:
   version "1.0.0"
-  resolved "https://bin.ti8m.ch:443/artifactory/api/npm/channelsuite-npm/fs.realpath/-/fs.realpath-1.0.0.tgz#1504ad2523158caa40db4a2787cb01411994ea4f"
+  resolved "https://bin.ti8m.ch:443/artifactory/api/npm/channelsuite-npm/fs.realpath/-/fs.realpath-1.0.0.tgz"
   integrity sha1-FQStJSMVjKpA20onh8sBQRmU6k8=
 
-fsevents@~2.3.1:
+fsevents@^2.3.2, fsevents@~2.3.1, fsevents@~2.3.2:
   version "2.3.2"
-  resolved "https://bin.ti8m.ch:443/artifactory/api/npm/channelsuite-npm/fsevents/-/fsevents-2.3.2.tgz#8a526f78b8fdf4623b709e0b975c52c24c02fd1a"
+  resolved "https://bin.ti8m.ch:443/artifactory/api/npm/channelsuite-npm/fsevents/-/fsevents-2.3.2.tgz"
   integrity sha1-ilJveLj99GI7cJ4Ll1xSwkwC/Ro=
 
 function-bind@^1.1.1:
   version "1.1.1"
-  resolved "https://bin.ti8m.ch:443/artifactory/api/npm/channelsuite-npm/function-bind/-/function-bind-1.1.1.tgz#a56899d3ea3c9bab874bb9773b7c5ede92f4895d"
+  resolved "https://bin.ti8m.ch:443/artifactory/api/npm/channelsuite-npm/function-bind/-/function-bind-1.1.1.tgz"
   integrity sha1-pWiZ0+o8m6uHS7l3O3xe3pL0iV0=
 
 functional-red-black-tree@^1.0.1:
   version "1.0.1"
-  resolved "https://bin.ti8m.ch:443/artifactory/api/npm/channelsuite-npm/functional-red-black-tree/-/functional-red-black-tree-1.0.1.tgz#1b0ab3bd553b2a0d6399d29c0e3ea0b252078327"
+  resolved "https://bin.ti8m.ch:443/artifactory/api/npm/channelsuite-npm/functional-red-black-tree/-/functional-red-black-tree-1.0.1.tgz"
   integrity sha1-GwqzvVU7Kg1jmdKcDj6gslIHgyc=
 
 get-intrinsic@^1.0.2, get-intrinsic@^1.1.0, get-intrinsic@^1.1.1:
   version "1.1.1"
-  resolved "https://bin.ti8m.ch:443/artifactory/api/npm/channelsuite-npm/get-intrinsic/-/get-intrinsic-1.1.1.tgz#15f59f376f855c446963948f0d24cd3637b4abc6"
+  resolved "https://bin.ti8m.ch:443/artifactory/api/npm/channelsuite-npm/get-intrinsic/-/get-intrinsic-1.1.1.tgz"
   integrity sha1-FfWfN2+FXERpY5SPDSTNNje0q8Y=
   dependencies:
     function-bind "^1.1.1"
@@ -1347,41 +1625,46 @@ get-intrinsic@^1.0.2, get-intrinsic@^1.1.0, get-intrinsic@^1.1.1:
 
 get-orientation@1.1.2:
   version "1.1.2"
-  resolved "https://bin.ti8m.ch:443/artifactory/api/npm/channelsuite-npm/get-orientation/-/get-orientation-1.1.2.tgz#20507928951814f8a91ded0a0e67b29dfab98947"
+  resolved "https://bin.ti8m.ch:443/artifactory/api/npm/channelsuite-npm/get-orientation/-/get-orientation-1.1.2.tgz"
   integrity sha1-IFB5KJUYFPipHe0KDmeynfq5iUc=
   dependencies:
     stream-parser "^0.3.1"
 
+get-stream@^6.0.0:
+  version "6.0.1"
+  resolved "https://bin.ti8m.ch:443/artifactory/api/npm/channelsuite-npm/get-stream/-/get-stream-6.0.1.tgz"
+  integrity sha1-omLY7vZ6ztV8KFKtYWdSakPL97c=
+
 get-symbol-description@^1.0.0:
   version "1.0.0"
-  resolved "https://bin.ti8m.ch:443/artifactory/api/npm/channelsuite-npm/get-symbol-description/-/get-symbol-description-1.0.0.tgz#7fdb81c900101fbd564dd5f1a30af5aadc1e58d6"
+  resolved "https://bin.ti8m.ch:443/artifactory/api/npm/channelsuite-npm/get-symbol-description/-/get-symbol-description-1.0.0.tgz"
   integrity sha1-f9uByQAQH71WTdXxowr1qtweWNY=
   dependencies:
     call-bind "^1.0.2"
     get-intrinsic "^1.1.1"
 
-glob-parent@^5.1.2, glob-parent@~5.1.0:
+glob-parent@^5.1.2, glob-parent@~5.1.0, glob-parent@~5.1.2:
   version "5.1.2"
-  resolved "https://bin.ti8m.ch:443/artifactory/api/npm/channelsuite-npm/glob-parent/-/glob-parent-5.1.2.tgz#869832c58034fe68a4093c17dc15e8340d8401c4"
+  resolved "https://bin.ti8m.ch:443/artifactory/api/npm/channelsuite-npm/glob-parent/-/glob-parent-5.1.2.tgz"
   integrity sha1-hpgyxYA0/mikCTwX3BXoNA2EAcQ=
   dependencies:
     is-glob "^4.0.1"
 
-glob-parent@^6.0.1:
+glob-parent@^6.0.1, glob-parent@^6.0.2:
   version "6.0.2"
-  resolved "https://bin.ti8m.ch:443/artifactory/api/npm/channelsuite-npm/glob-parent/-/glob-parent-6.0.2.tgz#6d237d99083950c79290f24c7642a3de9a28f9e3"
+  resolved "https://bin.ti8m.ch:443/artifactory/api/npm/channelsuite-npm/glob-parent/-/glob-parent-6.0.2.tgz"
   integrity sha1-bSN9mQg5UMeSkPJMdkKj3poo+eM=
   dependencies:
     is-glob "^4.0.3"
 
 glob-to-regexp@^0.4.1:
   version "0.4.1"
-  resolved "https://bin.ti8m.ch:443/artifactory/api/npm/channelsuite-npm/glob-to-regexp/-/glob-to-regexp-0.4.1.tgz#c75297087c851b9a578bd217dd59a92f59fe546e"
+  resolved "https://bin.ti8m.ch:443/artifactory/api/npm/channelsuite-npm/glob-to-regexp/-/glob-to-regexp-0.4.1.tgz"
   integrity sha1-x1KXCHyFG5pXi9IX3VmpL1n+VG4=
 
 glob@7.1.7:
   version "7.1.7"
-  resolved "https://bin.ti8m.ch:443/artifactory/api/npm/channelsuite-npm/glob/-/glob-7.1.7.tgz#3b193e9233f01d42d0b3f78294bbeeb418f94a90"
+  resolved "https://bin.ti8m.ch:443/artifactory/api/npm/channelsuite-npm/glob/-/glob-7.1.7.tgz"
   integrity sha1-Oxk+kjPwHULQs/eClLvutBj5SpA=
   dependencies:
     fs.realpath "^1.0.0"
@@ -1391,9 +1674,9 @@ glob@7.1.7:
     once "^1.3.0"
     path-is-absolute "^1.0.0"
 
-glob@^7.1.3, glob@^7.1.7:
+glob@^7.1.3:
   version "7.2.0"
-  resolved "https://bin.ti8m.ch:443/artifactory/api/npm/channelsuite-npm/glob/-/glob-7.2.0.tgz#d15535af7732e02e948f4c41628bd910293f6023"
+  resolved "https://bin.ti8m.ch:443/artifactory/api/npm/channelsuite-npm/glob/-/glob-7.2.0.tgz"
   integrity sha1-0VU1r3cy4C6Uj0xBYovZECk/YCM=
   dependencies:
     fs.realpath "^1.0.0"
@@ -1405,7 +1688,7 @@ glob@^7.1.3, glob@^7.1.7:
 
 globals@^13.6.0, globals@^13.9.0:
   version "13.12.0"
-  resolved "https://bin.ti8m.ch:443/artifactory/api/npm/channelsuite-npm/globals/-/globals-13.12.0.tgz#4d733760304230a0082ed96e21e5c565f898089e"
+  resolved "https://bin.ti8m.ch:443/artifactory/api/npm/channelsuite-npm/globals/-/globals-13.12.0.tgz"
   integrity sha1-TXM3YDBCMKAILtluIeXFZfiYCJ4=
   dependencies:
     type-fest "^0.20.2"
@@ -1424,46 +1707,46 @@ globby@^11.0.4:
 
 graceful-fs@^4.1.2:
   version "4.2.8"
-  resolved "https://bin.ti8m.ch:443/artifactory/api/npm/channelsuite-npm/graceful-fs/-/graceful-fs-4.2.8.tgz#e412b8d33f5e006593cbd3cee6df9f2cebbe802a"
+  resolved "https://bin.ti8m.ch:443/artifactory/api/npm/channelsuite-npm/graceful-fs/-/graceful-fs-4.2.8.tgz"
   integrity sha1-5BK40z9eAGWTy9PO5t+fLOu+gCo=
 
 has-bigints@^1.0.1:
   version "1.0.1"
-  resolved "https://bin.ti8m.ch:443/artifactory/api/npm/channelsuite-npm/has-bigints/-/has-bigints-1.0.1.tgz#64fe6acb020673e3b78db035a5af69aa9d07b113"
+  resolved "https://bin.ti8m.ch:443/artifactory/api/npm/channelsuite-npm/has-bigints/-/has-bigints-1.0.1.tgz"
   integrity sha1-ZP5qywIGc+O3jbA1pa9pqp0HsRM=
 
 has-flag@^3.0.0:
   version "3.0.0"
-  resolved "https://bin.ti8m.ch:443/artifactory/api/npm/channelsuite-npm/has-flag/-/has-flag-3.0.0.tgz#b5d454dc2199ae225699f3467e5a07f3b955bafd"
+  resolved "https://bin.ti8m.ch:443/artifactory/api/npm/channelsuite-npm/has-flag/-/has-flag-3.0.0.tgz"
   integrity sha1-tdRU3CGZriJWmfNGfloH87lVuv0=
 
 has-flag@^4.0.0:
   version "4.0.0"
-  resolved "https://bin.ti8m.ch:443/artifactory/api/npm/channelsuite-npm/has-flag/-/has-flag-4.0.0.tgz#944771fd9c81c81265c4d6941860da06bb59479b"
+  resolved "https://bin.ti8m.ch:443/artifactory/api/npm/channelsuite-npm/has-flag/-/has-flag-4.0.0.tgz"
   integrity sha1-lEdx/ZyByBJlxNaUGGDaBrtZR5s=
 
 has-symbols@^1.0.1, has-symbols@^1.0.2:
   version "1.0.2"
-  resolved "https://bin.ti8m.ch:443/artifactory/api/npm/channelsuite-npm/has-symbols/-/has-symbols-1.0.2.tgz#165d3070c00309752a1236a479331e3ac56f1423"
+  resolved "https://bin.ti8m.ch:443/artifactory/api/npm/channelsuite-npm/has-symbols/-/has-symbols-1.0.2.tgz"
   integrity sha1-Fl0wcMADCXUqEjakeTMeOsVvFCM=
 
 has-tostringtag@^1.0.0:
   version "1.0.0"
-  resolved "https://bin.ti8m.ch:443/artifactory/api/npm/channelsuite-npm/has-tostringtag/-/has-tostringtag-1.0.0.tgz#7e133818a7d394734f941e73c3d3f9291e658b25"
+  resolved "https://bin.ti8m.ch:443/artifactory/api/npm/channelsuite-npm/has-tostringtag/-/has-tostringtag-1.0.0.tgz"
   integrity sha1-fhM4GKfTlHNPlB5zw9P5KR5liyU=
   dependencies:
     has-symbols "^1.0.2"
 
 has@^1.0.3:
   version "1.0.3"
-  resolved "https://bin.ti8m.ch:443/artifactory/api/npm/channelsuite-npm/has/-/has-1.0.3.tgz#722d7cbfc1f6aa8241f16dd814e011e1f41e8796"
+  resolved "https://bin.ti8m.ch:443/artifactory/api/npm/channelsuite-npm/has/-/has-1.0.3.tgz"
   integrity sha1-ci18v8H2qoJB8W3YFOAR4fQeh5Y=
   dependencies:
     function-bind "^1.1.1"
 
 hash-base@^3.0.0:
   version "3.1.0"
-  resolved "https://bin.ti8m.ch:443/artifactory/api/npm/channelsuite-npm/hash-base/-/hash-base-3.1.0.tgz#55c381d9e06e1d2997a883b4a3fddfe7f0d3af33"
+  resolved "https://bin.ti8m.ch:443/artifactory/api/npm/channelsuite-npm/hash-base/-/hash-base-3.1.0.tgz"
   integrity sha1-VcOB2eBuHSmXqIO0o/3f5/DTrzM=
   dependencies:
     inherits "^2.0.4"
@@ -1472,7 +1755,7 @@ hash-base@^3.0.0:
 
 hash.js@^1.0.0, hash.js@^1.0.3:
   version "1.1.7"
-  resolved "https://bin.ti8m.ch:443/artifactory/api/npm/channelsuite-npm/hash.js/-/hash.js-1.1.7.tgz#0babca538e8d4ee4a0f8988d68866537a003cf42"
+  resolved "https://bin.ti8m.ch:443/artifactory/api/npm/channelsuite-npm/hash.js/-/hash.js-1.1.7.tgz"
   integrity sha1-C6vKU46NTuSg+JiNaIZlN6ADz0I=
   dependencies:
     inherits "^2.0.3"
@@ -1480,12 +1763,12 @@ hash.js@^1.0.0, hash.js@^1.0.3:
 
 he@1.2.0:
   version "1.2.0"
-  resolved "https://bin.ti8m.ch:443/artifactory/api/npm/channelsuite-npm/he/-/he-1.2.0.tgz#84ae65fa7eafb165fddb61566ae14baf05664f0f"
+  resolved "https://bin.ti8m.ch:443/artifactory/api/npm/channelsuite-npm/he/-/he-1.2.0.tgz"
   integrity sha1-hK5l+n6vsWX922FWauFLrwVmTw8=
 
 hmac-drbg@^1.0.1:
   version "1.0.1"
-  resolved "https://bin.ti8m.ch:443/artifactory/api/npm/channelsuite-npm/hmac-drbg/-/hmac-drbg-1.0.1.tgz#d2745701025a6c775a6c545793ed502fc0c649a1"
+  resolved "https://bin.ti8m.ch:443/artifactory/api/npm/channelsuite-npm/hmac-drbg/-/hmac-drbg-1.0.1.tgz"
   integrity sha1-0nRXAQJabHdabFRXk+1QL8DGSaE=
   dependencies:
     hash.js "^1.0.3"
@@ -1494,7 +1777,7 @@ hmac-drbg@^1.0.1:
 
 http-errors@1.7.3:
   version "1.7.3"
-  resolved "https://bin.ti8m.ch:443/artifactory/api/npm/channelsuite-npm/http-errors/-/http-errors-1.7.3.tgz#6c619e4f9c60308c38519498c14fbb10aacebb06"
+  resolved "https://bin.ti8m.ch:443/artifactory/api/npm/channelsuite-npm/http-errors/-/http-errors-1.7.3.tgz"
   integrity sha1-bGGeT5xgMIw4UZSYwU+7EKrOuwY=
   dependencies:
     depd "~1.1.2"
@@ -1505,61 +1788,90 @@ http-errors@1.7.3:
 
 https-browserify@1.0.0:
   version "1.0.0"
-  resolved "https://bin.ti8m.ch:443/artifactory/api/npm/channelsuite-npm/https-browserify/-/https-browserify-1.0.0.tgz#ec06c10e0a34c0f2faf199f7fd7fc78fffd03c73"
+  resolved "https://bin.ti8m.ch:443/artifactory/api/npm/channelsuite-npm/https-browserify/-/https-browserify-1.0.0.tgz"
   integrity sha1-7AbBDgo0wPL68Zn3/X/Hj//QPHM=
+
+human-signals@^2.1.0:
+  version "2.1.0"
+  resolved "https://bin.ti8m.ch:443/artifactory/api/npm/channelsuite-npm/human-signals/-/human-signals-2.1.0.tgz"
+  integrity sha1-3JH8ukLk0G5Kuu0zs+ejwC9RTqA=
 
 iconv-lite@0.4.24:
   version "0.4.24"
-  resolved "https://bin.ti8m.ch:443/artifactory/api/npm/channelsuite-npm/iconv-lite/-/iconv-lite-0.4.24.tgz#2022b4b25fbddc21d2f524974a474aafe733908b"
+  resolved "https://bin.ti8m.ch:443/artifactory/api/npm/channelsuite-npm/iconv-lite/-/iconv-lite-0.4.24.tgz"
   integrity sha1-ICK0sl+93CHS9SSXSkdKr+czkIs=
   dependencies:
     safer-buffer ">= 2.1.2 < 3"
 
 iconv-lite@^0.6.2:
   version "0.6.3"
-  resolved "https://bin.ti8m.ch:443/artifactory/api/npm/channelsuite-npm/iconv-lite/-/iconv-lite-0.6.3.tgz#a52f80bf38da1952eb5c681790719871a1a72501"
+  resolved "https://bin.ti8m.ch:443/artifactory/api/npm/channelsuite-npm/iconv-lite/-/iconv-lite-0.6.3.tgz"
   integrity sha1-pS+AvzjaGVLrXGgXkHGYcaGnJQE=
   dependencies:
     safer-buffer ">= 2.1.2 < 3.0.0"
 
 ieee754@^1.1.4:
   version "1.2.1"
-  resolved "https://bin.ti8m.ch:443/artifactory/api/npm/channelsuite-npm/ieee754/-/ieee754-1.2.1.tgz#8eb7a10a63fff25d15a57b001586d177d1b0d352"
+  resolved "https://bin.ti8m.ch:443/artifactory/api/npm/channelsuite-npm/ieee754/-/ieee754-1.2.1.tgz"
   integrity sha1-jrehCmP/8l0VpXsAFYbRd9Gw01I=
 
 ignore@^4.0.6:
   version "4.0.6"
-  resolved "https://bin.ti8m.ch:443/artifactory/api/npm/channelsuite-npm/ignore/-/ignore-4.0.6.tgz#750e3db5862087b4737ebac8207ffd1ef27b25fc"
+  resolved "https://bin.ti8m.ch:443/artifactory/api/npm/channelsuite-npm/ignore/-/ignore-4.0.6.tgz"
   integrity sha1-dQ49tYYgh7RzfrrIIH/9HvJ7Jfw=
 
 ignore@^5.1.4:
   version "5.1.9"
-  resolved "https://bin.ti8m.ch:443/artifactory/api/npm/channelsuite-npm/ignore/-/ignore-5.1.9.tgz#9ec1a5cbe8e1446ec60d4420060d43aa6e7382fb"
+  resolved "https://bin.ti8m.ch:443/artifactory/api/npm/channelsuite-npm/ignore/-/ignore-5.1.9.tgz"
   integrity sha1-nsGly+jhRG7GDUQgBg1Dqm5zgvs=
+
+ignore@^5.1.8:
+  version "5.2.0"
+  resolved "https://bin.ti8m.ch:443/artifactory/api/npm/channelsuite-npm/ignore/-/ignore-5.2.0.tgz#6d3bac8fa7fe0d45d9f9be7bac2fc279577e345a"
+  integrity sha1-bTusj6f+DUXZ+b57rC/CeVd+NFo=
 
 image-size@1.0.0:
   version "1.0.0"
-  resolved "https://bin.ti8m.ch:443/artifactory/api/npm/channelsuite-npm/image-size/-/image-size-1.0.0.tgz#58b31fe4743b1cec0a0ac26f5c914d3c5b2f0750"
+  resolved "https://bin.ti8m.ch:443/artifactory/api/npm/channelsuite-npm/image-size/-/image-size-1.0.0.tgz"
   integrity sha1-WLMf5HQ7HOwKCsJvXJFNPFsvB1A=
   dependencies:
     queue "6.0.2"
 
+import-cwd@^3.0.0:
+  version "3.0.0"
+  resolved "https://bin.ti8m.ch:443/artifactory/api/npm/channelsuite-npm/import-cwd/-/import-cwd-3.0.0.tgz"
+  integrity sha1-IIRVR3GAFRJuqbNna3WS+4vUz5I=
+  dependencies:
+    import-from "^3.0.0"
+
 import-fresh@^3.0.0, import-fresh@^3.2.1:
   version "3.3.0"
-  resolved "https://bin.ti8m.ch:443/artifactory/api/npm/channelsuite-npm/import-fresh/-/import-fresh-3.3.0.tgz#37162c25fcb9ebaa2e6e53d5b4d88ce17d9e0c2b"
+  resolved "https://bin.ti8m.ch:443/artifactory/api/npm/channelsuite-npm/import-fresh/-/import-fresh-3.3.0.tgz"
   integrity sha1-NxYsJfy566oublPVtNiM4X2eDCs=
   dependencies:
     parent-module "^1.0.0"
     resolve-from "^4.0.0"
 
+import-from@^3.0.0:
+  version "3.0.0"
+  resolved "https://bin.ti8m.ch:443/artifactory/api/npm/channelsuite-npm/import-from/-/import-from-3.0.0.tgz"
+  integrity sha1-BVz+w4zVon2AV8pRN219O/CJGWY=
+  dependencies:
+    resolve-from "^5.0.0"
+
 imurmurhash@^0.1.4:
   version "0.1.4"
-  resolved "https://bin.ti8m.ch:443/artifactory/api/npm/channelsuite-npm/imurmurhash/-/imurmurhash-0.1.4.tgz#9218b9b2b928a238b13dc4fb6b6d576f231453ea"
+  resolved "https://bin.ti8m.ch:443/artifactory/api/npm/channelsuite-npm/imurmurhash/-/imurmurhash-0.1.4.tgz"
   integrity sha1-khi5srkoojixPcT7a21XbyMUU+o=
+
+indent-string@^4.0.0:
+  version "4.0.0"
+  resolved "https://bin.ti8m.ch:443/artifactory/api/npm/channelsuite-npm/indent-string/-/indent-string-4.0.0.tgz"
+  integrity sha1-Yk+PRJfWGbLZdoUx1Y9BIoVNclE=
 
 inflight@^1.0.4:
   version "1.0.6"
-  resolved "https://bin.ti8m.ch:443/artifactory/api/npm/channelsuite-npm/inflight/-/inflight-1.0.6.tgz#49bd6331d7d02d0c09bc910a1075ba8165b56df9"
+  resolved "https://bin.ti8m.ch:443/artifactory/api/npm/channelsuite-npm/inflight/-/inflight-1.0.6.tgz"
   integrity sha1-Sb1jMdfQLQwJvJEKEHW6gWW1bfk=
   dependencies:
     once "^1.3.0"
@@ -1567,12 +1879,12 @@ inflight@^1.0.4:
 
 inherits@2, inherits@2.0.4, inherits@^2.0.1, inherits@^2.0.3, inherits@^2.0.4, inherits@~2.0.3, inherits@~2.0.4:
   version "2.0.4"
-  resolved "https://bin.ti8m.ch:443/artifactory/api/npm/channelsuite-npm/inherits/-/inherits-2.0.4.tgz#0fa2c64f932917c3433a0ded55363aae37416b7c"
+  resolved "https://bin.ti8m.ch:443/artifactory/api/npm/channelsuite-npm/inherits/-/inherits-2.0.4.tgz"
   integrity sha1-D6LGT5MpF8NDOg3tVTY6rjdBa3w=
 
 internal-slot@^1.0.3:
   version "1.0.3"
-  resolved "https://bin.ti8m.ch:443/artifactory/api/npm/channelsuite-npm/internal-slot/-/internal-slot-1.0.3.tgz#7347e307deeea2faac2ac6205d4bc7d34967f59c"
+  resolved "https://bin.ti8m.ch:443/artifactory/api/npm/channelsuite-npm/internal-slot/-/internal-slot-1.0.3.tgz"
   integrity sha1-c0fjB97uovqsKsYgXUvH00ln9Zw=
   dependencies:
     get-intrinsic "^1.1.0"
@@ -1581,29 +1893,34 @@ internal-slot@^1.0.3:
 
 is-arguments@^1.0.4:
   version "1.1.1"
-  resolved "https://bin.ti8m.ch:443/artifactory/api/npm/channelsuite-npm/is-arguments/-/is-arguments-1.1.1.tgz#15b3f88fda01f2a97fec84ca761a560f123efa9b"
+  resolved "https://bin.ti8m.ch:443/artifactory/api/npm/channelsuite-npm/is-arguments/-/is-arguments-1.1.1.tgz"
   integrity sha1-FbP4j9oB8ql/7ITKdhpWDxI++ps=
   dependencies:
     call-bind "^1.0.2"
     has-tostringtag "^1.0.0"
 
+is-arrayish@^0.2.1:
+  version "0.2.1"
+  resolved "https://bin.ti8m.ch:443/artifactory/api/npm/channelsuite-npm/is-arrayish/-/is-arrayish-0.2.1.tgz"
+  integrity sha1-d8mYQFJ6qOyxqLppe4BkWnqSap0=
+
 is-bigint@^1.0.1:
   version "1.0.4"
-  resolved "https://bin.ti8m.ch:443/artifactory/api/npm/channelsuite-npm/is-bigint/-/is-bigint-1.0.4.tgz#08147a1875bc2b32005d41ccd8291dffc6691df3"
+  resolved "https://bin.ti8m.ch:443/artifactory/api/npm/channelsuite-npm/is-bigint/-/is-bigint-1.0.4.tgz"
   integrity sha1-CBR6GHW8KzIAXUHM2Ckd/8ZpHfM=
   dependencies:
     has-bigints "^1.0.1"
 
 is-binary-path@~2.1.0:
   version "2.1.0"
-  resolved "https://bin.ti8m.ch:443/artifactory/api/npm/channelsuite-npm/is-binary-path/-/is-binary-path-2.1.0.tgz#ea1f7f3b80f064236e83470f86c09c254fb45b09"
+  resolved "https://bin.ti8m.ch:443/artifactory/api/npm/channelsuite-npm/is-binary-path/-/is-binary-path-2.1.0.tgz"
   integrity sha1-6h9/O4DwZCNug0cPhsCcJU+0Wwk=
   dependencies:
     binary-extensions "^2.0.0"
 
 is-boolean-object@^1.1.0:
   version "1.1.2"
-  resolved "https://bin.ti8m.ch:443/artifactory/api/npm/channelsuite-npm/is-boolean-object/-/is-boolean-object-1.1.2.tgz#5c6dc200246dd9321ae4b885a114bb1f75f63719"
+  resolved "https://bin.ti8m.ch:443/artifactory/api/npm/channelsuite-npm/is-boolean-object/-/is-boolean-object-1.1.2.tgz"
   integrity sha1-XG3CACRt2TIa5LiFoRS7H3X2Nxk=
   dependencies:
     call-bind "^1.0.2"
@@ -1611,45 +1928,55 @@ is-boolean-object@^1.1.0:
 
 is-callable@^1.1.4, is-callable@^1.2.4:
   version "1.2.4"
-  resolved "https://bin.ti8m.ch:443/artifactory/api/npm/channelsuite-npm/is-callable/-/is-callable-1.2.4.tgz#47301d58dd0259407865547853df6d61fe471945"
+  resolved "https://bin.ti8m.ch:443/artifactory/api/npm/channelsuite-npm/is-callable/-/is-callable-1.2.4.tgz"
   integrity sha1-RzAdWN0CWUB4ZVR4U99tYf5HGUU=
 
-is-core-module@^2.2.0, is-core-module@^2.8.0:
+is-core-module@^2.2.0:
   version "2.8.0"
-  resolved "https://bin.ti8m.ch:443/artifactory/api/npm/channelsuite-npm/is-core-module/-/is-core-module-2.8.0.tgz#0321336c3d0925e497fd97f5d95cb114a5ccd548"
+  resolved "https://bin.ti8m.ch:443/artifactory/api/npm/channelsuite-npm/is-core-module/-/is-core-module-2.8.0.tgz"
   integrity sha1-AyEzbD0JJeSX/Zf12VyxFKXM1Ug=
   dependencies:
     has "^1.0.3"
 
 is-date-object@^1.0.1:
   version "1.0.5"
-  resolved "https://bin.ti8m.ch:443/artifactory/api/npm/channelsuite-npm/is-date-object/-/is-date-object-1.0.5.tgz#0841d5536e724c25597bf6ea62e1bd38298df31f"
+  resolved "https://bin.ti8m.ch:443/artifactory/api/npm/channelsuite-npm/is-date-object/-/is-date-object-1.0.5.tgz"
   integrity sha1-CEHVU25yTCVZe/bqYuG9OCmN8x8=
   dependencies:
     has-tostringtag "^1.0.0"
 
 is-extglob@^2.1.1:
   version "2.1.1"
-  resolved "https://bin.ti8m.ch:443/artifactory/api/npm/channelsuite-npm/is-extglob/-/is-extglob-2.1.1.tgz#a88c02535791f02ed37c76a1b9ea9773c833f8c2"
+  resolved "https://bin.ti8m.ch:443/artifactory/api/npm/channelsuite-npm/is-extglob/-/is-extglob-2.1.1.tgz"
   integrity sha1-qIwCU1eR8C7TfHahueqXc8gz+MI=
+
+is-fullwidth-code-point@^3.0.0:
+  version "3.0.0"
+  resolved "https://bin.ti8m.ch:443/artifactory/api/npm/channelsuite-npm/is-fullwidth-code-point/-/is-fullwidth-code-point-3.0.0.tgz"
+  integrity sha1-8Rb4Bk/pCz94RKOJl8C3UFEmnx0=
+
+is-fullwidth-code-point@^4.0.0:
+  version "4.0.0"
+  resolved "https://bin.ti8m.ch:443/artifactory/api/npm/channelsuite-npm/is-fullwidth-code-point/-/is-fullwidth-code-point-4.0.0.tgz"
+  integrity sha1-+uMWfHKedGP4RhzlErCApJJoqog=
 
 is-generator-function@^1.0.7:
   version "1.0.10"
-  resolved "https://bin.ti8m.ch:443/artifactory/api/npm/channelsuite-npm/is-generator-function/-/is-generator-function-1.0.10.tgz#f1558baf1ac17e0deea7c0415c438351ff2b3c72"
+  resolved "https://bin.ti8m.ch:443/artifactory/api/npm/channelsuite-npm/is-generator-function/-/is-generator-function-1.0.10.tgz"
   integrity sha1-8VWLrxrBfg3up8BBXEODUf8rPHI=
   dependencies:
     has-tostringtag "^1.0.0"
 
 is-glob@^4.0.0, is-glob@^4.0.1, is-glob@^4.0.3, is-glob@~4.0.1:
   version "4.0.3"
-  resolved "https://bin.ti8m.ch:443/artifactory/api/npm/channelsuite-npm/is-glob/-/is-glob-4.0.3.tgz#64f61e42cbbb2eec2071a9dac0b28ba1e65d5084"
+  resolved "https://bin.ti8m.ch:443/artifactory/api/npm/channelsuite-npm/is-glob/-/is-glob-4.0.3.tgz"
   integrity sha1-ZPYeQsu7LuwgcanawLKLoeZdUIQ=
   dependencies:
     is-extglob "^2.1.1"
 
 is-nan@^1.2.1:
   version "1.3.2"
-  resolved "https://bin.ti8m.ch:443/artifactory/api/npm/channelsuite-npm/is-nan/-/is-nan-1.3.2.tgz#043a54adea31748b55b6cd4e09aadafa69bd9e1d"
+  resolved "https://bin.ti8m.ch:443/artifactory/api/npm/channelsuite-npm/is-nan/-/is-nan-1.3.2.tgz"
   integrity sha1-BDpUreoxdItVts1OCara+mm9nh0=
   dependencies:
     call-bind "^1.0.0"
@@ -1657,24 +1984,24 @@ is-nan@^1.2.1:
 
 is-negative-zero@^2.0.1:
   version "2.0.1"
-  resolved "https://bin.ti8m.ch:443/artifactory/api/npm/channelsuite-npm/is-negative-zero/-/is-negative-zero-2.0.1.tgz#3de746c18dda2319241a53675908d8f766f11c24"
+  resolved "https://bin.ti8m.ch:443/artifactory/api/npm/channelsuite-npm/is-negative-zero/-/is-negative-zero-2.0.1.tgz"
   integrity sha1-PedGwY3aIxkkGlNnWQjY92bxHCQ=
 
 is-number-object@^1.0.4:
   version "1.0.6"
-  resolved "https://bin.ti8m.ch:443/artifactory/api/npm/channelsuite-npm/is-number-object/-/is-number-object-1.0.6.tgz#6a7aaf838c7f0686a50b4553f7e54a96494e89f0"
+  resolved "https://bin.ti8m.ch:443/artifactory/api/npm/channelsuite-npm/is-number-object/-/is-number-object-1.0.6.tgz"
   integrity sha1-anqvg4x/BoalC0VT9+VKlklOifA=
   dependencies:
     has-tostringtag "^1.0.0"
 
 is-number@^7.0.0:
   version "7.0.0"
-  resolved "https://bin.ti8m.ch:443/artifactory/api/npm/channelsuite-npm/is-number/-/is-number-7.0.0.tgz#7535345b896734d5f80c4d06c50955527a14f12b"
+  resolved "https://bin.ti8m.ch:443/artifactory/api/npm/channelsuite-npm/is-number/-/is-number-7.0.0.tgz"
   integrity sha1-dTU0W4lnNNX4DE0GxQlVUnoU8Ss=
 
 is-regex@^1.1.4:
   version "1.1.4"
-  resolved "https://bin.ti8m.ch:443/artifactory/api/npm/channelsuite-npm/is-regex/-/is-regex-1.1.4.tgz#eef5663cd59fa4c0ae339505323df6854bb15958"
+  resolved "https://bin.ti8m.ch:443/artifactory/api/npm/channelsuite-npm/is-regex/-/is-regex-1.1.4.tgz"
   integrity sha1-7vVmPNWfpMCuM5UFMj32hUuxWVg=
   dependencies:
     call-bind "^1.0.2"
@@ -1682,26 +2009,31 @@ is-regex@^1.1.4:
 
 is-shared-array-buffer@^1.0.1:
   version "1.0.1"
-  resolved "https://bin.ti8m.ch:443/artifactory/api/npm/channelsuite-npm/is-shared-array-buffer/-/is-shared-array-buffer-1.0.1.tgz#97b0c85fbdacb59c9c446fe653b82cf2b5b7cfe6"
+  resolved "https://bin.ti8m.ch:443/artifactory/api/npm/channelsuite-npm/is-shared-array-buffer/-/is-shared-array-buffer-1.0.1.tgz"
   integrity sha1-l7DIX72stZycRG/mU7gs8rW3z+Y=
+
+is-stream@^2.0.0:
+  version "2.0.1"
+  resolved "https://bin.ti8m.ch:443/artifactory/api/npm/channelsuite-npm/is-stream/-/is-stream-2.0.1.tgz"
+  integrity sha1-+sHj1TuXrVqdCunO8jifWBClwHc=
 
 is-string@^1.0.5, is-string@^1.0.7:
   version "1.0.7"
-  resolved "https://bin.ti8m.ch:443/artifactory/api/npm/channelsuite-npm/is-string/-/is-string-1.0.7.tgz#0dd12bf2006f255bb58f695110eff7491eebc0fd"
+  resolved "https://bin.ti8m.ch:443/artifactory/api/npm/channelsuite-npm/is-string/-/is-string-1.0.7.tgz"
   integrity sha1-DdEr8gBvJVu1j2lREO/3SR7rwP0=
   dependencies:
     has-tostringtag "^1.0.0"
 
 is-symbol@^1.0.2, is-symbol@^1.0.3:
   version "1.0.4"
-  resolved "https://bin.ti8m.ch:443/artifactory/api/npm/channelsuite-npm/is-symbol/-/is-symbol-1.0.4.tgz#a6dac93b635b063ca6872236de88910a57af139c"
+  resolved "https://bin.ti8m.ch:443/artifactory/api/npm/channelsuite-npm/is-symbol/-/is-symbol-1.0.4.tgz"
   integrity sha1-ptrJO2NbBjymhyI23oiRClevE5w=
   dependencies:
     has-symbols "^1.0.2"
 
 is-typed-array@^1.1.3, is-typed-array@^1.1.7:
   version "1.1.8"
-  resolved "https://bin.ti8m.ch:443/artifactory/api/npm/channelsuite-npm/is-typed-array/-/is-typed-array-1.1.8.tgz#cbaa6585dc7db43318bc5b89523ea384a6f65e79"
+  resolved "https://bin.ti8m.ch:443/artifactory/api/npm/channelsuite-npm/is-typed-array/-/is-typed-array-1.1.8.tgz"
   integrity sha1-y6plhdx9tDMYvFuJUj6jhKb2Xnk=
   dependencies:
     available-typed-arrays "^1.0.5"
@@ -1710,21 +2042,26 @@ is-typed-array@^1.1.3, is-typed-array@^1.1.7:
     foreach "^2.0.5"
     has-tostringtag "^1.0.0"
 
+is-typedarray@^1.0.0:
+  version "1.0.0"
+  resolved "https://bin.ti8m.ch:443/artifactory/api/npm/channelsuite-npm/is-typedarray/-/is-typedarray-1.0.0.tgz"
+  integrity sha1-5HnICFjfDBsR3dppQPlgEfzaSpo=
+
 is-weakref@^1.0.1:
   version "1.0.1"
-  resolved "https://bin.ti8m.ch:443/artifactory/api/npm/channelsuite-npm/is-weakref/-/is-weakref-1.0.1.tgz#842dba4ec17fa9ac9850df2d6efbc1737274f2a2"
+  resolved "https://bin.ti8m.ch:443/artifactory/api/npm/channelsuite-npm/is-weakref/-/is-weakref-1.0.1.tgz"
   integrity sha1-hC26TsF/qayYUN8tbvvBc3J08qI=
   dependencies:
     call-bind "^1.0.0"
 
 isexe@^2.0.0:
   version "2.0.0"
-  resolved "https://bin.ti8m.ch:443/artifactory/api/npm/channelsuite-npm/isexe/-/isexe-2.0.0.tgz#e8fbf374dc556ff8947a10dcb0572d633f2cfa10"
+  resolved "https://bin.ti8m.ch:443/artifactory/api/npm/channelsuite-npm/isexe/-/isexe-2.0.0.tgz"
   integrity sha1-6PvzdNxVb/iUehDcsFctYz8s+hA=
 
 jest-worker@27.0.0-next.5:
   version "27.0.0-next.5"
-  resolved "https://bin.ti8m.ch:443/artifactory/api/npm/channelsuite-npm/jest-worker/-/jest-worker-27.0.0-next.5.tgz#5985ee29b12a4e191f4aae4bb73b97971d86ec28"
+  resolved "https://bin.ti8m.ch:443/artifactory/api/npm/channelsuite-npm/jest-worker/-/jest-worker-27.0.0-next.5.tgz"
   integrity sha1-WYXuKbEqThkfSq5LtzuXlx2G7Cg=
   dependencies:
     "@types/node" "*"
@@ -1733,119 +2070,162 @@ jest-worker@27.0.0-next.5:
 
 "js-tokens@^3.0.0 || ^4.0.0", js-tokens@^4.0.0:
   version "4.0.0"
-  resolved "https://bin.ti8m.ch:443/artifactory/api/npm/channelsuite-npm/js-tokens/-/js-tokens-4.0.0.tgz#19203fb59991df98e3a287050d4647cdeaf32499"
+  resolved "https://bin.ti8m.ch:443/artifactory/api/npm/channelsuite-npm/js-tokens/-/js-tokens-4.0.0.tgz"
   integrity sha1-GSA/tZmR35jjoocFDUZHzerzJJk=
 
 js-yaml@^4.1.0:
   version "4.1.0"
-  resolved "https://bin.ti8m.ch:443/artifactory/api/npm/channelsuite-npm/js-yaml/-/js-yaml-4.1.0.tgz#c1fb65f8f5017901cdd2c951864ba18458a10602"
+  resolved "https://bin.ti8m.ch:443/artifactory/api/npm/channelsuite-npm/js-yaml/-/js-yaml-4.1.0.tgz"
   integrity sha1-wftl+PUBeQHN0slRhkuhhFihBgI=
   dependencies:
     argparse "^2.0.1"
 
+json-parse-even-better-errors@^2.3.0:
+  version "2.3.1"
+  resolved "https://bin.ti8m.ch:443/artifactory/api/npm/channelsuite-npm/json-parse-even-better-errors/-/json-parse-even-better-errors-2.3.1.tgz"
+  integrity sha1-fEeAWpQxmSjgV3dAXcEuH3pO4C0=
+
 json-schema-traverse@^0.4.1:
   version "0.4.1"
-  resolved "https://bin.ti8m.ch:443/artifactory/api/npm/channelsuite-npm/json-schema-traverse/-/json-schema-traverse-0.4.1.tgz#69f6a87d9513ab8bb8fe63bdb0979c448e684660"
+  resolved "https://bin.ti8m.ch:443/artifactory/api/npm/channelsuite-npm/json-schema-traverse/-/json-schema-traverse-0.4.1.tgz"
   integrity sha1-afaofZUTq4u4/mO9sJecRI5oRmA=
 
 json-stable-stringify-without-jsonify@^1.0.1:
   version "1.0.1"
-  resolved "https://bin.ti8m.ch:443/artifactory/api/npm/channelsuite-npm/json-stable-stringify-without-jsonify/-/json-stable-stringify-without-jsonify-1.0.1.tgz#9db7b59496ad3f3cfef30a75142d2d930ad72651"
+  resolved "https://bin.ti8m.ch:443/artifactory/api/npm/channelsuite-npm/json-stable-stringify-without-jsonify/-/json-stable-stringify-without-jsonify-1.0.1.tgz"
   integrity sha1-nbe1lJatPzz+8wp1FC0tkwrXJlE=
 
 json5@^1.0.1:
   version "1.0.1"
-  resolved "https://bin.ti8m.ch:443/artifactory/api/npm/channelsuite-npm/json5/-/json5-1.0.1.tgz#779fb0018604fa854eacbf6252180d83543e3dbe"
+  resolved "https://bin.ti8m.ch:443/artifactory/api/npm/channelsuite-npm/json5/-/json5-1.0.1.tgz"
   integrity sha1-d5+wAYYE+oVOrL9iUhgNg1Q+Pb4=
   dependencies:
     minimist "^1.2.0"
 
-"jsx-ast-utils@^2.4.1 || ^3.0.0", jsx-ast-utils@^3.2.1:
+"jsx-ast-utils@^2.4.1 || ^3.0.0":
   version "3.2.1"
-  resolved "https://bin.ti8m.ch:443/artifactory/api/npm/channelsuite-npm/jsx-ast-utils/-/jsx-ast-utils-3.2.1.tgz#720b97bfe7d901b927d87c3773637ae8ea48781b"
+  resolved "https://bin.ti8m.ch:443/artifactory/api/npm/channelsuite-npm/jsx-ast-utils/-/jsx-ast-utils-3.2.1.tgz"
   integrity sha1-cguXv+fZAbkn2Hw3c2N66OpIeBs=
   dependencies:
     array-includes "^3.1.3"
     object.assign "^4.1.2"
 
-language-subtag-registry@~0.3.2:
-  version "0.3.21"
-  resolved "https://bin.ti8m.ch:443/artifactory/api/npm/channelsuite-npm/language-subtag-registry/-/language-subtag-registry-0.3.21.tgz#04ac218bea46f04cb039084602c6da9e788dd45a"
-  integrity sha1-BKwhi+pG8EywOQhGAsbanniN1Fo=
-
-language-tags@^1.0.5:
-  version "1.0.5"
-  resolved "https://bin.ti8m.ch:443/artifactory/api/npm/channelsuite-npm/language-tags/-/language-tags-1.0.5.tgz#d321dbc4da30ba8bf3024e040fa5c14661f9193a"
-  integrity sha1-0yHbxNowuovzAk4ED6XBRmH5GTo=
-  dependencies:
-    language-subtag-registry "~0.3.2"
-
 levn@^0.4.1:
   version "0.4.1"
-  resolved "https://bin.ti8m.ch:443/artifactory/api/npm/channelsuite-npm/levn/-/levn-0.4.1.tgz#ae4562c007473b932a6200d403268dd2fffc6ade"
+  resolved "https://bin.ti8m.ch:443/artifactory/api/npm/channelsuite-npm/levn/-/levn-0.4.1.tgz"
   integrity sha1-rkViwAdHO5MqYgDUAyaN0v/8at4=
   dependencies:
     prelude-ls "^1.2.1"
     type-check "~0.4.0"
 
+lilconfig@2.0.4, lilconfig@^2.0.3:
+  version "2.0.4"
+  resolved "https://bin.ti8m.ch:443/artifactory/api/npm/channelsuite-npm/lilconfig/-/lilconfig-2.0.4.tgz"
+  integrity sha1-9FB9BD1wWLOAtqj1y3vNSzTO4II=
+
+lines-and-columns@^1.1.6:
+  version "1.2.4"
+  resolved "https://bin.ti8m.ch:443/artifactory/api/npm/channelsuite-npm/lines-and-columns/-/lines-and-columns-1.2.4.tgz"
+  integrity sha1-7KKE910pZQeTCdwK2SVauy68FjI=
+
+lint-staged@>=10:
+  version "12.1.3"
+  resolved "https://bin.ti8m.ch:443/artifactory/api/npm/channelsuite-npm/lint-staged/-/lint-staged-12.1.3.tgz"
+  integrity sha1-oW6IXAped96c9VlyTSmhA0hnDmg=
+  dependencies:
+    cli-truncate "^3.1.0"
+    colorette "^2.0.16"
+    commander "^8.3.0"
+    debug "^4.3.3"
+    execa "^5.1.1"
+    lilconfig "2.0.4"
+    listr2 "^3.13.5"
+    micromatch "^4.0.4"
+    normalize-path "^3.0.0"
+    object-inspect "^1.11.1"
+    string-argv "^0.3.1"
+    supports-color "^9.2.1"
+    yaml "^1.10.2"
+
+listr2@^3.13.5:
+  version "3.13.5"
+  resolved "https://bin.ti8m.ch:443/artifactory/api/npm/channelsuite-npm/listr2/-/listr2-3.13.5.tgz"
+  integrity sha1-EFqBPy6yMpxKric3OigdYQ7kmF8=
+  dependencies:
+    cli-truncate "^2.1.0"
+    colorette "^2.0.16"
+    log-update "^4.0.0"
+    p-map "^4.0.0"
+    rfdc "^1.3.0"
+    rxjs "^7.4.0"
+    through "^2.3.8"
+    wrap-ansi "^7.0.0"
+
 loader-utils@1.2.3:
   version "1.2.3"
-  resolved "https://bin.ti8m.ch:443/artifactory/api/npm/channelsuite-npm/loader-utils/-/loader-utils-1.2.3.tgz#1ff5dc6911c9f0a062531a4c04b609406108c2c7"
+  resolved "https://bin.ti8m.ch:443/artifactory/api/npm/channelsuite-npm/loader-utils/-/loader-utils-1.2.3.tgz"
   integrity sha1-H/XcaRHJ8KBiUxpMBLYJQGEIwsc=
   dependencies:
     big.js "^5.2.2"
     emojis-list "^2.0.0"
     json5 "^1.0.1"
 
-locate-path@^2.0.0:
-  version "2.0.0"
-  resolved "https://bin.ti8m.ch:443/artifactory/api/npm/channelsuite-npm/locate-path/-/locate-path-2.0.0.tgz#2b568b265eec944c6d9c0de9c3dbbbca0354cd8e"
-  integrity sha1-K1aLJl7slExtnA3pw9u7ygNUzY4=
-  dependencies:
-    p-locate "^2.0.0"
-    path-exists "^3.0.0"
-
 locate-path@^5.0.0:
   version "5.0.0"
-  resolved "https://bin.ti8m.ch:443/artifactory/api/npm/channelsuite-npm/locate-path/-/locate-path-5.0.0.tgz#1afba396afd676a6d42504d0a67a3a7eb9f62aa0"
+  resolved "https://bin.ti8m.ch:443/artifactory/api/npm/channelsuite-npm/locate-path/-/locate-path-5.0.0.tgz"
   integrity sha1-Gvujlq/WdqbUJQTQpno6frn2KqA=
   dependencies:
     p-locate "^4.1.0"
 
 lodash.merge@^4.6.2:
   version "4.6.2"
-  resolved "https://bin.ti8m.ch:443/artifactory/api/npm/channelsuite-npm/lodash.merge/-/lodash.merge-4.6.2.tgz#558aa53b43b661e1925a0afdfa36a9a1085fe57a"
+  resolved "https://bin.ti8m.ch:443/artifactory/api/npm/channelsuite-npm/lodash.merge/-/lodash.merge-4.6.2.tgz"
   integrity sha1-VYqlO0O2YeGSWgr9+japoQhf5Xo=
 
 lodash.sortby@^4.7.0:
   version "4.7.0"
-  resolved "https://bin.ti8m.ch:443/artifactory/api/npm/channelsuite-npm/lodash.sortby/-/lodash.sortby-4.7.0.tgz#edd14c824e2cc9c1e0b0a1b42bb5210516a42438"
+  resolved "https://bin.ti8m.ch:443/artifactory/api/npm/channelsuite-npm/lodash.sortby/-/lodash.sortby-4.7.0.tgz"
   integrity sha1-7dFMgk4sycHgsKG0K7UhBRakJDg=
+
+lodash@^4.17.20:
+  version "4.17.21"
+  resolved "https://bin.ti8m.ch:443/artifactory/api/npm/channelsuite-npm/lodash/-/lodash-4.17.21.tgz"
+  integrity sha1-Z5WRxWTDv/quhFTPCz3zcMPWkRw=
+
+log-update@^4.0.0:
+  version "4.0.0"
+  resolved "https://bin.ti8m.ch:443/artifactory/api/npm/channelsuite-npm/log-update/-/log-update-4.0.0.tgz"
+  integrity sha1-WJ7NNSRx8qHAxXAodUOmTf0g4KE=
+  dependencies:
+    ansi-escapes "^4.3.0"
+    cli-cursor "^3.1.0"
+    slice-ansi "^4.0.0"
+    wrap-ansi "^6.2.0"
 
 loose-envify@^1.1.0, loose-envify@^1.4.0:
   version "1.4.0"
-  resolved "https://bin.ti8m.ch:443/artifactory/api/npm/channelsuite-npm/loose-envify/-/loose-envify-1.4.0.tgz#71ee51fa7be4caec1a63839f7e682d8132d30caf"
+  resolved "https://bin.ti8m.ch:443/artifactory/api/npm/channelsuite-npm/loose-envify/-/loose-envify-1.4.0.tgz"
   integrity sha1-ce5R+nvkyuwaY4OffmgtgTLTDK8=
   dependencies:
     js-tokens "^3.0.0 || ^4.0.0"
 
 lru-cache@^6.0.0:
   version "6.0.0"
-  resolved "https://bin.ti8m.ch:443/artifactory/api/npm/channelsuite-npm/lru-cache/-/lru-cache-6.0.0.tgz#6d6fe6570ebd96aaf90fcad1dafa3b2566db3a94"
+  resolved "https://bin.ti8m.ch:443/artifactory/api/npm/channelsuite-npm/lru-cache/-/lru-cache-6.0.0.tgz"
   integrity sha1-bW/mVw69lqr5D8rR2vo7JWbbOpQ=
   dependencies:
     yallist "^4.0.0"
 
 make-dir@^3.0.2:
   version "3.1.0"
-  resolved "https://bin.ti8m.ch:443/artifactory/api/npm/channelsuite-npm/make-dir/-/make-dir-3.1.0.tgz#415e967046b3a7f1d185277d84aa58203726a13f"
+  resolved "https://bin.ti8m.ch:443/artifactory/api/npm/channelsuite-npm/make-dir/-/make-dir-3.1.0.tgz"
   integrity sha1-QV6WcEazp/HRhSd9hKpYIDcmoT8=
   dependencies:
     semver "^6.0.0"
 
 md5.js@^1.3.4:
   version "1.3.5"
-  resolved "https://bin.ti8m.ch:443/artifactory/api/npm/channelsuite-npm/md5.js/-/md5.js-1.3.5.tgz#b5d07b8e3216e3e27cd728d72f70d1e6a342005f"
+  resolved "https://bin.ti8m.ch:443/artifactory/api/npm/channelsuite-npm/md5.js/-/md5.js-1.3.5.tgz"
   integrity sha1-tdB7jjIW4+J81yjXL3DR5qNCAF8=
   dependencies:
     hash-base "^3.0.0"
@@ -1854,17 +2234,17 @@ md5.js@^1.3.4:
 
 merge-stream@^2.0.0:
   version "2.0.0"
-  resolved "https://bin.ti8m.ch:443/artifactory/api/npm/channelsuite-npm/merge-stream/-/merge-stream-2.0.0.tgz#52823629a14dd00c9770fb6ad47dc6310f2c1f60"
+  resolved "https://bin.ti8m.ch:443/artifactory/api/npm/channelsuite-npm/merge-stream/-/merge-stream-2.0.0.tgz"
   integrity sha1-UoI2KaFN0AyXcPtq1H3GMQ8sH2A=
 
 merge2@^1.3.0:
   version "1.4.1"
-  resolved "https://bin.ti8m.ch:443/artifactory/api/npm/channelsuite-npm/merge2/-/merge2-1.4.1.tgz#4368892f885e907455a6fd7dc55c0c9d404990ae"
+  resolved "https://bin.ti8m.ch:443/artifactory/api/npm/channelsuite-npm/merge2/-/merge2-1.4.1.tgz"
   integrity sha1-Q2iJL4hekHRVpv19xVwMnUBJkK4=
 
 micromatch@^4.0.4:
   version "4.0.4"
-  resolved "https://bin.ti8m.ch:443/artifactory/api/npm/channelsuite-npm/micromatch/-/micromatch-4.0.4.tgz#896d519dfe9db25fce94ceb7a500919bf881ebf9"
+  resolved "https://bin.ti8m.ch:443/artifactory/api/npm/channelsuite-npm/micromatch/-/micromatch-4.0.4.tgz"
   integrity sha1-iW1Rnf6dsl/OlM63pQCRm/iB6/k=
   dependencies:
     braces "^3.0.1"
@@ -1872,62 +2252,72 @@ micromatch@^4.0.4:
 
 miller-rabin@^4.0.0:
   version "4.0.1"
-  resolved "https://bin.ti8m.ch:443/artifactory/api/npm/channelsuite-npm/miller-rabin/-/miller-rabin-4.0.1.tgz#f080351c865b0dc562a8462966daa53543c78a4d"
+  resolved "https://bin.ti8m.ch:443/artifactory/api/npm/channelsuite-npm/miller-rabin/-/miller-rabin-4.0.1.tgz"
   integrity sha1-8IA1HIZbDcViqEYpZtqlNUPHik0=
   dependencies:
     bn.js "^4.0.0"
     brorand "^1.0.1"
 
+mimic-fn@^2.1.0:
+  version "2.1.0"
+  resolved "https://bin.ti8m.ch:443/artifactory/api/npm/channelsuite-npm/mimic-fn/-/mimic-fn-2.1.0.tgz"
+  integrity sha1-ftLCzMyvhNP/y3pptXcR/CCDQBs=
+
 minimalistic-assert@^1.0.0, minimalistic-assert@^1.0.1:
   version "1.0.1"
-  resolved "https://bin.ti8m.ch:443/artifactory/api/npm/channelsuite-npm/minimalistic-assert/-/minimalistic-assert-1.0.1.tgz#2e194de044626d4a10e7f7fbc00ce73e83e4d5c7"
+  resolved "https://bin.ti8m.ch:443/artifactory/api/npm/channelsuite-npm/minimalistic-assert/-/minimalistic-assert-1.0.1.tgz"
   integrity sha1-LhlN4ERibUoQ5/f7wAznPoPk1cc=
 
 minimalistic-crypto-utils@^1.0.1:
   version "1.0.1"
-  resolved "https://bin.ti8m.ch:443/artifactory/api/npm/channelsuite-npm/minimalistic-crypto-utils/-/minimalistic-crypto-utils-1.0.1.tgz#f6c00c1c0b082246e5c4d99dfb8c7c083b2b582a"
+  resolved "https://bin.ti8m.ch:443/artifactory/api/npm/channelsuite-npm/minimalistic-crypto-utils/-/minimalistic-crypto-utils-1.0.1.tgz"
   integrity sha1-9sAMHAsIIkblxNmd+4x8CDsrWCo=
 
 minimatch@^3.0.4:
   version "3.0.4"
-  resolved "https://bin.ti8m.ch:443/artifactory/api/npm/channelsuite-npm/minimatch/-/minimatch-3.0.4.tgz#5166e286457f03306064be5497e8dbb0c3d32083"
+  resolved "https://bin.ti8m.ch:443/artifactory/api/npm/channelsuite-npm/minimatch/-/minimatch-3.0.4.tgz"
   integrity sha1-UWbihkV/AzBgZL5Ul+jbsMPTIIM=
   dependencies:
     brace-expansion "^1.1.7"
 
-minimist@^1.2.0:
+minimist@^1.1.1, minimist@^1.2.0:
   version "1.2.5"
-  resolved "https://bin.ti8m.ch:443/artifactory/api/npm/channelsuite-npm/minimist/-/minimist-1.2.5.tgz#67d66014b66a6a8aaa0c083c5fd58df4e4e97602"
+  resolved "https://bin.ti8m.ch:443/artifactory/api/npm/channelsuite-npm/minimist/-/minimist-1.2.5.tgz"
   integrity sha1-Z9ZgFLZqaoqqDAg8X9WN9OTpdgI=
 
 ms@2.0.0:
   version "2.0.0"
-  resolved "https://bin.ti8m.ch:443/artifactory/api/npm/channelsuite-npm/ms/-/ms-2.0.0.tgz#5608aeadfc00be6c2901df5f9861788de0d597c8"
+  resolved "https://bin.ti8m.ch:443/artifactory/api/npm/channelsuite-npm/ms/-/ms-2.0.0.tgz"
   integrity sha1-VgiurfwAvmwpAd9fmGF4jeDVl8g=
 
 ms@2.1.2:
   version "2.1.2"
-  resolved "https://bin.ti8m.ch:443/artifactory/api/npm/channelsuite-npm/ms/-/ms-2.1.2.tgz#d09d1f357b443f493382a8eb3ccd183872ae6009"
+  resolved "https://bin.ti8m.ch:443/artifactory/api/npm/channelsuite-npm/ms/-/ms-2.1.2.tgz"
   integrity sha1-0J0fNXtEP0kzgqjrPM0YOHKuYAk=
 
-ms@^2.1.1:
-  version "2.1.3"
-  resolved "https://bin.ti8m.ch:443/artifactory/api/npm/channelsuite-npm/ms/-/ms-2.1.3.tgz#574c8138ce1d2b5861f0b44579dbadd60c6615b2"
-  integrity sha1-V0yBOM4dK1hh8LRFedut1gxmFbI=
-
-nanoid@^3.1.23:
+nanoid@^3.1.23, nanoid@^3.1.30:
   version "3.1.30"
-  resolved "https://bin.ti8m.ch:443/artifactory/api/npm/channelsuite-npm/nanoid/-/nanoid-3.1.30.tgz#63f93cc548d2a113dc5dfbc63bfa09e2b9b64362"
+  resolved "https://bin.ti8m.ch:443/artifactory/api/npm/channelsuite-npm/nanoid/-/nanoid-3.1.30.tgz"
   integrity sha1-Y/k8xUjSoRPcXfvGO/oJ4rm2Q2I=
 
 natural-compare@^1.4.0:
   version "1.4.0"
-  resolved "https://bin.ti8m.ch:443/artifactory/api/npm/channelsuite-npm/natural-compare/-/natural-compare-1.4.0.tgz#4abebfeed7541f2c27acfb29bdbbd15c8d5ba4f7"
+  resolved "https://bin.ti8m.ch:443/artifactory/api/npm/channelsuite-npm/natural-compare/-/natural-compare-1.4.0.tgz"
   integrity sha1-Sr6/7tdUHywnrPspvbvRXI1bpPc=
+
+next-seo@^4.28.1:
+  version "4.28.1"
+  resolved "https://bin.ti8m.ch:443/artifactory/api/npm/channelsuite-npm/next-seo/-/next-seo-4.28.1.tgz"
+  integrity sha1-yY7lWcircZbGLQ9pA6/XqM3kegM=
+
+next-tick@~1.0.0:
+  version "1.0.0"
+  resolved "https://bin.ti8m.ch:443/artifactory/api/npm/channelsuite-npm/next-tick/-/next-tick-1.0.0.tgz"
+  integrity sha1-yobR/ogoFpsBICCOPchCS524NCw=
 
 next@12.0.7:
   version "12.0.7"
-  resolved "https://bin.ti8m.ch:443/artifactory/api/npm/channelsuite-npm/next/-/next-12.0.7.tgz#33ebf229b81b06e583ab5ae7613cffe1ca2103fc"
+  resolved "https://bin.ti8m.ch:443/artifactory/api/npm/channelsuite-npm/next/-/next-12.0.7.tgz"
   integrity sha1-M+vyKbgbBuWDq1rnYTz/4cohA/w=
   dependencies:
     "@babel/runtime" "7.15.4"
@@ -1994,39 +2384,71 @@ next@12.0.7:
 
 node-fetch@2.6.1:
   version "2.6.1"
-  resolved "https://bin.ti8m.ch:443/artifactory/api/npm/channelsuite-npm/node-fetch/-/node-fetch-2.6.1.tgz#045bd323631f76ed2e2b55573394416b639a0052"
+  resolved "https://bin.ti8m.ch:443/artifactory/api/npm/channelsuite-npm/node-fetch/-/node-fetch-2.6.1.tgz"
   integrity sha1-BFvTI2Mfdu0uK1VXM5RBa2OaAFI=
+
+node-gyp-build@^4.3.0:
+  version "4.3.0"
+  resolved "https://bin.ti8m.ch:443/artifactory/api/npm/channelsuite-npm/node-gyp-build/-/node-gyp-build-4.3.0.tgz"
+  integrity sha1-nyVrA+WCYVC+Ocdkv1Hpk5RtcaM=
 
 node-html-parser@1.4.9:
   version "1.4.9"
-  resolved "https://bin.ti8m.ch:443/artifactory/api/npm/channelsuite-npm/node-html-parser/-/node-html-parser-1.4.9.tgz#3c8f6cac46479fae5800725edb532e9ae8fd816c"
+  resolved "https://bin.ti8m.ch:443/artifactory/api/npm/channelsuite-npm/node-html-parser/-/node-html-parser-1.4.9.tgz"
   integrity sha1-PI9srEZHn65YAHJe21Mumuj9gWw=
   dependencies:
     he "1.2.0"
 
 node-releases@^1.1.71:
   version "1.1.77"
-  resolved "https://bin.ti8m.ch:443/artifactory/api/npm/channelsuite-npm/node-releases/-/node-releases-1.1.77.tgz#50b0cfede855dd374e7585bf228ff34e57c1c32e"
+  resolved "https://bin.ti8m.ch:443/artifactory/api/npm/channelsuite-npm/node-releases/-/node-releases-1.1.77.tgz"
   integrity sha1-ULDP7ehV3TdOdYW/Io/zTlfBwy4=
+
+node-releases@^2.0.1:
+  version "2.0.1"
+  resolved "https://bin.ti8m.ch:443/artifactory/api/npm/channelsuite-npm/node-releases/-/node-releases-2.0.1.tgz"
+  integrity sha1-PR05XyBPHy8ppUNYuftnh2WtL8U=
 
 normalize-path@^3.0.0, normalize-path@~3.0.0:
   version "3.0.0"
-  resolved "https://bin.ti8m.ch:443/artifactory/api/npm/channelsuite-npm/normalize-path/-/normalize-path-3.0.0.tgz#0dcd69ff23a1c9b11fd0978316644a0388216a65"
+  resolved "https://bin.ti8m.ch:443/artifactory/api/npm/channelsuite-npm/normalize-path/-/normalize-path-3.0.0.tgz"
   integrity sha1-Dc1p/yOhybEf0JeDFmRKA4ghamU=
+
+normalize-range@^0.1.2:
+  version "0.1.2"
+  resolved "https://bin.ti8m.ch:443/artifactory/api/npm/channelsuite-npm/normalize-range/-/normalize-range-0.1.2.tgz"
+  integrity sha1-LRDAa9/TEuqXd2laTShDlFa3WUI=
+
+npm-run-path@^4.0.1:
+  version "4.0.1"
+  resolved "https://bin.ti8m.ch:443/artifactory/api/npm/channelsuite-npm/npm-run-path/-/npm-run-path-4.0.1.tgz"
+  integrity sha1-t+zR5e1T2o43pV4cImnguX7XSOo=
+  dependencies:
+    path-key "^3.0.0"
 
 object-assign@^4.1.1:
   version "4.1.1"
-  resolved "https://bin.ti8m.ch:443/artifactory/api/npm/channelsuite-npm/object-assign/-/object-assign-4.1.1.tgz#2109adc7965887cfc05cbbd442cac8bfbb360863"
+  resolved "https://bin.ti8m.ch:443/artifactory/api/npm/channelsuite-npm/object-assign/-/object-assign-4.1.1.tgz"
   integrity sha1-IQmtx5ZYh8/AXLvUQsrIv7s2CGM=
+
+object-hash@^2.2.0:
+  version "2.2.0"
+  resolved "https://bin.ti8m.ch:443/artifactory/api/npm/channelsuite-npm/object-hash/-/object-hash-2.2.0.tgz"
+  integrity sha1-WtUYWB7vxEO9djRyuP8unCwNVKU=
 
 object-inspect@^1.11.0, object-inspect@^1.9.0:
   version "1.11.1"
-  resolved "https://bin.ti8m.ch:443/artifactory/api/npm/channelsuite-npm/object-inspect/-/object-inspect-1.11.1.tgz#d4bd7d7de54b9a75599f59a00bd698c1f1c6549b"
+  resolved "https://bin.ti8m.ch:443/artifactory/api/npm/channelsuite-npm/object-inspect/-/object-inspect-1.11.1.tgz"
   integrity sha1-1L19feVLmnVZn1mgC9aYwfHGVJs=
+
+object-inspect@^1.11.1:
+  version "1.12.0"
+  resolved "https://bin.ti8m.ch:443/artifactory/api/npm/channelsuite-npm/object-inspect/-/object-inspect-1.12.0.tgz"
+  integrity sha1-biwSDoaP0f0Yy08YwxdB0NbndvA=
 
 object-is@^1.0.1:
   version "1.1.5"
-  resolved "https://bin.ti8m.ch:443/artifactory/api/npm/channelsuite-npm/object-is/-/object-is-1.1.5.tgz#b9deeaa5fc7f1846a0faecdceec138e5778f53ac"
+  resolved "https://bin.ti8m.ch:443/artifactory/api/npm/channelsuite-npm/object-is/-/object-is-1.1.5.tgz"
   integrity sha1-ud7qpfx/GEag+uzc7sE45XePU6w=
   dependencies:
     call-bind "^1.0.2"
@@ -2034,12 +2456,12 @@ object-is@^1.0.1:
 
 object-keys@^1.0.12, object-keys@^1.1.1:
   version "1.1.1"
-  resolved "https://bin.ti8m.ch:443/artifactory/api/npm/channelsuite-npm/object-keys/-/object-keys-1.1.1.tgz#1c47f272df277f3b1daf061677d9c82e2322c60e"
+  resolved "https://bin.ti8m.ch:443/artifactory/api/npm/channelsuite-npm/object-keys/-/object-keys-1.1.1.tgz"
   integrity sha1-HEfyct8nfzsdrwYWd9nILiMixg4=
 
 object.assign@^4.1.2:
   version "4.1.2"
-  resolved "https://bin.ti8m.ch:443/artifactory/api/npm/channelsuite-npm/object.assign/-/object.assign-4.1.2.tgz#0ed54a342eceb37b38ff76eb831a0e788cb63940"
+  resolved "https://bin.ti8m.ch:443/artifactory/api/npm/channelsuite-npm/object.assign/-/object.assign-4.1.2.tgz"
   integrity sha1-DtVKNC7Os3s4/3brgxoOeIy2OUA=
   dependencies:
     call-bind "^1.0.0"
@@ -2049,7 +2471,7 @@ object.assign@^4.1.2:
 
 object.entries@^1.1.5:
   version "1.1.5"
-  resolved "https://bin.ti8m.ch:443/artifactory/api/npm/channelsuite-npm/object.entries/-/object.entries-1.1.5.tgz#e1acdd17c4de2cd96d5a08487cfb9db84d881861"
+  resolved "https://bin.ti8m.ch:443/artifactory/api/npm/channelsuite-npm/object.entries/-/object.entries-1.1.5.tgz"
   integrity sha1-4azdF8TeLNltWghIfPuduE2IGGE=
   dependencies:
     call-bind "^1.0.2"
@@ -2058,7 +2480,7 @@ object.entries@^1.1.5:
 
 object.fromentries@^2.0.5:
   version "2.0.5"
-  resolved "https://bin.ti8m.ch:443/artifactory/api/npm/channelsuite-npm/object.fromentries/-/object.fromentries-2.0.5.tgz#7b37b205109c21e741e605727fe8b0ad5fa08251"
+  resolved "https://bin.ti8m.ch:443/artifactory/api/npm/channelsuite-npm/object.fromentries/-/object.fromentries-2.0.5.tgz"
   integrity sha1-ezeyBRCcIedB5gVyf+iwrV+gglE=
   dependencies:
     call-bind "^1.0.2"
@@ -2067,7 +2489,7 @@ object.fromentries@^2.0.5:
 
 object.hasown@^1.1.0:
   version "1.1.0"
-  resolved "https://bin.ti8m.ch:443/artifactory/api/npm/channelsuite-npm/object.hasown/-/object.hasown-1.1.0.tgz#7232ed266f34d197d15cac5880232f7a4790afe5"
+  resolved "https://bin.ti8m.ch:443/artifactory/api/npm/channelsuite-npm/object.hasown/-/object.hasown-1.1.0.tgz"
   integrity sha1-cjLtJm800ZfRXKxYgCMvekeQr+U=
   dependencies:
     define-properties "^1.1.3"
@@ -2075,7 +2497,7 @@ object.hasown@^1.1.0:
 
 object.values@^1.1.5:
   version "1.1.5"
-  resolved "https://bin.ti8m.ch:443/artifactory/api/npm/channelsuite-npm/object.values/-/object.values-1.1.5.tgz#959f63e3ce9ef108720333082131e4a459b716ac"
+  resolved "https://bin.ti8m.ch:443/artifactory/api/npm/channelsuite-npm/object.values/-/object.values-1.1.5.tgz"
   integrity sha1-lZ9j486e8QhyAzMIITHkpFm3Fqw=
   dependencies:
     call-bind "^1.0.2"
@@ -2084,14 +2506,21 @@ object.values@^1.1.5:
 
 once@^1.3.0:
   version "1.4.0"
-  resolved "https://bin.ti8m.ch:443/artifactory/api/npm/channelsuite-npm/once/-/once-1.4.0.tgz#583b1aa775961d4b113ac17d9c50baef9dd76bd1"
+  resolved "https://bin.ti8m.ch:443/artifactory/api/npm/channelsuite-npm/once/-/once-1.4.0.tgz"
   integrity sha1-WDsap3WWHUsROsF9nFC6753Xa9E=
   dependencies:
     wrappy "1"
 
+onetime@^5.1.0, onetime@^5.1.2:
+  version "5.1.2"
+  resolved "https://bin.ti8m.ch:443/artifactory/api/npm/channelsuite-npm/onetime/-/onetime-5.1.2.tgz"
+  integrity sha1-0Oluu1awdHbfHdnEgG5SN5hcpF4=
+  dependencies:
+    mimic-fn "^2.1.0"
+
 optionator@^0.9.1:
   version "0.9.1"
-  resolved "https://bin.ti8m.ch:443/artifactory/api/npm/channelsuite-npm/optionator/-/optionator-0.9.1.tgz#4f236a6373dae0566a6d43e1326674f50c291499"
+  resolved "https://bin.ti8m.ch:443/artifactory/api/npm/channelsuite-npm/optionator/-/optionator-0.9.1.tgz"
   integrity sha1-TyNqY3Pa4FZqbUPhMmZ09QwpFJk=
   dependencies:
     deep-is "^0.1.3"
@@ -2103,69 +2532,57 @@ optionator@^0.9.1:
 
 os-browserify@0.3.0:
   version "0.3.0"
-  resolved "https://bin.ti8m.ch:443/artifactory/api/npm/channelsuite-npm/os-browserify/-/os-browserify-0.3.0.tgz#854373c7f5c2315914fc9bfc6bd8238fdda1ec27"
+  resolved "https://bin.ti8m.ch:443/artifactory/api/npm/channelsuite-npm/os-browserify/-/os-browserify-0.3.0.tgz"
   integrity sha1-hUNzx/XCMVkU/Jv8a9gjj92h7Cc=
 
 p-limit@3.1.0:
   version "3.1.0"
-  resolved "https://bin.ti8m.ch:443/artifactory/api/npm/channelsuite-npm/p-limit/-/p-limit-3.1.0.tgz#e1daccbe78d0d1388ca18c64fea38e3e57e3706b"
+  resolved "https://bin.ti8m.ch:443/artifactory/api/npm/channelsuite-npm/p-limit/-/p-limit-3.1.0.tgz"
   integrity sha1-4drMvnjQ0TiMoYxk/qOOPlfjcGs=
   dependencies:
     yocto-queue "^0.1.0"
 
-p-limit@^1.1.0:
-  version "1.3.0"
-  resolved "https://bin.ti8m.ch:443/artifactory/api/npm/channelsuite-npm/p-limit/-/p-limit-1.3.0.tgz#b86bd5f0c25690911c7590fcbfc2010d54b3ccb8"
-  integrity sha1-uGvV8MJWkJEcdZD8v8IBDVSzzLg=
-  dependencies:
-    p-try "^1.0.0"
-
 p-limit@^2.2.0:
   version "2.3.0"
-  resolved "https://bin.ti8m.ch:443/artifactory/api/npm/channelsuite-npm/p-limit/-/p-limit-2.3.0.tgz#3dd33c647a214fdfffd835933eb086da0dc21db1"
+  resolved "https://bin.ti8m.ch:443/artifactory/api/npm/channelsuite-npm/p-limit/-/p-limit-2.3.0.tgz"
   integrity sha1-PdM8ZHohT9//2DWTPrCG2g3CHbE=
   dependencies:
     p-try "^2.0.0"
 
-p-locate@^2.0.0:
-  version "2.0.0"
-  resolved "https://bin.ti8m.ch:443/artifactory/api/npm/channelsuite-npm/p-locate/-/p-locate-2.0.0.tgz#20a0103b222a70c8fd39cc2e580680f3dde5ec43"
-  integrity sha1-IKAQOyIqcMj9OcwuWAaA893l7EM=
-  dependencies:
-    p-limit "^1.1.0"
-
 p-locate@^4.1.0:
   version "4.1.0"
-  resolved "https://bin.ti8m.ch:443/artifactory/api/npm/channelsuite-npm/p-locate/-/p-locate-4.1.0.tgz#a3428bb7088b3a60292f66919278b7c297ad4f07"
+  resolved "https://bin.ti8m.ch:443/artifactory/api/npm/channelsuite-npm/p-locate/-/p-locate-4.1.0.tgz"
   integrity sha1-o0KLtwiLOmApL2aRkni3wpetTwc=
   dependencies:
     p-limit "^2.2.0"
 
-p-try@^1.0.0:
-  version "1.0.0"
-  resolved "https://bin.ti8m.ch:443/artifactory/api/npm/channelsuite-npm/p-try/-/p-try-1.0.0.tgz#cbc79cdbaf8fd4228e13f621f2b1a237c1b207b3"
-  integrity sha1-y8ec26+P1CKOE/Yh8rGiN8GyB7M=
+p-map@^4.0.0:
+  version "4.0.0"
+  resolved "https://bin.ti8m.ch:443/artifactory/api/npm/channelsuite-npm/p-map/-/p-map-4.0.0.tgz"
+  integrity sha1-uy+Vpe2i7BaOySdOBqdHw+KQTSs=
+  dependencies:
+    aggregate-error "^3.0.0"
 
 p-try@^2.0.0:
   version "2.2.0"
-  resolved "https://bin.ti8m.ch:443/artifactory/api/npm/channelsuite-npm/p-try/-/p-try-2.2.0.tgz#cb2868540e313d61de58fafbe35ce9004d5540e6"
+  resolved "https://bin.ti8m.ch:443/artifactory/api/npm/channelsuite-npm/p-try/-/p-try-2.2.0.tgz"
   integrity sha1-yyhoVA4xPWHeWPr741zpAE1VQOY=
 
 pako@~1.0.5:
   version "1.0.11"
-  resolved "https://bin.ti8m.ch:443/artifactory/api/npm/channelsuite-npm/pako/-/pako-1.0.11.tgz#6c9599d340d54dfd3946380252a35705a6b992bf"
+  resolved "https://bin.ti8m.ch:443/artifactory/api/npm/channelsuite-npm/pako/-/pako-1.0.11.tgz"
   integrity sha1-bJWZ00DVTf05RjgCUqNXBaa5kr8=
 
 parent-module@^1.0.0:
   version "1.0.1"
-  resolved "https://bin.ti8m.ch:443/artifactory/api/npm/channelsuite-npm/parent-module/-/parent-module-1.0.1.tgz#691d2709e78c79fae3a156622452d00762caaaa2"
+  resolved "https://bin.ti8m.ch:443/artifactory/api/npm/channelsuite-npm/parent-module/-/parent-module-1.0.1.tgz"
   integrity sha1-aR0nCeeMefrjoVZiJFLQB2LKqqI=
   dependencies:
     callsites "^3.0.0"
 
 parse-asn1@^5.0.0, parse-asn1@^5.1.5:
   version "5.1.6"
-  resolved "https://bin.ti8m.ch:443/artifactory/api/npm/channelsuite-npm/parse-asn1/-/parse-asn1-5.1.6.tgz#385080a3ec13cb62a62d39409cb3e88844cdaed4"
+  resolved "https://bin.ti8m.ch:443/artifactory/api/npm/channelsuite-npm/parse-asn1/-/parse-asn1-5.1.6.tgz"
   integrity sha1-OFCAo+wTy2KmLTlAnLPoiETNrtQ=
   dependencies:
     asn1.js "^5.2.0"
@@ -2174,44 +2591,49 @@ parse-asn1@^5.0.0, parse-asn1@^5.1.5:
     pbkdf2 "^3.0.3"
     safe-buffer "^5.1.1"
 
+parse-json@^5.0.0:
+  version "5.2.0"
+  resolved "https://bin.ti8m.ch:443/artifactory/api/npm/channelsuite-npm/parse-json/-/parse-json-5.2.0.tgz"
+  integrity sha1-x2/Gbe5UIxyWKyK8yKcs8vmXU80=
+  dependencies:
+    "@babel/code-frame" "^7.0.0"
+    error-ex "^1.3.1"
+    json-parse-even-better-errors "^2.3.0"
+    lines-and-columns "^1.1.6"
+
 path-browserify@1.0.1:
   version "1.0.1"
-  resolved "https://bin.ti8m.ch:443/artifactory/api/npm/channelsuite-npm/path-browserify/-/path-browserify-1.0.1.tgz#d98454a9c3753d5790860f16f68867b9e46be1fd"
+  resolved "https://bin.ti8m.ch:443/artifactory/api/npm/channelsuite-npm/path-browserify/-/path-browserify-1.0.1.tgz"
   integrity sha1-2YRUqcN1PVeQhg8W9ohnueRr4f0=
-
-path-exists@^3.0.0:
-  version "3.0.0"
-  resolved "https://bin.ti8m.ch:443/artifactory/api/npm/channelsuite-npm/path-exists/-/path-exists-3.0.0.tgz#ce0ebeaa5f78cb18925ea7d810d7b59b010fd515"
-  integrity sha1-zg6+ql94yxiSXqfYENe1mwEP1RU=
 
 path-exists@^4.0.0:
   version "4.0.0"
-  resolved "https://bin.ti8m.ch:443/artifactory/api/npm/channelsuite-npm/path-exists/-/path-exists-4.0.0.tgz#513bdbe2d3b95d7762e8c1137efa195c6c61b5b3"
+  resolved "https://bin.ti8m.ch:443/artifactory/api/npm/channelsuite-npm/path-exists/-/path-exists-4.0.0.tgz"
   integrity sha1-UTvb4tO5XXdi6METfvoZXGxhtbM=
 
 path-is-absolute@^1.0.0:
   version "1.0.1"
-  resolved "https://bin.ti8m.ch:443/artifactory/api/npm/channelsuite-npm/path-is-absolute/-/path-is-absolute-1.0.1.tgz#174b9268735534ffbc7ace6bf53a5a9e1b5c5f5f"
+  resolved "https://bin.ti8m.ch:443/artifactory/api/npm/channelsuite-npm/path-is-absolute/-/path-is-absolute-1.0.1.tgz"
   integrity sha1-F0uSaHNVNP+8es5r9TpanhtcX18=
 
-path-key@^3.1.0:
+path-key@^3.0.0, path-key@^3.1.0:
   version "3.1.1"
-  resolved "https://bin.ti8m.ch:443/artifactory/api/npm/channelsuite-npm/path-key/-/path-key-3.1.1.tgz#581f6ade658cbba65a0d3380de7753295054f375"
+  resolved "https://bin.ti8m.ch:443/artifactory/api/npm/channelsuite-npm/path-key/-/path-key-3.1.1.tgz"
   integrity sha1-WB9q3mWMu6ZaDTOA3ndTKVBU83U=
 
 path-parse@^1.0.6:
   version "1.0.7"
-  resolved "https://bin.ti8m.ch:443/artifactory/api/npm/channelsuite-npm/path-parse/-/path-parse-1.0.7.tgz#fbc114b60ca42b30d9daf5858e4bd68bbedb6735"
+  resolved "https://bin.ti8m.ch:443/artifactory/api/npm/channelsuite-npm/path-parse/-/path-parse-1.0.7.tgz"
   integrity sha1-+8EUtgykKzDZ2vWFjkvWi77bZzU=
 
 path-type@^4.0.0:
   version "4.0.0"
-  resolved "https://bin.ti8m.ch:443/artifactory/api/npm/channelsuite-npm/path-type/-/path-type-4.0.0.tgz#84ed01c0a7ba380afe09d90a8c180dcd9d03043b"
+  resolved "https://bin.ti8m.ch:443/artifactory/api/npm/channelsuite-npm/path-type/-/path-type-4.0.0.tgz"
   integrity sha1-hO0BwKe6OAr+CdkKjBgNzZ0DBDs=
 
 pbkdf2@^3.0.3:
   version "3.1.2"
-  resolved "https://bin.ti8m.ch:443/artifactory/api/npm/channelsuite-npm/pbkdf2/-/pbkdf2-3.1.2.tgz#dd822aa0887580e52f1a039dc3eda108efae3075"
+  resolved "https://bin.ti8m.ch:443/artifactory/api/npm/channelsuite-npm/pbkdf2/-/pbkdf2-3.1.2.tgz"
   integrity sha1-3YIqoIh1gOUvGgOdw+2hCO+uMHU=
   dependencies:
     create-hash "^1.1.2"
@@ -2220,57 +2642,106 @@ pbkdf2@^3.0.3:
     safe-buffer "^5.0.1"
     sha.js "^2.4.8"
 
+picocolors@^1.0.0:
+  version "1.0.0"
+  resolved "https://bin.ti8m.ch:443/artifactory/api/npm/channelsuite-npm/picocolors/-/picocolors-1.0.0.tgz"
+  integrity sha1-y1vcdP8/UYkiNur3nWi8RFZKuBw=
+
 picomatch@^2.0.4, picomatch@^2.2.1, picomatch@^2.2.3:
   version "2.3.0"
-  resolved "https://bin.ti8m.ch:443/artifactory/api/npm/channelsuite-npm/picomatch/-/picomatch-2.3.0.tgz#f1f061de8f6a4bf022892e2d128234fb98302972"
+  resolved "https://bin.ti8m.ch:443/artifactory/api/npm/channelsuite-npm/picomatch/-/picomatch-2.3.0.tgz"
   integrity sha1-8fBh3o9qS/AiiS4tEoI0+5gwKXI=
-
-pkg-dir@^2.0.0:
-  version "2.0.0"
-  resolved "https://bin.ti8m.ch:443/artifactory/api/npm/channelsuite-npm/pkg-dir/-/pkg-dir-2.0.0.tgz#f6d5d1109e19d63edf428e0bd57e12777615334b"
-  integrity sha1-9tXREJ4Z1j7fQo4L1X4Sd3YVM0s=
-  dependencies:
-    find-up "^2.1.0"
 
 pkg-dir@^4.1.0:
   version "4.2.0"
-  resolved "https://bin.ti8m.ch:443/artifactory/api/npm/channelsuite-npm/pkg-dir/-/pkg-dir-4.2.0.tgz#f099133df7ede422e81d1d8448270eeb3e4261f3"
+  resolved "https://bin.ti8m.ch:443/artifactory/api/npm/channelsuite-npm/pkg-dir/-/pkg-dir-4.2.0.tgz"
   integrity sha1-8JkTPfft5CLoHR2ESCcO6z5CYfM=
   dependencies:
     find-up "^4.0.0"
 
 platform@1.3.6:
   version "1.3.6"
-  resolved "https://bin.ti8m.ch:443/artifactory/api/npm/channelsuite-npm/platform/-/platform-1.3.6.tgz#48b4ce983164b209c2d45a107adb31f473a6e7a7"
+  resolved "https://bin.ti8m.ch:443/artifactory/api/npm/channelsuite-npm/platform/-/platform-1.3.6.tgz"
   integrity sha1-SLTOmDFksgnC1FoQetsx9HOm56c=
+
+postcss-js@^3.0.3:
+  version "3.0.3"
+  resolved "https://bin.ti8m.ch:443/artifactory/api/npm/channelsuite-npm/postcss-js/-/postcss-js-3.0.3.tgz"
+  integrity sha1-LwvTcKLoWZ1FQ59pcEA7WHOr2jM=
+  dependencies:
+    camelcase-css "^2.0.1"
+    postcss "^8.1.6"
+
+postcss-load-config@^3.1.0:
+  version "3.1.0"
+  resolved "https://bin.ti8m.ch:443/artifactory/api/npm/channelsuite-npm/postcss-load-config/-/postcss-load-config-3.1.0.tgz"
+  integrity sha1-05xHCRxK7Df1AnI3OmpkjvXpeCk=
+  dependencies:
+    import-cwd "^3.0.0"
+    lilconfig "^2.0.3"
+    yaml "^1.10.2"
+
+postcss-nested@5.0.6:
+  version "5.0.6"
+  resolved "https://bin.ti8m.ch:443/artifactory/api/npm/channelsuite-npm/postcss-nested/-/postcss-nested-5.0.6.tgz"
+  integrity sha1-RmND9/yNPUavPn26P81H0FKpRbw=
+  dependencies:
+    postcss-selector-parser "^6.0.6"
+
+postcss-selector-parser@^6.0.6, postcss-selector-parser@^6.0.7:
+  version "6.0.7"
+  resolved "https://bin.ti8m.ch:443/artifactory/api/npm/channelsuite-npm/postcss-selector-parser/-/postcss-selector-parser-6.0.7.tgz"
+  integrity sha1-SEBIMKY1ETpx/Xk5feggntBaZvw=
+  dependencies:
+    cssesc "^3.0.0"
+    util-deprecate "^1.0.2"
+
+postcss-value-parser@^4.1.0, postcss-value-parser@^4.2.0:
+  version "4.2.0"
+  resolved "https://bin.ti8m.ch:443/artifactory/api/npm/channelsuite-npm/postcss-value-parser/-/postcss-value-parser-4.2.0.tgz"
+  integrity sha1-cjwJkgg2um0+WvAZ+SvAlxwC5RQ=
 
 postcss@8.2.15:
   version "8.2.15"
-  resolved "https://bin.ti8m.ch:443/artifactory/api/npm/channelsuite-npm/postcss/-/postcss-8.2.15.tgz#9e66ccf07292817d226fc315cbbf9bc148fbca65"
+  resolved "https://bin.ti8m.ch:443/artifactory/api/npm/channelsuite-npm/postcss/-/postcss-8.2.15.tgz"
   integrity sha1-nmbM8HKSgX0ib8MVy7+bwUj7ymU=
   dependencies:
     colorette "^1.2.2"
     nanoid "^3.1.23"
     source-map "^0.6.1"
 
+postcss@^8.1.6, postcss@^8.4.4:
+  version "8.4.4"
+  resolved "https://bin.ti8m.ch:443/artifactory/api/npm/channelsuite-npm/postcss/-/postcss-8.4.4.tgz"
+  integrity sha1-1T1Oxqdf1iVXpmu0GXi/R/8MKGk=
+  dependencies:
+    nanoid "^3.1.30"
+    picocolors "^1.0.0"
+    source-map-js "^1.0.1"
+
 prelude-ls@^1.2.1:
   version "1.2.1"
-  resolved "https://bin.ti8m.ch:443/artifactory/api/npm/channelsuite-npm/prelude-ls/-/prelude-ls-1.2.1.tgz#debc6489d7a6e6b0e7611888cec880337d316396"
+  resolved "https://bin.ti8m.ch:443/artifactory/api/npm/channelsuite-npm/prelude-ls/-/prelude-ls-1.2.1.tgz"
   integrity sha1-3rxkidem5rDnYRiIzsiAM30xY5Y=
+
+prettier@^2.4.1:
+  version "2.5.1"
+  resolved "https://bin.ti8m.ch:443/artifactory/api/npm/channelsuite-npm/prettier/-/prettier-2.5.1.tgz#fff75fa9d519c54cf0fce328c1017d94546bc56a"
+  integrity sha1-//dfqdUZxUzw/OMowQF9lFRrxWo=
 
 process@0.11.10:
   version "0.11.10"
-  resolved "https://bin.ti8m.ch:443/artifactory/api/npm/channelsuite-npm/process/-/process-0.11.10.tgz#7332300e840161bda3e69a1d1d91a7d4bc16f182"
+  resolved "https://bin.ti8m.ch:443/artifactory/api/npm/channelsuite-npm/process/-/process-0.11.10.tgz"
   integrity sha1-czIwDoQBYb2j5podHZGn1LwW8YI=
 
 progress@^2.0.0:
   version "2.0.3"
-  resolved "https://bin.ti8m.ch:443/artifactory/api/npm/channelsuite-npm/progress/-/progress-2.0.3.tgz#7e8cf8d8f5b8f239c1bc68beb4eb78567d572ef8"
+  resolved "https://bin.ti8m.ch:443/artifactory/api/npm/channelsuite-npm/progress/-/progress-2.0.3.tgz"
   integrity sha1-foz42PW48jnBvGi+tOt4Vn1XLvg=
 
 prop-types@^15.7.2:
   version "15.7.2"
-  resolved "https://bin.ti8m.ch:443/artifactory/api/npm/channelsuite-npm/prop-types/-/prop-types-15.7.2.tgz#52c41e75b8c87e72b9d9360e0206b99dcbffa6c5"
+  resolved "https://bin.ti8m.ch:443/artifactory/api/npm/channelsuite-npm/prop-types/-/prop-types-15.7.2.tgz"
   integrity sha1-UsQedbjIfnK52TYOAga5ncv/psU=
   dependencies:
     loose-envify "^1.4.0"
@@ -2279,7 +2750,7 @@ prop-types@^15.7.2:
 
 public-encrypt@^4.0.0:
   version "4.0.3"
-  resolved "https://bin.ti8m.ch:443/artifactory/api/npm/channelsuite-npm/public-encrypt/-/public-encrypt-4.0.3.tgz#4fcc9d77a07e48ba7527e7cbe0de33d0701331e0"
+  resolved "https://bin.ti8m.ch:443/artifactory/api/npm/channelsuite-npm/public-encrypt/-/public-encrypt-4.0.3.tgz"
   integrity sha1-T8ydd6B+SLp1J+fL4N4z0HATMeA=
   dependencies:
     bn.js "^4.1.0"
@@ -2291,36 +2762,41 @@ public-encrypt@^4.0.0:
 
 punycode@^2.1.0:
   version "2.1.1"
-  resolved "https://bin.ti8m.ch:443/artifactory/api/npm/channelsuite-npm/punycode/-/punycode-2.1.1.tgz#b58b010ac40c22c5657616c8d2c2c02c7bf479ec"
+  resolved "https://bin.ti8m.ch:443/artifactory/api/npm/channelsuite-npm/punycode/-/punycode-2.1.1.tgz"
   integrity sha1-tYsBCsQMIsVldhbI0sLALHv0eew=
 
 querystring-es3@0.2.1:
   version "0.2.1"
-  resolved "https://bin.ti8m.ch:443/artifactory/api/npm/channelsuite-npm/querystring-es3/-/querystring-es3-0.2.1.tgz#9ec61f79049875707d69414596fd907a4d711e73"
+  resolved "https://bin.ti8m.ch:443/artifactory/api/npm/channelsuite-npm/querystring-es3/-/querystring-es3-0.2.1.tgz"
   integrity sha1-nsYfeQSYdXB9aUFFlv2Qek1xHnM=
 
 queue-microtask@^1.2.2:
   version "1.2.3"
-  resolved "https://bin.ti8m.ch:443/artifactory/api/npm/channelsuite-npm/queue-microtask/-/queue-microtask-1.2.3.tgz#4929228bbc724dfac43e0efb058caf7b6cfb6243"
+  resolved "https://bin.ti8m.ch:443/artifactory/api/npm/channelsuite-npm/queue-microtask/-/queue-microtask-1.2.3.tgz"
   integrity sha1-SSkii7xyTfrEPg77BYyve2z7YkM=
 
 queue@6.0.2:
   version "6.0.2"
-  resolved "https://bin.ti8m.ch:443/artifactory/api/npm/channelsuite-npm/queue/-/queue-6.0.2.tgz#b91525283e2315c7553d2efa18d83e76432fed65"
+  resolved "https://bin.ti8m.ch:443/artifactory/api/npm/channelsuite-npm/queue/-/queue-6.0.2.tgz"
   integrity sha1-uRUlKD4jFcdVPS76GNg+dkMv7WU=
   dependencies:
     inherits "~2.0.3"
 
+quick-lru@^5.1.1:
+  version "5.1.1"
+  resolved "https://bin.ti8m.ch:443/artifactory/api/npm/channelsuite-npm/quick-lru/-/quick-lru-5.1.1.tgz"
+  integrity sha1-NmST5rPkKjpoheLpnRj4D7eoyTI=
+
 randombytes@^2.0.0, randombytes@^2.0.1, randombytes@^2.0.5:
   version "2.1.0"
-  resolved "https://bin.ti8m.ch:443/artifactory/api/npm/channelsuite-npm/randombytes/-/randombytes-2.1.0.tgz#df6f84372f0270dc65cdf6291349ab7a473d4f2a"
+  resolved "https://bin.ti8m.ch:443/artifactory/api/npm/channelsuite-npm/randombytes/-/randombytes-2.1.0.tgz"
   integrity sha1-32+ENy8CcNxlzfYpE0mrekc9Tyo=
   dependencies:
     safe-buffer "^5.1.0"
 
 randomfill@^1.0.3:
   version "1.0.4"
-  resolved "https://bin.ti8m.ch:443/artifactory/api/npm/channelsuite-npm/randomfill/-/randomfill-1.0.4.tgz#c92196fc86ab42be983f1bf31778224931d61458"
+  resolved "https://bin.ti8m.ch:443/artifactory/api/npm/channelsuite-npm/randomfill/-/randomfill-1.0.4.tgz"
   integrity sha1-ySGW/IarQr6YPxvzF3giSTHWFFg=
   dependencies:
     randombytes "^2.0.5"
@@ -2328,7 +2804,7 @@ randomfill@^1.0.3:
 
 raw-body@2.4.1:
   version "2.4.1"
-  resolved "https://bin.ti8m.ch:443/artifactory/api/npm/channelsuite-npm/raw-body/-/raw-body-2.4.1.tgz#30ac82f98bb5ae8c152e67149dac8d55153b168c"
+  resolved "https://bin.ti8m.ch:443/artifactory/api/npm/channelsuite-npm/raw-body/-/raw-body-2.4.1.tgz"
   integrity sha1-MKyC+Yu1rowVLmcUnayNVRU7Fow=
   dependencies:
     bytes "3.1.0"
@@ -2338,31 +2814,36 @@ raw-body@2.4.1:
 
 react-dom@17.0.2:
   version "17.0.2"
-  resolved "https://bin.ti8m.ch:443/artifactory/api/npm/channelsuite-npm/react-dom/-/react-dom-17.0.2.tgz#ecffb6845e3ad8dbfcdc498f0d0a939736502c23"
+  resolved "https://bin.ti8m.ch:443/artifactory/api/npm/channelsuite-npm/react-dom/-/react-dom-17.0.2.tgz"
   integrity sha1-7P+2hF462Nv83EmPDQqTlzZQLCM=
   dependencies:
     loose-envify "^1.1.0"
     object-assign "^4.1.1"
     scheduler "^0.20.2"
 
+react-icons@^4.3.1:
+  version "4.3.1"
+  resolved "https://bin.ti8m.ch:443/artifactory/api/npm/channelsuite-npm/react-icons/-/react-icons-4.3.1.tgz"
+  integrity sha1-L6kq67vHH0PS2y7RrtBzYRJOkco=
+
 react-is@17.0.2:
   version "17.0.2"
-  resolved "https://bin.ti8m.ch:443/artifactory/api/npm/channelsuite-npm/react-is/-/react-is-17.0.2.tgz#e691d4a8e9c789365655539ab372762b0efb54f0"
+  resolved "https://bin.ti8m.ch:443/artifactory/api/npm/channelsuite-npm/react-is/-/react-is-17.0.2.tgz"
   integrity sha1-5pHUqOnHiTZWVVOas3J2Kw77VPA=
 
 react-is@^16.8.1:
   version "16.13.1"
-  resolved "https://bin.ti8m.ch:443/artifactory/api/npm/channelsuite-npm/react-is/-/react-is-16.13.1.tgz#789729a4dc36de2999dc156dd6c1d9c18cea56a4"
+  resolved "https://bin.ti8m.ch:443/artifactory/api/npm/channelsuite-npm/react-is/-/react-is-16.13.1.tgz"
   integrity sha1-eJcppNw23imZ3BVt1sHZwYzqVqQ=
 
 react-refresh@0.8.3:
   version "0.8.3"
-  resolved "https://bin.ti8m.ch:443/artifactory/api/npm/channelsuite-npm/react-refresh/-/react-refresh-0.8.3.tgz#721d4657672d400c5e3c75d063c4a85fb2d5d68f"
+  resolved "https://bin.ti8m.ch:443/artifactory/api/npm/channelsuite-npm/react-refresh/-/react-refresh-0.8.3.tgz"
   integrity sha1-ch1GV2ctQAxePHXQY8SoX7LV1o8=
 
 react@17.0.2:
   version "17.0.2"
-  resolved "https://bin.ti8m.ch:443/artifactory/api/npm/channelsuite-npm/react/-/react-17.0.2.tgz#d0b5cc516d29eb3eee383f75b62864cfb6800037"
+  resolved "https://bin.ti8m.ch:443/artifactory/api/npm/channelsuite-npm/react/-/react-17.0.2.tgz"
   integrity sha1-0LXMUW0p6z7uOD91tihkz7aAADc=
   dependencies:
     loose-envify "^1.1.0"
@@ -2370,7 +2851,7 @@ react@17.0.2:
 
 readable-stream@^3.5.0, readable-stream@^3.6.0:
   version "3.6.0"
-  resolved "https://bin.ti8m.ch:443/artifactory/api/npm/channelsuite-npm/readable-stream/-/readable-stream-3.6.0.tgz#337bbda3adc0706bd3e024426a286d4b4b2c9198"
+  resolved "https://bin.ti8m.ch:443/artifactory/api/npm/channelsuite-npm/readable-stream/-/readable-stream-3.6.0.tgz"
   integrity sha1-M3u9o63AcGvT4CRCaihtS0sskZg=
   dependencies:
     inherits "^2.0.3"
@@ -2379,24 +2860,31 @@ readable-stream@^3.5.0, readable-stream@^3.6.0:
 
 readdirp@~3.5.0:
   version "3.5.0"
-  resolved "https://bin.ti8m.ch:443/artifactory/api/npm/channelsuite-npm/readdirp/-/readdirp-3.5.0.tgz#9ba74c019b15d365278d2e91bb8c48d7b4d42c9e"
+  resolved "https://bin.ti8m.ch:443/artifactory/api/npm/channelsuite-npm/readdirp/-/readdirp-3.5.0.tgz"
   integrity sha1-m6dMAZsV02UnjS6Ru4xI17TULJ4=
+  dependencies:
+    picomatch "^2.2.1"
+
+readdirp@~3.6.0:
+  version "3.6.0"
+  resolved "https://bin.ti8m.ch:443/artifactory/api/npm/channelsuite-npm/readdirp/-/readdirp-3.6.0.tgz"
+  integrity sha1-dKNwvYVxFuJFspzJc0DNQxoCpsc=
   dependencies:
     picomatch "^2.2.1"
 
 regenerator-runtime@0.13.4:
   version "0.13.4"
-  resolved "https://bin.ti8m.ch:443/artifactory/api/npm/channelsuite-npm/regenerator-runtime/-/regenerator-runtime-0.13.4.tgz#e96bf612a3362d12bb69f7e8f74ffeab25c7ac91"
+  resolved "https://bin.ti8m.ch:443/artifactory/api/npm/channelsuite-npm/regenerator-runtime/-/regenerator-runtime-0.13.4.tgz"
   integrity sha1-6Wv2EqM2LRK7affo90/+qyXHrJE=
 
 regenerator-runtime@^0.13.4:
   version "0.13.9"
-  resolved "https://bin.ti8m.ch:443/artifactory/api/npm/channelsuite-npm/regenerator-runtime/-/regenerator-runtime-0.13.9.tgz#8925742a98ffd90814988d7566ad30ca3b263b52"
+  resolved "https://bin.ti8m.ch:443/artifactory/api/npm/channelsuite-npm/regenerator-runtime/-/regenerator-runtime-0.13.9.tgz"
   integrity sha1-iSV0Kpj/2QgUmI11Zq0wyjsmO1I=
 
 regexp.prototype.flags@^1.3.1:
   version "1.3.1"
-  resolved "https://bin.ti8m.ch:443/artifactory/api/npm/channelsuite-npm/regexp.prototype.flags/-/regexp.prototype.flags-1.3.1.tgz#7ef352ae8d159e758c0eadca6f8fcb4eef07be26"
+  resolved "https://bin.ti8m.ch:443/artifactory/api/npm/channelsuite-npm/regexp.prototype.flags/-/regexp.prototype.flags-1.3.1.tgz"
   integrity sha1-fvNSro0VnnWMDq3Kb4/LTu8HviY=
   dependencies:
     call-bind "^1.0.2"
@@ -2409,12 +2897,17 @@ regexpp@^3.2.0:
 
 resolve-from@^4.0.0:
   version "4.0.0"
-  resolved "https://bin.ti8m.ch:443/artifactory/api/npm/channelsuite-npm/resolve-from/-/resolve-from-4.0.0.tgz#4abcd852ad32dd7baabfe9b40e00a36db5f392e6"
+  resolved "https://bin.ti8m.ch:443/artifactory/api/npm/channelsuite-npm/resolve-from/-/resolve-from-4.0.0.tgz"
   integrity sha1-SrzYUq0y3Xuqv+m0DgCjbbXzkuY=
+
+resolve-from@^5.0.0:
+  version "5.0.0"
+  resolved "https://bin.ti8m.ch:443/artifactory/api/npm/channelsuite-npm/resolve-from/-/resolve-from-5.0.0.tgz"
+  integrity sha1-w1IlhD3493bfIcV1V7wIfp39/Gk=
 
 resolve@^1.20.0:
   version "1.20.0"
-  resolved "https://bin.ti8m.ch:443/artifactory/api/npm/channelsuite-npm/resolve/-/resolve-1.20.0.tgz#629a013fb3f70755d6f0b7935cc1c2c5378b1975"
+  resolved "https://bin.ti8m.ch:443/artifactory/api/npm/channelsuite-npm/resolve/-/resolve-1.20.0.tgz"
   integrity sha1-YpoBP7P3B1XW8LeTXMHCxTeLGXU=
   dependencies:
     is-core-module "^2.2.0"
@@ -2422,27 +2915,40 @@ resolve@^1.20.0:
 
 resolve@^2.0.0-next.3:
   version "2.0.0-next.3"
-  resolved "https://bin.ti8m.ch:443/artifactory/api/npm/channelsuite-npm/resolve/-/resolve-2.0.0-next.3.tgz#d41016293d4a8586a39ca5d9b5f15cbea1f55e46"
+  resolved "https://bin.ti8m.ch:443/artifactory/api/npm/channelsuite-npm/resolve/-/resolve-2.0.0-next.3.tgz"
   integrity sha1-1BAWKT1KhYajnKXZtfFcvqH1XkY=
   dependencies:
     is-core-module "^2.2.0"
     path-parse "^1.0.6"
 
+restore-cursor@^3.1.0:
+  version "3.1.0"
+  resolved "https://bin.ti8m.ch:443/artifactory/api/npm/channelsuite-npm/restore-cursor/-/restore-cursor-3.1.0.tgz"
+  integrity sha1-OfZ8VLOnpYzqUjbZXPADQjljH34=
+  dependencies:
+    onetime "^5.1.0"
+    signal-exit "^3.0.2"
+
 reusify@^1.0.4:
   version "1.0.4"
-  resolved "https://bin.ti8m.ch:443/artifactory/api/npm/channelsuite-npm/reusify/-/reusify-1.0.4.tgz#90da382b1e126efc02146e90845a88db12925d76"
+  resolved "https://bin.ti8m.ch:443/artifactory/api/npm/channelsuite-npm/reusify/-/reusify-1.0.4.tgz"
   integrity sha1-kNo4Kx4SbvwCFG6QhFqI2xKSXXY=
 
-rimraf@^3.0.2:
+rfdc@^1.3.0:
+  version "1.3.0"
+  resolved "https://bin.ti8m.ch:443/artifactory/api/npm/channelsuite-npm/rfdc/-/rfdc-1.3.0.tgz"
+  integrity sha1-0LfEQasnINBdxM8m4ByJYx2doIs=
+
+rimraf@^3.0.0, rimraf@^3.0.2:
   version "3.0.2"
-  resolved "https://bin.ti8m.ch:443/artifactory/api/npm/channelsuite-npm/rimraf/-/rimraf-3.0.2.tgz#f1a5402ba6220ad52cc1282bac1ae3aa49fd061a"
+  resolved "https://bin.ti8m.ch:443/artifactory/api/npm/channelsuite-npm/rimraf/-/rimraf-3.0.2.tgz"
   integrity sha1-8aVAK6YiCtUswSgrrBrjqkn9Bho=
   dependencies:
     glob "^7.1.3"
 
 ripemd160@^2.0.0, ripemd160@^2.0.1:
   version "2.0.2"
-  resolved "https://bin.ti8m.ch:443/artifactory/api/npm/channelsuite-npm/ripemd160/-/ripemd160-2.0.2.tgz#a1c1a6f624751577ba5d07914cbc92850585890c"
+  resolved "https://bin.ti8m.ch:443/artifactory/api/npm/channelsuite-npm/ripemd160/-/ripemd160-2.0.2.tgz"
   integrity sha1-ocGm9iR1FXe6XQeRTLyShQWFiQw=
   dependencies:
     hash-base "^3.0.0"
@@ -2450,29 +2956,36 @@ ripemd160@^2.0.0, ripemd160@^2.0.1:
 
 run-parallel@^1.1.9:
   version "1.2.0"
-  resolved "https://bin.ti8m.ch:443/artifactory/api/npm/channelsuite-npm/run-parallel/-/run-parallel-1.2.0.tgz#66d1368da7bdf921eb9d95bd1a9229e7f21a43ee"
+  resolved "https://bin.ti8m.ch:443/artifactory/api/npm/channelsuite-npm/run-parallel/-/run-parallel-1.2.0.tgz"
   integrity sha1-ZtE2jae9+SHrnZW9GpIp5/IaQ+4=
   dependencies:
     queue-microtask "^1.2.2"
 
+rxjs@^7.4.0:
+  version "7.4.0"
+  resolved "https://bin.ti8m.ch:443/artifactory/api/npm/channelsuite-npm/rxjs/-/rxjs-7.4.0.tgz"
+  integrity sha1-oSpE1+6/AW9f8kQbh/KMmlHOvGg=
+  dependencies:
+    tslib "~2.1.0"
+
 safe-buffer@^5.0.1, safe-buffer@^5.1.0, safe-buffer@^5.1.1, safe-buffer@^5.1.2, safe-buffer@^5.2.0, safe-buffer@~5.2.0:
   version "5.2.1"
-  resolved "https://bin.ti8m.ch:443/artifactory/api/npm/channelsuite-npm/safe-buffer/-/safe-buffer-5.2.1.tgz#1eaf9fa9bdb1fdd4ec75f58f9cdb4e6b7827eec6"
+  resolved "https://bin.ti8m.ch:443/artifactory/api/npm/channelsuite-npm/safe-buffer/-/safe-buffer-5.2.1.tgz"
   integrity sha1-Hq+fqb2x/dTsdfWPnNtOa3gn7sY=
 
 safe-buffer@~5.1.1:
   version "5.1.2"
-  resolved "https://bin.ti8m.ch:443/artifactory/api/npm/channelsuite-npm/safe-buffer/-/safe-buffer-5.1.2.tgz#991ec69d296e0313747d59bdfd2b745c35f8828d"
+  resolved "https://bin.ti8m.ch:443/artifactory/api/npm/channelsuite-npm/safe-buffer/-/safe-buffer-5.1.2.tgz"
   integrity sha1-mR7GnSluAxN0fVm9/St0XDX4go0=
 
 "safer-buffer@>= 2.1.2 < 3", "safer-buffer@>= 2.1.2 < 3.0.0", safer-buffer@^2.1.0:
   version "2.1.2"
-  resolved "https://bin.ti8m.ch:443/artifactory/api/npm/channelsuite-npm/safer-buffer/-/safer-buffer-2.1.2.tgz#44fa161b0187b9549dd84bb91802f9bd8385cd6a"
+  resolved "https://bin.ti8m.ch:443/artifactory/api/npm/channelsuite-npm/safer-buffer/-/safer-buffer-2.1.2.tgz"
   integrity sha1-RPoWGwGHuVSd2Eu5GAL5vYOFzWo=
 
 scheduler@^0.20.2:
   version "0.20.2"
-  resolved "https://bin.ti8m.ch:443/artifactory/api/npm/channelsuite-npm/scheduler/-/scheduler-0.20.2.tgz#4baee39436e34aa93b4874bddcbf0fe8b8b50e91"
+  resolved "https://bin.ti8m.ch:443/artifactory/api/npm/channelsuite-npm/scheduler/-/scheduler-0.20.2.tgz"
   integrity sha1-S67jlDbjSqk7SHS93L8P6Li1DpE=
   dependencies:
     loose-envify "^1.1.0"
@@ -2480,29 +2993,29 @@ scheduler@^0.20.2:
 
 semver@^6.0.0, semver@^6.3.0:
   version "6.3.0"
-  resolved "https://bin.ti8m.ch:443/artifactory/api/npm/channelsuite-npm/semver/-/semver-6.3.0.tgz#ee0a64c8af5e8ceea67687b133761e1becbd1d3d"
+  resolved "https://bin.ti8m.ch:443/artifactory/api/npm/channelsuite-npm/semver/-/semver-6.3.0.tgz"
   integrity sha1-7gpkyK9ejO6mdoexM3YeG+y9HT0=
 
 semver@^7.2.1, semver@^7.3.5:
   version "7.3.5"
-  resolved "https://bin.ti8m.ch:443/artifactory/api/npm/channelsuite-npm/semver/-/semver-7.3.5.tgz#0b621c879348d8998e4b0e4be94b3f12e6018ef7"
+  resolved "https://bin.ti8m.ch:443/artifactory/api/npm/channelsuite-npm/semver/-/semver-7.3.5.tgz"
   integrity sha1-C2Ich5NI2JmOSw5L6Us/EuYBjvc=
   dependencies:
     lru-cache "^6.0.0"
 
 setimmediate@^1.0.4:
   version "1.0.5"
-  resolved "https://bin.ti8m.ch:443/artifactory/api/npm/channelsuite-npm/setimmediate/-/setimmediate-1.0.5.tgz#290cbb232e306942d7d7ea9b83732ab7856f8285"
+  resolved "https://bin.ti8m.ch:443/artifactory/api/npm/channelsuite-npm/setimmediate/-/setimmediate-1.0.5.tgz"
   integrity sha1-KQy7Iy4waULX1+qbg3Mqt4VvgoU=
 
 setprototypeof@1.1.1:
   version "1.1.1"
-  resolved "https://bin.ti8m.ch:443/artifactory/api/npm/channelsuite-npm/setprototypeof/-/setprototypeof-1.1.1.tgz#7e95acb24aa92f5885e0abef5ba131330d4ae683"
+  resolved "https://bin.ti8m.ch:443/artifactory/api/npm/channelsuite-npm/setprototypeof/-/setprototypeof-1.1.1.tgz"
   integrity sha1-fpWsskqpL1iF4KvvW6ExMw1K5oM=
 
 sha.js@^2.4.0, sha.js@^2.4.8:
   version "2.4.11"
-  resolved "https://bin.ti8m.ch:443/artifactory/api/npm/channelsuite-npm/sha.js/-/sha.js-2.4.11.tgz#37a5cf0b81ecbc6943de109ba2960d1b26584ae7"
+  resolved "https://bin.ti8m.ch:443/artifactory/api/npm/channelsuite-npm/sha.js/-/sha.js-2.4.11.tgz"
   integrity sha1-N6XPC4HsvGlD3hCbopYNGyZYSuc=
   dependencies:
     inherits "^2.0.1"
@@ -2510,67 +3023,103 @@ sha.js@^2.4.0, sha.js@^2.4.8:
 
 shebang-command@^2.0.0:
   version "2.0.0"
-  resolved "https://bin.ti8m.ch:443/artifactory/api/npm/channelsuite-npm/shebang-command/-/shebang-command-2.0.0.tgz#ccd0af4f8835fbdc265b82461aaf0c36663f34ea"
+  resolved "https://bin.ti8m.ch:443/artifactory/api/npm/channelsuite-npm/shebang-command/-/shebang-command-2.0.0.tgz"
   integrity sha1-zNCvT4g1+9wmW4JGGq8MNmY/NOo=
   dependencies:
     shebang-regex "^3.0.0"
 
 shebang-regex@^3.0.0:
   version "3.0.0"
-  resolved "https://bin.ti8m.ch:443/artifactory/api/npm/channelsuite-npm/shebang-regex/-/shebang-regex-3.0.0.tgz#ae16f1644d873ecad843b0307b143362d4c42172"
+  resolved "https://bin.ti8m.ch:443/artifactory/api/npm/channelsuite-npm/shebang-regex/-/shebang-regex-3.0.0.tgz"
   integrity sha1-rhbxZE2HPsrYQ7AwexQzYtTEIXI=
 
 shell-quote@1.7.3:
   version "1.7.3"
-  resolved "https://bin.ti8m.ch:443/artifactory/api/npm/channelsuite-npm/shell-quote/-/shell-quote-1.7.3.tgz#aa40edac170445b9a431e17bb62c0b881b9c4123"
+  resolved "https://bin.ti8m.ch:443/artifactory/api/npm/channelsuite-npm/shell-quote/-/shell-quote-1.7.3.tgz"
   integrity sha1-qkDtrBcERbmkMeF7tiwLiBucQSM=
 
 side-channel@^1.0.4:
   version "1.0.4"
-  resolved "https://bin.ti8m.ch:443/artifactory/api/npm/channelsuite-npm/side-channel/-/side-channel-1.0.4.tgz#efce5c8fdc104ee751b25c58d4290011fa5ea2cf"
+  resolved "https://bin.ti8m.ch:443/artifactory/api/npm/channelsuite-npm/side-channel/-/side-channel-1.0.4.tgz"
   integrity sha1-785cj9wQTudRslxY1CkAEfpeos8=
   dependencies:
     call-bind "^1.0.0"
     get-intrinsic "^1.0.2"
     object-inspect "^1.9.0"
 
+signal-exit@^3.0.2, signal-exit@^3.0.3:
+  version "3.0.6"
+  resolved "https://bin.ti8m.ch:443/artifactory/api/npm/channelsuite-npm/signal-exit/-/signal-exit-3.0.6.tgz"
+  integrity sha1-JOYwxLDwP+pEaivSmeYrSmyo0K8=
+
 slash@^3.0.0:
   version "3.0.0"
-  resolved "https://bin.ti8m.ch:443/artifactory/api/npm/channelsuite-npm/slash/-/slash-3.0.0.tgz#6539be870c165adbd5240220dbe361f1bc4d4634"
+  resolved "https://bin.ti8m.ch:443/artifactory/api/npm/channelsuite-npm/slash/-/slash-3.0.0.tgz"
   integrity sha1-ZTm+hwwWWtvVJAIg2+Nh8bxNRjQ=
+
+slice-ansi@^3.0.0:
+  version "3.0.0"
+  resolved "https://bin.ti8m.ch:443/artifactory/api/npm/channelsuite-npm/slice-ansi/-/slice-ansi-3.0.0.tgz"
+  integrity sha1-Md3BCTCht+C2ewjJbC9Jt3p4l4c=
+  dependencies:
+    ansi-styles "^4.0.0"
+    astral-regex "^2.0.0"
+    is-fullwidth-code-point "^3.0.0"
+
+slice-ansi@^4.0.0:
+  version "4.0.0"
+  resolved "https://bin.ti8m.ch:443/artifactory/api/npm/channelsuite-npm/slice-ansi/-/slice-ansi-4.0.0.tgz"
+  integrity sha1-UA6N0P1VsFgVCGJVsxla3ypF/ms=
+  dependencies:
+    ansi-styles "^4.0.0"
+    astral-regex "^2.0.0"
+    is-fullwidth-code-point "^3.0.0"
+
+slice-ansi@^5.0.0:
+  version "5.0.0"
+  resolved "https://bin.ti8m.ch:443/artifactory/api/npm/channelsuite-npm/slice-ansi/-/slice-ansi-5.0.0.tgz"
+  integrity sha1-tzBjxXqpb5zYgWVLFSlNldKFxCo=
+  dependencies:
+    ansi-styles "^6.0.0"
+    is-fullwidth-code-point "^4.0.0"
+
+source-map-js@^1.0.1:
+  version "1.0.1"
+  resolved "https://bin.ti8m.ch:443/artifactory/api/npm/channelsuite-npm/source-map-js/-/source-map-js-1.0.1.tgz"
+  integrity sha1-oXQcEx48d9BIJSrfok4juQhnDK8=
 
 source-map@0.7.3:
   version "0.7.3"
-  resolved "https://bin.ti8m.ch:443/artifactory/api/npm/channelsuite-npm/source-map/-/source-map-0.7.3.tgz#5302f8169031735226544092e64981f751750383"
+  resolved "https://bin.ti8m.ch:443/artifactory/api/npm/channelsuite-npm/source-map/-/source-map-0.7.3.tgz"
   integrity sha1-UwL4FpAxc1ImVECS5kmB91F1A4M=
 
 source-map@0.8.0-beta.0:
   version "0.8.0-beta.0"
-  resolved "https://bin.ti8m.ch:443/artifactory/api/npm/channelsuite-npm/source-map/-/source-map-0.8.0-beta.0.tgz#d4c1bb42c3f7ee925f005927ba10709e0d1d1f11"
+  resolved "https://bin.ti8m.ch:443/artifactory/api/npm/channelsuite-npm/source-map/-/source-map-0.8.0-beta.0.tgz"
   integrity sha1-1MG7QsP37pJfAFknuhBwng0dHxE=
   dependencies:
     whatwg-url "^7.0.0"
 
 source-map@^0.6.1:
   version "0.6.1"
-  resolved "https://bin.ti8m.ch:443/artifactory/api/npm/channelsuite-npm/source-map/-/source-map-0.6.1.tgz#74722af32e9614e9c287a8d0bbde48b5e2f1a263"
+  resolved "https://bin.ti8m.ch:443/artifactory/api/npm/channelsuite-npm/source-map/-/source-map-0.6.1.tgz"
   integrity sha1-dHIq8y6WFOnCh6jQu95IteLxomM=
 
 stacktrace-parser@0.1.10:
   version "0.1.10"
-  resolved "https://bin.ti8m.ch:443/artifactory/api/npm/channelsuite-npm/stacktrace-parser/-/stacktrace-parser-0.1.10.tgz#29fb0cae4e0d0b85155879402857a1639eb6051a"
+  resolved "https://bin.ti8m.ch:443/artifactory/api/npm/channelsuite-npm/stacktrace-parser/-/stacktrace-parser-0.1.10.tgz"
   integrity sha1-KfsMrk4NC4UVWHlAKFehY562BRo=
   dependencies:
     type-fest "^0.7.1"
 
 "statuses@>= 1.5.0 < 2":
   version "1.5.0"
-  resolved "https://bin.ti8m.ch:443/artifactory/api/npm/channelsuite-npm/statuses/-/statuses-1.5.0.tgz#161c7dac177659fd9811f43771fa99381478628c"
+  resolved "https://bin.ti8m.ch:443/artifactory/api/npm/channelsuite-npm/statuses/-/statuses-1.5.0.tgz"
   integrity sha1-Fhx9rBd2Wf2YEfQ3cfqZOBR4Yow=
 
 stream-browserify@3.0.0:
   version "3.0.0"
-  resolved "https://bin.ti8m.ch:443/artifactory/api/npm/channelsuite-npm/stream-browserify/-/stream-browserify-3.0.0.tgz#22b0a2850cdf6503e73085da1fc7b7d0c2122f2f"
+  resolved "https://bin.ti8m.ch:443/artifactory/api/npm/channelsuite-npm/stream-browserify/-/stream-browserify-3.0.0.tgz"
   integrity sha1-IrCihQzfZQPnMIXaH8e30MISLy8=
   dependencies:
     inherits "~2.0.4"
@@ -2578,7 +3127,7 @@ stream-browserify@3.0.0:
 
 stream-http@3.1.1:
   version "3.1.1"
-  resolved "https://bin.ti8m.ch:443/artifactory/api/npm/channelsuite-npm/stream-http/-/stream-http-3.1.1.tgz#0370a8017cf8d050b9a8554afe608f043eaff564"
+  resolved "https://bin.ti8m.ch:443/artifactory/api/npm/channelsuite-npm/stream-http/-/stream-http-3.1.1.tgz"
   integrity sha1-A3CoAXz40FC5qFVK/mCPBD6v9WQ=
   dependencies:
     builtin-status-codes "^3.0.0"
@@ -2588,19 +3137,42 @@ stream-http@3.1.1:
 
 stream-parser@^0.3.1:
   version "0.3.1"
-  resolved "https://bin.ti8m.ch:443/artifactory/api/npm/channelsuite-npm/stream-parser/-/stream-parser-0.3.1.tgz#1618548694420021a1182ff0af1911c129761773"
+  resolved "https://bin.ti8m.ch:443/artifactory/api/npm/channelsuite-npm/stream-parser/-/stream-parser-0.3.1.tgz"
   integrity sha1-FhhUhpRCACGhGC/wrxkRwSl2F3M=
   dependencies:
     debug "2"
 
+string-argv@^0.3.1:
+  version "0.3.1"
+  resolved "https://bin.ti8m.ch:443/artifactory/api/npm/channelsuite-npm/string-argv/-/string-argv-0.3.1.tgz"
+  integrity sha1-leL77AQnrhkYSTX4FtdKqkxcGdo=
+
 string-hash@1.1.3:
   version "1.1.3"
-  resolved "https://bin.ti8m.ch:443/artifactory/api/npm/channelsuite-npm/string-hash/-/string-hash-1.1.3.tgz#e8aafc0ac1855b4666929ed7dd1275df5d6c811b"
+  resolved "https://bin.ti8m.ch:443/artifactory/api/npm/channelsuite-npm/string-hash/-/string-hash-1.1.3.tgz"
   integrity sha1-6Kr8CsGFW0Zmkp7X3RJ1311sgRs=
+
+string-width@^4.1.0, string-width@^4.2.0:
+  version "4.2.3"
+  resolved "https://bin.ti8m.ch:443/artifactory/api/npm/channelsuite-npm/string-width/-/string-width-4.2.3.tgz"
+  integrity sha1-JpxxF9J7Ba0uU2gwqOyJXvnG0BA=
+  dependencies:
+    emoji-regex "^8.0.0"
+    is-fullwidth-code-point "^3.0.0"
+    strip-ansi "^6.0.1"
+
+string-width@^5.0.0:
+  version "5.0.1"
+  resolved "https://bin.ti8m.ch:443/artifactory/api/npm/channelsuite-npm/string-width/-/string-width-5.0.1.tgz"
+  integrity sha1-DYFYM1ps/Y65Xam2smLOMUoDb/0=
+  dependencies:
+    emoji-regex "^9.2.2"
+    is-fullwidth-code-point "^4.0.0"
+    strip-ansi "^7.0.1"
 
 string.prototype.matchall@^4.0.6:
   version "4.0.6"
-  resolved "https://bin.ti8m.ch:443/artifactory/api/npm/channelsuite-npm/string.prototype.matchall/-/string.prototype.matchall-4.0.6.tgz#5abb5dabc94c7b0ea2380f65ba610b3a544b15fa"
+  resolved "https://bin.ti8m.ch:443/artifactory/api/npm/channelsuite-npm/string.prototype.matchall/-/string.prototype.matchall-4.0.6.tgz"
   integrity sha1-Wrtdq8lMew6iOA9lumELOlRLFfo=
   dependencies:
     call-bind "^1.0.2"
@@ -2614,7 +3186,7 @@ string.prototype.matchall@^4.0.6:
 
 string.prototype.trimend@^1.0.4:
   version "1.0.4"
-  resolved "https://bin.ti8m.ch:443/artifactory/api/npm/channelsuite-npm/string.prototype.trimend/-/string.prototype.trimend-1.0.4.tgz#e75ae90c2942c63504686c18b287b4a0b1a45f80"
+  resolved "https://bin.ti8m.ch:443/artifactory/api/npm/channelsuite-npm/string.prototype.trimend/-/string.prototype.trimend-1.0.4.tgz"
   integrity sha1-51rpDClCxjUEaGwYsoe0oLGkX4A=
   dependencies:
     call-bind "^1.0.2"
@@ -2622,7 +3194,7 @@ string.prototype.trimend@^1.0.4:
 
 string.prototype.trimstart@^1.0.4:
   version "1.0.4"
-  resolved "https://bin.ti8m.ch:443/artifactory/api/npm/channelsuite-npm/string.prototype.trimstart/-/string.prototype.trimstart-1.0.4.tgz#b36399af4ab2999b4c9c648bd7a3fb2bb26feeed"
+  resolved "https://bin.ti8m.ch:443/artifactory/api/npm/channelsuite-npm/string.prototype.trimstart/-/string.prototype.trimstart-1.0.4.tgz"
   integrity sha1-s2OZr0qymZtMnGSL16P7K7Jv7u0=
   dependencies:
     call-bind "^1.0.2"
@@ -2630,31 +3202,38 @@ string.prototype.trimstart@^1.0.4:
 
 string_decoder@1.3.0, string_decoder@^1.1.1:
   version "1.3.0"
-  resolved "https://bin.ti8m.ch:443/artifactory/api/npm/channelsuite-npm/string_decoder/-/string_decoder-1.3.0.tgz#42f114594a46cf1a8e30b0a84f56c78c3edac21e"
+  resolved "https://bin.ti8m.ch:443/artifactory/api/npm/channelsuite-npm/string_decoder/-/string_decoder-1.3.0.tgz"
   integrity sha1-QvEUWUpGzxqOMLCoT1bHjD7awh4=
   dependencies:
     safe-buffer "~5.2.0"
 
-strip-ansi@6.0.1, strip-ansi@^6.0.1:
+strip-ansi@6.0.1, strip-ansi@^6.0.0, strip-ansi@^6.0.1:
   version "6.0.1"
-  resolved "https://bin.ti8m.ch:443/artifactory/api/npm/channelsuite-npm/strip-ansi/-/strip-ansi-6.0.1.tgz#9e26c63d30f53443e9489495b2105d37b67a85d9"
+  resolved "https://bin.ti8m.ch:443/artifactory/api/npm/channelsuite-npm/strip-ansi/-/strip-ansi-6.0.1.tgz"
   integrity sha1-nibGPTD1NEPpSJSVshBdN7Z6hdk=
   dependencies:
     ansi-regex "^5.0.1"
 
-strip-bom@^3.0.0:
-  version "3.0.0"
-  resolved "https://bin.ti8m.ch:443/artifactory/api/npm/channelsuite-npm/strip-bom/-/strip-bom-3.0.0.tgz#2334c18e9c759f7bdd56fdef7e9ae3d588e68ed3"
-  integrity sha1-IzTBjpx1n3vdVv3vfprj1YjmjtM=
+strip-ansi@^7.0.1:
+  version "7.0.1"
+  resolved "https://bin.ti8m.ch:443/artifactory/api/npm/channelsuite-npm/strip-ansi/-/strip-ansi-7.0.1.tgz"
+  integrity sha1-YXQKCM42th5Q5lZT8HBg0ACXX7I=
+  dependencies:
+    ansi-regex "^6.0.1"
+
+strip-final-newline@^2.0.0:
+  version "2.0.0"
+  resolved "https://bin.ti8m.ch:443/artifactory/api/npm/channelsuite-npm/strip-final-newline/-/strip-final-newline-2.0.0.tgz"
+  integrity sha1-ibhS+y/L6Tb29LMYevsKEsGrWK0=
 
 strip-json-comments@^3.1.0, strip-json-comments@^3.1.1:
   version "3.1.1"
-  resolved "https://bin.ti8m.ch:443/artifactory/api/npm/channelsuite-npm/strip-json-comments/-/strip-json-comments-3.1.1.tgz#31f1281b3832630434831c310c01cccda8cbe006"
+  resolved "https://bin.ti8m.ch:443/artifactory/api/npm/channelsuite-npm/strip-json-comments/-/strip-json-comments-3.1.1.tgz"
   integrity sha1-MfEoGzgyYwQ0gxwxDAHMzajL4AY=
 
 styled-jsx@5.0.0-beta.3:
   version "5.0.0-beta.3"
-  resolved "https://bin.ti8m.ch:443/artifactory/api/npm/channelsuite-npm/styled-jsx/-/styled-jsx-5.0.0-beta.3.tgz#400d16179b5dff10d5954ab8be27a9a1b7780dd2"
+  resolved "https://bin.ti8m.ch:443/artifactory/api/npm/channelsuite-npm/styled-jsx/-/styled-jsx-5.0.0-beta.3.tgz"
   integrity sha1-QA0WF5td/xDVlUq4viepobd4DdI=
   dependencies:
     "@babel/plugin-syntax-jsx" "7.14.5"
@@ -2668,123 +3247,184 @@ styled-jsx@5.0.0-beta.3:
 
 stylis-rule-sheet@0.0.10:
   version "0.0.10"
-  resolved "https://bin.ti8m.ch:443/artifactory/api/npm/channelsuite-npm/stylis-rule-sheet/-/stylis-rule-sheet-0.0.10.tgz#44e64a2b076643f4b52e5ff71efc04d8c3c4a430"
+  resolved "https://bin.ti8m.ch:443/artifactory/api/npm/channelsuite-npm/stylis-rule-sheet/-/stylis-rule-sheet-0.0.10.tgz"
   integrity sha1-ROZKKwdmQ/S1Ll/3HvwE2MPEpDA=
 
 stylis@3.5.4:
   version "3.5.4"
-  resolved "https://bin.ti8m.ch:443/artifactory/api/npm/channelsuite-npm/stylis/-/stylis-3.5.4.tgz#f665f25f5e299cf3d64654ab949a57c768b73fbe"
+  resolved "https://bin.ti8m.ch:443/artifactory/api/npm/channelsuite-npm/stylis/-/stylis-3.5.4.tgz"
   integrity sha1-9mXyX14pnPPWRlSrlJpXx2i3P74=
 
 supports-color@^5.3.0:
   version "5.5.0"
-  resolved "https://bin.ti8m.ch:443/artifactory/api/npm/channelsuite-npm/supports-color/-/supports-color-5.5.0.tgz#e2e69a44ac8772f78a1ec0b35b689df6530efc8f"
+  resolved "https://bin.ti8m.ch:443/artifactory/api/npm/channelsuite-npm/supports-color/-/supports-color-5.5.0.tgz"
   integrity sha1-4uaaRKyHcveKHsCzW2id9lMO/I8=
   dependencies:
     has-flag "^3.0.0"
 
 supports-color@^7.1.0:
   version "7.2.0"
-  resolved "https://bin.ti8m.ch:443/artifactory/api/npm/channelsuite-npm/supports-color/-/supports-color-7.2.0.tgz#1b7dcdcb32b8138801b3e478ba6a51caa89648da"
+  resolved "https://bin.ti8m.ch:443/artifactory/api/npm/channelsuite-npm/supports-color/-/supports-color-7.2.0.tgz"
   integrity sha1-G33NyzK4E4gBs+R4umpRyqiWSNo=
   dependencies:
     has-flag "^4.0.0"
 
 supports-color@^8.0.0:
   version "8.1.1"
-  resolved "https://bin.ti8m.ch:443/artifactory/api/npm/channelsuite-npm/supports-color/-/supports-color-8.1.1.tgz#cd6fc17e28500cff56c1b86c0a7fd4a54a73005c"
+  resolved "https://bin.ti8m.ch:443/artifactory/api/npm/channelsuite-npm/supports-color/-/supports-color-8.1.1.tgz"
   integrity sha1-zW/BfihQDP9WwbhsCn/UpUpzAFw=
   dependencies:
     has-flag "^4.0.0"
 
+supports-color@^9.2.1:
+  version "9.2.1"
+  resolved "https://bin.ti8m.ch:443/artifactory/api/npm/channelsuite-npm/supports-color/-/supports-color-9.2.1.tgz"
+  integrity sha1-WZ3J1FrPdMYXbg2IC6sdfXGP6JE=
+
+tailwindcss@^3.0.7:
+  version "3.0.7"
+  resolved "https://bin.ti8m.ch:443/artifactory/api/npm/channelsuite-npm/tailwindcss/-/tailwindcss-3.0.7.tgz#15936881f042a7eb8d6f2b6a454bac9f51181bbd"
+  integrity sha1-FZNogfBCp+uNbytqRUusn1EYG70=
+  dependencies:
+    arg "^5.0.1"
+    chalk "^4.1.2"
+    chokidar "^3.5.2"
+    color-name "^1.1.4"
+    cosmiconfig "^7.0.1"
+    detective "^5.2.0"
+    didyoumean "^1.2.2"
+    dlv "^1.1.3"
+    fast-glob "^3.2.7"
+    glob-parent "^6.0.2"
+    is-glob "^4.0.3"
+    normalize-path "^3.0.0"
+    object-hash "^2.2.0"
+    postcss-js "^3.0.3"
+    postcss-load-config "^3.1.0"
+    postcss-nested "5.0.6"
+    postcss-selector-parser "^6.0.7"
+    postcss-value-parser "^4.2.0"
+    quick-lru "^5.1.1"
+    resolve "^1.20.0"
+    tmp "^0.2.1"
+
 text-table@^0.2.0:
   version "0.2.0"
-  resolved "https://bin.ti8m.ch:443/artifactory/api/npm/channelsuite-npm/text-table/-/text-table-0.2.0.tgz#7f5ee823ae805207c00af2df4a84ec3fcfa570b4"
+  resolved "https://bin.ti8m.ch:443/artifactory/api/npm/channelsuite-npm/text-table/-/text-table-0.2.0.tgz"
   integrity sha1-f17oI66AUgfACvLfSoTsP8+lcLQ=
+
+through@^2.3.8:
+  version "2.3.8"
+  resolved "https://bin.ti8m.ch:443/artifactory/api/npm/channelsuite-npm/through/-/through-2.3.8.tgz"
+  integrity sha1-DdTJ/6q8NXlgsbckEV1+Doai4fU=
 
 timers-browserify@2.0.12:
   version "2.0.12"
-  resolved "https://bin.ti8m.ch:443/artifactory/api/npm/channelsuite-npm/timers-browserify/-/timers-browserify-2.0.12.tgz#44a45c11fbf407f34f97bccd1577c652361b00ee"
+  resolved "https://bin.ti8m.ch:443/artifactory/api/npm/channelsuite-npm/timers-browserify/-/timers-browserify-2.0.12.tgz"
   integrity sha1-RKRcEfv0B/NPl7zNFXfGUjYbAO4=
   dependencies:
     setimmediate "^1.0.4"
 
+tmp@^0.2.1:
+  version "0.2.1"
+  resolved "https://bin.ti8m.ch:443/artifactory/api/npm/channelsuite-npm/tmp/-/tmp-0.2.1.tgz"
+  integrity sha1-hFf8MDfc9HGcJRNnoa9lAO4czxQ=
+  dependencies:
+    rimraf "^3.0.0"
+
 to-fast-properties@^2.0.0:
   version "2.0.0"
-  resolved "https://bin.ti8m.ch:443/artifactory/api/npm/channelsuite-npm/to-fast-properties/-/to-fast-properties-2.0.0.tgz#dc5e698cbd079265bc73e0377681a4e4e83f616e"
+  resolved "https://bin.ti8m.ch:443/artifactory/api/npm/channelsuite-npm/to-fast-properties/-/to-fast-properties-2.0.0.tgz"
   integrity sha1-3F5pjL0HkmW8c+A3doGk5Og/YW4=
 
 to-regex-range@^5.0.1:
   version "5.0.1"
-  resolved "https://bin.ti8m.ch:443/artifactory/api/npm/channelsuite-npm/to-regex-range/-/to-regex-range-5.0.1.tgz#1648c44aae7c8d988a326018ed72f5b4dd0392e4"
+  resolved "https://bin.ti8m.ch:443/artifactory/api/npm/channelsuite-npm/to-regex-range/-/to-regex-range-5.0.1.tgz"
   integrity sha1-FkjESq58jZiKMmAY7XL1tN0DkuQ=
   dependencies:
     is-number "^7.0.0"
 
 toidentifier@1.0.0:
   version "1.0.0"
-  resolved "https://bin.ti8m.ch:443/artifactory/api/npm/channelsuite-npm/toidentifier/-/toidentifier-1.0.0.tgz#7e1be3470f1e77948bc43d94a3c8f4d7752ba553"
+  resolved "https://bin.ti8m.ch:443/artifactory/api/npm/channelsuite-npm/toidentifier/-/toidentifier-1.0.0.tgz"
   integrity sha1-fhvjRw8ed5SLxD2Uo8j013UrpVM=
 
 tr46@^1.0.1:
   version "1.0.1"
-  resolved "https://bin.ti8m.ch:443/artifactory/api/npm/channelsuite-npm/tr46/-/tr46-1.0.1.tgz#a8b13fd6bfd2489519674ccde55ba3693b706d09"
+  resolved "https://bin.ti8m.ch:443/artifactory/api/npm/channelsuite-npm/tr46/-/tr46-1.0.1.tgz"
   integrity sha1-qLE/1r/SSJUZZ0zN5VujaTtwbQk=
   dependencies:
     punycode "^2.1.0"
 
-tsconfig-paths@^3.11.0, tsconfig-paths@^3.9.0:
-  version "3.12.0"
-  resolved "https://bin.ti8m.ch:443/artifactory/api/npm/channelsuite-npm/tsconfig-paths/-/tsconfig-paths-3.12.0.tgz#19769aca6ee8f6a1a341e38c8fa45dd9fb18899b"
-  integrity sha1-GXaaym7o9qGjQeOMj6Rd2fsYiZs=
-  dependencies:
-    "@types/json5" "^0.0.29"
-    json5 "^1.0.1"
-    minimist "^1.2.0"
-    strip-bom "^3.0.0"
-
 tslib@^1.8.1:
   version "1.14.1"
-  resolved "https://bin.ti8m.ch:443/artifactory/api/npm/channelsuite-npm/tslib/-/tslib-1.14.1.tgz#cf2d38bdc34a134bcaf1091c41f6619e2f672d00"
+  resolved "https://bin.ti8m.ch:443/artifactory/api/npm/channelsuite-npm/tslib/-/tslib-1.14.1.tgz"
   integrity sha1-zy04vcNKE0vK8QkcQfZhni9nLQA=
+
+tslib@~2.1.0:
+  version "2.1.0"
+  resolved "https://bin.ti8m.ch:443/artifactory/api/npm/channelsuite-npm/tslib/-/tslib-2.1.0.tgz"
+  integrity sha1-2mCGDxwuyqVwOrfTm8Bba/mIuXo=
 
 tsutils@^3.21.0:
   version "3.21.0"
-  resolved "https://bin.ti8m.ch:443/artifactory/api/npm/channelsuite-npm/tsutils/-/tsutils-3.21.0.tgz#b48717d394cea6c1e096983eed58e9d61715b623"
+  resolved "https://bin.ti8m.ch:443/artifactory/api/npm/channelsuite-npm/tsutils/-/tsutils-3.21.0.tgz"
   integrity sha1-tIcX05TOpsHglpg+7Vjp1hcVtiM=
   dependencies:
     tslib "^1.8.1"
 
 tty-browserify@0.0.1:
   version "0.0.1"
-  resolved "https://bin.ti8m.ch:443/artifactory/api/npm/channelsuite-npm/tty-browserify/-/tty-browserify-0.0.1.tgz#3f05251ee17904dfd0677546670db9651682b811"
+  resolved "https://bin.ti8m.ch:443/artifactory/api/npm/channelsuite-npm/tty-browserify/-/tty-browserify-0.0.1.tgz"
   integrity sha1-PwUlHuF5BN/QZ3VGZw25ZRaCuBE=
 
 type-check@^0.4.0, type-check@~0.4.0:
   version "0.4.0"
-  resolved "https://bin.ti8m.ch:443/artifactory/api/npm/channelsuite-npm/type-check/-/type-check-0.4.0.tgz#07b8203bfa7056c0657050e3ccd2c37730bab8f1"
+  resolved "https://bin.ti8m.ch:443/artifactory/api/npm/channelsuite-npm/type-check/-/type-check-0.4.0.tgz"
   integrity sha1-B7ggO/pwVsBlcFDjzNLDdzC6uPE=
   dependencies:
     prelude-ls "^1.2.1"
 
 type-fest@^0.20.2:
   version "0.20.2"
-  resolved "https://bin.ti8m.ch:443/artifactory/api/npm/channelsuite-npm/type-fest/-/type-fest-0.20.2.tgz#1bf207f4b28f91583666cb5fbd327887301cd5f4"
+  resolved "https://bin.ti8m.ch:443/artifactory/api/npm/channelsuite-npm/type-fest/-/type-fest-0.20.2.tgz"
   integrity sha1-G/IH9LKPkVg2ZstfvTJ4hzAc1fQ=
+
+type-fest@^0.21.3:
+  version "0.21.3"
+  resolved "https://bin.ti8m.ch:443/artifactory/api/npm/channelsuite-npm/type-fest/-/type-fest-0.21.3.tgz"
+  integrity sha1-0mCiSwGYQ24TP6JqUkptZfo7Ljc=
 
 type-fest@^0.7.1:
   version "0.7.1"
-  resolved "https://bin.ti8m.ch:443/artifactory/api/npm/channelsuite-npm/type-fest/-/type-fest-0.7.1.tgz#8dda65feaf03ed78f0a3f9678f1869147f7c5c48"
+  resolved "https://bin.ti8m.ch:443/artifactory/api/npm/channelsuite-npm/type-fest/-/type-fest-0.7.1.tgz"
   integrity sha1-jdpl/q8D7Xjwo/lnjxhpFH98XEg=
 
-typescript@4.5.2:
-  version "4.5.2"
-  resolved "https://bin.ti8m.ch:443/artifactory/api/npm/channelsuite-npm/typescript/-/typescript-4.5.2.tgz#8ac1fba9f52256fdb06fb89e4122fa6a346c2998"
-  integrity sha1-isH7qfUiVv2wb7ieQSL6ajRsKZg=
+type@^1.0.1:
+  version "1.2.0"
+  resolved "https://bin.ti8m.ch:443/artifactory/api/npm/channelsuite-npm/type/-/type-1.2.0.tgz"
+  integrity sha1-hI3XaY2vo+VKbEeedZxLw/GIR6A=
+
+type@^2.5.0:
+  version "2.5.0"
+  resolved "https://bin.ti8m.ch:443/artifactory/api/npm/channelsuite-npm/type/-/type-2.5.0.tgz"
+  integrity sha1-Ci54wud5B7JSq+XymMGwHGPw2z0=
+
+typedarray-to-buffer@^3.1.5:
+  version "3.1.5"
+  resolved "https://bin.ti8m.ch:443/artifactory/api/npm/channelsuite-npm/typedarray-to-buffer/-/typedarray-to-buffer-3.1.5.tgz"
+  integrity sha1-qX7nqf9CaRufeD/xvFES/j/KkIA=
+  dependencies:
+    is-typedarray "^1.0.0"
+
+typescript@^4.5.3:
+  version "4.5.3"
+  resolved "https://bin.ti8m.ch:443/artifactory/api/npm/channelsuite-npm/typescript/-/typescript-4.5.3.tgz"
+  integrity sha1-r6qFjmjHEDMX2J65DF2JBiaNNTw=
 
 unbox-primitive@^1.0.1:
   version "1.0.1"
-  resolved "https://bin.ti8m.ch:443/artifactory/api/npm/channelsuite-npm/unbox-primitive/-/unbox-primitive-1.0.1.tgz#085e215625ec3162574dc8859abee78a59b14471"
+  resolved "https://bin.ti8m.ch:443/artifactory/api/npm/channelsuite-npm/unbox-primitive/-/unbox-primitive-1.0.1.tgz"
   integrity sha1-CF4hViXsMWJXTciFmr7nilmxRHE=
   dependencies:
     function-bind "^1.1.1"
@@ -2794,31 +3434,38 @@ unbox-primitive@^1.0.1:
 
 unpipe@1.0.0:
   version "1.0.0"
-  resolved "https://bin.ti8m.ch:443/artifactory/api/npm/channelsuite-npm/unpipe/-/unpipe-1.0.0.tgz#b2bf4ee8514aae6165b4817829d21b2ef49904ec"
+  resolved "https://bin.ti8m.ch:443/artifactory/api/npm/channelsuite-npm/unpipe/-/unpipe-1.0.0.tgz"
   integrity sha1-sr9O6FFKrmFltIF4KdIbLvSZBOw=
 
 uri-js@^4.2.2:
   version "4.4.1"
-  resolved "https://bin.ti8m.ch:443/artifactory/api/npm/channelsuite-npm/uri-js/-/uri-js-4.4.1.tgz#9b1a52595225859e55f669d928f88c6c57f2a77e"
+  resolved "https://bin.ti8m.ch:443/artifactory/api/npm/channelsuite-npm/uri-js/-/uri-js-4.4.1.tgz"
   integrity sha1-mxpSWVIlhZ5V9mnZKPiMbFfyp34=
   dependencies:
     punycode "^2.1.0"
 
 use-subscription@1.5.1:
   version "1.5.1"
-  resolved "https://bin.ti8m.ch:443/artifactory/api/npm/channelsuite-npm/use-subscription/-/use-subscription-1.5.1.tgz#73501107f02fad84c6dd57965beb0b75c68c42d1"
+  resolved "https://bin.ti8m.ch:443/artifactory/api/npm/channelsuite-npm/use-subscription/-/use-subscription-1.5.1.tgz"
   integrity sha1-c1ARB/AvrYTG3VeWW+sLdcaMQtE=
   dependencies:
     object-assign "^4.1.1"
 
-util-deprecate@^1.0.1:
+utf-8-validate@^5.0.2:
+  version "5.0.7"
+  resolved "https://bin.ti8m.ch:443/artifactory/api/npm/channelsuite-npm/utf-8-validate/-/utf-8-validate-5.0.7.tgz"
+  integrity sha1-wVoZpq8fetnsfdxCV0fKKMNkSSI=
+  dependencies:
+    node-gyp-build "^4.3.0"
+
+util-deprecate@^1.0.1, util-deprecate@^1.0.2:
   version "1.0.2"
-  resolved "https://bin.ti8m.ch:443/artifactory/api/npm/channelsuite-npm/util-deprecate/-/util-deprecate-1.0.2.tgz#450d4dc9fa70de732762fbd2d4a28981419a0ccf"
+  resolved "https://bin.ti8m.ch:443/artifactory/api/npm/channelsuite-npm/util-deprecate/-/util-deprecate-1.0.2.tgz"
   integrity sha1-RQ1Nyfpw3nMnYvvS1KKJgUGaDM8=
 
 util@0.12.4, util@^0.12.0:
   version "0.12.4"
-  resolved "https://bin.ti8m.ch:443/artifactory/api/npm/channelsuite-npm/util/-/util-0.12.4.tgz#66121a31420df8f01ca0c464be15dfa1d1850253"
+  resolved "https://bin.ti8m.ch:443/artifactory/api/npm/channelsuite-npm/util/-/util-0.12.4.tgz"
   integrity sha1-ZhIaMUIN+PAcoMRkvhXfodGFAlM=
   dependencies:
     inherits "^2.0.3"
@@ -2830,17 +3477,17 @@ util@0.12.4, util@^0.12.0:
 
 v8-compile-cache@^2.0.3:
   version "2.3.0"
-  resolved "https://bin.ti8m.ch:443/artifactory/api/npm/channelsuite-npm/v8-compile-cache/-/v8-compile-cache-2.3.0.tgz#2de19618c66dc247dcfb6f99338035d8245a2cee"
+  resolved "https://bin.ti8m.ch:443/artifactory/api/npm/channelsuite-npm/v8-compile-cache/-/v8-compile-cache-2.3.0.tgz"
   integrity sha1-LeGWGMZtwkfc+2+ZM4A12CRaLO4=
 
 vm-browserify@1.1.2:
   version "1.1.2"
-  resolved "https://bin.ti8m.ch:443/artifactory/api/npm/channelsuite-npm/vm-browserify/-/vm-browserify-1.1.2.tgz#78641c488b8e6ca91a75f511e7a3b32a86e5dda0"
+  resolved "https://bin.ti8m.ch:443/artifactory/api/npm/channelsuite-npm/vm-browserify/-/vm-browserify-1.1.2.tgz"
   integrity sha1-eGQcSIuObKkadfUR56OzKobl3aA=
 
 watchpack@2.3.0:
   version "2.3.0"
-  resolved "https://bin.ti8m.ch:443/artifactory/api/npm/channelsuite-npm/watchpack/-/watchpack-2.3.0.tgz#a41bca3da6afaff31e92a433f4c856a0c25ea0c4"
+  resolved "https://bin.ti8m.ch:443/artifactory/api/npm/channelsuite-npm/watchpack/-/watchpack-2.3.0.tgz"
   integrity sha1-pBvKPaavr/MekqQz9MhWoMJeoMQ=
   dependencies:
     glob-to-regexp "^0.4.1"
@@ -2848,12 +3495,24 @@ watchpack@2.3.0:
 
 webidl-conversions@^4.0.2:
   version "4.0.2"
-  resolved "https://bin.ti8m.ch:443/artifactory/api/npm/channelsuite-npm/webidl-conversions/-/webidl-conversions-4.0.2.tgz#a855980b1f0b6b359ba1d5d9fb39ae941faa63ad"
+  resolved "https://bin.ti8m.ch:443/artifactory/api/npm/channelsuite-npm/webidl-conversions/-/webidl-conversions-4.0.2.tgz"
   integrity sha1-qFWYCx8LazWbodXZ+zmulB+qY60=
+
+websocket@^1.0.34:
+  version "1.0.34"
+  resolved "https://bin.ti8m.ch:443/artifactory/api/npm/channelsuite-npm/websocket/-/websocket-1.0.34.tgz"
+  integrity sha1-K9wmAsCL8sgiU7cwZVwO99yrMRE=
+  dependencies:
+    bufferutil "^4.0.1"
+    debug "^2.2.0"
+    es5-ext "^0.10.50"
+    typedarray-to-buffer "^3.1.5"
+    utf-8-validate "^5.0.2"
+    yaeti "^0.0.6"
 
 whatwg-url@^7.0.0:
   version "7.1.0"
-  resolved "https://bin.ti8m.ch:443/artifactory/api/npm/channelsuite-npm/whatwg-url/-/whatwg-url-7.1.0.tgz#c2c492f1eca612988efd3d2266be1b9fc6170d06"
+  resolved "https://bin.ti8m.ch:443/artifactory/api/npm/channelsuite-npm/whatwg-url/-/whatwg-url-7.1.0.tgz"
   integrity sha1-wsSS8eymEpiO/T0iZr4bn8YXDQY=
   dependencies:
     lodash.sortby "^4.7.0"
@@ -2862,7 +3521,7 @@ whatwg-url@^7.0.0:
 
 which-boxed-primitive@^1.0.2:
   version "1.0.2"
-  resolved "https://bin.ti8m.ch:443/artifactory/api/npm/channelsuite-npm/which-boxed-primitive/-/which-boxed-primitive-1.0.2.tgz#13757bc89b209b049fe5d86430e21cf40a89a8e6"
+  resolved "https://bin.ti8m.ch:443/artifactory/api/npm/channelsuite-npm/which-boxed-primitive/-/which-boxed-primitive-1.0.2.tgz"
   integrity sha1-E3V7yJsgmwSf5dhkMOIc9AqJqOY=
   dependencies:
     is-bigint "^1.0.1"
@@ -2873,7 +3532,7 @@ which-boxed-primitive@^1.0.2:
 
 which-typed-array@^1.1.2:
   version "1.1.7"
-  resolved "https://bin.ti8m.ch:443/artifactory/api/npm/channelsuite-npm/which-typed-array/-/which-typed-array-1.1.7.tgz#2761799b9a22d4b8660b3c1b40abaa7739691793"
+  resolved "https://bin.ti8m.ch:443/artifactory/api/npm/channelsuite-npm/which-typed-array/-/which-typed-array-1.1.7.tgz"
   integrity sha1-J2F5m5oi1LhmCzwbQKuqdzlpF5M=
   dependencies:
     available-typed-arrays "^1.0.5"
@@ -2885,32 +3544,60 @@ which-typed-array@^1.1.2:
 
 which@^2.0.1:
   version "2.0.2"
-  resolved "https://bin.ti8m.ch:443/artifactory/api/npm/channelsuite-npm/which/-/which-2.0.2.tgz#7c6a8dd0a636a0327e10b59c9286eee93f3f51b1"
+  resolved "https://bin.ti8m.ch:443/artifactory/api/npm/channelsuite-npm/which/-/which-2.0.2.tgz"
   integrity sha1-fGqN0KY2oDJ+ELWckobu6T8/UbE=
   dependencies:
     isexe "^2.0.0"
 
 word-wrap@^1.2.3:
   version "1.2.3"
-  resolved "https://bin.ti8m.ch:443/artifactory/api/npm/channelsuite-npm/word-wrap/-/word-wrap-1.2.3.tgz#610636f6b1f703891bd34771ccb17fb93b47079c"
+  resolved "https://bin.ti8m.ch:443/artifactory/api/npm/channelsuite-npm/word-wrap/-/word-wrap-1.2.3.tgz"
   integrity sha1-YQY29rH3A4kb00dxzLF/uTtHB5w=
+
+wrap-ansi@^6.2.0:
+  version "6.2.0"
+  resolved "https://bin.ti8m.ch:443/artifactory/api/npm/channelsuite-npm/wrap-ansi/-/wrap-ansi-6.2.0.tgz"
+  integrity sha1-6Tk7oHEC5skaOyIUePAlfNKFblM=
+  dependencies:
+    ansi-styles "^4.0.0"
+    string-width "^4.1.0"
+    strip-ansi "^6.0.0"
+
+wrap-ansi@^7.0.0:
+  version "7.0.0"
+  resolved "https://bin.ti8m.ch:443/artifactory/api/npm/channelsuite-npm/wrap-ansi/-/wrap-ansi-7.0.0.tgz"
+  integrity sha1-Z+FFz/UQpqaYS98RUpEdadLrnkM=
+  dependencies:
+    ansi-styles "^4.0.0"
+    string-width "^4.1.0"
+    strip-ansi "^6.0.0"
 
 wrappy@1:
   version "1.0.2"
-  resolved "https://bin.ti8m.ch:443/artifactory/api/npm/channelsuite-npm/wrappy/-/wrappy-1.0.2.tgz#b5243d8f3ec1aa35f1364605bc0d1036e30ab69f"
+  resolved "https://bin.ti8m.ch:443/artifactory/api/npm/channelsuite-npm/wrappy/-/wrappy-1.0.2.tgz"
   integrity sha1-tSQ9jz7BqjXxNkYFvA0QNuMKtp8=
 
 xtend@^4.0.2:
   version "4.0.2"
-  resolved "https://bin.ti8m.ch:443/artifactory/api/npm/channelsuite-npm/xtend/-/xtend-4.0.2.tgz#bb72779f5fa465186b1f438f674fa347fdb5db54"
+  resolved "https://bin.ti8m.ch:443/artifactory/api/npm/channelsuite-npm/xtend/-/xtend-4.0.2.tgz"
   integrity sha1-u3J3n1+kZRhrH0OPZ0+jR/2121Q=
+
+yaeti@^0.0.6:
+  version "0.0.6"
+  resolved "https://bin.ti8m.ch:443/artifactory/api/npm/channelsuite-npm/yaeti/-/yaeti-0.0.6.tgz"
+  integrity sha1-8m9ITXJoTPQr7ft2lwqhYI+/lXc=
 
 yallist@^4.0.0:
   version "4.0.0"
-  resolved "https://bin.ti8m.ch:443/artifactory/api/npm/channelsuite-npm/yallist/-/yallist-4.0.0.tgz#9bb92790d9c0effec63be73519e11a35019a3a72"
+  resolved "https://bin.ti8m.ch:443/artifactory/api/npm/channelsuite-npm/yallist/-/yallist-4.0.0.tgz"
   integrity sha1-m7knkNnA7/7GO+c1GeEaNQGaOnI=
+
+yaml@^1.10.0, yaml@^1.10.2:
+  version "1.10.2"
+  resolved "https://bin.ti8m.ch:443/artifactory/api/npm/channelsuite-npm/yaml/-/yaml-1.10.2.tgz"
+  integrity sha1-IwHF/78StGfejaIzOkWeKeeSDks=
 
 yocto-queue@^0.1.0:
   version "0.1.0"
-  resolved "https://bin.ti8m.ch:443/artifactory/api/npm/channelsuite-npm/yocto-queue/-/yocto-queue-0.1.0.tgz#0294eb3dee05028d31ee1a5fa2c556a6aaf10a1b"
+  resolved "https://bin.ti8m.ch:443/artifactory/api/npm/channelsuite-npm/yocto-queue/-/yocto-queue-0.1.0.tgz"
   integrity sha1-ApTrPe4FAo0x7hpfosVWpqrxChs=
