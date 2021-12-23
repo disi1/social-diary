@@ -1,5 +1,5 @@
 export interface Contact {
-    id: string,
+    id?: string,
     name: string,
     relationship: string,
     location: string,
@@ -9,6 +9,8 @@ export interface Contact {
 }
 
 export interface Category {
-    id: string,
+    id?: string,
     name: string,
 }
+
+export type CustomAlert = "information" | "warning" | "error" | "success";

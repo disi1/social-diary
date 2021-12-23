@@ -1,4 +1,11 @@
 import { useFormFields } from "../../lib/utils";
+import { useRef } from "react";
+import { Category } from "../../types/contact";
+
+interface NewCategoryFormProps {
+  onSubmit: (category: Category) => void;
+  onCancel: () => void;
+}
 
 // define the shape of the NewCategory form's fields
 type NewCategoryFieldProps = {
@@ -10,12 +17,24 @@ const FORM_VALUES: NewCategoryFieldProps = {
   name: "",
 };
 
-export const NewCategoryForm = () => {
+export const NewCategoryForm: React.FC<NewCategoryFormProps> = ({
+  onSubmit,
+  onCancel,
+}) => {
+  const nameInputRef = useRef<HTMLInputElement>(null);
+
   const [values, handleChange, resetFormFields] =
     useFormFields<NewCategoryFieldProps>(FORM_VALUES);
 
   const handleSubmit = async (event: React.FormEvent) => {
     event.preventDefault();
+
+    const category: Category = {
+      name: nameInputRef.current?.value ?? "",
+    };
+
+    onSubmit(category);
+
     resetFormFields();
   };
 
@@ -32,13 +51,16 @@ export const NewCategoryForm = () => {
             </label>
             <input
               id="name"
-              name="name"
-              type="name"
               className="h-12 px-4 py-2 text-gray-700 bg-white rounded shadow-inner border-gray-300 w-full border hover:border-gray-400"
-              placeholder="Category name"
+              name="name"
+              type="text"
+              maxLength={80}
+              placeholder="Enter the category name"
               required
+              pattern="\S(.*\S)?"
               value={values.name}
               onChange={handleChange}
+              ref={nameInputRef}
             />
           </div>
 
@@ -54,8 +76,9 @@ export const NewCategoryForm = () => {
 
             <div className="flex-1 text-right">
               <button
-                  className="flex-shrink-0 border-transparent border-4 text-gray-500 hover:text-gray-800 text-sm font-bold py-1 px-2 rounded"
-                  type="button">
+                className="flex-shrink-0 border-transparent border-4 text-gray-500 hover:text-gray-800 text-sm font-bold py-1 px-2 rounded"
+                type="button"
+              >
                 Cancel
               </button>
             </div>

@@ -59,7 +59,7 @@ export const ContactList = () => {
   return (
     <div className="grid grid-cols-4 gap-2">
       {dummyCategories.map((category) => (
-        <div className="grid grid-cols-1 gap-2 p-5">
+        <div className="grid grid-cols-1 gap-2 p-5" key={category.id}>
           <div>{category.name}</div>
           {dummyContacts.map(
             (contact) =>

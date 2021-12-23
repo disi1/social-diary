@@ -12,6 +12,7 @@ module.exports = {
       gray: colors.slate,
       'white': colors.white,
       'teal': {
+        100: '#ccfbf1',
         200: '#99f6e4',
         500: '#14b8a6'
       }
