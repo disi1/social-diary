@@ -20,7 +20,7 @@ export const CategoryProvider: FunctionComponent = ({ children }) => {
         .from("category")
         .select("*")
         .eq("user_id", user?.id)
-        .order("id", { ascending: false })
+        .order("name", { ascending: true })
         .then(({ data, error }) => {
           if (!error) {
             setCategories(data as Category[]);
@@ -39,7 +39,7 @@ export const CategoryProvider: FunctionComponent = ({ children }) => {
             ? [...oldCategories, newCategory]
             : [newCategory];
 
-          newCategories.sort((a, b) => b.id! - a.id!);
+          newCategories.sort((a, b) => a.name.localeCompare(b.name));
           return newCategories;
         });
       })

@@ -1,5 +1,7 @@
 import { useFormFields } from "../../lib/utils";
 import { Priority, PriorityUnit, PriorityUnitOption } from "../../lib/priority";
+import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
+import { faCaretDown } from "@fortawesome/free-solid-svg-icons";
 
 interface NewPriorityFormProps {
   onSubmit: (category: Priority) => void;
@@ -17,7 +19,7 @@ type NewPriorityFieldProps = {
 const FORM_VALUES: NewPriorityFieldProps = {
   name: "",
   frequency: 1,
-  unit: 'hour',
+  unit: "hour",
 };
 
 export const NewPriorityForm: React.FC<NewPriorityFormProps> = ({
@@ -53,10 +55,15 @@ export const NewPriorityForm: React.FC<NewPriorityFormProps> = ({
   const handleSubmit = async (event: React.FormEvent) => {
     event.preventDefault();
 
+    const unitHoursCorrespondent = frequencyUnitOptions.find(
+        (unitOption) => unitOption.unit === values.unit
+    )?.value ?? 1;
+
     const priority = {
       name: values.name,
-      frequency: values.frequency * (frequencyUnitOptions.find(unitOption => unitOption.unit === values.unit)?.value ?? 1)
-    } as Priority
+      frequency:
+        values.frequency * unitHoursCorrespondent,
+    } as Priority;
 
     onSubmit(priority);
 
@@ -125,22 +132,12 @@ export const NewPriorityForm: React.FC<NewPriorityFormProps> = ({
                   onChange={handleChange}
                   name="unit"
                 >
-                  {frequencyUnitOptions.map(({unit, value}) => (
-                    <option
-                      key={unit}
-                      value={value}
-                      label={unit}
-                    />
+                  {frequencyUnitOptions.map(({ unit, value }) => (
+                    <option key={unit} value={unit} label={unit} />
                   ))}
                 </select>
                 <div className="pointer-events-none absolute inset-y-0 right-0 flex items-center px-2 text-gray-700">
-                  <svg
-                    className="fill-current h-4 w-4"
-                    xmlns="http://www.w3.org/2000/svg"
-                    viewBox="0 0 20 20"
-                  >
-                    <path d="M9.293 12.95l.707.707L15.657 8l-1.414-1.414L10 10.828 5.757 6.586 4.343 8z" />
-                  </svg>
+                  <FontAwesomeIcon icon={faCaretDown} />
                 </div>
               </div>
             </div>

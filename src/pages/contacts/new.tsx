@@ -3,12 +3,22 @@ import {SpinnerFullPage} from "../../components/Spinner";
 import Link from "next/link";
 import Layout from "../../components/layout/Layout";
 import {NewContactForm} from "../../components/contacts/NewContactForm";
+import {useCategory} from "../../lib/category";
+import {usePriority} from "../../lib/priority";
 
 const NewContactPage = () => {
     const {
         user,
         loading,
     } = useAuth();
+
+    const {
+        categories
+    } = useCategory();
+
+    const {
+        priorities
+    } = usePriority();
 
     if (loading) {
         return <SpinnerFullPage />;
@@ -29,7 +39,7 @@ const NewContactPage = () => {
             )}
             {user && (
                 <Layout>
-                    <NewContactForm/>
+                    <NewContactForm categories={categories} priorities={priorities}/>
                 </Layout>
             )}
         </>

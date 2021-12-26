@@ -4,12 +4,15 @@ import type { AppProps } from "next/app";
 import { AuthProvider } from "../lib/auth";
 import React from "react";
 import { CategoryProvider } from "../lib/category";
+import { PriorityProvider } from "../lib/priority";
 
 function MyApp({ Component, pageProps }: AppProps) {
   return (
     <AuthProvider>
       <CategoryProvider>
-        <Component {...pageProps} />
+        <PriorityProvider>
+          <Component {...pageProps} />
+        </PriorityProvider>
       </CategoryProvider>
     </AuthProvider>
   );

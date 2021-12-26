@@ -20,7 +20,7 @@ export const PriorityProvider: FunctionComponent = ({ children }) => {
         .from("priority")
         .select("*")
         .eq("user_id", user?.id)
-        .order("id", { ascending: false })
+        .order("frequency", { ascending: true })
         .then(({ data, error }) => {
           if (!error) {
             setPriorities(data as Priority[]);
@@ -38,7 +38,8 @@ export const PriorityProvider: FunctionComponent = ({ children }) => {
           const newPriorities = oldPriorities
             ? [...oldPriorities, newPriority]
             : [newPriority];
-          newPriorities.sort((a, b) => b.id! - a.id!);
+
+          newPriorities.sort((a, b) => a.frequency! - b.frequency!);
           return newPriorities;
         });
       })
@@ -51,7 +52,7 @@ export const PriorityProvider: FunctionComponent = ({ children }) => {
 
   return (
     <PriorityContext.Provider value={{ priorities }}>
-      {priorities}
+      {children}
     </PriorityContext.Provider>
   );
 };

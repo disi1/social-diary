@@ -1,7 +1,6 @@
 import { Contact } from "../../types/contact";
 import { ContactItem } from "./ContactItem";
-import { Category } from "../../lib/category";
-import {log} from "util";
+import {Category, useCategory} from "../../lib/category";
 
 const dummyContacts = [
   {
