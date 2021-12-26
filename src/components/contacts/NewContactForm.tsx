@@ -23,7 +23,7 @@ export const NewContactForm = () => {
     <div className="h-screen flex flex-col justify-center items-center relative">
       <form className="w-full sm:w-1/2 xl:w-1/3" onSubmit={handleSubmit}>
         <div className="border-teal p-8 border-t-12 bg-white mb-6 rounded-lg shadow-lg">
-          <div className="mb-4">
+          <div className="mb-6">
             <label
               htmlFor="name"
               className="block font-semibold text-gray-500 mb-2"
@@ -42,7 +42,7 @@ export const NewContactForm = () => {
             />
           </div>
 
-          <div className="mb-4">
+          <div className="mb-6">
             <label
               htmlFor="relationship"
               className="block font-semibold text-gray-500 mb-2"
@@ -61,7 +61,7 @@ export const NewContactForm = () => {
             />
           </div>
 
-          <div className="mb-4">
+          <div className="mb-6">
             <label
               htmlFor="location"
               className="block font-semibold text-gray-500 mb-2"

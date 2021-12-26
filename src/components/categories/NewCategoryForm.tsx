@@ -21,8 +21,6 @@ export const NewCategoryForm: React.FC<NewCategoryFormProps> = ({
   onSubmit,
   onCancel,
 }) => {
-  const nameInputRef = useRef<HTMLInputElement>(null);
-
   const [values, handleChange, resetFormFields] =
     useFormFields<NewCategoryFieldProps>(FORM_VALUES);
 
@@ -30,7 +28,7 @@ export const NewCategoryForm: React.FC<NewCategoryFormProps> = ({
     event.preventDefault();
 
     const category = {
-      name: nameInputRef.current?.value ?? "",
+      name: values.name,
     };
 
     onSubmit(category);
@@ -42,7 +40,7 @@ export const NewCategoryForm: React.FC<NewCategoryFormProps> = ({
     <div className="h-screen flex flex-col justify-center items-center relative">
       <form className="w-full sm:w-1/2 xl:w-1/3" onSubmit={handleSubmit}>
         <div className="border-teal p-8 border-t-12 bg-white mb-6 rounded-lg shadow-lg">
-          <div className="mb-4">
+          <div className="mb-6">
             <label
               htmlFor="name"
               className="block font-semibold text-gray-500 mb-2"
@@ -60,7 +58,6 @@ export const NewCategoryForm: React.FC<NewCategoryFormProps> = ({
               pattern="\S(.*\S)?"
               value={values.name}
               onChange={handleChange}
-              ref={nameInputRef}
             />
           </div>
 

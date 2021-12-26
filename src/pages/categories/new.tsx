@@ -3,10 +3,10 @@ import { SpinnerFullPage } from "../../components/Spinner";
 import Link from "next/link";
 import Layout from "../../components/layout/Layout";
 import { NewCategoryForm } from "../../components/categories/NewCategoryForm";
-import { Category } from "../../types/contact";
 import { useState } from "react";
 import { supabase } from "../../lib";
 import { Alert } from "../../components/Alert";
+import { Category } from "../../lib/category";
 
 const NewCategoryPage = () => {
   const { user, loading } = useAuth();
@@ -50,8 +50,8 @@ const NewCategoryPage = () => {
       )}
       {user && (
         <Layout>
-          {errorMessage && <Alert type="error" text={errorMessage} />}
-          {successMessage && <Alert type="success" text={successMessage} />}
+          {errorMessage && <Alert type="error" text={errorMessage} onClose={setErrorMessage}/>}
+          {successMessage && <Alert type="success" text={successMessage} onClose={setErrorMessage}/>}
           <NewCategoryForm onSubmit={onSubmit} onCancel={onCancel} />
         </Layout>
       )}

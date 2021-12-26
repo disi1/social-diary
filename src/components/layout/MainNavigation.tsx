@@ -3,7 +3,7 @@ import Link from "next/link";
 import Logo from "./Logo";
 import { useAuth } from "../../lib/auth";
 import { SpinnerFullPage } from "../Spinner";
-import {ROUTE_HOME, ROUTE_NEW_CATEGORY, ROUTE_NEW_CONTACT} from "../../config";
+import {ROUTE_HOME, ROUTE_NEW_CATEGORY, ROUTE_NEW_CONTACT, ROUTE_NEW_PRIORITY} from "../../config";
 
 const MainNavigation = () => {
   const {
@@ -33,6 +33,9 @@ const MainNavigation = () => {
           </div>
           <div className="block mt-4 lg:inline-block lg:mt-0 text-gray-600 hover:text-gray-900 mr-4">
             <Link href={ROUTE_NEW_CATEGORY}>Add New Category</Link>
+          </div>
+          <div className="block mt-4 lg:inline-block lg:mt-0 text-gray-600 hover:text-gray-900 mr-4">
+            <Link href={ROUTE_NEW_PRIORITY}>Add New Priority</Link>
           </div>
         </div>
         <button

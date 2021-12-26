@@ -33,7 +33,7 @@ const IndexPage: NextPage<NextAppPageProps> = ({}) => {
   return (
     <div className="h-screen flex flex-col justify-center items-center relative">
       {/* App logo and tagline*/}
-      <div className="w-full text-center mb-4 flex  flex-col place-items-center">
+      <div className="w-full text-center mb-6 flex  flex-col place-items-center">
         <div>
           <FaLock className="text-gray-600 text-5xl shadow-sm" />
         </div>
@@ -49,7 +49,7 @@ const IndexPage: NextPage<NextAppPageProps> = ({}) => {
       {/* Sign Up & Sign In form */}
       <form className="w-full sm:w-1/2 xl:w-1/3" onSubmit={handleSumbit}>
         <div className="border-teal p-8 border-t-12 bg-white mb-6 rounded-lg shadow-lg">
-          <div className="mb-4">
+          <div className="mb-6">
             <label
               htmlFor="email"
               className="block font-semibold text-gray-500 mb-2"
@@ -67,7 +67,7 @@ const IndexPage: NextPage<NextAppPageProps> = ({}) => {
               onChange={handleChange}
             />
           </div>
-          <div className="mb-4">
+          <div className="mb-6">
             <label
               htmlFor="password"
               className="block font-semibold text-gray-500 mb-2"

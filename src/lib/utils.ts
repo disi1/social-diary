@@ -2,9 +2,9 @@ import { useState } from 'react';
 
 export function useFormFields<T>(
   initialValues: T
-): [T, (event: React.ChangeEvent<HTMLInputElement>) => void, () => void] {
+): [T, (event: React.ChangeEvent<HTMLInputElement | HTMLSelectElement>) => void, () => void] {
   const [values, setValues] = useState<T>(initialValues);
-  const handleChange = (event: React.ChangeEvent<HTMLInputElement>) => {
+  const handleChange = (event: React.ChangeEvent<HTMLInputElement | HTMLSelectElement>) => {
     event.persist();
     const { target } = event;
     const { name, value } = target;
