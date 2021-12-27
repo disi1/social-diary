@@ -6,6 +6,7 @@ import React from "react";
 import { CategoryProvider } from "../lib/category";
 import { PriorityProvider } from "../lib/priority";
 import { ContactProvider } from "../lib/contact";
+import { LogProvider } from "../lib/log";
 
 function MyApp({ Component, pageProps }: AppProps) {
   return (
@@ -13,7 +14,9 @@ function MyApp({ Component, pageProps }: AppProps) {
       <ContactProvider>
         <CategoryProvider>
           <PriorityProvider>
-            <Component {...pageProps} />
+            <LogProvider>
+              <Component {...pageProps} />
+            </LogProvider>
           </PriorityProvider>
         </CategoryProvider>
       </ContactProvider>

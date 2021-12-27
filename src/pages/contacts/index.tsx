@@ -5,6 +5,7 @@ import { useCategory } from "../../lib/category";
 import Layout from "../../components/layout/Layout";
 import { ContactList } from "../../components/contacts/ContactList";
 import { useContact } from "../../lib/contact";
+import {useLog} from "../../lib/log";
 
 const ContactsPage = () => {
   const {
@@ -15,6 +16,8 @@ const ContactsPage = () => {
   const { categories } = useCategory();
 
   const { contacts } = useContact();
+
+  const { logs } = useLog();
 
   if (loading) {
     return <SpinnerFullPage />;
@@ -33,7 +36,7 @@ const ContactsPage = () => {
       )}
       {user && (
         <Layout>
-          <ContactList categories={categories} contacts={contacts} />
+          <ContactList categories={categories} contacts={contacts} logs={logs}/>
         </Layout>
       )}
     </>
