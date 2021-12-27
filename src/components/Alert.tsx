@@ -1,4 +1,4 @@
-import { CustomAlert } from "../types/contact";
+import { CustomAlert } from "../types/alert";
 import { faTimes } from "@fortawesome/free-solid-svg-icons";
 import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
 

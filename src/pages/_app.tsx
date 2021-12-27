@@ -5,15 +5,18 @@ import { AuthProvider } from "../lib/auth";
 import React from "react";
 import { CategoryProvider } from "../lib/category";
 import { PriorityProvider } from "../lib/priority";
+import { ContactProvider } from "../lib/contact";
 
 function MyApp({ Component, pageProps }: AppProps) {
   return (
     <AuthProvider>
-      <CategoryProvider>
-        <PriorityProvider>
-          <Component {...pageProps} />
-        </PriorityProvider>
-      </CategoryProvider>
+      <ContactProvider>
+        <CategoryProvider>
+          <PriorityProvider>
+            <Component {...pageProps} />
+          </PriorityProvider>
+        </CategoryProvider>
+      </ContactProvider>
     </AuthProvider>
   );
 }

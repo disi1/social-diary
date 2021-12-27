@@ -1,33 +1,57 @@
 import { useFormFields } from "../../lib/utils";
 import { Category } from "../../lib/category";
 import { Priority } from "../../lib/priority";
-import { faCaretDown, faCircle } from "@fortawesome/free-solid-svg-icons";
+import { faCaretDown } from "@fortawesome/free-solid-svg-icons";
 import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
-
-// define the shape of the NewCategory form's fields
-type NewContactFieldProps = {
-  name: string;
-};
-
-// the value we'd like to initialize the NewContact form with
-const FORM_VALUES: NewContactFieldProps = {
-  name: "",
-};
+import { Contact } from "../../lib/contact";
 
 interface NewContactFormProps {
+  onSubmit: (contact: Contact) => void;
+  onCancel: () => void;
   categories: Category[] | undefined;
   priorities: Priority[] | undefined;
 }
 
+// define the shape of the NewContact form's fields
+type NewContactFieldProps = {
+  name: string;
+  relationship: string;
+  location: string;
+  category: number;
+  priority: number;
+};
+
 export const NewContactForm: React.FC<NewContactFormProps> = ({
+  onSubmit,
+  onCancel,
   categories,
   priorities,
 }) => {
+  // the values we'd like to initialize the NewContact form with
+  const FORM_VALUES: NewContactFieldProps = {
+    name: "",
+    relationship: "",
+    location: "",
+    category: categories ? categories[0].id ?? 1 : 1,
+    priority: priorities ? priorities[0].id ?? 1 : 1,
+  };
+
   const [values, handleChange, resetFormFields] =
     useFormFields<NewContactFieldProps>(FORM_VALUES);
 
   const handleSubmit = async (event: React.FormEvent) => {
     event.preventDefault();
+
+    const contact = {
+      name: values.name,
+      relationship: values.relationship,
+      location: values.location,
+      category_id: values.category,
+      priority_id: values.priority,
+    } as Contact;
+
+    onSubmit(contact);
+
     resetFormFields();
   };
 
@@ -45,7 +69,7 @@ export const NewContactForm: React.FC<NewContactFormProps> = ({
             <input
               id="name"
               name="name"
-              type="name"
+              type="text"
               className="h-12 px-4 py-2 bg-white text-gray-700 rounded shadow-inner border-gray-300 w-full border  hover:border-gray-400"
               placeholder="Full name"
               required
@@ -64,11 +88,11 @@ export const NewContactForm: React.FC<NewContactFormProps> = ({
             <input
               id="relationship"
               name="relationship"
-              type="name"
+              type="text"
               className="h-12 px-4 py-2 bg-white text-gray-700 rounded shadow-inner border-gray-300 w-full border  hover:border-gray-400"
               placeholder="Your relationship with this person"
               required
-              value={values.name}
+              value={values.relationship}
               onChange={handleChange}
             />
           </div>
@@ -83,11 +107,10 @@ export const NewContactForm: React.FC<NewContactFormProps> = ({
             <input
               id="location"
               name="location"
-              type="name"
+              type="text"
               className="h-12 px-4 py-2 bg-white text-gray-700 rounded shadow-inner border-gray-300 w-full border hover:border-gray-400"
               placeholder="Location"
-              required
-              value={values.name}
+              value={values.location}
               onChange={handleChange}
             />
           </div>
@@ -107,6 +130,8 @@ export const NewContactForm: React.FC<NewContactFormProps> = ({
                   id="category"
                   name="category"
                   onChange={handleChange}
+                  required
+                  value={values.category}
                 >
                   {categories?.map(({ id, name }) => (
                     <option key={id} value={id} label={name} />
@@ -132,6 +157,8 @@ export const NewContactForm: React.FC<NewContactFormProps> = ({
                   id="priority"
                   onChange={handleChange}
                   name={"priority"}
+                  required
+                  value={values.priority}
                 >
                   {priorities?.map(({ id, name, frequency }) => (
                     <option key={id} value={id} label={name} />
@@ -144,7 +171,7 @@ export const NewContactForm: React.FC<NewContactFormProps> = ({
             </div>
           </div>
 
-          {/*  New Category form: Actions */}
+          {/*  New Contact form: Actions */}
 
           <div className="flex pt-4 gap-2 items-center">
             <button
@@ -158,6 +185,7 @@ export const NewContactForm: React.FC<NewContactFormProps> = ({
               <button
                 className="flex-shrink-0 border-transparent border-4 text-gray-500 hover:text-gray-800 text-sm font-bold py-1 px-2 rounded"
                 type="button"
+                onClick={resetFormFields}
               >
                 Cancel
               </button>

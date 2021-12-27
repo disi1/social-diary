@@ -3,7 +3,8 @@ import { SpinnerFullPage } from "../../components/Spinner";
 import { useAuth } from "../../lib/auth";
 import { useCategory } from "../../lib/category";
 import Layout from "../../components/layout/Layout";
-import {ContactList} from "../../components/contacts/ContactList";
+import { ContactList } from "../../components/contacts/ContactList";
+import { useContact } from "../../lib/contact";
 
 const ContactsPage = () => {
   const {
@@ -11,9 +12,9 @@ const ContactsPage = () => {
     loading, // loading state
   } = useAuth();
 
-  const {
-    categories
-  } = useCategory();
+  const { categories } = useCategory();
+
+  const { contacts } = useContact();
 
   if (loading) {
     return <SpinnerFullPage />;
@@ -23,9 +24,7 @@ const ContactsPage = () => {
     <>
       {!user && (
         <div className="h-screen flex flex-col justify-center items-center relative">
-          <h2 className="text-3xl my-4">
-            Howdie, Explorer!
-          </h2>
+          <h2 className="text-3xl my-4">Howdie, Explorer!</h2>
           <small className="mb-2">
             You&apos;ve landed on a protected page. Please{" "}
             <Link href="/">log in</Link> to view the page&apos;s full content{" "}
@@ -34,7 +33,7 @@ const ContactsPage = () => {
       )}
       {user && (
         <Layout>
-            <ContactList categories={categories}/>
+          <ContactList categories={categories} contacts={contacts} />
         </Layout>
       )}
     </>

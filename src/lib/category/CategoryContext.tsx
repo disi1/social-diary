@@ -19,7 +19,7 @@ export const CategoryProvider: FunctionComponent = ({ children }) => {
       supabase
         .from("category")
         .select("*")
-        .eq("user_id", user?.id)
+        .eq("user_id", user.id)
         .order("name", { ascending: true })
         .then(({ data, error }) => {
           if (!error) {
@@ -40,6 +40,7 @@ export const CategoryProvider: FunctionComponent = ({ children }) => {
             : [newCategory];
 
           newCategories.sort((a, b) => a.name.localeCompare(b.name));
+
           return newCategories;
         });
       })

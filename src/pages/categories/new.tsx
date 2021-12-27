@@ -22,7 +22,7 @@ const NewCategoryPage = () => {
   const onSubmit = async (category: Category) => {
     setIsLoading(true);
 
-    const { error, status, statusText } = await supabase
+    const { error, status } = await supabase
       .from("category")
       .insert([{ name: category.name, user_id: user?.id }]);
 
@@ -50,8 +50,17 @@ const NewCategoryPage = () => {
       )}
       {user && (
         <Layout>
-          {errorMessage && <Alert type="error" text={errorMessage} onClose={setErrorMessage}/>}
-          {successMessage && <Alert type="success" text={successMessage} onClose={setErrorMessage}/>}
+          {errorMessage && (
+            <Alert type="error" text={errorMessage} onClose={setErrorMessage} />
+          )}
+          {successMessage && (
+            <Alert
+              type="success"
+              text={successMessage}
+              onClose={setErrorMessage}
+            />
+          )}
+
           <NewCategoryForm onSubmit={onSubmit} onCancel={onCancel} />
         </Layout>
       )}
