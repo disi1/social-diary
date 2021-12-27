@@ -51,38 +51,21 @@ const NewContactPage = () => {
   const onCancel = () => {};
 
   return (
-    <>
-      {!user && (
-        <div className="h-screen flex flex-col justify-center items-center relative">
-          <h2 className="text-3xl my-4">Howdie, Explorer!</h2>
-          <small className="mb-2">
-            You&apos;ve landed on a protected page. Please{" "}
-            <Link href="/">log in</Link> to view the page&apos;s full content{" "}
-          </small>
-        </div>
+    <Layout>
+      {errorMessage && (
+        <Alert type="error" text={errorMessage} onClose={setErrorMessage} />
       )}
-      {user && (
-        <Layout>
-          {errorMessage && (
-            <Alert type="error" text={errorMessage} onClose={setErrorMessage} />
-          )}
-          {successMessage && (
-            <Alert
-              type="success"
-              text={successMessage}
-              onClose={setErrorMessage}
-            />
-          )}
+      {successMessage && (
+        <Alert type="success" text={successMessage} onClose={setErrorMessage} />
+      )}
 
-          <NewContactForm
-            onSubmit={onSubmit}
-            onCancel={onCancel}
-            categories={categories}
-            priorities={priorities}
-          />
-        </Layout>
-      )}
-    </>
+      <NewContactForm
+        onSubmit={onSubmit}
+        onCancel={onCancel}
+        categories={categories}
+        priorities={priorities}
+      />
+    </Layout>
   );
 };
 

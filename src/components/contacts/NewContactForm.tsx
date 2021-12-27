@@ -32,8 +32,8 @@ export const NewContactForm: React.FC<NewContactFormProps> = ({
     name: "",
     relationship: "",
     location: "",
-    category: categories ? categories[0].id ?? 1 : 1,
-    priority: priorities ? priorities[0].id ?? 1 : 1,
+    category: categories && categories.length > 0 ? categories[0].id ?? 1 : 1,
+    priority: priorities && priorities.length > 0 ? priorities[0].id ?? 1 : 1,
   };
 
   const [values, handleChange, resetFormFields] =
