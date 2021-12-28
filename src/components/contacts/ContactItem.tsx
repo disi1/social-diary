@@ -4,22 +4,34 @@ import { Contact } from "../../lib/contact";
 import { Log } from "../../lib/log";
 import Link from "next/link";
 import { ROUTE_HOME } from "../../config";
-import {useRouter} from "next/router";
+import { getNoOfHoursSinceDate } from "../../lib/utils";
+import { Priority } from "../../lib/priority";
+import resolveConfig from "tailwindcss/resolveConfig";
+import tailwindConfig from "../../../tailwind.config.js";
+
+const twFullConfig = resolveConfig(tailwindConfig);
 
 interface ContactItempProps {
   contact: Contact;
+  priority: Priority | undefined;
   logs: Log[] | undefined;
 }
 
-export const ContactItem: React.FC<ContactItempProps> = ({ contact, logs }) => {
-  const lastLogEntry = logs && logs.length > 1 ? logs[logs?.length] : undefined;
-const router = useRouter();
+export const ContactItem: React.FC<ContactItempProps> = ({
+  contact,
+  logs,
+  priority,
+}) => {
+  const noOfHoursSinceLastLogEntry =
+    logs && logs.length > 0
+      ? getNoOfHoursSinceDate(new Date(logs[logs.length - 1].timestamp))
+      : null;
 
   return (
     <Link href={`${ROUTE_HOME}/${contact.id}`}>
-      <div className="flex">
+      <div className="flex cursor-pointer">
         <div className="h-48 lg:h-auto lg:w-48 flex-none bg-cover rounded-t lg:rounded-t-none lg:rounded-l text-center overflow-hidden bg-gray-300" />
-        <div className="border-r border-b border-l border-gray-400 lg:border-l-0 lg:border-t lg:border-gray-400 bg-white rounded-b lg:rounded-b-none lg:rounded-r p-4 flex flex-col justify-between leading-normal">
+        <div className="w-full border-r border-b border-l border-gray-400 lg:border-l-0 lg:border-t lg:border-gray-400 bg-white rounded-b lg:rounded-b-none lg:rounded-r p-4 flex flex-col justify-between leading-normal">
           <div className="items-center mb-8">
             <div className="mb-2 flex items-center">
               <div className="text-gray-700 font-bold text-xl mr-2">
@@ -28,7 +40,17 @@ const router = useRouter();
               {
                 <FontAwesomeIcon
                   icon={faCircle}
-                  color={lastLogEntry ? "green" : "gray"}
+                  color={
+                    priority &&
+                    noOfHoursSinceLastLogEntry &&
+                    noOfHoursSinceLastLogEntry < priority.frequency
+                      ? twFullConfig.theme.colors.teal[500]
+                      : priority &&
+                        noOfHoursSinceLastLogEntry &&
+                        noOfHoursSinceLastLogEntry > priority.frequency
+                      ? twFullConfig.theme.colors.red[500]
+                      : "gray"
+                  }
                 />
               }
             </div>

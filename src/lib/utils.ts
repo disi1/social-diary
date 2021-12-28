@@ -1,10 +1,16 @@
-import { useState } from 'react';
+import { useState } from "react";
 
 export function useFormFields<T>(
   initialValues: T
-): [T, (event: React.ChangeEvent<HTMLInputElement | HTMLSelectElement>) => void, () => void] {
+): [
+  T,
+  (event: React.ChangeEvent<HTMLInputElement | HTMLSelectElement>) => void,
+  () => void
+] {
   const [values, setValues] = useState<T>(initialValues);
-  const handleChange = (event: React.ChangeEvent<HTMLInputElement | HTMLSelectElement>) => {
+  const handleChange = (
+    event: React.ChangeEvent<HTMLInputElement | HTMLSelectElement>
+  ) => {
     event.persist();
     const { target } = event;
     const { name, value } = target;
@@ -13,3 +19,7 @@ export function useFormFields<T>(
   const resetForm = () => setValues(initialValues);
   return [values, handleChange, resetForm];
 }
+
+export const getNoOfHoursSinceDate = (date: Date) => {
+  return (new Date().valueOf() - new Date(date).valueOf()) / 1000 / 60 / 60;
+};

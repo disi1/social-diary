@@ -1,6 +1,5 @@
 import { useAuth } from "../../lib/auth";
 import { SpinnerFullPage } from "../../components/Spinner";
-import Link from "next/link";
 import Layout from "../../components/layout/Layout";
 import { NewContactForm } from "../../components/contacts/NewContactForm";
 import { useCategory } from "../../lib/category";
@@ -16,9 +15,7 @@ const NewContactPage = () => {
   const [successMessage, setSuccessMessage] = useState<string>();
 
   const { user, loading } = useAuth();
-
   const { categories } = useCategory();
-
   const { priorities } = usePriority();
 
   if (loading || isLoading) {

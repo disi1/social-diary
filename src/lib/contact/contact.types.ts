@@ -5,4 +5,5 @@ export interface Contact {
     location: string,
     category_id: number,
     priority_id: number,
+    user_id: string,
 }

@@ -298,9 +298,9 @@
     "@supabase/realtime-js" "^1.3.4"
     "@supabase/storage-js" "^1.5.0"
 
-"@supabase/ui@^0.36.1":
+"@supabase/ui@^0.36.2":
   version "0.36.2"
-  resolved "https://bin.ti8m.ch:443/artifactory/api/npm/channelsuite-npm/@supabase/ui/-/ui-0.36.2.tgz"
+  resolved "https://bin.ti8m.ch:443/artifactory/api/npm/channelsuite-npm/@supabase/ui/-/ui-0.36.2.tgz#4c7af9c944a6d8124dd2bec083ea6d688a859328"
   integrity sha1-THr5yUSm2BJN0r7Ag+ptaIqFkyg=
   dependencies:
     lodash "^4.17.20"
@@ -1078,6 +1078,11 @@ d@1, d@^1.0.1:
   dependencies:
     es5-ext "^0.10.50"
     type "^1.0.1"
+
+daisyui@^1.20.0:
+  version "1.20.0"
+  resolved "https://bin.ti8m.ch:443/artifactory/api/npm/channelsuite-npm/daisyui/-/daisyui-1.20.0.tgz#3f7acfe7213139b2cd7a6d1398299a48de57970d"
+  integrity sha1-P3rP5yExObLNem0TmCmaSN5Xlw0=
 
 data-uri-to-buffer@3.0.1:
   version "3.0.1"

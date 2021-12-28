@@ -28,7 +28,7 @@ export const Alert: React.FC<AlertProps> = ({ type, text, onClose }) => (
       >
         <strong className="font-bold">Informational message</strong>
         <p>{text}</p>
-        <div className="absolute top-0 right-0 px-4 py-3 text-gray-300 hover:text-blue-700 cursor-pointer">
+        <div className="absolute top-0 right-0 px-4 py-3 text-gray-300 hover:text-blue-700 cursor-pointer" onClick={() => onClose(undefined)}>
           <FontAwesomeIcon icon={faTimes} />
         </div>
       </div>
@@ -39,7 +39,7 @@ export const Alert: React.FC<AlertProps> = ({ type, text, onClose }) => (
       >
         <strong className="font-bold">Warning</strong>
         <p>{text}</p>
-        <div className="absolute top-0 right-0 px-4 py-3 text-gray-300 hover:text-orange-700 cursor-pointer">
+        <div className="absolute top-0 right-0 px-4 py-3 text-gray-300 hover:text-orange-700 cursor-pointer" onClick={() => onClose(undefined)}>
           <FontAwesomeIcon icon={faTimes} />
         </div>
       </div>
@@ -50,7 +50,7 @@ export const Alert: React.FC<AlertProps> = ({ type, text, onClose }) => (
       >
         <strong className="font-bold">Error</strong>
         <p>{text}</p>
-        <div className="absolute top-0 right-0 px-4 py-3 text-gray-300 hover:text-red-700 cursor-pointer">
+        <div className="absolute top-0 right-0 px-4 py-3 text-gray-300 hover:text-red-700 cursor-pointer" onClick={() => onClose(undefined)}>
           <FontAwesomeIcon icon={faTimes} />
         </div>
       </div>
