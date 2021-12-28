@@ -20,7 +20,7 @@ export const ContactList: React.FC<ContactListProps> = ({
   return (
     <div className="grid grid-cols-4 gap-2">
       {categories?.map((category) => (
-        <div className="grid grid-cols-1 gap-2 p-5" key={category.id}>
+        <div className="grid grid-cols-1 auto-rows-min gap-2 p-5" key={category.id}>
           <div>{category.name}</div>
           {contacts?.map(
             (contact) =>

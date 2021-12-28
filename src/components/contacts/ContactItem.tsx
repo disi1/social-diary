@@ -29,42 +29,39 @@ export const ContactItem: React.FC<ContactItempProps> = ({
 
   return (
     <Link href={`${ROUTE_HOME}/${contact.id}`}>
-      <div className="flex cursor-pointer">
-        <div className="h-48 lg:h-auto lg:w-48 flex-none bg-cover rounded-t lg:rounded-t-none lg:rounded-l text-center overflow-hidden bg-gray-300" />
-        <div className="w-full border-r border-b border-l border-gray-400 lg:border-l-0 lg:border-t lg:border-gray-400 bg-white rounded-b lg:rounded-b-none lg:rounded-r p-4 flex flex-col justify-between leading-normal">
-          <div className="items-center mb-8">
-            <div className="mb-2 flex items-center">
-              <div className="text-gray-700 font-bold text-xl mr-2">
-                {contact.name}
-              </div>
-              {
-                <FontAwesomeIcon
-                  icon={faCircle}
-                  color={
-                    priority &&
+      <div className="card lg:card-side card-bordered cursor-pointer">
+        <div className="card-body">
+          <h2 className="card-title">
+            {contact.name}
+            <FontAwesomeIcon
+              className="ml-2"
+              icon={faCircle}
+              color={
+                priority &&
+                noOfHoursSinceLastLogEntry &&
+                noOfHoursSinceLastLogEntry < priority.frequency
+                  ? twFullConfig.theme.colors.teal[500]
+                  : priority &&
                     noOfHoursSinceLastLogEntry &&
-                    noOfHoursSinceLastLogEntry < priority.frequency
-                      ? twFullConfig.theme.colors.teal[500]
-                      : priority &&
-                        noOfHoursSinceLastLogEntry &&
-                        noOfHoursSinceLastLogEntry > priority.frequency
-                      ? twFullConfig.theme.colors.red[500]
-                      : "gray"
-                  }
-                />
+                    noOfHoursSinceLastLogEntry > priority.frequency
+                  ? twFullConfig.theme.colors.red[500]
+                  : "gray"
               }
-            </div>
-            <p className="text-gray-700 text-base">{contact.relationship}</p>
-          </div>
-          <div className="flex items-center">
+            />
+          </h2>
+          <p>{contact.relationship}</p>
+
+          <div className="flex items-center mt-2">
             <FontAwesomeIcon
               icon={faCalendar}
               color={"gray"}
               className="mr-2"
             />
             <div className="text-sm">
-              <p className="text-gray-600">
-                {logs && logs.length > 1 ? logs[logs?.length] : "No logs"}
+              <p>
+                {logs && logs.length > 1
+                  ? new Date(logs[logs?.length - 1].timestamp).toLocaleString()
+                  : "No logs"}
               </p>
             </div>
           </div>
