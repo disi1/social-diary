@@ -15,10 +15,6 @@ export const ContactItem: React.FC<ContactItempProps> = ({ contact, logs }) => {
   const lastLogEntry = logs && logs.length > 1 ? logs[logs?.length] : undefined;
 const router = useRouter();
 
-  const goToDetailsHandler = () => {
-    router.push(`${ROUTE_HOME}/${contact.id}`)
-  }
-
   return (
     <Link href={`${ROUTE_HOME}/${contact.id}`}>
       <div className="flex">

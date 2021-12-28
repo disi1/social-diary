@@ -2,9 +2,9 @@ import { createContext, FunctionComponent, useEffect } from "react";
 import { useState } from "react";
 import { supabase } from "..";
 import { SupabaseAuthPayload } from "./auth.types";
-import { User } from "@supabase/supabase-js";
 import { ROUTE_AUTH, ROUTE_HOME } from "../../config";
 import Router from "next/router";
+import { User, Session, AuthChangeEvent } from '@supabase/supabase-js'
 
 export type AuthContextProps = {
   user: User;
@@ -40,6 +40,7 @@ export const AuthProvider: FunctionComponent = ({ children }) => {
       async (event, session) => {
         const user = session?.user! ?? null;
         setUserLoading(false);
+        await setServerSession(event, session)
         if (user) {
           setUser(user);
           setLoggedin(true);
@@ -55,6 +56,15 @@ export const AuthProvider: FunctionComponent = ({ children }) => {
       authListener?.unsubscribe();
     };
   }, []);
+
+  const setServerSession = async (event: AuthChangeEvent, session: Session | null) => {
+    session && await fetch('/api/auth', {
+      method: 'POST',
+      headers: new Headers({ 'Content-Type': 'application/json' }),
+      credentials: 'same-origin',
+      body: JSON.stringify({ event, session }),
+    })
+  }
 
   // sing-out the user
   const signOut = async () => await supabase.auth.signOut();

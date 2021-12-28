@@ -9,35 +9,46 @@ interface ContactDetailsProps {
   contact: Contact;
   priority: Priority;
   category: Category;
-  lastLogEntry: Log | undefined;
+  logs: Log[];
 }
 
 export const ContactDetails: React.FC<ContactDetailsProps> = ({
   contact,
   category,
   priority,
-  lastLogEntry,
+  logs,
 }) => {
   return (
-    <div className="flex">
-      <div className="h-48 lg:h-auto lg:w-48 flex-none bg-cover rounded-t lg:rounded-t-none lg:rounded-l text-center overflow-hidden bg-gray-300" />
-      <div className="border-r border-b border-l border-gray-400 lg:border-l-0 lg:border-t lg:border-gray-400 bg-white rounded-b lg:rounded-b-none lg:rounded-r p-4 flex justify-between leading-normal">
-        <div className="items-center mb-8">
-          <div className="mb-2 flex items-center">
-            <div className="text-gray-700 font-bold text-xl mr-2">
-              {contact.name}
-            </div>
-            {
-              <FontAwesomeIcon
-                icon={faCircle}
-                color={lastLogEntry ? "green" : "gray"}
-              />
-            }
-          </div>
-          <p className="text-gray-700 text-base">{contact.relationship}</p>
+    <div className="flex flex-col p-5">
+      <div className="mb-2 flex items-center">
+        <div className="text-gray-700 font-bold text-xl mr-2">
+          {contact.name}
         </div>
-        <div className="flex flex-col items-center">
-          <div>{`Priority: ${priority.name}`}</div>
+        {<FontAwesomeIcon icon={faCircle} color={logs ? "green" : "gray"} />}
+      </div>
+      <div className="my-5">
+        <button
+          type="button"
+          className="text-sm bg-gray-500 hover:bg-gray-600 border border-gray-500 hover:border-transparent text-white font-bold py-3 px-4 rounded text-center shadow"
+        >
+          Got in touch?
+        </button>
+      </div>
+      <div>
+        <p>{`Category: ${category.name}`}</p>
+        <p>{`Relationship: ${contact.relationship}`}</p>
+        <p>{`Priority: ${priority.name}`}</p>
+        <div>
+          Logs:
+          {logs && logs.length > 0 ? (
+            <div className="flex flex-col">
+              {logs.map((log) => (
+                <div className="ml-5">{`Log ${log.id}: ${log.note}`}</div>
+              ))}
+            </div>
+          ) : (
+            " There are no logs"
+          )}
         </div>
       </div>
     </div>
