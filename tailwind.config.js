@@ -33,6 +33,7 @@ module.exports = {
       fuchsia: colors.fuchsia,
       pink: colors.pink,
       rose: colors.rose,
+      darkblue: '#0a1121',
     }),
     extend: {},
   },

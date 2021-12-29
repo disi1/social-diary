@@ -18,10 +18,15 @@ export const ContactList: React.FC<ContactListProps> = ({
   priorities,
 }) => {
   return (
-    <div className="p-5 grid grid-cols-4 gap-5 h-screen bg-white dark:bg-slate-900 overflow-x-scroll">
+    <div className="p-5 grid grid-cols-4 gap-5 h-screen bg-slate-100 dark:bg-darkblue grid-flow-col auto-cols-[minmax(300px,_1fr)] grid-cols-[repeat(auto-fill,_minmax(300px,_1fr))] overflow-scroll">
       {categories?.map((category) => (
-        <div className="grid h-screen bg-sky-400/10 grid-cols-1 auto-rows-min gap-5 p-5 overflow-y-auto" key={category.id}>
-          <div className="text-gray-900 dark:text-white text-center font-semibold text-xl tracking-tight mb-2">{category.name}</div>
+        <div
+          className="grid h-screen bg-white dark:bg-slate-900 grid-cols-1 auto-rows-min gap-5 p-5"
+          key={category.id}
+        >
+          <div className="text-gray-900 dark:text-white text-center font-semibold text-xl tracking-tight mb-2">
+            {category.name}
+          </div>
           {contacts?.map(
             (contact) =>
               contact.category_id === category.id && (
@@ -29,7 +34,11 @@ export const ContactList: React.FC<ContactListProps> = ({
                   contact={contact}
                   key={contact.id}
                   logs={logs?.filter((log) => log.contact_id === contact.id)}
-                  priority={priorities?.filter((priority) => priority.id === contact.priority_id)[0]}
+                  priority={
+                    priorities?.filter(
+                      (priority) => priority.id === contact.priority_id
+                    )[0]
+                  }
                 />
               )
           )}

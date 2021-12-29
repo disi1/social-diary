@@ -29,7 +29,7 @@ export const ContactItem: React.FC<ContactItempProps> = ({
 
   return (
     <Link href={`${ROUTE_HOME}/${contact.id}`}>
-      <div className="card card-compact lg:card-side card-bordered cursor-pointer bg-white dark:bg-transparent">
+      <div className="card z-10 card-compact lg:card-side cursor-pointer bg-gray-100 rounded-lg dark:bg-gray-800 dark:highlight-white/5 shadow dark:shadow-white/20 hover:drop-shadow-md dark:hover:shadow-white/20 dark:hover:shadow-md">
         <div className="card-body">
           <h2 className="card-title text-gray-900 tracking-tight dark:text-gray-200">
             {contact.name}

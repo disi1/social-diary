@@ -46,7 +46,7 @@ export const NewCategoryForm: React.FC<NewCategoryFormProps> = ({
   };
 
   return (
-    <div className="h-screen bg-white dark:bg-slate-900 flex flex-col justify-center items-center relative">
+    <div className="h-screen bg-slate-100 dark:bg-slate-900 flex flex-col justify-center items-center relative">
       <form className="w-full sm:w-1/2 xl:w-1/3" onSubmit={handleSubmit}>
         <div className="border-teal p-8 border-t-12 bg-white mb-6 rounded-lg shadow-lg">
           <div>
@@ -100,7 +100,7 @@ export const NewCategoryForm: React.FC<NewCategoryFormProps> = ({
 
           <div className="flex pt-6 gap-2 items-center">
             <button
-              className="flex-1 btn btn-ghost font-bold text-sm text-slate-400 hover:text-slate-600 hover:bg-transparent rounded"
+              className="flex-1 btn btn-ghost font-bold text-base normal-case text-slate-600 hover:text-slate-800 hover:bg-transparent rounded"
               type="button"
               onClick={resetFormFields}
             >
@@ -109,7 +109,7 @@ export const NewCategoryForm: React.FC<NewCategoryFormProps> = ({
 
             <button
               type="submit"
-              className="flex-1 btn text-sm bg-slate-200 hover:text-white hover:bg-slate-500 border border-slate-200 hover:border-transparent text-slate-600 font-bold rounded w-full"
+              className="flex-1 btn capitalize text-base bg-slate-600 hover:bg-slate-800 border border-slate-600 hover:border-transparent text-white rounded w-full text-center shadow"
             >
               Save Category
             </button>
