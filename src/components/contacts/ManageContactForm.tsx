@@ -8,6 +8,7 @@ import { Contact } from "../../lib/contact";
 interface NewContactFormProps {
   onSubmit: (contact: Contact) => void;
   onCancel: () => void;
+  contact?: Contact;
   categories: Category[] | undefined;
   priorities: Priority[] | undefined;
 }
@@ -21,19 +22,30 @@ type NewContactFieldProps = {
   priority: number;
 };
 
-export const NewContactForm: React.FC<NewContactFormProps> = ({
+export const ManageContactForm: React.FC<NewContactFormProps> = ({
   onSubmit,
   onCancel,
+  contact,
   categories,
   priorities,
 }) => {
   // the values we'd like to initialize the NewContact form with
   const FORM_VALUES: NewContactFieldProps = {
-    name: "",
-    relationship: "",
-    location: "",
-    category: categories && categories.length > 0 ? categories[0].id ?? 1 : 1,
-    priority: priorities && priorities.length > 0 ? priorities[0].id ?? 1 : 1,
+    name: contact ? contact.name : "",
+    relationship: contact ? contact.relationship : "",
+    location: contact ? contact.location : "",
+    category:
+      categories && categories.length > 0
+        ? contact
+          ? contact.category_id
+          : categories[0].id ?? 1
+        : 1,
+    priority:
+      priorities && priorities.length > 0
+        ? contact
+          ? contact.priority_id
+          : priorities[0].id ?? 1
+        : 1,
   };
 
   const [values, handleChange, resetFormFields] =
@@ -56,13 +68,13 @@ export const NewContactForm: React.FC<NewContactFormProps> = ({
   };
 
   return (
-    <div className="h-screen flex flex-col justify-center items-center relative">
+    <div className="h-screen bg-white dark:bg-slate-900 flex flex-col justify-center items-center relative">
       <form className="w-full sm:w-1/2 xl:w-1/3" onSubmit={handleSubmit}>
         <div className="border-teal p-8 border-t-12 bg-white mb-6 rounded-lg shadow-lg">
           <div className="mb-6">
             <label
               htmlFor="name"
-              className="block font-semibold text-gray-500 mb-2"
+              className="block font-semibold text-slate-500 mb-2"
             >
               Full name
             </label>
@@ -70,7 +82,7 @@ export const NewContactForm: React.FC<NewContactFormProps> = ({
               id="name"
               name="name"
               type="text"
-              className="input text-base bg-white text-gray-700 rounded shadow-inner border-gray-300 w-full border  hover:border-gray-400"
+              className="input text-base bg-white text-slate-700 rounded shadow-inner border-slate-300 w-full border  hover:border-slate-400"
               placeholder="Full name"
               required
               value={values.name}
@@ -81,7 +93,7 @@ export const NewContactForm: React.FC<NewContactFormProps> = ({
           <div className="mb-6">
             <label
               htmlFor="relationship"
-              className="block font-semibold text-gray-500 mb-2"
+              className="block font-semibold text-slate-500 mb-2"
             >
               Relationship to person
             </label>
@@ -89,7 +101,7 @@ export const NewContactForm: React.FC<NewContactFormProps> = ({
               id="relationship"
               name="relationship"
               type="text"
-              className="input text-base bg-white text-gray-700 rounded shadow-inner border-gray-300 w-full border hover:border-gray-400"
+              className="input text-base bg-white text-slate-700 rounded shadow-inner border-slate-300 w-full border hover:border-slate-400"
               placeholder="Your relationship with this person"
               required
               value={values.relationship}
@@ -100,7 +112,7 @@ export const NewContactForm: React.FC<NewContactFormProps> = ({
           <div className="mb-6">
             <label
               htmlFor="location"
-              className="block font-semibold text-gray-500 mb-2"
+              className="block font-semibold text-slate-500 mb-2"
             >
               Location
             </label>
@@ -108,7 +120,7 @@ export const NewContactForm: React.FC<NewContactFormProps> = ({
               id="location"
               name="location"
               type="text"
-              className="input text-base bg-white text-gray-700 rounded shadow-inner border-gray-300 w-full border hover:border-gray-400"
+              className="input text-base bg-white text-slate-700 rounded shadow-inner border-slate-300 w-full border hover:border-slate-400"
               placeholder="Location"
               value={values.location}
               onChange={handleChange}
@@ -119,22 +131,22 @@ export const NewContactForm: React.FC<NewContactFormProps> = ({
             <div className="w-full md:w-1/2 px-3 md:mb-0">
               <label
                 htmlFor="category"
-                className="block font-semibold text-gray-500 mb-2"
+                className="block font-semibold text-slate-500 mb-2"
               >
                 Category
               </label>
 
               <div className="relative">
                 <select
-                    className="select text-base font-normal w-full max-w-xs bg-white border border-gray-300 text-gray-700 rounded focus:bg-white hover:border-gray-400"
-                    id="category"
-                    name="category"
-                    onChange={handleChange}
-                    required
-                    value={values.category}
+                  className="select text-base font-normal w-full max-w-xs bg-white border border-slate-300 text-slate-700 rounded focus:bg-white hover:border-slate-400"
+                  id="category"
+                  name="category"
+                  onChange={handleChange}
+                  required
+                  value={values.category}
                 >
                   {categories?.map(({ id, name }) => (
-                      <option key={id} value={id} label={name} />
+                    <option key={id} value={id} label={name} />
                   ))}
                 </select>
               </div>
@@ -143,22 +155,22 @@ export const NewContactForm: React.FC<NewContactFormProps> = ({
             <div className="w-full md:w-1/2 px-3 mb-6 md:mb-0">
               <label
                 htmlFor="priority"
-                className="block font-semibold text-gray-500 mb-2"
+                className="block font-semibold text-slate-500 mb-2"
               >
                 Priority
               </label>
 
               <div className="relative">
                 <select
-                    className="select text-base font-normal w-full max-w-xs bg-white border border-gray-300 text-gray-700 rounded focus:bg-white hover:border-gray-400"
-                    id="priority"
-                    onChange={handleChange}
-                    name="priority"
-                    required
-                    value={values.priority}
+                  className="select text-base font-normal w-full max-w-xs bg-white border border-slate-300 text-slate-700 rounded focus:bg-white hover:border-slate-400"
+                  id="priority"
+                  onChange={handleChange}
+                  name="priority"
+                  required
+                  value={values.priority}
                 >
                   {priorities?.map(({ id, name, frequency }) => (
-                      <option key={id} value={id} label={name} />
+                    <option key={id} value={id} label={name} />
                   ))}
                 </select>
               </div>
@@ -169,18 +181,18 @@ export const NewContactForm: React.FC<NewContactFormProps> = ({
 
           <div className="flex pt-6 gap-2 items-center">
             <button
-                className="flex-1 btn btn-ghost font-bold text-sm text-gray-400 hover:text-gray-600 hover:bg-transparent rounded"
-                type="button"
-                onClick={resetFormFields}
+              className="flex-1 btn btn-ghost font-bold text-sm text-slate-400 hover:text-slate-600 hover:bg-transparent rounded"
+              type="button"
+              onClick={resetFormFields}
             >
               Cancel
             </button>
 
             <button
-                type="submit"
-                className="flex-1 btn text-sm bg-gray-200 hover:text-white hover:bg-gray-500 border border-gray-200 hover:border-transparent text-gray-600 font-bold rounded w-full"
+              type="submit"
+              className="flex-1 btn text-sm bg-slate-200 hover:text-white hover:bg-slate-500 border border-slate-200 hover:border-transparent text-slate-600 font-bold rounded w-full"
             >
-              Save Contact
+              {contact ? "Edit Contact" : "Save Contact"}
             </button>
           </div>
         </div>

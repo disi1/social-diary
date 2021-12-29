@@ -31,16 +31,16 @@ const IndexPage: NextPage<NextAppPageProps> = ({}) => {
   };
 
   return (
-    <div className="h-screen flex flex-col justify-center items-center relative">
+    <div className="h-screen bg-white dark:bg-slate-900 flex flex-col justify-center items-center relative">
       {/* App logo and tagline*/}
-      <div className="w-full text-center mb-6 flex  flex-col place-items-center">
+      <div className="w-full text-center mb-6 flex flex-col place-items-center">
         <div>
-          <FaLock className="text-gray-600 text-5xl shadow-sm" />
+          <FaLock className="text-5xl shadow-sm text-sky-400" />
         </div>
-        <h3 className="text-3xl text-gray-600">
+        <h3 className="text-3xl text-gray-900 dark:text-white my-3">
           Social<strong>Diary</strong>
         </h3>
-        <small>
+        <small className="text-gray-400">
           Please provide your <strong>email</strong> and{' '}
           <strong>password</strong> and {isSignIn ? 'Log In' : 'Sign Up'}
         </small>
@@ -52,7 +52,7 @@ const IndexPage: NextPage<NextAppPageProps> = ({}) => {
           <div className="mb-6">
             <label
               htmlFor="email"
-              className="block font-semibold text-gray-500 mb-2"
+              className="block font-semibold text-slate-500 mb-2"
             >
               Email
             </label>
@@ -60,7 +60,7 @@ const IndexPage: NextPage<NextAppPageProps> = ({}) => {
               id="email"
               name="email"
               type="email"
-              className="h-12 px-4 py-2 bg-white rounded shadow-inner border-gray-300 w-full border  hover:border-gray-400"
+              className="h-12 px-4 py-2 bg-white rounded shadow-inner border-slate-300 w-full border  hover:border-slate-400"
               placeholder="Your Email"
               required
               value={values.email}
@@ -70,7 +70,7 @@ const IndexPage: NextPage<NextAppPageProps> = ({}) => {
           <div className="mb-6">
             <label
               htmlFor="password"
-              className="block font-semibold text-gray-500 mb-2"
+              className="block font-semibold text-slate-500 mb-2"
             >
               Password
             </label>
@@ -78,7 +78,7 @@ const IndexPage: NextPage<NextAppPageProps> = ({}) => {
               id="password"
               name="password"
               type="password"
-              className="h-12 px-4 py-2 bg-white rounded shadow-inner border-gray-300 w-full border hover:border-gray-400"
+              className="h-12 px-4 py-2 bg-white rounded shadow-inner border-slate-300 w-full border hover:border-slate-400"
               placeholder="Your password"
               required
               value={values.password}
@@ -91,12 +91,12 @@ const IndexPage: NextPage<NextAppPageProps> = ({}) => {
           <div className="flex pt-4 gap-2">
             <button
               type="submit"
-              className="flex-1 text-sm px-4 py-2 bg-gray-500 hover:bg-gray-600 border border-gray-500 hover:border-transparent text-white font-bold py-3 rounded w-full text-center shadow"
+              className="flex-1 btn text-sm bg-slate-500 hover:bg-slate-600 border border-slate-600 hover:border-transparent text-white rounded w-full text-center shadow"
             >
               {isSignIn ? 'Log In' : 'Sign Up'}
             </button>
             <div className="flex-1 text-right">
-              <small className="block text-gray-600">
+              <small className="block text-slate-600">
                 {isSignIn ? 'Not a member yet?' : 'Already a member?'}{' '}
               </small>
               <a

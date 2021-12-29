@@ -44,19 +44,30 @@ export const ContactDetails: React.FC<ContactDetailsProps> = ({
                   ? twFullConfig.theme.colors.teal[500]
                   : noOfHoursSinceLastLogEntry &&
                     noOfHoursSinceLastLogEntry > priority.frequency
-                  ? twFullConfig.theme.colors.red[500]
+                  ? twFullConfig.theme.colors.rose[500]
                   : "gray"
               }
             />
           }
         </div>
         <Link href={`${ROUTE_HOME}/${contact.id}/newLog`}>
-          <div className="my-5">
+          <div className="my-5 flex">
             <button
               type="button"
-              className="text-sm bg-gray-500 hover:bg-gray-600 border border-gray-500 hover:border-transparent text-white font-bold py-3 px-4 rounded text-center shadow"
+              className="text-sm bg-slate-500 hover:bg-slate-600 border border-slate-500 hover:border-transparent text-white font-bold py-3 px-4 rounded text-center shadow"
             >
               Got in touch?
+            </button>
+          </div>
+        </Link>
+
+        <Link href={`${ROUTE_HOME}/${contact.id}/edit`}>
+          <div className="my-5 flex">
+            <button
+                type="button"
+                className="text-sm bg-slate-500 hover:bg-slate-600 border border-slate-500 hover:border-transparent text-white font-bold py-3 px-4 rounded text-center shadow"
+            >
+              Edit Contact
             </button>
           </div>
         </Link>

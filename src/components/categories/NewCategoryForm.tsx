@@ -46,13 +46,13 @@ export const NewCategoryForm: React.FC<NewCategoryFormProps> = ({
   };
 
   return (
-    <div className="h-screen flex flex-col justify-center items-center relative">
+    <div className="h-screen bg-white dark:bg-slate-900 flex flex-col justify-center items-center relative">
       <form className="w-full sm:w-1/2 xl:w-1/3" onSubmit={handleSubmit}>
         <div className="border-teal p-8 border-t-12 bg-white mb-6 rounded-lg shadow-lg">
           <div>
             <label
               htmlFor="name"
-              className="block font-semibold text-gray-500 mb-6"
+              className="block font-semibold text-slate-500 mb-6"
             >
               Choose one of the following
             </label>
@@ -61,7 +61,7 @@ export const NewCategoryForm: React.FC<NewCategoryFormProps> = ({
               {categoryOptions.map((option) => (
                 <button
                   key={option.name}
-                  className="btn btn-outline btn-accent btn-circle btn-lg text-sm normal-case disabled:text-gray-400"
+                  className="btn btn-outline btn-accent btn-circle btn-lg text-sm normal-case disabled:text-slate-400"
                   type="button"
                   name="name"
                   onClick={() => manuallyHandleChange("name", option.name)}
@@ -78,13 +78,13 @@ export const NewCategoryForm: React.FC<NewCategoryFormProps> = ({
           <div className="mb-6 mt-12">
             <label
               htmlFor="name"
-              className="block font-semibold text-gray-500 mb-2"
+              className="block font-semibold text-slate-500 mb-2"
             >
               Or create your own
             </label>
             <input
               id="name"
-              className="input text-base text-gray-700 bg-white rounded shadow-inner border-gray-300 w-full border hover:border-gray-400"
+              className="input text-base text-slate-700 bg-white rounded shadow-inner border-slate-300 w-full border hover:border-slate-400"
               name="name"
               type="text"
               maxLength={80}
@@ -100,7 +100,7 @@ export const NewCategoryForm: React.FC<NewCategoryFormProps> = ({
 
           <div className="flex pt-6 gap-2 items-center">
             <button
-              className="flex-1 btn btn-ghost font-bold text-sm text-gray-400 hover:text-gray-600 hover:bg-transparent rounded"
+              className="flex-1 btn btn-ghost font-bold text-sm text-slate-400 hover:text-slate-600 hover:bg-transparent rounded"
               type="button"
               onClick={resetFormFields}
             >
@@ -109,7 +109,7 @@ export const NewCategoryForm: React.FC<NewCategoryFormProps> = ({
 
             <button
               type="submit"
-              className="flex-1 btn text-sm bg-gray-200 hover:text-white hover:bg-gray-500 border border-gray-200 hover:border-transparent text-gray-600 font-bold rounded w-full"
+              className="flex-1 btn text-sm bg-slate-200 hover:text-white hover:bg-slate-500 border border-slate-200 hover:border-transparent text-slate-600 font-bold rounded w-full"
             >
               Save Category
             </button>

@@ -1,47 +1,54 @@
-import { useState } from "react";
+import { Contact } from "../../../lib/contact";
+import { useCategory } from "../../../lib/category";
+import { usePriority } from "../../../lib/priority";
+import { GetServerSideProps, NextPage } from "next";
 import { useAuth } from "../../../lib/auth";
 import { SpinnerFullPage } from "../../../components/Spinner";
-import { Alert } from "../../../components/Alert";
 import Layout from "../../../components/layout/Layout";
-import { Contact } from "../../../lib/contact";
 import { supabase } from "../../../lib";
-import { Log } from "../../../lib/log";
-import { NewLogForm } from "../../../components/logs/NewLogForm";
-import { GetServerSideProps, NextPage } from "next";
 import { ROUTE_AUTH } from "../../../config";
+import { ManageContactForm } from "../../../components/contacts/ManageContactForm";
+import { Alert } from "../../../components/Alert";
+import { useState } from "react";
 
-interface NewLogPageProps {
+interface EditContactPageProps {
   contacts: Contact[];
 }
 
-const NewLogPage: NextPage<NewLogPageProps> = ({ contacts }) => {
+const EditContactPage: NextPage<EditContactPageProps> = ({ contacts }) => {
   const [isLoading, setIsLoading] = useState(false);
   const [errorMessage, setErrorMessage] = useState<string>();
   const [successMessage, setSuccessMessage] = useState<string>();
 
-  const { loading } = useAuth();
+  const { user, loading } = useAuth();
+  const { categories } = useCategory();
+  const { priorities } = usePriority();
+
   if (loading || isLoading) {
     return <SpinnerFullPage />;
   }
 
-  const onSubmit = async (log: Log) => {
+  const onSubmit = async (contact: Contact) => {
     setIsLoading(true);
 
-    const { error, status } = await supabase.from("log").insert([
-      {
-        contact_id: log.contact_id,
-        note: log.note,
-        timestamp: log.timestamp,
-        user_id: log.user_id,
-      },
-    ]);
+    const { error, status, data } = await supabase
+      .from("contact")
+      .update({
+        name: contact.name,
+        relationship: contact.relationship,
+        location: contact.location,
+        category_id: contact.category_id,
+        priority_id: contact.priority_id,
+        user_id: user?.id,
+      })
+      .eq("id", contacts[0].id);
 
     setIsLoading(false);
 
     if (error) {
       setErrorMessage(error.message);
-    } else if (status === 201) {
-      setSuccessMessage("Your new Log was successfully saved.");
+    } else if (status === 200) {
+      setSuccessMessage("Your contact was successfully updated.");
     }
   };
 
@@ -56,8 +63,10 @@ const NewLogPage: NextPage<NewLogPageProps> = ({ contacts }) => {
         <Alert type="success" text={successMessage} onClose={setSuccessMessage} />
       )}
 
-      <NewLogForm
+      <ManageContactForm
+        categories={categories}
         contact={contacts[0]}
+        priorities={priorities}
         onSubmit={onSubmit}
         onCancel={onCancel}
       />
@@ -65,7 +74,7 @@ const NewLogPage: NextPage<NewLogPageProps> = ({ contacts }) => {
   );
 };
 
-export default NewLogPage;
+export default EditContactPage;
 
 export const getServerSideProps: GetServerSideProps = async (context) => {
   try {

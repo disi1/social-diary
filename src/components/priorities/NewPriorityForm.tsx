@@ -70,19 +70,19 @@ export const NewPriorityForm: React.FC<NewPriorityFormProps> = ({
   };
 
   return (
-    <div className="h-screen flex flex-col justify-center items-center relative">
+    <div className="h-screen bg-white dark:bg-slate-900 flex flex-col justify-center items-center relative">
       <form className="w-full sm:w-1/2 xl:w-1/3" onSubmit={handleSubmit}>
         <div className="border-teal p-8 border-t-12 bg-white mb-6 rounded-lg shadow-lg">
           <div className="mb-6">
             <label
               htmlFor="name"
-              className="block font-semibold text-gray-500 mb-2"
+              className="block font-semibold text-slate-500 mb-2"
             >
               Name
             </label>
             <input
               id="name"
-              className="input text-base text-gray-700 bg-white rounded shadow-inner border-gray-300 w-full border hover:border-gray-400"
+              className="input text-base text-slate-700 bg-white rounded shadow-inner border-slate-300 w-full border hover:border-slate-400"
               name="name"
               type="text"
               maxLength={80}
@@ -98,13 +98,13 @@ export const NewPriorityForm: React.FC<NewPriorityFormProps> = ({
             <div className="w-full md:w-1/2 px-3 mb-6 md:mb-0">
               <label
                 htmlFor="frequency"
-                className="block font-semibold text-gray-500 mb-2"
+                className="block font-semibold text-slate-500 mb-2"
               >
                 Frequency
               </label>
               <input
                 id="frequency"
-                className="input text-base text-gray-700 bg-white rounded shadow-inner border-gray-300 w-full border hover:border-gray-400"
+                className="input text-base text-slate-700 bg-white rounded shadow-inner border-slate-300 w-full border hover:border-slate-400"
                 name="frequency"
                 type="number"
                 max={10000}
@@ -119,14 +119,14 @@ export const NewPriorityForm: React.FC<NewPriorityFormProps> = ({
             <div className="w-full md:w-1/2 px-3 mb-6 md:mb-0">
               <label
                 htmlFor="unit"
-                className="block font-semibold text-gray-500 mb-2"
+                className="block font-semibold text-slate-500 mb-2"
               >
                 Unit
               </label>
 
               <div className="relative">
                 <select
-                  className="select text-base font-normal w-full bg-white border border-gray-300 text-gray-700 rounded focus:bg-white hover:border-gray-400"
+                  className="select text-base font-normal w-full bg-white border border-slate-300 text-slate-700 rounded focus:bg-white hover:border-slate-400"
                   id="unit"
                   onChange={handleChange}
                   name="unit"
@@ -145,7 +145,7 @@ export const NewPriorityForm: React.FC<NewPriorityFormProps> = ({
 
           <div className="flex pt-6 gap-2 items-center">
             <button
-                className="flex-1 btn btn-ghost font-bold text-sm text-gray-400 hover:text-gray-600 hover:bg-transparent rounded"
+                className="flex-1 btn btn-ghost font-bold text-sm text-slate-400 hover:text-slate-600 hover:bg-transparent rounded"
                 type="button"
                 onClick={resetFormFields}
             >
@@ -154,7 +154,7 @@ export const NewPriorityForm: React.FC<NewPriorityFormProps> = ({
 
             <button
                 type="submit"
-                className="flex-1 btn text-sm bg-gray-200 hover:text-white hover:bg-gray-500 border border-gray-200 hover:border-transparent text-gray-600 font-bold rounded w-full"
+                className="flex-1 btn text-sm bg-slate-200 hover:text-white hover:bg-slate-500 border border-slate-200 hover:border-transparent text-slate-600 font-bold rounded w-full"
             >
               Save Priority
             </button>

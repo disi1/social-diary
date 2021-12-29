@@ -46,7 +46,7 @@ export const NewLogForm: React.FC<NewLogModalProps> = ({
     <div className="h-screen flex flex-col justify-center items-center relative">
       <form className="w-full sm:w-1/2 xl:w-1/3" onSubmit={handleSubmit}>
         <div className="border-teal p-8 border-t-12 bg-white mb-6 rounded-lg shadow-lg">
-          <div className="block text-xl font-semibold text-gray-700 mb-5">
+          <div className="block text-xl font-semibold text-slate-700 mb-5">
             {`Log chat with ${contact.name}`}
           </div>
 
@@ -54,7 +54,7 @@ export const NewLogForm: React.FC<NewLogModalProps> = ({
             <div className="mb-6">
               <label
                 htmlFor="timestamp"
-                className="block font-semibold text-gray-500 mb-2"
+                className="block font-semibold text-slate-500 mb-2"
               >
                 When did you chat?
               </label>
@@ -62,7 +62,7 @@ export const NewLogForm: React.FC<NewLogModalProps> = ({
                 id="timestamp"
                 name="timestamp"
                 type="datetime-local"
-                className="input text-base bg-white text-gray-700 rounded shadow-inner border-gray-300 w-full border hover:border-gray-400"
+                className="input text-base bg-white text-slate-700 rounded shadow-inner border-slate-300 w-full border hover:border-slate-400"
                 required
                 value={values.timestamp}
                 onChange={handleChange}
@@ -71,13 +71,13 @@ export const NewLogForm: React.FC<NewLogModalProps> = ({
           </div>
 
           <div className="form-control">
-            <label className="block font-semibold text-gray-500 mb-2">
+            <label className="block font-semibold text-slate-500 mb-2">
               Any notes on your chat?
             </label>
             <textarea
               id="note"
               name="note"
-              className="textarea text-base bg-white text-gray-700 rounded shadow-inner border-gray-300 w-full border hover:border-gray-400"
+              className="textarea text-base bg-white text-slate-700 rounded shadow-inner border-slate-300 w-full border hover:border-slate-400"
               placeholder="Start typing a note..."
               onChange={handleChange}
               required
@@ -89,7 +89,7 @@ export const NewLogForm: React.FC<NewLogModalProps> = ({
 
           <div className="flex pt-6 gap-2 items-center">
             <button
-              className="flex-1 btn btn-ghost font-bold text-sm text-gray-400 hover:text-gray-600 hover:bg-transparent rounded"
+              className="flex-1 btn btn-ghost font-bold text-sm text-slate-400 hover:text-slate-600 hover:bg-transparent rounded"
               type="button"
               onClick={resetFormFields}
             >
@@ -98,7 +98,7 @@ export const NewLogForm: React.FC<NewLogModalProps> = ({
 
             <button
               type="submit"
-              className="flex-1 btn text-sm bg-gray-200 hover:text-white hover:bg-gray-500 border border-gray-200 hover:border-transparent text-gray-600 font-bold rounded w-full"
+              className="flex-1 btn text-sm bg-slate-200 hover:text-white hover:bg-slate-500 border border-slate-200 hover:border-transparent text-slate-600 font-bold rounded w-full"
             >
               Save Log
             </button>

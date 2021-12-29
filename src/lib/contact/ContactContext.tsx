@@ -34,10 +34,23 @@ export const ContactProvider: FunctionComponent = ({ children }) => {
       .from("contact")
       .on("*", (payload) => {
         const newContact = payload.new as Contact;
+
         setContacts((oldContacts) => {
-          const newContacts = oldContacts
-            ? [...oldContacts, newContact]
-            : [newContact];
+          const exists = oldContacts.find(
+            (contact) => contact.id === newContact.id
+          );
+
+          let newContacts;
+
+          if (exists) {
+            const oldContactIndex = oldContacts.findIndex(
+              (obj) => obj.id === newContact.id
+            );
+            oldContacts[oldContactIndex] = newContact;
+            newContacts = oldContacts;
+          } else {
+            newContacts = [...oldContacts, newContact];
+          }
 
           newContacts.sort((a, b) => a.name.localeCompare(b.name));
 

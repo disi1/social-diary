@@ -42,7 +42,7 @@ const NewCategoryPage = () => {
         <Alert type="error" text={errorMessage} onClose={setErrorMessage} />
       )}
       {successMessage && (
-        <Alert type="success" text={successMessage} onClose={setErrorMessage} />
+        <Alert type="success" text={successMessage} onClose={setSuccessMessage} />
       )}
 
       <NewCategoryForm onSubmit={onSubmit} onCancel={onCancel} />

@@ -29,9 +29,9 @@ export const ContactItem: React.FC<ContactItempProps> = ({
 
   return (
     <Link href={`${ROUTE_HOME}/${contact.id}`}>
-      <div className="card lg:card-side card-bordered cursor-pointer">
+      <div className="card card-compact lg:card-side card-bordered cursor-pointer bg-white dark:bg-transparent">
         <div className="card-body">
-          <h2 className="card-title">
+          <h2 className="card-title text-gray-900 tracking-tight dark:text-gray-200">
             {contact.name}
             <FontAwesomeIcon
               className="ml-2"
@@ -44,20 +44,20 @@ export const ContactItem: React.FC<ContactItempProps> = ({
                   : priority &&
                     noOfHoursSinceLastLogEntry &&
                     noOfHoursSinceLastLogEntry > priority.frequency
-                  ? twFullConfig.theme.colors.red[500]
+                  ? twFullConfig.theme.colors.rose[500]
                   : "gray"
               }
             />
           </h2>
-          <p>{contact.relationship}</p>
+          <p className="text-gray-900 tracking-tight dark:text-gray-200">{contact.relationship}</p>
 
           <div className="flex items-center mt-3">
             <FontAwesomeIcon
               icon={faCalendar}
               color={"gray"}
-              className="mr-2"
+              className="mr-2 text-sky-400/30"
             />
-            <div className="text-sm">
+            <div className="text-sm text-gray-900 tracking-tight dark:text-gray-200">
               <p>
                 {logs && logs.length > 0
                   ? new Date(logs[logs?.length - 1].timestamp).toLocaleString()

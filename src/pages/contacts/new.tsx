@@ -1,7 +1,7 @@
 import { useAuth } from "../../lib/auth";
 import { SpinnerFullPage } from "../../components/Spinner";
 import Layout from "../../components/layout/Layout";
-import { NewContactForm } from "../../components/contacts/NewContactForm";
+import { ManageContactForm } from "../../components/contacts/ManageContactForm";
 import { useCategory } from "../../lib/category";
 import { usePriority } from "../../lib/priority";
 import { Contact } from "../../lib/contact";
@@ -53,10 +53,10 @@ const NewContactPage = () => {
         <Alert type="error" text={errorMessage} onClose={setErrorMessage} />
       )}
       {successMessage && (
-        <Alert type="success" text={successMessage} onClose={setErrorMessage} />
+        <Alert type="success" text={successMessage} onClose={setSuccessMessage} />
       )}
 
-      <NewContactForm
+      <ManageContactForm
         onSubmit={onSubmit}
         onCancel={onCancel}
         categories={categories}
