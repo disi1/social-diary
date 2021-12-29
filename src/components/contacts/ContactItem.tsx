@@ -51,7 +51,7 @@ export const ContactItem: React.FC<ContactItempProps> = ({
           </h2>
           <p>{contact.relationship}</p>
 
-          <div className="flex items-center mt-2">
+          <div className="flex items-center mt-3">
             <FontAwesomeIcon
               icon={faCalendar}
               color={"gray"}
@@ -59,7 +59,7 @@ export const ContactItem: React.FC<ContactItempProps> = ({
             />
             <div className="text-sm">
               <p>
-                {logs && logs.length > 1
+                {logs && logs.length > 0
                   ? new Date(logs[logs?.length - 1].timestamp).toLocaleString()
                   : "No logs"}
               </p>

@@ -55,14 +55,13 @@ export const NewPriorityForm: React.FC<NewPriorityFormProps> = ({
   const handleSubmit = async (event: React.FormEvent) => {
     event.preventDefault();
 
-    const unitHoursCorrespondent = frequencyUnitOptions.find(
-        (unitOption) => unitOption.unit === values.unit
-    )?.value ?? 1;
+    const unitHoursCorrespondent =
+      frequencyUnitOptions.find((unitOption) => unitOption.unit === values.unit)
+        ?.value ?? 1;
 
     const priority = {
       name: values.name,
-      frequency:
-        values.frequency * unitHoursCorrespondent,
+      frequency: values.frequency * unitHoursCorrespondent,
     } as Priority;
 
     onSubmit(priority);
@@ -83,7 +82,7 @@ export const NewPriorityForm: React.FC<NewPriorityFormProps> = ({
             </label>
             <input
               id="name"
-              className="h-12 px-4 py-2 text-gray-700 bg-white rounded shadow-inner border-gray-300 w-full border hover:border-gray-400"
+              className="input text-base text-gray-700 bg-white rounded shadow-inner border-gray-300 w-full border hover:border-gray-400"
               name="name"
               type="text"
               maxLength={80}
@@ -105,7 +104,7 @@ export const NewPriorityForm: React.FC<NewPriorityFormProps> = ({
               </label>
               <input
                 id="frequency"
-                className="h-12 px-4 py-2 text-gray-700 bg-white rounded shadow-inner border-gray-300 w-full border hover:border-gray-400"
+                className="input text-base text-gray-700 bg-white rounded shadow-inner border-gray-300 w-full border hover:border-gray-400"
                 name="frequency"
                 type="number"
                 max={10000}
@@ -127,40 +126,38 @@ export const NewPriorityForm: React.FC<NewPriorityFormProps> = ({
 
               <div className="relative">
                 <select
-                  className="block appearance-none w-full bg-white border border-gray-300 text-gray-700 py-3 px-4 pr-8 rounded leading-tight focus:outline-none focus:bg-white focus:border-gray-400 hover:border-gray-400"
+                  className="select text-base font-normal w-full bg-white border border-gray-300 text-gray-700 rounded focus:bg-white hover:border-gray-400"
                   id="unit"
                   onChange={handleChange}
                   name="unit"
+                  required
+                  value={values.unit}
                 >
                   {frequencyUnitOptions.map(({ unit, value }) => (
                     <option key={unit} value={unit} label={unit} />
                   ))}
                 </select>
-                <div className="pointer-events-none absolute inset-y-0 right-0 flex items-center px-2 text-gray-700">
-                  <FontAwesomeIcon icon={faCaretDown} />
-                </div>
               </div>
             </div>
           </div>
 
           {/*  New Priority form: Actions */}
 
-          <div className="flex pt-4 gap-2 items-center">
+          <div className="flex pt-6 gap-2 items-center">
             <button
-              type="submit"
-              className="flex-1 text-sm px-4 py-2 bg-gray-500 hover:bg-gray-600 border border-gray-500 hover:border-transparent text-white font-bold py-3 rounded w-full text-center shadow"
+                className="flex-1 btn btn-ghost font-bold text-sm text-gray-400 hover:text-gray-600 hover:bg-transparent rounded"
+                type="button"
+                onClick={resetFormFields}
+            >
+              Cancel
+            </button>
+
+            <button
+                type="submit"
+                className="flex-1 btn text-sm bg-gray-200 hover:text-white hover:bg-gray-500 border border-gray-200 hover:border-transparent text-gray-600 font-bold rounded w-full"
             >
               Save Priority
             </button>
-
-            <div className="flex-1 text-right">
-              <button
-                className="flex-shrink-0 border-transparent border-4 text-gray-500 hover:text-gray-800 text-sm font-bold py-1 px-2 rounded"
-                type="button"
-              >
-                Cancel
-              </button>
-            </div>
           </div>
         </div>
       </form>

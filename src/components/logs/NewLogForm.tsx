@@ -17,7 +17,7 @@ type NewLogFieldProps = {
 // the value we'd like to initialize the NewPriority form with
 const FORM_VALUES: NewLogFieldProps = {
   note: "",
-  timestamp: ((new Date()).toISOString()),
+  timestamp: new Date().toISOString(),
 };
 
 export const NewLogForm: React.FC<NewLogModalProps> = ({
@@ -53,61 +53,55 @@ export const NewLogForm: React.FC<NewLogModalProps> = ({
           <div>
             <div className="mb-6">
               <label
-                  htmlFor="timestamp"
-                  className="block font-semibold text-gray-500 mb-2"
+                htmlFor="timestamp"
+                className="block font-semibold text-gray-500 mb-2"
               >
                 When did you chat?
               </label>
               <input
-                  id="timestamp"
-                  name="timestamp"
-                  type="datetime-local"
-                  className="h-12 px-4 py-2 bg-white text-gray-700 rounded shadow-inner border-gray-300 w-full border  hover:border-gray-400"
-                  required
-                  value={values.timestamp}
-                  onChange={handleChange}
+                id="timestamp"
+                name="timestamp"
+                type="datetime-local"
+                className="input text-base bg-white text-gray-700 rounded shadow-inner border-gray-300 w-full border hover:border-gray-400"
+                required
+                value={values.timestamp}
+                onChange={handleChange}
               />
             </div>
           </div>
 
-          <div className="mb-6">
-            <label
-              htmlFor="note"
-              className="block font-semibold text-gray-500 mb-2"
-            >
+          <div className="form-control">
+            <label className="block font-semibold text-gray-500 mb-2">
               Any notes on your chat?
             </label>
-            <input
+            <textarea
               id="note"
               name="note"
-              type="text"
-              className="h-12 px-4 py-2 bg-white text-gray-700 rounded shadow-inner border-gray-300 w-full border  hover:border-gray-400"
-              placeholder="Start typing a note... "
+              className="textarea text-base bg-white text-gray-700 rounded shadow-inner border-gray-300 w-full border hover:border-gray-400"
+              placeholder="Start typing a note..."
+              onChange={handleChange}
               required
               value={values.note}
-              onChange={handleChange}
             />
           </div>
 
-          {/*  New Contact form: Actions */}
+          {/*  New Log form: Actions */}
 
-          <div className="flex pt-4 gap-2 items-center">
+          <div className="flex pt-6 gap-2 items-center">
+            <button
+              className="flex-1 btn btn-ghost font-bold text-sm text-gray-400 hover:text-gray-600 hover:bg-transparent rounded"
+              type="button"
+              onClick={resetFormFields}
+            >
+              Cancel
+            </button>
+
             <button
               type="submit"
-              className="flex-1 text-sm px-4 py-2 bg-gray-500 hover:bg-gray-600 border border-gray-500 hover:border-transparent text-white font-bold py-3 rounded w-full text-center shadow"
+              className="flex-1 btn text-sm bg-gray-200 hover:text-white hover:bg-gray-500 border border-gray-200 hover:border-transparent text-gray-600 font-bold rounded w-full"
             >
               Save Log
             </button>
-
-            <div className="flex-1 text-right">
-              <button
-                className="flex-shrink-0 border-transparent border-4 text-gray-500 hover:text-gray-800 text-sm font-bold py-1 px-2 rounded"
-                type="button"
-                onClick={resetFormFields}
-              >
-                Cancel
-              </button>
-            </div>
           </div>
         </div>
       </form>

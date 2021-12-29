@@ -1,11 +1,18 @@
 import { useFormFields } from "../../lib/utils";
 import { useRef } from "react";
-import { Category } from "../../lib/category";
+import { Category, CategoryOption, useCategory } from "../../lib/category";
+import { event } from "next/dist/build/output/log";
 
 interface NewCategoryFormProps {
   onSubmit: (category: Category) => void;
   onCancel: () => void;
 }
+
+const categoryOptions: Record<string, CategoryOption>[] = [
+  { name: "Family" },
+  { name: "Friends" },
+  { name: "Work" },
+];
 
 // define the shape of the NewCategory form's fields
 type NewCategoryFieldProps = {
@@ -21,7 +28,9 @@ export const NewCategoryForm: React.FC<NewCategoryFormProps> = ({
   onSubmit,
   onCancel,
 }) => {
-  const [values, handleChange, resetFormFields] =
+  const { categories } = useCategory();
+
+  const [values, handleChange, resetFormFields, manuallyHandleChange] =
     useFormFields<NewCategoryFieldProps>(FORM_VALUES);
 
   const handleSubmit = async (event: React.FormEvent) => {
@@ -40,16 +49,42 @@ export const NewCategoryForm: React.FC<NewCategoryFormProps> = ({
     <div className="h-screen flex flex-col justify-center items-center relative">
       <form className="w-full sm:w-1/2 xl:w-1/3" onSubmit={handleSubmit}>
         <div className="border-teal p-8 border-t-12 bg-white mb-6 rounded-lg shadow-lg">
-          <div className="mb-6">
+          <div>
+            <label
+              htmlFor="name"
+              className="block font-semibold text-gray-500 mb-6"
+            >
+              Choose one of the following
+            </label>
+
+            <div className="flex justify-around">
+              {categoryOptions.map((option) => (
+                <button
+                  key={option.name}
+                  className="btn btn-outline btn-accent btn-circle btn-lg text-sm normal-case disabled:text-gray-400"
+                  type="button"
+                  name="name"
+                  onClick={() => manuallyHandleChange("name", option.name)}
+                  disabled={categories?.some(
+                    (category) => category.name === option.name
+                  )}
+                >
+                  {option.name}
+                </button>
+              ))}
+            </div>
+          </div>
+
+          <div className="mb-6 mt-12">
             <label
               htmlFor="name"
               className="block font-semibold text-gray-500 mb-2"
             >
-              Name
+              Or create your own
             </label>
             <input
               id="name"
-              className="h-12 px-4 py-2 text-gray-700 bg-white rounded shadow-inner border-gray-300 w-full border hover:border-gray-400"
+              className="input text-base text-gray-700 bg-white rounded shadow-inner border-gray-300 w-full border hover:border-gray-400"
               name="name"
               type="text"
               maxLength={80}
@@ -63,22 +98,21 @@ export const NewCategoryForm: React.FC<NewCategoryFormProps> = ({
 
           {/*  New Category form: Actions */}
 
-          <div className="flex pt-4 gap-2 items-center">
+          <div className="flex pt-6 gap-2 items-center">
+            <button
+              className="flex-1 btn btn-ghost font-bold text-sm text-gray-400 hover:text-gray-600 hover:bg-transparent rounded"
+              type="button"
+              onClick={resetFormFields}
+            >
+              Cancel
+            </button>
+
             <button
               type="submit"
-              className="flex-1 text-sm px-4 py-2 bg-gray-500 hover:bg-gray-600 border border-gray-500 hover:border-transparent text-white font-bold py-3 rounded w-full text-center shadow"
+              className="flex-1 btn text-sm bg-gray-200 hover:text-white hover:bg-gray-500 border border-gray-200 hover:border-transparent text-gray-600 font-bold rounded w-full"
             >
               Save Category
             </button>
-
-            <div className="flex-1 text-right">
-              <button
-                className="flex-shrink-0 border-transparent border-4 text-gray-500 hover:text-gray-800 text-sm font-bold py-1 px-2 rounded"
-                type="button"
-              >
-                Cancel
-              </button>
-            </div>
           </div>
         </div>
       </form>
