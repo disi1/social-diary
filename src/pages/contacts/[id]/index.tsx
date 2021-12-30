@@ -11,10 +11,6 @@ import { useRouter } from "next/router";
 const ContactDetailsPage = () => {
   const { loading } = useAuth();
 
-  if (loading) {
-    return <SpinnerFullPage />;
-  }
-
   const { contacts } = useContact();
 
   const { id } = useRouter().query;
@@ -36,6 +32,8 @@ const ContactDetailsPage = () => {
   const thisContactLogs = logs?.filter(
     (log) => log.contact_id === thisContact?.id
   ) as Log[];
+  thisContactLogs.sort((a, b) => new Date(b.timestamp).valueOf() - new Date(a.timestamp).valueOf());
+
 
   return (
     thisContact && (
@@ -46,6 +44,8 @@ const ContactDetailsPage = () => {
           logs={thisContactLogs}
           priority={thisContactPriority}
         />
+
+        {(loading) && <SpinnerFullPage />}
       </Layout>
     )
   );

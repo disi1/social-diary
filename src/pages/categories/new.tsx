@@ -1,7 +1,7 @@
 import { useAuth } from "../../lib/auth";
 import { SpinnerFullPage } from "../../components/Spinner";
 import Layout from "../../components/layout/Layout";
-import { NewCategoryForm } from "../../components/categories/NewCategoryForm";
+import { ManageCategoryForm } from "../../components/categories/ManageCategoryForm";
 import { useState } from "react";
 import { supabase } from "../../lib";
 import { Alert } from "../../components/Alert";
@@ -13,10 +13,6 @@ const NewCategoryPage = () => {
   const [isLoading, setIsLoading] = useState(false);
   const [errorMessage, setErrorMessage] = useState<string>();
   const [successMessage, setSuccessMessage] = useState<string>();
-
-  if (loading || isLoading) {
-    return <SpinnerFullPage />;
-  }
 
   const onSubmit = async (category: Category) => {
     setIsLoading(true);
@@ -45,7 +41,9 @@ const NewCategoryPage = () => {
         <Alert type="success" text={successMessage} onClose={setSuccessMessage} />
       )}
 
-      <NewCategoryForm onSubmit={onSubmit} onCancel={onCancel} />
+      <ManageCategoryForm onSubmit={onSubmit} onCancel={onCancel} />
+
+      {(loading || isLoading) && <SpinnerFullPage />}
     </Layout>
   );
 };

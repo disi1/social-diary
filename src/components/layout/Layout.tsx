@@ -15,16 +15,13 @@ const Layout = (props: any) => {
     }
   }, [userLoading, loggedIn]);
 
-  if (loading) {
-    return <SpinnerFullPage />;
-  }
-
   return (
     <>
       {user && (
         <Fragment>
           <MainNavigation />
           <main className="h-screen bg-slate-100 dark:bg-slate-900">{props.children}</main>
+          {(loading) && <SpinnerFullPage />}
         </Fragment>
       )}
     </>

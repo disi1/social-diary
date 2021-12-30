@@ -15,10 +15,6 @@ const NewPriorityPage = () => {
   const [errorMessage, setErrorMessage] = useState<string>();
   const [successMessage, setSuccessMessage] = useState<string>();
 
-  if (loading || isLoading) {
-    return <SpinnerFullPage />;
-  }
-
   const onSubmit = async (priority: Priority) => {
     setIsLoading(true);
 
@@ -56,6 +52,8 @@ const NewPriorityPage = () => {
         />
       )}
       <ManagePriorityForm onSubmit={onSubmit} onCancel={onCancel} />
+
+      {(loading || isLoading) && <SpinnerFullPage />}
     </Layout>
   );
 };

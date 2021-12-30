@@ -20,10 +20,6 @@ const EditContactPage = () => {
   const { priorities } = usePriority();
   const { contacts } = useContact();
 
-  if (loading || isLoading) {
-    return <SpinnerFullPage />;
-  }
-
   const { id } = useRouter().query;
 
   const currentContact =
@@ -78,6 +74,8 @@ const EditContactPage = () => {
           onSubmit={onSubmit}
           onCancel={onCancel}
         />
+
+        {(loading || isLoading) && <SpinnerFullPage />}
       </Layout>
     )
   );

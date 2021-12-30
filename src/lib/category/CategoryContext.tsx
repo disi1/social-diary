@@ -2,6 +2,7 @@ import { createContext, FunctionComponent, useEffect, useState } from "react";
 import { useAuth } from "../auth";
 import { supabase } from "../supabaseClient";
 import { Category } from "./category.types";
+import { getUpdatedItems } from "../utils";
 
 export type CategoryContextProps = {
   categories: Category[];
@@ -34,11 +35,9 @@ export const CategoryProvider: FunctionComponent = ({ children }) => {
       .from("category")
       .on("*", (payload) => {
         const newCategory = payload.new as Category;
-        setCategories((oldCategories) => {
-          const newCategories = oldCategories
-            ? [...oldCategories, newCategory]
-            : [newCategory];
 
+        setCategories((oldCategories) => {
+          const newCategories = getUpdatedItems(oldCategories, newCategory);
           newCategories.sort((a, b) => a.name.localeCompare(b.name));
 
           return newCategories;

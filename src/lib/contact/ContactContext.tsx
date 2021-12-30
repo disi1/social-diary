@@ -2,6 +2,7 @@ import { Contact } from "./contact.types";
 import { createContext, FunctionComponent, useEffect, useState } from "react";
 import { useAuth } from "../auth";
 import { supabase } from "../supabaseClient";
+import {getUpdatedItems} from "../utils";
 
 export type ContactContextProps = {
   contacts: Contact[];
@@ -36,22 +37,7 @@ export const ContactProvider: FunctionComponent = ({ children }) => {
         const newContact = payload.new as Contact;
 
         setContacts((oldContacts) => {
-          const exists = oldContacts.find(
-            (contact) => contact.id === newContact.id
-          );
-
-          let newContacts;
-
-          if (exists) {
-            const oldContactIndex = oldContacts.findIndex(
-              (obj) => obj.id === newContact.id
-            );
-            oldContacts[oldContactIndex] = newContact;
-            newContacts = oldContacts;
-          } else {
-            newContacts = [...oldContacts, newContact];
-          }
-
+          const newContacts = getUpdatedItems(oldContacts, newContact);
           newContacts.sort((a, b) => a.name.localeCompare(b.name));
 
           return newContacts;

@@ -12,11 +12,7 @@ import {
 import { useRouter } from "next/router";
 
 const MainNavigation = () => {
-  const { loading, signOut } = useAuth();
-
-  if (loading) {
-    return <SpinnerFullPage />;
-  }
+  const { signOut } = useAuth();
 
   const router = useRouter();
 

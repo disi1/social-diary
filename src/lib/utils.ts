@@ -77,3 +77,21 @@ export const convertHours = (
 
   return undefined;
 };
+
+export const getUpdatedItems = (oldItems: any[], newItem: any) => {
+  const exists = oldItems.find((item: any) => item.id === newItem.id);
+
+  let newItems;
+
+  if (exists) {
+    const oldContactIndex = oldItems.findIndex(
+      (item: any) => item.id === newItem.id
+    );
+    oldItems[oldContactIndex] = newItem;
+    newItems = oldItems;
+  } else {
+    newItems = oldItems ? [...oldItems, newItem] : [newItem];
+  }
+
+  return newItems;
+};

@@ -20,7 +20,7 @@ export default Spinner
 export const SpinnerFullPage: React.FunctionComponent<SpinnerProps> = ({
   size = 'xl',
 }) => (
-  <div className="w-screen h-screen flex justify-center place-items-center">
+  <div className="absolute top-0 left-0 z-50 w-screen transition-all h-screen bg-slate-200/20 dark:bg-slate-900/20 flex justify-center place-items-center">
     <Spinner size={size} />
   </div>
 )

@@ -1,7 +1,7 @@
 import { Priority } from "../../lib/priority";
 import { convertHours } from "../../lib/utils";
 import Link from "next/link";
-import { ROUTE_HOME, ROUTE_PRIORITIES } from "../../config";
+import { ROUTE_PRIORITIES } from "../../config";
 
 interface PriorityItemProps {
   priority: Priority;

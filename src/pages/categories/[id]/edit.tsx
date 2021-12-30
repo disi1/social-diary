@@ -1,55 +1,54 @@
 import { useState } from "react";
+import { useAuth } from "../../../lib/auth";
 import { SpinnerFullPage } from "../../../components/Spinner";
 import { useRouter } from "next/router";
-import { useAuth } from "../../../lib/auth";
-import { Priority, usePriority } from "../../../lib/priority";
+import { Category, useCategory } from "../../../lib/category";
 import { supabase } from "../../../lib";
 import Layout from "../../../components/layout/Layout";
 import { Alert } from "../../../components/Alert";
-import { ManagePriorityForm } from "../../../components/priorities/ManagePriorityForm";
+import { ManageCategoryForm } from "../../../components/categories/ManageCategoryForm";
 
-const EditPriorityPage = () => {
+const EditCategoryPage = () => {
   const [isLoading, setIsLoading] = useState(false);
   const [errorMessage, setErrorMessage] = useState<string>();
   const [successMessage, setSuccessMessage] = useState<string>();
 
   const { user, loading } = useAuth();
-  const { priorities } = usePriority();
+  const { categories } = useCategory();
 
   const { id } = useRouter().query;
 
-  const currentPriority =
+  const currentCategory =
     id && typeof id === "string"
-      ? (priorities?.find(
-          (priority) => priority.id === parseInt(id)
-        ) as Priority)
+      ? (categories?.find(
+          (category) => category.id === parseInt(id)
+        ) as Category)
       : null;
 
-  const onSubmit = async (priority: Priority) => {
+  const onSubmit = async (category: Category) => {
     setIsLoading(true);
 
     const { error, status } = await supabase
-      .from("priority")
+      .from("category")
       .update({
-        name: priority.name,
-        frequency: priority.frequency,
+        name: category.name,
         user_id: user?.id,
       })
-      .eq("id", currentPriority?.id);
+      .eq("id", currentCategory?.id);
 
     setIsLoading(false);
 
     if (error) {
       setErrorMessage(error.message);
     } else if (status === 200) {
-      setSuccessMessage("Your priority was successfully updated.");
+      setSuccessMessage("Your category was successfully updated.");
     }
   };
 
   const onCancel = () => {};
 
   return (
-    currentPriority && (
+    currentCategory && (
       <Layout>
         {errorMessage && (
           <Alert type="error" text={errorMessage} onClose={setErrorMessage} />
@@ -62,8 +61,8 @@ const EditPriorityPage = () => {
           />
         )}
 
-        <ManagePriorityForm
-          priority={currentPriority}
+        <ManageCategoryForm
+          category={currentCategory}
           onSubmit={onSubmit}
           onCancel={onCancel}
         />
@@ -74,4 +73,4 @@ const EditPriorityPage = () => {
   );
 };
 
-export default EditPriorityPage;
+export default EditCategoryPage;

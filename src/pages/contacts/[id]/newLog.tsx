@@ -15,10 +15,6 @@ const NewLogPage = () => {
   const [successMessage, setSuccessMessage] = useState<string>();
 
   const { loading } = useAuth();
-  if (loading || isLoading) {
-    return <SpinnerFullPage />;
-  }
-
   const { contacts } = useContact();
 
   const { id } = useRouter().query;
@@ -69,6 +65,8 @@ const NewLogPage = () => {
           onSubmit={onSubmit}
           onCancel={onCancel}
         />
+
+        {(loading || isLoading) && <SpinnerFullPage />}
       </Layout>
     )
   );

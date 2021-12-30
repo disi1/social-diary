@@ -2,6 +2,7 @@ import { useFormFields } from "../../lib/utils";
 import { Category, CategoryOption, useCategory } from "../../lib/category";
 
 interface NewCategoryFormProps {
+  category?: Category;
   onSubmit: (category: Category) => void;
   onCancel: () => void;
 }
@@ -17,15 +18,16 @@ type NewCategoryFieldProps = {
   name: string;
 };
 
-// the value we'd like to initialize the NewCategory form with
-const FORM_VALUES: NewCategoryFieldProps = {
-  name: "",
-};
-
-export const NewCategoryForm: React.FC<NewCategoryFormProps> = ({
+export const ManageCategoryForm: React.FC<NewCategoryFormProps> = ({
+  category,
   onSubmit,
   onCancel,
 }) => {
+  // the value we'd like to initialize the NewCategory form with
+  const FORM_VALUES: NewCategoryFieldProps = {
+    name: category ? category.name : "",
+  };
+
   const { categories } = useCategory();
 
   const [values, handleChange, resetFormFields, manuallyHandleChange] =
@@ -56,20 +58,31 @@ export const NewCategoryForm: React.FC<NewCategoryFormProps> = ({
             </label>
 
             <div className="flex justify-around">
-              {categoryOptions.map((option) => (
-                <button
-                  key={option.name}
-                  className="btn btn-outline btn-accent btn-circle btn-lg text-sm normal-case disabled:text-slate-400"
-                  type="button"
-                  name="name"
-                  onClick={() => manuallyHandleChange("name", option.name)}
-                  disabled={categories?.some(
-                    (category) => category.name === option.name
-                  )}
-                >
-                  {option.name}
-                </button>
-              ))}
+              {categoryOptions.map((option) => {
+                const exists = categories?.some(
+                  (category) => category.name === option.name
+                );
+
+                return (
+                  <div
+                    className={exists ? "tooltip" : ""}
+                    {...(exists && {
+                      "data-tip": "This category exists already.",
+                    })}
+                  >
+                    <button
+                      key={option.name}
+                      className="btn btn-outline btn-accent btn-circle btn-lg text-sm normal-case disabled:text-slate-400"
+                      type="button"
+                      name="name"
+                      onClick={() => manuallyHandleChange("name", option.name)}
+                      disabled={exists}
+                    >
+                      {option.name}
+                    </button>
+                  </div>
+                );
+              })}
             </div>
           </div>
 
@@ -97,21 +110,20 @@ export const NewCategoryForm: React.FC<NewCategoryFormProps> = ({
           {/*  New Category form: Actions */}
 
           <div className="flex pt-6 justify-around">
-              <button
-                  className="btn btn-ghost uppercase text-base px-4 py-2 leading-none rounded text-slate-400 hover:text-slate-600 hover:bg-transparent"
+            <button
+              className="btn btn-ghost uppercase text-base px-4 py-2 leading-none rounded text-slate-400 hover:text-slate-600 hover:bg-transparent"
+              type="button"
+              onClick={resetFormFields}
+            >
+              Cancel
+            </button>
 
-                  type="button"
-                  onClick={resetFormFields}
-              >
-                Cancel
-              </button>
-
-              <button
-                  type="submit"
-                  className="btn capitalize btn-ghost capitalize text-base px-4 py-2 leading-none border rounded text-sky-400 border-sky-400 hover:border-transparent hover:text-white hover:bg-sky-400 shadow"
-              >
-                Save Category
-              </button>
+            <button
+              type="submit"
+              className="btn capitalize btn-ghost capitalize text-base px-4 py-2 leading-none border rounded text-sky-400 border-sky-400 hover:border-transparent hover:text-white hover:bg-sky-400 shadow"
+            >
+              {category ? "Edit Category" : "Save Category"}
+            </button>
           </div>
         </div>
       </form>

@@ -18,10 +18,6 @@ const NewContactPage = () => {
   const { categories } = useCategory();
   const { priorities } = usePriority();
 
-  if (loading || isLoading) {
-    return <SpinnerFullPage />;
-  }
-
   const onSubmit = async (contact: Contact) => {
     setIsLoading(true);
 
@@ -62,6 +58,8 @@ const NewContactPage = () => {
         categories={categories}
         priorities={priorities}
       />
+
+      {(loading || isLoading) && <SpinnerFullPage />}
     </Layout>
   );
 };
