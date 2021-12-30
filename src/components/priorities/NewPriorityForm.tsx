@@ -1,7 +1,5 @@
-import { useFormFields } from "../../lib/utils";
-import { Priority, PriorityUnit, PriorityUnitOption } from "../../lib/priority";
-import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
-import { faCaretDown } from "@fortawesome/free-solid-svg-icons";
+import {frequencyUnitOptions, useFormFields} from "../../lib/utils";
+import { Priority, PriorityUnit } from "../../lib/priority";
 
 interface NewPriorityFormProps {
   onSubmit: (category: Priority) => void;
@@ -26,29 +24,6 @@ export const NewPriorityForm: React.FC<NewPriorityFormProps> = ({
   onSubmit,
   onCancel,
 }) => {
-  const frequencyUnitOptions: PriorityUnitOption<PriorityUnit>[] = [
-    {
-      unit: "hour",
-      value: 1,
-    },
-    {
-      unit: "day",
-      value: 24,
-    },
-    {
-      unit: "week",
-      value: 168,
-    },
-    {
-      unit: "month",
-      value: 730,
-    },
-    {
-      unit: "year",
-      value: 8760,
-    },
-  ];
-
   const [values, handleChange, resetFormFields] =
     useFormFields<NewPriorityFieldProps>(FORM_VALUES);
 
@@ -70,9 +45,9 @@ export const NewPriorityForm: React.FC<NewPriorityFormProps> = ({
   };
 
   return (
-    <div className="h-screen bg-slate-100 dark:bg-slate-900 flex flex-col justify-center items-center relative">
+    <div className="h-screen p-5 bg-slate-100 dark:bg-slate-900 flex flex-col justify-center items-center relative">
       <form className="w-full sm:w-1/2 xl:w-1/3" onSubmit={handleSubmit}>
-        <div className="border-teal p-8 border-t-12 bg-white mb-6 rounded-lg shadow-lg">
+        <div className="border-teal p-8 border-t-12 bg-white dark:bg-slate-100 mb-6 rounded-lg shadow-lg">
           <div className="mb-6">
             <label
               htmlFor="name"
@@ -143,18 +118,18 @@ export const NewPriorityForm: React.FC<NewPriorityFormProps> = ({
 
           {/*  New Priority form: Actions */}
 
-          <div className="flex pt-6 gap-2 items-center">
+          <div className="flex pt-6 gap-2 justify-around">
             <button
-                className="flex-1 btn btn-ghost font-bold text-base normal-case text-slate-600 hover:text-slate-800 hover:bg-transparent rounded"
-                type="button"
-                onClick={resetFormFields}
+              className="btn btn-ghost uppercase text-base px-4 py-2 leading-none rounded text-slate-400 hover:text-slate-600 hover:bg-transparent"
+              type="button"
+              onClick={resetFormFields}
             >
               Cancel
             </button>
 
             <button
-                type="submit"
-                className="flex-1 btn capitalize text-base bg-slate-600 hover:bg-slate-800 border border-slate-600 hover:border-transparent text-white rounded w-full text-center shadow"
+              type="submit"
+              className="btn capitalize btn-ghost capitalize text-base px-4 py-2 leading-none border rounded text-sky-400 border-sky-400 hover:border-transparent hover:text-white hover:bg-sky-400 shadow"
             >
               Save Priority
             </button>

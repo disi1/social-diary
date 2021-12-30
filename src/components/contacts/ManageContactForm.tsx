@@ -68,9 +68,9 @@ export const ManageContactForm: React.FC<NewContactFormProps> = ({
   };
 
   return (
-    <div className="h-screen bg-slate-100 dark:bg-slate-900 flex flex-col justify-center items-center relative">
+    <div className="h-full bg-slate-100 dark:bg-slate-900 flex flex-col justify-center items-center relative">
       <form className="w-full sm:w-1/2 xl:w-1/3" onSubmit={handleSubmit}>
-        <div className="border-teal p-8 border-t-12 bg-white mb-6 rounded-lg shadow-lg">
+        <div className="border-teal p-8 border-t-12 bg-white dark:bg-slate-100 mb-6 rounded-lg shadow-lg">
           <div className="mb-6">
             <label
               htmlFor="name"
@@ -179,18 +179,18 @@ export const ManageContactForm: React.FC<NewContactFormProps> = ({
 
           {/*  Manage Contact form: Actions */}
 
-          <div className="flex pt-6 gap-2 items-center">
+          <div className="flex pt-6 justify-around">
             <button
-                className="flex-1 btn btn-ghost font-bold text-base normal-case text-slate-600 hover:text-slate-800 hover:bg-transparent rounded"
-                type="button"
-                onClick={resetFormFields}
+              className="btn btn-ghost text-base uppercase px-4 py-2 leading-none rounded text-slate-400 hover:text-slate-600 hover:bg-transparent"
+              type="button"
+              onClick={resetFormFields}
             >
               Cancel
             </button>
 
             <button
-                type="submit"
-                className="flex-1 btn capitalize text-base bg-slate-600 hover:bg-slate-800 border border-slate-600 hover:border-transparent text-white rounded w-full text-center shadow"
+              type="submit"
+              className="btn capitalize btn-ghost capitalize text-base px-4 py-2 leading-none border rounded text-sky-400 border-sky-400 hover:border-transparent hover:text-white hover:bg-sky-400 shadow"
             >
               {contact ? "Edit Contact" : "Save Contact"}
             </button>
