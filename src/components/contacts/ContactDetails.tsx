@@ -1,6 +1,6 @@
 import { Contact } from "../../lib/contact";
 import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
-import { faUser, faChevronRight } from "@fortawesome/free-solid-svg-icons";
+import {faUser, faChevronRight, faCircle} from "@fortawesome/free-solid-svg-icons";
 import { Priority } from "../../lib/priority";
 import { Category } from "../../lib/category";
 import { Log } from "../../lib/log";
@@ -8,6 +8,10 @@ import { getNoOfHoursSinceDate } from "../../lib/utils";
 import { useState } from "react";
 import Link from "next/link";
 import { ROUTE_HOME } from "../../config";
+import resolveConfig from "tailwindcss/resolveConfig";
+import tailwindConfig from "../../../tailwind.config.js";
+
+const twFullConfig = resolveConfig(tailwindConfig);
 
 interface ContactDetailsProps {
   contact: Contact;
@@ -36,13 +40,13 @@ export const ContactDetails: React.FC<ContactDetailsProps> = ({
       <div className="p-5 flex grow max-w-screen-xl flex-col gap-5">
         <header className="flex flex-col sm:flex-row bg-white dark:bg-slate-900 gap-5 p-5 justify-between items-center">
           <div className="flex lg:flex-row flex-col w-full md:w-auto lg:items-center lg:flex-initial gap-5">
-            <div className="avatar self-center sm:self-start">
-              <span className="flex justify-center items-center rounded-btn w-24 h-24">
-                <FontAwesomeIcon
-                  className="text-gray-200 dark:text-gray-200 fa-5x"
+            <div className="avatar self-center border rounded-full border-slate-200 dark:border-slate-700 sm:self-start">
+            <span className="flex rounded-full justify-center items-center rounded-btn w-24 h-24">
+              <FontAwesomeIcon
+                  className="text-gray-200 dark:text-gray-200 fa-4x"
                   icon={faUser}
-                />
-              </span>
+              />
+            </span>
             </div>
 
             <div className="flex flex-col gap-2">
@@ -67,13 +71,28 @@ export const ContactDetails: React.FC<ContactDetailsProps> = ({
               <p className="text-slate-500 dark-text-slate-400">Priority:</p>
               <p className="font-bold">{priority ? priority.name : "-"}</p>
             </div>
-            <div className="flex gap-2">
+            <div className="flex gap-2 items-center">
               <p className="text-slate-500 dark-text-slate-400">Last entry:</p>
               <p className="font-bold">
                 {logs && logs.length > 0
                   ? new Date(logs[0].timestamp).toLocaleString()
                   : "-"}
               </p>
+              <FontAwesomeIcon
+                  className="ml-2"
+                  icon={faCircle}
+                  color={
+                    priority &&
+                    noOfHoursSinceLastLogEntry &&
+                    noOfHoursSinceLastLogEntry < priority.frequency
+                        ? twFullConfig.theme.colors.teal[500]
+                        : priority &&
+                        noOfHoursSinceLastLogEntry &&
+                        noOfHoursSinceLastLogEntry > priority.frequency
+                            ? twFullConfig.theme.colors.rose[500]
+                            : "gray"
+                  }
+              />
             </div>
           </div>
           <div className="flex flex-col gap-5">

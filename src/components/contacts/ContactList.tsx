@@ -18,7 +18,7 @@ export const ContactList: React.FC<ContactListProps> = ({
   priorities,
 }) => {
   return (
-    <div className="h-full p-5 dark:bg-darkblue grid gap-5 grid-flow-col auto-cols-[minmax(300px,_1fr)] grid-cols-[repeat(auto-fill,_minmax(300px,_1fr))] overflow-scroll">
+    <div className="h-full p-5 dark:bg-darkblue grid gap-5 grid-flow-col auto-cols-[minmax(400px,_1fr)] grid-cols-[repeat(auto-fill,_minmax(400px,_1fr))] overflow-scroll">
       {categories?.map((category) => (
         <div
           className="grid bg-white dark:bg-slate-900 grid-cols-1 auto-rows-min gap-5 p-5"
