@@ -67,7 +67,7 @@ export const ManageCategoryForm: React.FC<NewCategoryFormProps> = ({
                   <div
                     className={exists ? "tooltip" : ""}
                     {...(exists && {
-                      "data-tip": "This category exists already.",
+                      "data-tip": "This category already exists.",
                     })}
                   >
                     <button

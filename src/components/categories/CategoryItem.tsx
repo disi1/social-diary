@@ -8,7 +8,7 @@ interface CategoryItemProps {
 
 export const CategoryItem: React.FC<CategoryItemProps> = ({ category }) => {
   return (
-    <div className="card items-stretch p-5 gap-5 card-compact cursor-pointer bg-gray-100 rounded-lg dark:bg-gray-800 dark:highlight-white/5 shadow dark:shadow-white/20 hover:drop-shadow-md dark:hover:shadow-white/20 dark:hover:shadow-md">
+    <div className="card items-stretch p-5 gap-5 card-compact bg-gray-100 rounded-lg dark:bg-gray-800 dark:highlight-white/5 shadow dark:shadow-white/20">
       <h3 className="card-title self-center text-lg text-gray-900 dark:text-gray-200">
         {category.name}
       </h3>

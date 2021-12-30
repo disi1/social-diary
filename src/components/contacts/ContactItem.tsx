@@ -55,7 +55,7 @@ export const ContactItem: React.FC<ContactItempProps> = ({
             <FontAwesomeIcon
               icon={faCalendar}
               color={"gray"}
-              className="mr-2 text-sky-400/30"
+              className="mr-2 text-gray-200"
             />
             <div className="text-sm text-gray-900 tracking-tight dark:text-gray-200">
               <p>
