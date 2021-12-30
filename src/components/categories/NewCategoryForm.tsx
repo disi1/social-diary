@@ -1,7 +1,5 @@
 import { useFormFields } from "../../lib/utils";
-import { useRef } from "react";
 import { Category, CategoryOption, useCategory } from "../../lib/category";
-import { event } from "next/dist/build/output/log";
 
 interface NewCategoryFormProps {
   onSubmit: (category: Category) => void;

@@ -1,9 +1,14 @@
-import {frequencyUnitOptions, useFormFields} from "../../lib/utils";
+import {
+  convertHours,
+  frequencyUnitOptions,
+  useFormFields,
+} from "../../lib/utils";
 import { Priority, PriorityUnit } from "../../lib/priority";
 
 interface NewPriorityFormProps {
   onSubmit: (category: Priority) => void;
   onCancel: () => void;
+  priority?: Priority;
 }
 
 // define the shape of the NewPriority form's fields
@@ -13,17 +18,18 @@ type NewPriorityFieldProps = {
   unit: PriorityUnit;
 };
 
-// the value we'd like to initialize the NewPriority form with
-const FORM_VALUES: NewPriorityFieldProps = {
-  name: "",
-  frequency: 1,
-  unit: "hour",
-};
-
-export const NewPriorityForm: React.FC<NewPriorityFormProps> = ({
+export const ManagePriorityForm: React.FC<NewPriorityFormProps> = ({
+  priority,
   onSubmit,
   onCancel,
 }) => {
+  // the value we'd like to initialize the NewPriority form with
+  const FORM_VALUES: NewPriorityFieldProps = {
+    name: priority ? priority.name : "",
+    frequency: priority ? convertHours(priority.frequency)?.value ?? 1 : 1,
+    unit: priority ? convertHours(priority.frequency)?.unit ?? "hour" : "hour",
+  };
+
   const [values, handleChange, resetFormFields] =
     useFormFields<NewPriorityFieldProps>(FORM_VALUES);
 
@@ -45,7 +51,7 @@ export const NewPriorityForm: React.FC<NewPriorityFormProps> = ({
   };
 
   return (
-    <div className="h-screen p-5 bg-slate-100 dark:bg-slate-900 flex flex-col justify-center items-center relative">
+    <div className="h-screen bg-slate-100 dark:bg-slate-900 flex flex-col justify-center items-center relative">
       <form className="w-full sm:w-1/2 xl:w-1/3" onSubmit={handleSubmit}>
         <div className="border-teal p-8 border-t-12 bg-white dark:bg-slate-100 mb-6 rounded-lg shadow-lg">
           <div className="mb-6">
@@ -82,7 +88,7 @@ export const NewPriorityForm: React.FC<NewPriorityFormProps> = ({
                 className="input text-base text-slate-700 bg-white rounded shadow-inner border-slate-300 w-full border hover:border-slate-400"
                 name="frequency"
                 type="number"
-                max={10000}
+                max={1000}
                 min={1}
                 placeholder="Enter the frequency"
                 required
@@ -131,7 +137,7 @@ export const NewPriorityForm: React.FC<NewPriorityFormProps> = ({
               type="submit"
               className="btn capitalize btn-ghost capitalize text-base px-4 py-2 leading-none border rounded text-sky-400 border-sky-400 hover:border-transparent hover:text-white hover:bg-sky-400 shadow"
             >
-              Save Priority
+              {priority ? "Edit Priority" : "Save Priority"}
             </button>
           </div>
         </div>

@@ -1,8 +1,6 @@
 import { useFormFields } from "../../lib/utils";
 import { Category } from "../../lib/category";
 import { Priority } from "../../lib/priority";
-import { faCaretDown } from "@fortawesome/free-solid-svg-icons";
-import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
 import { Contact } from "../../lib/contact";
 
 interface NewContactFormProps {

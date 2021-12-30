@@ -6,7 +6,7 @@ import { Priority } from "../../lib/priority";
 import Link from "next/link";
 import Layout from "../../components/layout/Layout";
 import { Alert } from "../../components/Alert";
-import { NewPriorityForm } from "../../components/priorities/NewPriorityForm";
+import { ManagePriorityForm } from "../../components/priorities/ManagePriorityForm";
 
 const NewPriorityPage = () => {
   const { user, loading } = useAuth();
@@ -55,7 +55,7 @@ const NewPriorityPage = () => {
           onClose={setSuccessMessage}
         />
       )}
-      <NewPriorityForm onSubmit={onSubmit} onCancel={onCancel} />
+      <ManagePriorityForm onSubmit={onSubmit} onCancel={onCancel} />
     </Layout>
   );
 };

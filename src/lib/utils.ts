@@ -61,15 +61,19 @@ export const frequencyUnitOptions: PriorityUnitOption<PriorityUnit>[] = [
   },
 ];
 
-export const hoursToString = (hours: number) => {
-  const result: string[] = [];
+export const convertHours = (
+  hours: number
+): PriorityUnitOption<PriorityUnit> | undefined => {
+  const exactOption = frequencyUnitOptions.find(
+    (option) => hours % option.value === 0
+  );
 
-  frequencyUnitOptions.forEach((unit) => {
-    var p = Math.floor(hours / unit.value);
-    if (p == 1) result.push(" " + p + " " + unit.unit);
-    if (p >= 2) result.push(" " + p + " " + unit.unit + "s");
-    hours %= unit.value;
-  });
+  if (exactOption) {
+    return {
+      unit: exactOption.unit,
+      value: hours / exactOption.value,
+    } as PriorityUnitOption<PriorityUnit>;
+  }
 
-  return result.join();
-}
+  return undefined;
+};
