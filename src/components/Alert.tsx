@@ -17,7 +17,7 @@ export const Alert: React.FC<AlertProps> = ({
   onConfirm,
   onCancel,
 }) => (
-  <div className="bg-white w-fit ml-auto mt-5 mr-5">
+  <div className="bg-slate-100 dark:bg-slate-100 w-fit ml-auto mt-5 mr-5">
     {type === "success" ? (
       <div
         className="relative border-l-4 border-teal-500 text-teal-700 p-4 shadow-md"
@@ -76,13 +76,13 @@ export const Alert: React.FC<AlertProps> = ({
         {onCancel && onConfirm && (
           <div className="flex justify-around gap-3">
             <button
-              className="btn btn-sm btn-ghost bg-transparent capitalize text-rose:500 hover:text-rose-700"
+              className="btn btn-sm btn-ghost bg-transparent uppercase text-rose:500 hover:text-rose-700"
               onClick={() => onCancel(undefined)}
             >
               Cancel
             </button>
             <button
-              className="btn btn-sm btn-ghost bg-transparent capitalize text-rose:500 hover:text-rose-700"
+              className="btn btn-sm btn-ghost bg-transparent uppercase text-rose:500 hover:text-rose-700"
               onClick={() => onConfirm(true)}
             >
               Remove

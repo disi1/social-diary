@@ -1,11 +1,15 @@
 import { Contact } from "../../lib/contact";
 import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
-import {faUser, faChevronRight, faCircle} from "@fortawesome/free-solid-svg-icons";
+import {
+  faUser,
+  faChevronRight,
+  faCircle,
+} from "@fortawesome/free-solid-svg-icons";
 import { Priority } from "../../lib/priority";
 import { Category } from "../../lib/category";
 import { Log } from "../../lib/log";
 import { getNoOfHoursSinceDate } from "../../lib/utils";
-import { useState } from "react";
+import {useEffect, useState} from "react";
 import Link from "next/link";
 import { ROUTE_HOME } from "../../config";
 import resolveConfig from "tailwindcss/resolveConfig";
@@ -18,6 +22,7 @@ interface ContactDetailsProps {
   priority: Priority | undefined;
   category: Category | undefined;
   logs: Log[] | undefined;
+  onRemoveLog: (log: Log | undefined) => void;
 }
 
 export const ContactDetails: React.FC<ContactDetailsProps> = ({
@@ -25,15 +30,20 @@ export const ContactDetails: React.FC<ContactDetailsProps> = ({
   category,
   priority,
   logs,
+  onRemoveLog,
 }) => {
   const noOfHoursSinceLastLogEntry =
     logs && logs.length > 0
-      ? getNoOfHoursSinceDate(new Date(logs[logs.length - 1].timestamp))
+      ? getNoOfHoursSinceDate(new Date(logs[0].timestamp))
       : null;
 
   const [selectedLog, setSelectedLog] = useState<Log | null>(
     logs ? logs[0] : null
   );
+
+  useEffect(() => {
+    !!logs && !(logs?.some((log) => log.id === selectedLog?.id)) && setSelectedLog(logs[0]);
+  }, [logs])
 
   return (
     <div className="h-full p-5 dark:bg-darkblue text-base flex justify-center text-gray-600 dark:text-gray-200 overflow-scroll">
@@ -41,12 +51,12 @@ export const ContactDetails: React.FC<ContactDetailsProps> = ({
         <header className="flex flex-col sm:flex-row bg-white dark:bg-slate-900 gap-5 p-5 justify-between items-center">
           <div className="flex lg:flex-row flex-col w-full md:w-auto lg:items-center lg:flex-initial gap-5">
             <div className="avatar self-center border rounded-full border-slate-200 dark:border-slate-700 sm:self-start">
-            <span className="flex rounded-full justify-center items-center rounded-btn w-24 h-24">
-              <FontAwesomeIcon
+              <span className="flex rounded-full justify-center items-center rounded-btn w-24 h-24">
+                <FontAwesomeIcon
                   className="text-gray-200 dark:text-gray-200 fa-4x"
                   icon={faUser}
-              />
-            </span>
+                />
+              </span>
             </div>
 
             <div className="flex flex-col gap-2">
@@ -79,19 +89,19 @@ export const ContactDetails: React.FC<ContactDetailsProps> = ({
                   : "-"}
               </p>
               <FontAwesomeIcon
-                  className="ml-2"
-                  icon={faCircle}
-                  color={
-                    priority &&
-                    noOfHoursSinceLastLogEntry &&
-                    noOfHoursSinceLastLogEntry < priority.frequency
-                        ? twFullConfig.theme.colors.teal[500]
-                        : priority &&
-                        noOfHoursSinceLastLogEntry &&
-                        noOfHoursSinceLastLogEntry > priority.frequency
-                            ? twFullConfig.theme.colors.rose[500]
-                            : "gray"
-                  }
+                className="ml-2"
+                icon={faCircle}
+                color={
+                  priority &&
+                  noOfHoursSinceLastLogEntry &&
+                  noOfHoursSinceLastLogEntry < priority.frequency
+                    ? twFullConfig.theme.colors.teal[500]
+                    : priority &&
+                      noOfHoursSinceLastLogEntry &&
+                      noOfHoursSinceLastLogEntry > priority.frequency
+                    ? twFullConfig.theme.colors.rose[500]
+                    : "gray"
+                }
               />
             </div>
           </div>
@@ -148,9 +158,27 @@ export const ContactDetails: React.FC<ContactDetailsProps> = ({
             </ul>
             <section className="card grow self-stretch rounded-lg p-5 bg-gray-100 dark:bg-gray-800">
               {selectedLog && (
-                <h2 className="text-center font-bold mb-8">
-                  {new Date(selectedLog.timestamp).toLocaleString()}
-                </h2>
+                <div>
+                  <div className="flex flex-col gap-5">
+                    <Link
+                      href={`${ROUTE_HOME}/${contact.id}/${selectedLog.id}/edit`}
+                    >
+                      <button className="btn btn-sm btn-ghost capitalize text-sm px-4 py-2 leading-none border rounded text-slate-400 border-slate-400 hover:border-transparent hover:text-white hover:bg-slate-600">
+                        Edit
+                      </button>
+                    </Link>
+                    <button
+                      className="btn btn-sm btn-ghost capitalize text-sm px-4 py-2 leading-none border rounded text-slate-400 border-slate-400 hover:border-transparent hover:text-white hover:bg-slate-600"
+                      onClick={() => onRemoveLog(selectedLog)}
+                    >
+                      Remove
+                    </button>
+                  </div>
+
+                  <h2 className="text-center font-bold mb-8">
+                    {new Date(selectedLog.timestamp).toLocaleString()}
+                  </h2>
+                </div>
               )}
               {selectedLog && <p>{selectedLog.note}</p>}
             </section>

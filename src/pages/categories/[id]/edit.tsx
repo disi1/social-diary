@@ -1,12 +1,13 @@
-import { useState } from "react";
+import { useEffect, useState } from "react";
 import { useAuth } from "../../../lib/auth";
 import { SpinnerFullPage } from "../../../components/Spinner";
-import { useRouter } from "next/router";
+import Router, { useRouter } from "next/router";
 import { Category, useCategory } from "../../../lib/category";
 import { supabase } from "../../../lib";
 import Layout from "../../../components/layout/Layout";
 import { Alert } from "../../../components/Alert";
 import { ManageCategoryForm } from "../../../components/categories/ManageCategoryForm";
+import { ROUTE_CONFIGURATION } from "../../../config";
 
 const EditCategoryPage = () => {
   const [isLoading, setIsLoading] = useState(false);
@@ -24,6 +25,15 @@ const EditCategoryPage = () => {
           (category) => category.id === parseInt(id)
         ) as Category)
       : null;
+
+  useEffect(() => {
+    if (successMessage) {
+      setIsLoading(true);
+      Router.push(ROUTE_CONFIGURATION);
+      setSuccessMessage(undefined);
+      setIsLoading(false);
+    }
+  });
 
   const onSubmit = async (category: Category) => {
     setIsLoading(true);

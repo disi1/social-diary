@@ -2,7 +2,7 @@ import { useCategory } from "../../lib/category";
 import Layout from "../../components/layout/Layout";
 import { ContactList } from "../../components/contacts/ContactList";
 import { useContact } from "../../lib/contact";
-import { useLog } from "../../lib/log";
+import {Log, useLog} from "../../lib/log";
 import {usePriority} from "../../lib/priority";
 
 const ContactsPage = () => {

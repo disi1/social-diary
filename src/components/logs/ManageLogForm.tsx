@@ -4,6 +4,7 @@ import { useFormFields } from "../../lib/utils";
 
 interface NewLogModalProps {
   contact: Contact;
+  log?: Log;
   onSubmit: (log: Log) => void;
   onCancel: (displayModal: null) => void;
 }
@@ -14,17 +15,18 @@ type NewLogFieldProps = {
   timestamp: string;
 };
 
-// the value we'd like to initialize the NewPriority form with
-const FORM_VALUES: NewLogFieldProps = {
-  note: "",
-  timestamp: new Date().toISOString(),
-};
-
-export const NewLogForm: React.FC<NewLogModalProps> = ({
+export const ManageLogForm: React.FC<NewLogModalProps> = ({
   contact,
+  log,
   onSubmit,
   onCancel,
 }) => {
+  // the value we'd like to initialize the NewPriority form with
+  const FORM_VALUES: NewLogFieldProps = {
+    note: log ? log.note : "",
+    timestamp: log ? log.timestamp.slice(0, 16) : "",
+  };
+
   const [values, handleChange, resetFormFields] =
     useFormFields<NewLogFieldProps>(FORM_VALUES);
 
@@ -45,9 +47,9 @@ export const NewLogForm: React.FC<NewLogModalProps> = ({
   return (
     <div className="h-screen bg-slate-100 dark:bg-slate-900 flex flex-col justify-center items-center relative">
       <form className="w-full sm:w-1/2 xl:w-1/3" onSubmit={handleSubmit}>
-        <div className="border-teal p-8 border-t-12 bg-white mb-6 rounded-lg shadow-lg">
+        <div className="border-teal p-8 border-t-12 bg-slate-100 dark:bg-slate-100 mb-6 rounded-lg shadow-lg">
           <div className="block text-xl font-semibold text-slate-700 mb-5">
-            {`Log chat with ${contact.name}`}
+            {log ? `Edit chat with ${contact.name}` : `Log chat with ${contact.name}`}
           </div>
 
           <div>
@@ -87,9 +89,9 @@ export const NewLogForm: React.FC<NewLogModalProps> = ({
 
           {/*  New Log form: Actions */}
 
-          <div className="flex pt-6 gap-2 items-center">
+          <div className="flex pt-6 gap-2 justify-around">
             <button
-                className="flex-1 btn btn-ghost font-bold text-base normal-case text-slate-600 hover:text-slate-800 hover:bg-transparent rounded"
+                className="btn btn-ghost uppercase text-base px-4 py-2 leading-none rounded text-slate-400 hover:text-slate-600 hover:bg-transparent"
                 type="button"
                 onClick={resetFormFields}
             >
@@ -98,9 +100,9 @@ export const NewLogForm: React.FC<NewLogModalProps> = ({
 
             <button
                 type="submit"
-                className="flex-1 btn capitalize text-base bg-slate-600 hover:bg-slate-800 border border-slate-600 hover:border-transparent text-white rounded w-full text-center shadow"
+                className="btn capitalize btn-ghost capitalize text-base px-4 py-2 leading-none border rounded text-sky-400 border-sky-400 hover:border-transparent hover:text-white hover:bg-sky-400 shadow"
             >
-              Save Log
+              {log ? "Edit Log" : "Save Log"}
             </button>
           </div>
         </div>

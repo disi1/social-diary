@@ -2,7 +2,7 @@ import { Log } from "./log.types";
 import { createContext, FunctionComponent, useEffect, useState } from "react";
 import { useAuth } from "../auth";
 import { supabase } from "../supabaseClient";
-import { updateItemsWithNewItem } from "../utils";
+import { updateItemsWithNewItem, updateItemsWithOldItem } from "../utils";
 
 export type LogContextProps = {
   logs: Log[];
@@ -34,13 +34,24 @@ export const LogProvider: FunctionComponent = ({ children }) => {
     const logListener = supabase
       .from("log")
       .on("*", (payload) => {
-        const newLog = payload.new as Log;
-        setLogs((oldLogs) => {
-          const newLogs = updateItemsWithNewItem(oldLogs, newLog);
-          newLogs.sort((a, b) => a.id! - b.id!);
+        if (payload.eventType === "DELETE") {
+          const oldLog = payload.old;
 
-          return newLogs;
-        });
+          setLogs((oldLogs) => {
+            const newLogs = updateItemsWithOldItem(oldLogs, oldLog);
+            newLogs.sort((a, b) => a.id! - b.id!);
+
+            return newLogs;
+          });
+        } else {
+          const newLog = payload.new as Log;
+          setLogs((oldLogs) => {
+            const newLogs = updateItemsWithNewItem(oldLogs, newLog);
+            newLogs.sort((a, b) => a.id! - b.id!);
+
+            return newLogs;
+          });
+        }
       })
       .subscribe();
 
