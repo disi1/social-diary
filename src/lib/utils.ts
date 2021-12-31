@@ -78,7 +78,7 @@ export const convertHours = (
   return undefined;
 };
 
-export const getUpdatedItems = (oldItems: any[], newItem: any) => {
+export const updateItemsWithNewItem = (oldItems: any[], newItem: any) => {
   const exists = oldItems.find((item: any) => item.id === newItem.id);
 
   let newItems;
@@ -95,3 +95,18 @@ export const getUpdatedItems = (oldItems: any[], newItem: any) => {
 
   return newItems;
 };
+
+export const updateItemsWithOldItem = (oldItems: any[], oldItem: any) => {
+  const exists = oldItems.find((item: any) => item.id === oldItem.id);
+
+  let newItems;
+
+  if (exists) {
+    newItems = oldItems.filter((item) => item.id !== oldItem.id)
+  } else {
+    newItems = oldItems ? [...oldItems, oldItem] : [oldItem];
+  }
+
+  return newItems;
+};
+

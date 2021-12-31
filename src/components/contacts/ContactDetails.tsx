@@ -37,7 +37,7 @@ export const ContactDetails: React.FC<ContactDetailsProps> = ({
 
   return (
     <div className="h-full p-5 dark:bg-darkblue text-base flex justify-center text-gray-600 dark:text-gray-200 overflow-scroll">
-      <div className="p-5 flex grow max-w-screen-xl flex-col gap-5">
+      <div className="flex grow max-w-screen-xl flex-col gap-5">
         <header className="flex flex-col sm:flex-row bg-white dark:bg-slate-900 gap-5 p-5 justify-between items-center">
           <div className="flex lg:flex-row flex-col w-full md:w-auto lg:items-center lg:flex-initial gap-5">
             <div className="avatar self-center border rounded-full border-slate-200 dark:border-slate-700 sm:self-start">
@@ -112,7 +112,7 @@ export const ContactDetails: React.FC<ContactDetailsProps> = ({
           </div>
         </header>
         {logs && logs.length > 0 && (
-          <main className="flex flex-col items-center sm:items-initial sm:flex-row bg-white dark:bg-slate-900 gap-5 p-5">
+          <main className="flex flex-col items-center sm:items-start sm:flex-row bg-white dark:bg-slate-900 gap-5 p-5">
             <ul className="flex flex-col gap-3 text-slate-500 dark-text-slate-400">
               {logs.map((log) => (
                 <div

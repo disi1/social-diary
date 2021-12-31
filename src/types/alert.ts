@@ -1,1 +1,6 @@
-export type CustomAlert = "information" | "warning" | "error" | "success";
+export type CustomAlert =
+  | "information"
+  | "warning"
+  | "error"
+  | "success"
+  | "confirm";

@@ -2,7 +2,7 @@ import { Log } from "./log.types";
 import { createContext, FunctionComponent, useEffect, useState } from "react";
 import { useAuth } from "../auth";
 import { supabase } from "../supabaseClient";
-import { getUpdatedItems } from "../utils";
+import { updateItemsWithNewItem } from "../utils";
 
 export type LogContextProps = {
   logs: Log[];
@@ -36,7 +36,7 @@ export const LogProvider: FunctionComponent = ({ children }) => {
       .on("*", (payload) => {
         const newLog = payload.new as Log;
         setLogs((oldLogs) => {
-          const newLogs = getUpdatedItems(oldLogs, newLog);
+          const newLogs = updateItemsWithNewItem(oldLogs, newLog);
           newLogs.sort((a, b) => a.id! - b.id!);
 
           return newLogs;

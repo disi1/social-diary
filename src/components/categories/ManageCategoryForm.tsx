@@ -1,5 +1,6 @@
 import { useFormFields } from "../../lib/utils";
 import { Category, CategoryOption, useCategory } from "../../lib/category";
+import { useAuth } from "../../lib/auth";
 
 interface NewCategoryFormProps {
   category?: Category;
@@ -29,6 +30,7 @@ export const ManageCategoryForm: React.FC<NewCategoryFormProps> = ({
   };
 
   const { categories } = useCategory();
+  const { user } = useAuth();
 
   const [values, handleChange, resetFormFields, manuallyHandleChange] =
     useFormFields<NewCategoryFieldProps>(FORM_VALUES);
@@ -36,13 +38,16 @@ export const ManageCategoryForm: React.FC<NewCategoryFormProps> = ({
   const handleSubmit = async (event: React.FormEvent) => {
     event.preventDefault();
 
-    const category = {
-      name: values.name,
-    };
+    if (user) {
+      const category = {
+        name: values.name,
+        user_id: user?.id,
+      };
 
-    onSubmit(category);
+      onSubmit(category);
 
-    resetFormFields();
+      resetFormFields();
+    }
   };
 
   return (

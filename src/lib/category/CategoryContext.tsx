@@ -2,7 +2,7 @@ import { createContext, FunctionComponent, useEffect, useState } from "react";
 import { useAuth } from "../auth";
 import { supabase } from "../supabaseClient";
 import { Category } from "./category.types";
-import { getUpdatedItems } from "../utils";
+import {updateItemsWithNewItem, updateItemsWithOldItem} from "../utils";
 
 export type CategoryContextProps = {
   categories: Category[];
@@ -34,14 +34,25 @@ export const CategoryProvider: FunctionComponent = ({ children }) => {
     const categoryListener = supabase
       .from("category")
       .on("*", (payload) => {
-        const newCategory = payload.new as Category;
+          if(payload.eventType === "DELETE") {
+              const oldCategory = payload.old;
 
-        setCategories((oldCategories) => {
-          const newCategories = getUpdatedItems(oldCategories, newCategory);
-          newCategories.sort((a, b) => a.name.localeCompare(b.name));
+              setCategories((oldCategories) => {
+                  const newCategories = updateItemsWithOldItem(oldCategories, oldCategory);
+                  newCategories.sort((a, b) => a.name.localeCompare(b.name));
 
-          return newCategories;
-        });
+                  return newCategories;
+              });
+          } else {
+              const newCategory = payload.new as Category;
+
+              setCategories((oldCategories) => {
+                  const newCategories = updateItemsWithNewItem(oldCategories, newCategory);
+                  newCategories.sort((a, b) => a.name.localeCompare(b.name));
+
+                  return newCategories;
+              });
+          }
       })
       .subscribe();
 

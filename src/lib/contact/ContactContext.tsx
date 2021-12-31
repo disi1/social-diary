@@ -2,7 +2,7 @@ import { Contact } from "./contact.types";
 import { createContext, FunctionComponent, useEffect, useState } from "react";
 import { useAuth } from "../auth";
 import { supabase } from "../supabaseClient";
-import {getUpdatedItems} from "../utils";
+import {updateItemsWithNewItem} from "../utils";
 
 export type ContactContextProps = {
   contacts: Contact[];
@@ -37,7 +37,7 @@ export const ContactProvider: FunctionComponent = ({ children }) => {
         const newContact = payload.new as Contact;
 
         setContacts((oldContacts) => {
-          const newContacts = getUpdatedItems(oldContacts, newContact);
+          const newContacts = updateItemsWithNewItem(oldContacts, newContact);
           newContacts.sort((a, b) => a.name.localeCompare(b.name));
 
           return newContacts;

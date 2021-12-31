@@ -2,7 +2,7 @@ import { Priority } from "./priority.types";
 import { createContext, FunctionComponent, useEffect, useState } from "react";
 import { useAuth } from "../auth";
 import { supabase } from "../supabaseClient";
-import { getUpdatedItems } from "../utils";
+import { updateItemsWithNewItem } from "../utils";
 
 export type PriorityContextProps = {
   priorities: Priority[];
@@ -36,7 +36,7 @@ export const PriorityProvider: FunctionComponent = ({ children }) => {
       .on("*", (payload) => {
         const newPriority = payload.new as Priority;
         setPriorities((oldPriorities) => {
-          const newPriorities = getUpdatedItems(oldPriorities, newPriority);
+          const newPriorities = updateItemsWithNewItem(oldPriorities, newPriority);
           newPriorities.sort((a, b) => a.frequency! - b.frequency!);
 
           return newPriorities;

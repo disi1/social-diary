@@ -11,7 +11,7 @@ export const PriorityItem: React.FC<PriorityItemProps> = ({ priority }) => {
   const convertedHours = convertHours(priority.frequency);
 
   return (
-    <div className="card items-stretch p-5 card-compact bg-gray-100 rounded-lg dark:bg-gray-800 dark:highlight-white/5 shadow dark:shadow-white/20">
+    <div className="items-stretch flex flex-col p-5 card-compact bg-gray-100 rounded-lg dark:bg-gray-800 dark:highlight-white/5 shadow dark:shadow-white/20">
       <h3 className="card-title self-center text-lg text-gray-900 dark:text-gray-200">
         {priority.name}
       </h3>
