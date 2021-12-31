@@ -1,4 +1,4 @@
-import {usePriority} from "../../lib/priority";
+import {Priority, usePriority} from "../../lib/priority";
 import {Category, useCategory} from "../../lib/category";
 import Layout from "../../components/layout/Layout";
 import {Configuration} from "../../components/configuration/Configuration";
@@ -8,7 +8,7 @@ import {supabase} from "../../lib";
 import {Alert} from "../../components/Alert";
 import {SpinnerFullPage} from "../../components/Spinner";
 import Router from "next/router";
-import {ROUTE_AUTH, ROUTE_CONFIGURATION} from "../../config";
+import {ROUTE_CONFIGURATION} from "../../config";
 
 const ConfigurationPage = () => {
     const [isLoading, setIsLoading] = useState(false);
@@ -17,6 +17,9 @@ const ConfigurationPage = () => {
     const [categoryToBeRemoved, setCategoryToBeRemoved] = useState<
         Category | undefined
         >(undefined);
+    const [priorityToBeRemoved, setPriorityToBeRemoved] = useState<
+        Priority | undefined
+        >(undefined);
 
     const { loading } = useAuth();
     const { priorities } = usePriority();
@@ -24,11 +27,13 @@ const ConfigurationPage = () => {
 
     useEffect(() => {
         if(successMessage) {
+            setIsLoading(true);
             Router.push(ROUTE_CONFIGURATION);
+            setIsLoading(false);
         }
     }, [successMessage])
 
-    const onRemoveHandler = async () => {
+    const onRemoveCategoryHandler = async () => {
         if(categoryToBeRemoved) {
             setIsLoading(true);
 
@@ -49,6 +54,27 @@ const ConfigurationPage = () => {
         }
     }
 
+    const onRemovePriorityHandler = async () => {
+        if(priorityToBeRemoved) {
+            setIsLoading(true);
+
+            const { error, status } = await supabase
+                .from("priority")
+                .delete()
+                .eq("user_id", priorityToBeRemoved.user_id)
+                .eq("id", priorityToBeRemoved?.id);
+
+            setPriorityToBeRemoved(undefined)
+            setIsLoading(false);
+
+            if (error) {
+                setErrorMessage(error.message);
+            } else if (status === 200) {
+                setSuccessMessage("Your priority was successfully removed.");
+            }
+        }
+    }
+
     return (
         <Layout>
             <div className="absolute top-10 right-0">
@@ -58,7 +84,17 @@ const ConfigurationPage = () => {
                         text={`Remove the "${categoryToBeRemoved?.name}" category?`}
                         onClose={setCategoryToBeRemoved}
                         onCancel={setCategoryToBeRemoved}
-                        onConfirm={onRemoveHandler}
+                        onConfirm={onRemoveCategoryHandler}
+                    />
+                )}
+
+                {priorityToBeRemoved && (
+                    <Alert
+                        type="confirm"
+                        text={`Remove the "${priorityToBeRemoved?.name}" priority?`}
+                        onClose={setPriorityToBeRemoved}
+                        onCancel={setPriorityToBeRemoved}
+                        onConfirm={onRemovePriorityHandler}
                     />
                 )}
 
@@ -75,7 +111,7 @@ const ConfigurationPage = () => {
                 )}
             </div>
 
-            <Configuration categories={categories} priorities={priorities} onRemove={setCategoryToBeRemoved}/>
+            <Configuration categories={categories} priorities={priorities} onRemoveCategory={setCategoryToBeRemoved} onRemovePriority={setPriorityToBeRemoved}/>
 
             {(loading || isLoading) && <SpinnerFullPage />}
         </Layout>

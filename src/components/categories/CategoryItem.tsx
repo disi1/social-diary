@@ -17,7 +17,7 @@ export const CategoryItem: React.FC<CategoryItemProps> = ({ category, onRemove }
       <div className="flex justify-around gap-3">
         <button
           className="btn btn-sm btn-ghost capitalize text-sm px-4 py-2 leading-none border rounded text-slate-400 border-slate-400 hover:border-transparent hover:text-white hover:bg-slate-600"
-          onClick={() => onRemove()}
+          onClick={onRemove}
         >
           Remove
         </button>

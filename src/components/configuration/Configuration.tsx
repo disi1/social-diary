@@ -9,13 +9,15 @@ import { Alert } from "../Alert";
 interface ConfigurationProps {
   categories: Category[] | undefined;
   priorities: Priority[] | undefined;
-  onRemove: (category: Category | undefined) => void;
+  onRemoveCategory: (category: Category | undefined) => void;
+  onRemovePriority: (priority: Priority | undefined) => void;
 }
 
 export const Configuration: React.FC<ConfigurationProps> = ({
   categories,
   priorities,
-  onRemove,
+  onRemoveCategory,
+  onRemovePriority,
 }) => {
   return (
     <div className="h-full p-5 dark:bg-darkblue flex justify-center">
@@ -31,7 +33,7 @@ export const Configuration: React.FC<ConfigurationProps> = ({
                   <CategoryItem
                     key={category.id}
                     category={category}
-                    onRemove={() => onRemove(category)}
+                    onRemove={() => onRemoveCategory(category)}
                   />
                 )
             )}
@@ -46,7 +48,11 @@ export const Configuration: React.FC<ConfigurationProps> = ({
             {priorities?.map(
               (priority) =>
                 priority && (
-                  <PriorityItem key={priority.id} priority={priority} />
+                  <PriorityItem
+                    key={priority.id}
+                    priority={priority}
+                    onRemove={() => onRemovePriority(priority)}
+                  />
                 )
             )}
           </div>

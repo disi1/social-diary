@@ -5,9 +5,13 @@ import { ROUTE_PRIORITIES } from "../../config";
 
 interface PriorityItemProps {
   priority: Priority;
+  onRemove: () => void;
 }
 
-export const PriorityItem: React.FC<PriorityItemProps> = ({ priority }) => {
+export const PriorityItem: React.FC<PriorityItemProps> = ({
+  priority,
+  onRemove,
+}) => {
   const convertedHours = convertHours(priority.frequency);
 
   return (
@@ -25,7 +29,10 @@ export const PriorityItem: React.FC<PriorityItemProps> = ({ priority }) => {
         </p>
       )}
       <div className="flex justify-around gap-3 mt-5">
-        <button className="btn btn-sm btn-ghost capitalize text-sm px-4 py-2 leading-none border rounded text-slate-400 border-slate-400 hover:border-transparent hover:text-white hover:bg-slate-600">
+        <button
+          className="btn btn-sm btn-ghost capitalize text-sm px-4 py-2 leading-none border rounded text-slate-400 border-slate-400 hover:border-transparent hover:text-white hover:bg-slate-600"
+          onClick={onRemove}
+        >
           Remove
         </button>
         <Link href={`${ROUTE_PRIORITIES}/${priority.id}/edit`}>

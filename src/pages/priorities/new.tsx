@@ -1,5 +1,5 @@
 import { useAuth } from "../../lib/auth";
-import { useState } from "react";
+import {useEffect, useState} from "react";
 import { SpinnerFullPage } from "../../components/Spinner";
 import { supabase } from "../../lib";
 import { Priority } from "../../lib/priority";
@@ -7,6 +7,8 @@ import Link from "next/link";
 import Layout from "../../components/layout/Layout";
 import { Alert } from "../../components/Alert";
 import { ManagePriorityForm } from "../../components/priorities/ManagePriorityForm";
+import Router from "next/router";
+import {ROUTE_CONFIGURATION} from "../../config";
 
 const NewPriorityPage = () => {
   const { user, loading } = useAuth();
@@ -14,6 +16,13 @@ const NewPriorityPage = () => {
   const [isLoading, setIsLoading] = useState(false);
   const [errorMessage, setErrorMessage] = useState<string>();
   const [successMessage, setSuccessMessage] = useState<string>();
+
+  useEffect(() => {
+    if(successMessage) {
+      Router.push(ROUTE_CONFIGURATION);
+      setSuccessMessage(undefined);
+    }
+  })
 
   const onSubmit = async (priority: Priority) => {
     setIsLoading(true);

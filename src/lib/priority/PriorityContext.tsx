@@ -2,7 +2,7 @@ import { Priority } from "./priority.types";
 import { createContext, FunctionComponent, useEffect, useState } from "react";
 import { useAuth } from "../auth";
 import { supabase } from "../supabaseClient";
-import { updateItemsWithNewItem } from "../utils";
+import { updateItemsWithNewItem, updateItemsWithOldItem } from "../utils";
 
 export type PriorityContextProps = {
   priorities: Priority[];
@@ -34,13 +34,30 @@ export const PriorityProvider: FunctionComponent = ({ children }) => {
     const priorityListener = supabase
       .from("priority")
       .on("*", (payload) => {
-        const newPriority = payload.new as Priority;
-        setPriorities((oldPriorities) => {
-          const newPriorities = updateItemsWithNewItem(oldPriorities, newPriority);
-          newPriorities.sort((a, b) => a.frequency! - b.frequency!);
+        if (payload.eventType === "DELETE") {
+          const oldPriority = payload.old;
 
-          return newPriorities;
-        });
+          setPriorities((oldPriorities) => {
+            const newPriorities = updateItemsWithOldItem(
+              oldPriorities,
+              oldPriority
+            );
+            newPriorities.sort((a, b) => a.frequency! - b.frequency!);
+
+            return newPriorities;
+          });
+        } else {
+          const newPriority = payload.new as Priority;
+          setPriorities((oldPriorities) => {
+            const newPriorities = updateItemsWithNewItem(
+              oldPriorities,
+              newPriority
+            );
+            newPriorities.sort((a, b) => a.frequency! - b.frequency!);
+
+            return newPriorities;
+          });
+        }
       })
       .subscribe();
 
