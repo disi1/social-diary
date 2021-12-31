@@ -15,7 +15,7 @@ export const Configuration: React.FC<ConfigurationProps> = ({
 }) => {
   return (
     <div className="h-full p-5 dark:bg-darkblue flex justify-center">
-        <div className="p-5 grow grid xl:grid-cols-2 lg:grid-cols-2 auto-rows-auto max-w-screen-xl grid-cols-1 gap-10 h-screen bg-slate-100 dark:bg-darkblue ">
+        <div className="grow grid xl:grid-cols-2 lg:grid-cols-2 auto-rows-auto max-w-screen-xl grid-cols-1 gap-10 bg-slate-100 dark:bg-darkblue ">
           <div className="bg-white dark:bg-slate-900 gap-5 p-5">
             <h2 className="pb-5 text-gray-900 dark:text-white text-center font-semibold text-xl tracking-tight mb-2">
               Categories

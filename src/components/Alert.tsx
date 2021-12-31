@@ -9,7 +9,7 @@ interface AlertProps {
 }
 
 export const Alert: React.FC<AlertProps> = ({ type, text, onClose }) => (
-  <div className="bg-white w-fit ml-auto">
+  <div className="bg-white w-fit ml-auto mt-5 mr-5">
     {type === "success" ? (
       <div
         className="relative border-l-4 border-teal-500 text-teal-700 p-4 shadow-md"

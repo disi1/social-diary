@@ -18,7 +18,7 @@ const MainNavigation = () => {
 
   return (
     <div className="dark:divide-slate-700 divide-slate-300 divide-y sticky">
-      <nav className="flex items-center justify-between  p-6 bg-slate-100 dark:bg-slate-900">
+      <nav className="flex items-center justify-between p-6 bg-slate-100 dark:bg-slate-900">
         <Link href={ROUTE_HOME}>
           <a>
             <Logo />
