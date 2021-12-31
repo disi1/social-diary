@@ -13,7 +13,7 @@ import {ROUTE_CONFIGURATION} from "../../config";
 const ConfigurationPage = () => {
     const [isLoading, setIsLoading] = useState(false);
     const [errorMessage, setErrorMessage] = useState<string>();
-    const [successMessage, setSuccessMessage] = useState<string>();
+    const [successMessage, setSuccessMessage] = useState<string|undefined>(undefined);
     const [categoryToBeRemoved, setCategoryToBeRemoved] = useState<
         Category | undefined
         >(undefined);

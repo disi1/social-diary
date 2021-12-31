@@ -26,7 +26,7 @@ export const Configuration: React.FC<ConfigurationProps> = ({
           <h2 className="pb-5 text-gray-900 dark:text-white text-center font-semibold text-xl tracking-tight mb-2">
             Categories
           </h2>
-          <div className="grid grid-cols-2 gap-5 auto-rows-auto grid-rows-none sm:grid-cols-[repeat(2,_minmax(200px,_1fr))] grid-cols-1">
+          <div className="grid grid-cols-1 gap-5 auto-rows-auto grid-rows-none lg:grid-cols-[repeat(2,_minmax(200px,_1fr))] sm:grid-cols-2">
             {categories?.map(
               (category) =>
                 category && (
@@ -44,7 +44,7 @@ export const Configuration: React.FC<ConfigurationProps> = ({
           <h2 className="pb-5 text-gray-900 dark:text-white text-center font-semibold text-xl tracking-tight mb-2">
             Priorities
           </h2>
-          <div className="grid grid-cols-2 gap-5 auto-rows-auto grid-rows-none lg:grid-cols-[repeat(2,_minmax(200px,_1fr))] sm:grid-cols-1 xs:grid-cols-1">
+          <div className="grid grid-cols-1 gap-5 auto-rows-auto grid-rows-none lg:grid-cols-[repeat(2,_minmax(200px,_1fr))] sm:grid-cols-2">
             {priorities?.map(
               (priority) =>
                 priority && (

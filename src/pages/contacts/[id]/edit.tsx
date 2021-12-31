@@ -7,8 +7,9 @@ import Layout from "../../../components/layout/Layout";
 import { supabase } from "../../../lib";
 import { ManageContactForm } from "../../../components/contacts/ManageContactForm";
 import { Alert } from "../../../components/Alert";
-import { useState } from "react";
-import { useRouter } from "next/router";
+import { useEffect, useState } from "react";
+import Router, { useRouter } from "next/router";
+import { ROUTE_HOME } from "../../../config";
 
 const EditContactPage = () => {
   const [isLoading, setIsLoading] = useState(false);
@@ -26,6 +27,15 @@ const EditContactPage = () => {
     id && typeof id === "string"
       ? (contacts?.find((contact) => contact.id === parseInt(id)) as Contact)
       : null;
+
+  useEffect(() => {
+    if (successMessage) {
+      setIsLoading(true);
+      Router.push(`${ROUTE_HOME}/${id}`);
+      setSuccessMessage(undefined);
+      setIsLoading(false);
+    }
+  }, [successMessage]);
 
   const onSubmit = async (contact: Contact) => {
     setIsLoading(true);

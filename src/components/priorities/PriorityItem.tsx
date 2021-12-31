@@ -30,13 +30,13 @@ export const PriorityItem: React.FC<PriorityItemProps> = ({
       )}
       <div className="flex justify-around gap-3 mt-5">
         <button
-          className="btn btn-sm btn-ghost capitalize text-sm px-4 py-2 leading-none border rounded text-slate-400 border-slate-400 hover:border-transparent hover:text-white hover:bg-slate-600"
+          className="btn btn-sm btn-ghost flex-1 max-w-[100px] capitalize text-sm px-4 py-2 leading-none border rounded text-slate-400 border-slate-400 hover:border-transparent hover:text-white hover:bg-slate-600"
           onClick={onRemove}
         >
           Remove
         </button>
         <Link href={`${ROUTE_PRIORITIES}/${priority.id}/edit`}>
-          <button className="btn btn-sm btn-ghost capitalize text-sm px-4 py-2 leading-none border rounded text-sky-400 border-sky-400 hover:border-transparent hover:text-white hover:bg-sky-600">
+          <button className="btn btn-sm btn-ghost flex-1 max-w-[100px] capitalize text-sm px-4 py-2 leading-none border rounded text-sky-400 border-sky-400 hover:border-transparent hover:text-white hover:bg-sky-600">
             Edit
           </button>
         </Link>

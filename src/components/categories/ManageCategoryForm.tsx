@@ -45,15 +45,13 @@ export const ManageCategoryForm: React.FC<NewCategoryFormProps> = ({
       };
 
       onSubmit(category);
-
-      resetFormFields();
     }
   };
 
   return (
     <div className="h-screen bg-slate-100 dark:bg-slate-900 flex flex-col justify-center items-center relative">
       <form className="w-full sm:w-1/2 xl:w-1/3" onSubmit={handleSubmit}>
-        <div className="border-teal p-8 border-t-12 bg-slate-100 dark:bg-slate-100 mb-6 rounded-lg shadow-lg">
+        <div className="border-teal p-8 border-t-12 bg-white dark:bg-slate-100 mb-6 rounded-lg shadow-lg">
           <div>
             <label
               htmlFor="name"

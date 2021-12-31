@@ -40,14 +40,12 @@ export const ManageLogForm: React.FC<NewLogModalProps> = ({
     } as Log;
 
     onSubmit(log);
-
-    resetFormFields();
   };
 
   return (
     <div className="h-screen bg-slate-100 dark:bg-slate-900 flex flex-col justify-center items-center relative">
       <form className="w-full sm:w-1/2 xl:w-1/3" onSubmit={handleSubmit}>
-        <div className="border-teal p-8 border-t-12 bg-slate-100 dark:bg-slate-100 mb-6 rounded-lg shadow-lg">
+        <div className="border-teal p-8 border-t-12 bg-white dark:bg-slate-100 mb-6 rounded-lg shadow-lg">
           <div className="block text-xl font-semibold text-slate-700 mb-5">
             {log ? `Edit chat with ${contact.name}` : `Log chat with ${contact.name}`}
           </div>

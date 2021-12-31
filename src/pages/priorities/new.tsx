@@ -24,7 +24,7 @@ const NewPriorityPage = () => {
       setSuccessMessage(undefined);
       setIsLoading(false);
     }
-  });
+  }, [successMessage]);
 
   const onSubmit = async (priority: Priority) => {
     setIsLoading(true);

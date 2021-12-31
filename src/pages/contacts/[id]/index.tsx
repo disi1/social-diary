@@ -80,25 +80,27 @@ const ContactDetailsPage = () => {
       <Layout>
         <div className="absolute top-10 right-0">
           {logToBeRemoved && (
-              <Alert
-                  type="confirm"
-                  text={`Remove the log from ${new Date(logToBeRemoved.timestamp).toLocaleString()}?`}
-                  onClose={setLogToBeRemoved}
-                  onCancel={setLogToBeRemoved}
-                  onConfirm={onRemoveLogHandler}
-              />
+            <Alert
+              type="confirm"
+              text={`Remove the log from ${new Date(
+                logToBeRemoved.timestamp
+              ).toLocaleString()}?`}
+              onClose={setLogToBeRemoved}
+              onCancel={setLogToBeRemoved}
+              onConfirm={onRemoveLogHandler}
+            />
           )}
 
           {errorMessage && (
-              <Alert type="error" text={errorMessage} onClose={setErrorMessage} />
+            <Alert type="error" text={errorMessage} onClose={setErrorMessage} />
           )}
 
           {successMessage && (
-              <Alert
-                  type="success"
-                  text={successMessage}
-                  onClose={setSuccessMessage}
-              />
+            <Alert
+              type="success"
+              text={successMessage}
+              onClose={setSuccessMessage}
+            />
           )}
         </div>
 
@@ -110,7 +112,7 @@ const ContactDetailsPage = () => {
           onRemoveLog={setLogToBeRemoved}
         />
 
-        {loading || isLoading && <SpinnerFullPage />}
+        {loading || (isLoading && <SpinnerFullPage />)}
       </Layout>
     )
   );

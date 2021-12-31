@@ -46,8 +46,6 @@ export const ManagePriorityForm: React.FC<NewPriorityFormProps> = ({
     } as Priority;
 
     onSubmit(priority);
-
-    resetFormFields();
   };
 
   return (

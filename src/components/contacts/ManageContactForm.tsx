@@ -61,8 +61,6 @@ export const ManageContactForm: React.FC<NewContactFormProps> = ({
     } as Contact;
 
     onSubmit(contact);
-
-    resetFormFields();
   };
 
   return (

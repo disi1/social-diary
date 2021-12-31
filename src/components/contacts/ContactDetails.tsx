@@ -74,6 +74,12 @@ export const ContactDetails: React.FC<ContactDetailsProps> = ({
                 </p>
                 <p className="font-bold">{contact.relationship}</p>
               </div>
+              <div className="flex gap-2">
+                <p className="text-slate-500 dark:text-slate-400">
+                  Location:
+                </p>
+                <p className="font-bold">{contact.location}</p>
+              </div>
             </div>
           </div>
           <div className="flex flex-col gap-2 w-full md:w-auto md:items-center md:flex-initial">
@@ -156,10 +162,10 @@ export const ContactDetails: React.FC<ContactDetailsProps> = ({
                 </div>
               ))}
             </ul>
-            <section className="card grow self-stretch rounded-lg p-5 bg-gray-100 dark:bg-gray-800">
+            <section className="card grow self-stretch rounded-lg p-5 gap-3 bg-gray-100 dark:bg-gray-800">
               {selectedLog && (
-                <div>
-                  <div className="flex flex-col gap-5">
+                <div className="flex flex-col-reverse sm:flex-row-reverse gap-3 items-center justify-between">
+                  <div className="flex flex-row sm:flex-col gap-5 sm:self-end">
                     <Link
                       href={`${ROUTE_HOME}/${contact.id}/${selectedLog.id}/edit`}
                     >
@@ -175,7 +181,8 @@ export const ContactDetails: React.FC<ContactDetailsProps> = ({
                     </button>
                   </div>
 
-                  <h2 className="text-center font-bold mb-8">
+                  <h2 className=" font-bold text-xl text-center sm:text-left">
+                    <span className="text-2xs text-gray-500 font-normal italic">Your log on<br/></span>
                     {new Date(selectedLog.timestamp).toLocaleString()}
                   </h2>
                 </div>
