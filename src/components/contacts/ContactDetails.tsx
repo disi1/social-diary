@@ -9,7 +9,7 @@ import { Priority } from "../../lib/priority";
 import { Category } from "../../lib/category";
 import { Log } from "../../lib/log";
 import { getNoOfHoursSinceDate } from "../../lib/utils";
-import {useEffect, useState} from "react";
+import { useEffect, useState } from "react";
 import Link from "next/link";
 import { ROUTE_HOME } from "../../config";
 import resolveConfig from "tailwindcss/resolveConfig";
@@ -22,6 +22,7 @@ interface ContactDetailsProps {
   priority: Priority | undefined;
   category: Category | undefined;
   logs: Log[] | undefined;
+  onRemoveContact: () => void;
   onRemoveLog: (log: Log | undefined) => void;
 }
 
@@ -30,8 +31,11 @@ export const ContactDetails: React.FC<ContactDetailsProps> = ({
   category,
   priority,
   logs,
+  onRemoveContact,
   onRemoveLog,
 }) => {
+  console.log("priority: ", priority)
+
   const noOfHoursSinceLastLogEntry =
     logs && logs.length > 0
       ? getNoOfHoursSinceDate(new Date(logs[0].timestamp))
@@ -42,8 +46,10 @@ export const ContactDetails: React.FC<ContactDetailsProps> = ({
   );
 
   useEffect(() => {
-    !!logs && !(logs?.some((log) => log.id === selectedLog?.id)) && setSelectedLog(logs[0]);
-  }, [logs])
+    !!logs &&
+      !logs?.some((log) => log.id === selectedLog?.id) &&
+      setSelectedLog(logs[0]);
+  }, [logs]);
 
   return (
     <div className="h-full p-5 dark:bg-darkblue text-base flex justify-center text-gray-600 dark:text-gray-200 overflow-scroll">
@@ -75,9 +81,7 @@ export const ContactDetails: React.FC<ContactDetailsProps> = ({
                 <p className="font-bold">{contact.relationship}</p>
               </div>
               <div className="flex gap-2">
-                <p className="text-slate-500 dark:text-slate-400">
-                  Location:
-                </p>
+                <p className="text-slate-500 dark:text-slate-400">Location:</p>
                 <p className="font-bold">{contact.location}</p>
               </div>
             </div>
@@ -122,7 +126,10 @@ export const ContactDetails: React.FC<ContactDetailsProps> = ({
                 Edit
               </button>
             </Link>
-            <button className="btn btn-sm btn-ghost capitalize text-sm px-4 py-2 leading-none border rounded text-slate-400 border-slate-400 hover:border-transparent hover:text-white hover:bg-slate-600">
+            <button
+              className="btn btn-sm btn-ghost capitalize text-sm px-4 py-2 leading-none border rounded text-slate-400 border-slate-400 hover:border-transparent hover:text-white hover:bg-slate-600"
+              onClick={onRemoveContact}
+            >
               Remove
             </button>
           </div>
@@ -182,7 +189,10 @@ export const ContactDetails: React.FC<ContactDetailsProps> = ({
                   </div>
 
                   <h2 className=" font-bold text-xl text-center sm:text-left">
-                    <span className="text-2xs text-gray-500 font-normal italic">Your log on<br/></span>
+                    <span className="text-2xs text-gray-500 font-normal italic">
+                      Your log on
+                      <br />
+                    </span>
                     {new Date(selectedLog.timestamp).toLocaleString()}
                   </h2>
                 </div>

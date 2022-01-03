@@ -1,10 +1,7 @@
 import { Category } from "../../lib/category";
-import { Log } from "../../lib/log";
 import { Priority } from "../../lib/priority";
 import { PriorityItem } from "../priorities/PriorityItem";
 import { CategoryItem } from "../categories/CategoryItem";
-import { useState } from "react";
-import { Alert } from "../Alert";
 
 interface ConfigurationProps {
   categories: Category[] | undefined;

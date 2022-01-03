@@ -81,7 +81,7 @@ const ConfigurationPage = () => {
                 {categoryToBeRemoved && (
                     <Alert
                         type="confirm"
-                        text={`Remove the "${categoryToBeRemoved?.name}" category?`}
+                        text={`Remove the "${categoryToBeRemoved?.name}" category? All associated contacts will be removed.`}
                         onClose={setCategoryToBeRemoved}
                         onCancel={setCategoryToBeRemoved}
                         onConfirm={onRemoveCategoryHandler}

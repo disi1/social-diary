@@ -17,7 +17,7 @@ type NewContactFieldProps = {
   relationship: string;
   location: string;
   category: number;
-  priority: number;
+  priority: number | undefined;
 };
 
 export const ManageContactForm: React.FC<NewContactFormProps> = ({

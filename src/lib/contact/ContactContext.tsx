@@ -2,7 +2,7 @@ import { Contact } from "./contact.types";
 import { createContext, FunctionComponent, useEffect, useState } from "react";
 import { useAuth } from "../auth";
 import { supabase } from "../supabaseClient";
-import {updateItemsWithNewItem} from "../utils";
+import {updateItemsWithNewItem, updateItemsWithOldItem} from "../utils";
 
 export type ContactContextProps = {
   contacts: Contact[];
@@ -34,14 +34,27 @@ export const ContactProvider: FunctionComponent = ({ children }) => {
     const contactListener = supabase
       .from("contact")
       .on("*", (payload) => {
-        const newContact = payload.new as Contact;
+          if(payload.eventType === "DELETE") {
+              const oldContact = payload.old;
 
-        setContacts((oldContacts) => {
-          const newContacts = updateItemsWithNewItem(oldContacts, newContact);
-          newContacts.sort((a, b) => a.name.localeCompare(b.name));
+              setContacts((oldContacts) => {
+                  const newContacts = updateItemsWithOldItem(oldContacts, oldContact);
+                  newContacts.sort((a, b) => a.name.localeCompare(b.name));
 
-          return newContacts;
-        });
+                  return newContacts
+              });
+          } else {
+              const newContact = payload.new as Contact;
+              setContacts((oldContacts) => {
+                  const newContacts = updateItemsWithNewItem(
+                      oldContacts,
+                      newContact
+                  );
+                  newContacts.sort((a, b) => a.name.localeCompare(b.name));
+
+                  return newContacts;
+              });
+          }
       })
       .subscribe();
 

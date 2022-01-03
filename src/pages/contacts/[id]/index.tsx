@@ -10,15 +10,20 @@ import Router, { useRouter } from "next/router";
 import { useEffect, useState } from "react";
 import { ROUTE_HOME } from "../../../config";
 import { supabase } from "../../../lib";
-import {Alert} from "../../../components/Alert";
+import { Alert } from "../../../components/Alert";
 
 const ContactDetailsPage = () => {
   const [isLoading, setIsLoading] = useState(false);
   const [errorMessage, setErrorMessage] = useState<string>();
   const [successMessage, setSuccessMessage] = useState<string>();
+  const [contactRemovedSuccessMessage, setContactRemovedSuccessMessage] =
+    useState<string>();
   const [logToBeRemoved, setLogToBeRemoved] = useState<Log | undefined>(
     undefined
   );
+  const [contactToBeRemoved, setContactToBeRemoved] = useState<
+    Contact | undefined
+  >(undefined);
 
   const { loading } = useAuth();
   const { contacts } = useContact();
@@ -54,6 +59,14 @@ const ContactDetailsPage = () => {
     }
   }, [successMessage]);
 
+  useEffect(() => {
+    if (contactRemovedSuccessMessage) {
+      setIsLoading(true);
+      Router.push(ROUTE_HOME);
+      setIsLoading(false);
+    }
+  }, [contactRemovedSuccessMessage]);
+
   const onRemoveLogHandler = async () => {
     if (logToBeRemoved) {
       setIsLoading(true);
@@ -75,6 +88,28 @@ const ContactDetailsPage = () => {
     }
   };
 
+  const onRemoveContactHandler = async () => {
+    if (contactToBeRemoved) {
+      setIsLoading(true);
+
+      const { error, status } = await supabase
+        .from("contact")
+        .delete()
+        .eq("id", contactToBeRemoved?.id);
+
+      setContactToBeRemoved(undefined);
+      setIsLoading(false);
+
+      if (error) {
+        setErrorMessage(error.message);
+      } else if (status === 200) {
+        setContactRemovedSuccessMessage(
+          "Your contact and associated logs were successfully removed."
+        );
+      }
+    }
+  };
+
   return (
     thisContact && (
       <Layout>
@@ -91,6 +126,16 @@ const ContactDetailsPage = () => {
             />
           )}
 
+          {contactToBeRemoved && (
+            <Alert
+              type="confirm"
+              text={`Remove ${thisContact.name} contact? All associated logs will be removed.`}
+              onClose={setContactToBeRemoved}
+              onCancel={setContactToBeRemoved}
+              onConfirm={onRemoveContactHandler}
+            />
+          )}
+
           {errorMessage && (
             <Alert type="error" text={errorMessage} onClose={setErrorMessage} />
           )}
@@ -102,6 +147,14 @@ const ContactDetailsPage = () => {
               onClose={setSuccessMessage}
             />
           )}
+
+          {contactRemovedSuccessMessage && (
+            <Alert
+              type="success"
+              text={contactRemovedSuccessMessage}
+              onClose={setContactRemovedSuccessMessage}
+            />
+          )}
         </div>
 
         <ContactDetails
@@ -109,6 +162,7 @@ const ContactDetailsPage = () => {
           contact={thisContact}
           logs={thisContactLogs}
           priority={thisContactPriority}
+          onRemoveContact={() => setContactToBeRemoved(thisContact)}
           onRemoveLog={setLogToBeRemoved}
         />
 

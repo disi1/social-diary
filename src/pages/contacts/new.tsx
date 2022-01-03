@@ -5,9 +5,11 @@ import { ManageContactForm } from "../../components/contacts/ManageContactForm";
 import { useCategory } from "../../lib/category";
 import { usePriority } from "../../lib/priority";
 import { Contact } from "../../lib/contact";
-import { useState } from "react";
+import {useEffect, useState} from "react";
 import { supabase } from "../../lib";
 import { Alert } from "../../components/Alert";
+import Router from "next/router";
+import {ROUTE_HOME} from "../../config";
 
 const NewContactPage = () => {
   const [isLoading, setIsLoading] = useState(false);
@@ -17,6 +19,15 @@ const NewContactPage = () => {
   const { user, loading } = useAuth();
   const { categories } = useCategory();
   const { priorities } = usePriority();
+
+  useEffect(() => {
+    if (successMessage) {
+      setIsLoading(true);
+      Router.push(ROUTE_HOME);
+      setSuccessMessage(undefined);
+      setIsLoading(false);
+    }
+  });
 
   const onSubmit = async (contact: Contact) => {
     setIsLoading(true);
