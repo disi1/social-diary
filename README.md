@@ -10,7 +10,7 @@ See what Social Diary is about in the [presentation video](https://www.youtube.c
 
 ### Problem statement
 
-Sometimes life takes us travelling frequently, stay away from our closed oneds for long periods or time, or simply makes us grow out of touch.
+Sometimes life takes us travelling frequently, staying away from our closed ones for long periods or time, or simply makes us grow out of touch.
 With 2020 and 2021 especially, it is more important than ever to employ some new tactics, or the new situation will become the new norm:
 - less human contact, impacting mental and physical health measurably
 - a more frequent feeling of loneliness, exacerbated by lockdowns here and there
@@ -25,7 +25,7 @@ By adding contacts, then classifying them by category or priority/frequency, you
 ## Implementation Details
 
 ### Tech stack
-  - **Typescript** as the language of choice. Typescript enables me to write better, more stable code for production and it also enables me to have a much better developer experience, with the helpful IDE tips.
+  - **TypeScript** as the language of choice. Typescript enables me to write better, more stable code for production and it also enables me to have a much better developer experience, with the helpful IDE tips.
   - **Next.js** for the full-stack framework possibility. I knew it would eventuall allow me the necessary flexibility in choosing the right solutions to get to the end product.
   - **Supabase** for data storage and management. I wanted to learn about this Firebase backend alternatives built on top of SQL. I found Supabase very intriguing and the flow has been great so far.
   - **Tailwind CSS** and **daisyUI**:  I chose **Tailwind** because I wanted to learn, to build something meaninfgul with it, to see what it's like building websites with a utility-first CSS framework. What I like the most is that it gives you freedom to create your own UI and customize it to build something original, comparing to Bootstrap which gives you the classes for components that you'd want to use, and customizing these might take some time. What I didn't like was how hard it seemed to make debugging CSS itself. As for **daisyUI**, I made an early choice not to create full components from scratch, and instead focus on functionality and layouts;
