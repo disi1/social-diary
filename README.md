@@ -28,9 +28,9 @@ By adding contacts, then classifying them by category or priority/frequency, you
   - **TypeScript** as the language of choice. Typescript enables me to write better, more stable code for production and it also enables me to have a much better developer experience, with the helpful IDE tips.
   - **Next.js** for the full-stack framework possibility. I knew it would eventuall allow me the necessary flexibility in choosing the right solutions to get to the end product.
   - **Supabase** for data storage and management. I wanted to learn about this Firebase backend alternatives built on top of SQL. I found Supabase very intriguing and the flow has been great so far.
-  - **Tailwind CSS** and **daisyUI**:  I chose **Tailwind** because I wanted to learn, to build something meaninfgul with it, to see what it's like building websites with a utility-first CSS framework. What I like the most is that it gives you freedom to create your own UI and customize it to build something original, comparing to Bootstrap which gives you the classes for components that you'd want to use, and customizing these might take some time. What I didn't like was how hard it seemed to make debugging CSS itself. As for **daisyUI**, I made an early choice not to create full components from scratch, and instead focus on functionality and layouts;
+  - **Tailwind CSS** and **daisyUI**:  I chose **Tailwind** because I wanted to learn, to build something meaninfgul with it, to see what it's like building websites with a utility-first CSS framework. What I like the most is that it gives you freedom to create your own UI and customize it to build something original, comparing to Bootstrap which gives you the classes for pre-styled components that you'd want to use, and customizing these might take some time. What I didn't like was how hard it seemed to make debugging CSS itself. As for **daisyUI**, I made an early choice not to create full components from scratch, and instead focus on functionality and layouts;
   - **ESLint** for _static code_ analysis
-  - **Prettier**-formatted code
+  - **Prettier** - formatted code
 
 ### Folder structure
   - public - folder used by Next.js to statically serve files like the favicon.ico, SVG files, etc.
