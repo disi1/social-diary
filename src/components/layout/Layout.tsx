@@ -23,7 +23,7 @@ const Layout = (props: any) => {
           <main className="h-full bg-slate-100 dark:bg-slate-900">{props.children}</main>
           {(loading) && <SpinnerFullPage />}
           <footer className="flex flex-col sm:flex-row items-center justify-center py-3 text-slate-500 dark:text-slate-400 border-t bg-slate-100 dark:bg-slate-900 border-slate-300 dark:border-slate-700">
-            <p>Build with &#10084; by Diana Ilie</p>
+            <p>Built with &#10084; by Diana Ilie</p>
             <div className="divider divider-vertical"/>
             <p>2021</p>
           </footer>
