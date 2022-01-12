@@ -87,8 +87,8 @@ export const updateItemsWithNewItem = (oldItems: any[], newItem: any) => {
     const oldContactIndex = oldItems.findIndex(
       (item: any) => item.id === newItem.id
     );
-    oldItems[oldContactIndex] = newItem;
-    newItems = oldItems;
+    newItems = [...oldItems];
+    newItems[oldContactIndex] = newItem;
   } else {
     newItems = oldItems ? [...oldItems, newItem] : [newItem];
   }
