@@ -1,20 +1,19 @@
-import { useEffect, useState } from "react";
+import { useState } from "react";
 import { SpinnerFullPage } from "../../../components/Spinner";
 import Router, { useRouter } from "next/router";
 import { useAuth } from "../../../lib/auth";
 import { Priority, usePriority } from "../../../lib/priority";
-import { supabase } from "../../../lib";
 import Layout from "../../../components/layout/Layout";
 import { Alert } from "../../../components/Alert";
 import { ManagePriorityForm } from "../../../components/priorities/ManagePriorityForm";
 import { ROUTE_CONFIGURATION } from "../../../config";
+import useUpdatePriority from "../../../lib/hooks/priority/useUpdatePriority";
 
 const EditPriorityPage = () => {
-  const [isLoading, setIsLoading] = useState(false);
   const [errorMessage, setErrorMessage] = useState<string>();
   const [successMessage, setSuccessMessage] = useState<string>();
 
-  const { user, loading } = useAuth();
+  const { loading } = useAuth();
   const { priorities } = usePriority();
 
   const { id } = useRouter().query;
@@ -26,34 +25,29 @@ const EditPriorityPage = () => {
         ) as Priority)
       : null;
 
-  useEffect(() => {
-    if (successMessage) {
-      setIsLoading(true);
-      Router.push(ROUTE_CONFIGURATION);
-      setSuccessMessage(undefined);
-      setIsLoading(false);
-    }
-  }, [successMessage]);
+  const { mutate, isLoading } = useUpdatePriority();
 
   const onSubmit = async (priority: Priority) => {
-    setIsLoading(true);
-
-    const { error, status } = await supabase
-      .from("priority")
-      .update({
+    mutate(
+      {
         name: priority.name,
         frequency: priority.frequency,
-        user_id: user?.id,
-      })
-      .eq("id", currentPriority?.id);
-
-    setIsLoading(false);
-
-    if (error) {
-      setErrorMessage(error.message);
-    } else if (status === 200) {
-      setSuccessMessage("Your priority was successfully updated.");
-    }
+        user_id: priority.user_id,
+        id: currentPriority?.id,
+      },
+      {
+        onSuccess: (status: number) => {
+          if (status === 200) {
+            setSuccessMessage("Your priority was successfully updated.");
+            Router.push(ROUTE_CONFIGURATION);
+            setSuccessMessage(undefined);
+          }
+        },
+        onError: (error) => {
+          setErrorMessage((error as Error).message);
+        },
+      }
+    );
   };
 
   const onCancel = () => {};

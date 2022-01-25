@@ -9,6 +9,16 @@ import { ContactProvider } from "../lib/contact";
 import { LogProvider } from "../lib/log";
 import { supabase } from "../lib";
 import { AuthChangeEvent, Session } from "@supabase/gotrue-js";
+import { QueryClient, QueryClientProvider } from "react-query";
+import { ReactQueryDevtools } from "react-query/devtools";
+
+const queryClient = new QueryClient({
+  defaultOptions: {
+    queries: {
+      retry: 0,
+    },
+  },
+});
 
 function MyApp({ Component, pageProps }: AppProps) {
   useEffect(() => {
@@ -36,17 +46,20 @@ function MyApp({ Component, pageProps }: AppProps) {
   }
 
   return (
-    <AuthProvider>
-      <ContactProvider>
-        <CategoryProvider>
-          <PriorityProvider>
-            <LogProvider>
-              <Component {...pageProps} />
-            </LogProvider>
-          </PriorityProvider>
-        </CategoryProvider>
-      </ContactProvider>
-    </AuthProvider>
+    <QueryClientProvider client={queryClient}>
+      <AuthProvider>
+        <ContactProvider>
+          <CategoryProvider>
+            <PriorityProvider>
+              <LogProvider>
+                <Component {...pageProps} />
+              </LogProvider>
+            </PriorityProvider>
+          </CategoryProvider>
+        </ContactProvider>
+      </AuthProvider>
+      <ReactQueryDevtools initialIsOpen={false} />
+    </QueryClientProvider>
   );
 }
 
