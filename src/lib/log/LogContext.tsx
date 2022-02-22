@@ -1,8 +1,9 @@
 import { Log } from "./log.types";
-import { createContext, FunctionComponent, useEffect, useState } from "react";
+import { createContext, FunctionComponent, useEffect } from "react";
 import { useAuth } from "../auth";
+import useLogs from "../hooks/log/useLogs";
+import { useQueryClient } from "react-query";
 import { supabase } from "../supabaseClient";
-import { updateItemsWithNewItem, updateItemsWithOldItem } from "../utils";
 
 export type LogContextProps = {
   logs: Log[];
@@ -11,54 +12,25 @@ export type LogContextProps = {
 export const LogContext = createContext<Partial<LogContextProps>>({});
 
 export const LogProvider: FunctionComponent = ({ children }) => {
-  const [logs, setLogs] = useState<Log[]>([]);
+  const queryClient = useQueryClient();
 
   const { user } = useAuth();
 
-  useEffect(() => {
-    if (user) {
-      supabase
-        .from("log")
-        .select("*")
-        .eq("user_id", user.id)
-        .order("id", { ascending: true })
-        .then(({ data, error }) => {
-          if (!error) {
-            setLogs(data as Log[]);
-          }
-        });
-    }
-  }, [user]);
+  const { data: logs } = useLogs(user?.id);
 
   useEffect(() => {
     const logListener = supabase
       .from("log")
       .on("*", (payload) => {
-        if (payload.eventType === "DELETE") {
-          const oldLog = payload.old;
-
-          setLogs((oldLogs) => {
-            const newLogs = updateItemsWithOldItem(oldLogs, oldLog);
-            newLogs.sort((a, b) => a.id! - b.id!);
-
-            return newLogs;
-          });
-        } else {
-          const newLog = payload.new as Log;
-          setLogs((oldLogs) => {
-            const newLogs = updateItemsWithNewItem(oldLogs, newLog);
-            newLogs.sort((a, b) => a.id! - b.id!);
-
-            return newLogs;
-          });
-        }
+        queryClient.invalidateQueries(["logs", user?.id]);
+        queryClient.invalidateQueries(["contacts", user?.id]);
       })
       .subscribe();
 
     return () => {
       logListener.unsubscribe();
     };
-  }, []);
+  }, [user?.id]);
 
   return <LogContext.Provider value={{ logs }}>{children}</LogContext.Provider>;
 };

@@ -28,26 +28,28 @@ const EditPriorityPage = () => {
   const { mutate, isLoading } = useUpdatePriority();
 
   const onSubmit = async (priority: Priority) => {
-    mutate(
-      {
-        name: priority.name,
-        frequency: priority.frequency,
-        user_id: priority.user_id,
-        id: currentPriority?.id,
-      },
-      {
-        onSuccess: (status: number) => {
-          if (status === 200) {
-            setSuccessMessage("Your priority was successfully updated.");
-            Router.push(ROUTE_CONFIGURATION);
-            setSuccessMessage(undefined);
-          }
+    if (currentPriority) {
+      mutate(
+        {
+          name: priority.name,
+          frequency: priority.frequency,
+          user_id: priority.user_id,
+          id: currentPriority?.id,
         },
-        onError: (error) => {
-          setErrorMessage((error as Error).message);
-        },
-      }
-    );
+        {
+          onSuccess: (status: number) => {
+            if (status === 200) {
+              setSuccessMessage("Your priority was successfully updated.");
+              Router.push(ROUTE_CONFIGURATION);
+              setSuccessMessage(undefined);
+            }
+          },
+          onError: (error) => {
+            setErrorMessage((error as Error).message);
+          },
+        }
+      );
+    }
   };
 
   const onCancel = () => {};

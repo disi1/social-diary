@@ -1,21 +1,20 @@
-import {useEffect, useState} from "react";
+import { useState } from "react";
 import { useAuth } from "../../../lib/auth";
 import { SpinnerFullPage } from "../../../components/Spinner";
 import { Alert } from "../../../components/Alert";
 import Layout from "../../../components/layout/Layout";
 import { Contact, useContact } from "../../../lib/contact";
-import { supabase } from "../../../lib";
 import { Log } from "../../../lib/log";
 import { ManageLogForm } from "../../../components/logs/ManageLogForm";
 import Router, { useRouter } from "next/router";
-import {ROUTE_CONFIGURATION, ROUTE_HOME} from "../../../config";
+import { ROUTE_HOME } from "../../../config";
+import useCreateLog from "../../../lib/hooks/log/useCreateLog";
 
 const NewLogPage = () => {
-  const [isLoading, setIsLoading] = useState(false);
   const [errorMessage, setErrorMessage] = useState<string>();
   const [successMessage, setSuccessMessage] = useState<string>();
 
-  const { loading } = useAuth();
+  const { user, loading } = useAuth();
   const { contacts } = useContact();
 
   const { id } = useRouter().query;
@@ -24,34 +23,31 @@ const NewLogPage = () => {
       ? (contacts?.find((contact) => contact.id === parseInt(id)) as Contact)
       : null;
 
-  useEffect(() => {
-    if (successMessage) {
-      setIsLoading(true);
-      Router.push(`${ROUTE_HOME}/${thisContact?.id}`);
-      setSuccessMessage(undefined);
-      setIsLoading(false);
-    }
-  });
+  const { mutate, isLoading } = useCreateLog();
 
   const onSubmit = async (log: Log) => {
-    setIsLoading(true);
-
-    const { error, status } = await supabase.from("log").insert([
-      {
-        contact_id: log.contact_id,
-        note: log.note,
-        timestamp: log.timestamp,
-        user_id: log.user_id,
-      },
-    ]);
-
-    setIsLoading(false);
-
-    if (error) {
-      setErrorMessage(error.message);
-    } else if (status === 201) {
-      setSuccessMessage("Your new Log was successfully saved.");
-    }
+    if (user) {
+      mutate(
+        {
+          contact_id: log.contact_id,
+          note: log.note,
+          timestamp: log.timestamp,
+          user_id: log.user_id,
+        },
+        {
+          onSuccess: (status: number) => {
+            if (status === 201) {
+              setSuccessMessage("Your new Log was successfully saved.");
+              Router.push(`${ROUTE_HOME}/${thisContact?.id}`);
+              setSuccessMessage(undefined);
+            }
+          },
+          onError: (error) => {
+            setErrorMessage((error as Error).message);
+          },
+        }
+      );
+    } else throw new Error("User is not authenticated");
   };
 
   const onCancel = () => {};

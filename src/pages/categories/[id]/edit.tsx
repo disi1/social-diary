@@ -28,25 +28,27 @@ const EditCategoryPage = () => {
   const { mutate, isLoading } = useUpdateCategory();
 
   const onSubmit = async (category: Category) => {
-    mutate(
-      {
-        name: category.name,
-        user_id: category.user_id,
-        id: currentCategory?.id,
-      },
-      {
-        onSuccess: (status: number) => {
-          if (status === 200) {
-            setSuccessMessage("Your category was successfully updated.");
-            Router.push(ROUTE_CONFIGURATION);
-            setSuccessMessage(undefined);
-          }
+    if (currentCategory) {
+      mutate(
+        {
+          name: category.name,
+          user_id: category.user_id,
+          id: currentCategory.id,
         },
-        onError: (error) => {
-          setErrorMessage((error as Error).message);
-        },
-      }
-    );
+        {
+          onSuccess: (status: number) => {
+            if (status === 200) {
+              setSuccessMessage("Your category was successfully updated.");
+              Router.push(ROUTE_CONFIGURATION);
+              setSuccessMessage(undefined);
+            }
+          },
+          onError: (error) => {
+            setErrorMessage((error as Error).message);
+          },
+        }
+      );
+    }
   };
 
   const onCancel = () => {};

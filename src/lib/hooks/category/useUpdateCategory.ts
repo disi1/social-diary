@@ -1,23 +1,23 @@
-import {Category} from "../../category";
-import {useMutation} from "react-query";
-import {supabase} from "../../supabaseClient";
+import { Category } from "../../category";
+import { useMutation, useQueryClient } from "react-query";
+import { supabase } from "../../supabaseClient";
 
 const updateCategory = async (category: Category) => {
-    const { error, status } = await supabase
-        .from("category")
-        .update({
-            name: category.name,
-            user_id: category.user_id,
-        })
-        .eq("id", category.id);
+  const { error, status } = await supabase
+    .from("category")
+    .update({
+      name: category.name,
+      user_id: category.user_id,
+    })
+    .eq("id", category.id);
 
-    if (error) {
-        throw error;
-    }
+  if (error) {
+    throw error;
+  }
 
-    return status
-}
+  return status;
+};
 
 export default function useUpdateCategory() {
-    return useMutation((category: Category) => updateCategory(category));
+  return useMutation((category: Category) => updateCategory(category));
 }

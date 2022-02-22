@@ -1,21 +1,20 @@
-import { useEffect, useState } from "react";
+import { useState } from "react";
 import { useAuth } from "../../../../lib/auth";
 import { Log, useLog } from "../../../../lib/log";
 import Router, { useRouter } from "next/router";
-import { supabase } from "../../../../lib";
 import Layout from "../../../../components/layout/Layout";
 import { Alert } from "../../../../components/Alert";
 import { SpinnerFullPage } from "../../../../components/Spinner";
 import { ManageLogForm } from "../../../../components/logs/ManageLogForm";
 import { Contact, useContact } from "../../../../lib/contact";
 import { ROUTE_HOME } from "../../../../config";
+import useUpdateLog from "../../../../lib/hooks/log/useUpdateLog";
 
 const EditLogPage = () => {
-  const [isLoading, setIsLoading] = useState(false);
   const [errorMessage, setErrorMessage] = useState<string>();
   const [successMessage, setSuccessMessage] = useState<string>();
 
-  const { user, loading } = useAuth();
+  const { loading } = useAuth();
   const { logs } = useLog();
   const { contacts } = useContact();
 
@@ -31,35 +30,31 @@ const EditLogPage = () => {
       ? (contacts?.find((contact) => contact.id === parseInt(id)) as Contact)
       : null;
 
-  useEffect(() => {
-    if (successMessage) {
-      setIsLoading(true);
-      Router.push(`${ROUTE_HOME}/${id}`);
-      setSuccessMessage(undefined);
-      setIsLoading(false);
-    }
-  });
+  const { mutate, isLoading } = useUpdateLog();
 
   const onSubmit = async (log: Log) => {
-    setIsLoading(true);
-
-    const { error, status } = await supabase
-      .from("log")
-      .update({
-        user_id: user?.id,
-        contact_id: log.contact_id,
-        note: log.note,
-        timestamp: log.timestamp,
-      })
-      .eq("user_id", user?.id)
-      .eq("id", currentLog?.id);
-
-    setIsLoading(false);
-
-    if (error) {
-      setErrorMessage(error.message);
-    } else if (status === 200) {
-      setSuccessMessage("Your log was successfully updated.");
+    if (currentLog) {
+      mutate(
+        {
+          id: currentLog.id,
+          user_id: log.user_id,
+          contact_id: log.contact_id,
+          note: log.note,
+          timestamp: log.timestamp,
+        },
+        {
+          onSuccess: (status: number) => {
+            if (status === 200) {
+              setSuccessMessage("Your log was successfully updated.");
+              Router.push(`${ROUTE_HOME}/${id}`);
+              setSuccessMessage(undefined);
+            }
+          },
+          onError: (error) => {
+            setErrorMessage((error as Error).message);
+          },
+        }
+      );
     }
   };
 

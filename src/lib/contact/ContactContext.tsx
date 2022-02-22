@@ -1,8 +1,9 @@
 import { Contact } from "./contact.types";
-import { createContext, FunctionComponent, useEffect, useState } from "react";
+import { createContext, FunctionComponent, useEffect } from "react";
 import { useAuth } from "../auth";
+import useContacts from "../hooks/contact/useContacts";
 import { supabase } from "../supabaseClient";
-import {updateItemsWithNewItem, updateItemsWithOldItem} from "../utils";
+import { useQueryClient } from "react-query";
 
 export type ContactContextProps = {
   contacts: Contact[];
@@ -11,57 +12,24 @@ export type ContactContextProps = {
 export const ContactContext = createContext<Partial<ContactContextProps>>({});
 
 export const ContactProvider: FunctionComponent = ({ children }) => {
-  const [contacts, setContacts] = useState<Contact[]>([]);
+  const queryClient = useQueryClient();
 
   const { user } = useAuth();
 
-  useEffect(() => {
-    if (user) {
-      supabase
-        .from("contact")
-        .select("*")
-        .eq("user_id", user.id)
-        .order("name", { ascending: true })
-        .then(({ data, error }) => {
-          if (!error) {
-            setContacts(data as Contact[]);
-          }
-        });
-    }
-  }, [user]);
+  const { data: contacts } = useContacts(user?.id);
 
   useEffect(() => {
     const contactListener = supabase
       .from("contact")
       .on("*", (payload) => {
-          if(payload.eventType === "DELETE") {
-              const oldContact = payload.old;
-
-              setContacts((oldContacts) => {
-                  const newContacts = updateItemsWithOldItem(oldContacts, oldContact);
-                  newContacts.sort((a, b) => a.name.localeCompare(b.name));
-
-                  return newContacts
-              });
-          } else {
-              const newContact = payload.new as Contact;
-              setContacts((oldContacts) => {
-                  const newContacts = updateItemsWithNewItem(
-                      oldContacts,
-                      newContact
-                  );
-                  newContacts.sort((a, b) => a.name.localeCompare(b.name));
-
-                  return newContacts;
-              });
-          }
+        queryClient.invalidateQueries(["contacts", user?.id]);
       })
       .subscribe();
 
     return () => {
       contactListener.unsubscribe();
     };
-  }, []);
+  }, [user?.id]);
 
   return (
     <ContactContext.Provider

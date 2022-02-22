@@ -1,8 +1,9 @@
 import { Priority } from "./priority.types";
-import { createContext, FunctionComponent, useEffect, useState } from "react";
+import { createContext, FunctionComponent, useEffect } from "react";
 import { useAuth } from "../auth";
+import usePriorities from "../hooks/priority/usePriorities";
 import { supabase } from "../supabaseClient";
-import { updateItemsWithNewItem, updateItemsWithOldItem } from "../utils";
+import { useQueryClient } from "react-query";
 
 export type PriorityContextProps = {
   priorities: Priority[];
@@ -11,60 +12,24 @@ export type PriorityContextProps = {
 export const PriorityContext = createContext<Partial<PriorityContextProps>>({});
 
 export const PriorityProvider: FunctionComponent = ({ children }) => {
-  const [priorities, setPriorities] = useState<Priority[]>([]);
+  const queryClient = useQueryClient();
 
   const { user } = useAuth();
 
-  useEffect(() => {
-    if (user) {
-      supabase
-        .from("priority")
-        .select("*")
-        .eq("user_id", user?.id)
-        .order("frequency", { ascending: true })
-        .then(({ data, error }) => {
-          if (!error) {
-            setPriorities(data as Priority[]);
-          }
-        });
-    }
-  }, [user]);
+  const { data: priorities } = usePriorities(user?.id);
 
   useEffect(() => {
-    const priorityListener = supabase
+    const contactListener = supabase
       .from("priority")
       .on("*", (payload) => {
-        if (payload.eventType === "DELETE") {
-          const oldPriority = payload.old;
-
-          setPriorities((oldPriorities) => {
-            const newPriorities = updateItemsWithOldItem(
-              oldPriorities,
-              oldPriority
-            );
-            newPriorities.sort((a, b) => a.frequency! - b.frequency!);
-
-            return newPriorities;
-          });
-        } else {
-          const newPriority = payload.new as Priority;
-          setPriorities((oldPriorities) => {
-            const newPriorities = updateItemsWithNewItem(
-              oldPriorities,
-              newPriority
-            );
-            newPriorities.sort((a, b) => a.frequency! - b.frequency!);
-
-            return newPriorities;
-          });
-        }
+        queryClient.invalidateQueries(["priorities", user?.id]);
       })
       .subscribe();
 
     return () => {
-      priorityListener.unsubscribe();
+      contactListener.unsubscribe();
     };
-  }, []);
+  }, [user?.id]);
 
   return (
     <PriorityContext.Provider value={{ priorities }}>

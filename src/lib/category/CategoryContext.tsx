@@ -1,8 +1,9 @@
-import { createContext, FunctionComponent, useEffect, useState } from "react";
+import { createContext, FunctionComponent, useEffect } from "react";
 import { useAuth } from "../auth";
-import { supabase } from "../supabaseClient";
 import { Category } from "./category.types";
-import { updateItemsWithNewItem, updateItemsWithOldItem } from "../utils";
+import useCategories from "../hooks/category/useCategories";
+import { supabase } from "../supabaseClient";
+import { useQueryClient } from "react-query";
 
 export type CategoryContextProps = {
   categories: Category[];
@@ -11,61 +12,24 @@ export type CategoryContextProps = {
 export const CategoryContext = createContext<Partial<CategoryContextProps>>({});
 
 export const CategoryProvider: FunctionComponent = ({ children }) => {
-  const [categories, setCategories] = useState<Category[]>([]);
+  const queryClient = useQueryClient();
 
   const { user } = useAuth();
 
-  useEffect(() => {
-    if (user) {
-      supabase
-        .from("category")
-        .select("*")
-        .eq("user_id", user.id)
-        .order("name", { ascending: true })
-        .then(({ data, error }) => {
-          if (!error) {
-            setCategories(data as Category[]);
-          }
-        });
-    }
-  }, [user]);
+  const { data: categories } = useCategories(user?.id);
 
   useEffect(() => {
     const categoryListener = supabase
       .from("category")
       .on("*", (payload) => {
-        if (payload.eventType === "DELETE") {
-          const oldCategory = payload.old;
-
-          setCategories((oldCategories) => {
-            const newCategories = updateItemsWithOldItem(
-              oldCategories,
-              oldCategory
-            );
-            newCategories.sort((a, b) => a.name.localeCompare(b.name));
-
-            return newCategories;
-          });
-        } else {
-          const newCategory = payload.new as Category;
-
-          setCategories((oldCategories) => {
-            const newCategories = updateItemsWithNewItem(
-              oldCategories,
-              newCategory
-            );
-            newCategories.sort((a, b) => a.name.localeCompare(b.name));
-
-            return newCategories;
-          });
-        }
+        queryClient.invalidateQueries(["categories", user?.id]);
       })
       .subscribe();
 
     return () => {
       categoryListener.unsubscribe();
     };
-  }, []);
+  }, [user?.id]);
 
   return (
     <CategoryContext.Provider

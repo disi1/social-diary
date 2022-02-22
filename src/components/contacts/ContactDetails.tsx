@@ -34,8 +34,6 @@ export const ContactDetails: React.FC<ContactDetailsProps> = ({
   onRemoveContact,
   onRemoveLog,
 }) => {
-  console.log("priority: ", priority)
-
   const noOfHoursSinceLastLogEntry =
     logs && logs.length > 0
       ? getNoOfHoursSinceDate(new Date(logs[0].timestamp))

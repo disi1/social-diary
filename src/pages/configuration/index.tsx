@@ -50,10 +50,8 @@ const ConfigurationPage = () => {
 
   const onRemovePriorityHandler = async () => {
     if (priorityToBeRemoved) {
-      console.log("priority: ", priorityToBeRemoved)
       deletePriorityMutation(priorityToBeRemoved, {
         onSuccess: (status: number) => {
-          console.log("status: ", status)
           if (status === 200) {
             setSuccessMessage("Your priority was successfully removed.");
           }

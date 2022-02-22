@@ -7,13 +7,15 @@ import { Category, useCategory } from "../../../lib/category";
 import { ContactDetails } from "../../../components/contacts/ContactDetails";
 import { Log, useLog } from "../../../lib/log";
 import Router, { useRouter } from "next/router";
-import { useEffect, useState } from "react";
+import { useState } from "react";
 import { ROUTE_HOME } from "../../../config";
-import { supabase } from "../../../lib";
 import { Alert } from "../../../components/Alert";
+import useDeleteLog from "../../../lib/hooks/log/useDeleteLog";
+import useDeleteContact from "../../../lib/hooks/contact/useDeleteContact";
 
 const ContactDetailsPage = () => {
-  const [isLoading, setIsLoading] = useState(false);
+  const [isLoading] = useState(false);
+
   const [errorMessage, setErrorMessage] = useState<string>();
   const [successMessage, setSuccessMessage] = useState<string>();
   const [contactRemovedSuccessMessage, setContactRemovedSuccessMessage] =
@@ -41,9 +43,11 @@ const ContactDetailsPage = () => {
   const thisContactCategory = categories?.find(
     (category) => category.id === thisContact?.category_id
   ) as Category;
+
   const thisContactPriority = priorities?.find(
     (priority) => priority.id === thisContact?.priority_id
   ) as Priority;
+
   const thisContactLogs = logs?.filter(
     (log) => log.contact_id === thisContact?.id
   ) as Log[];
@@ -51,62 +55,46 @@ const ContactDetailsPage = () => {
     (a, b) => new Date(b.timestamp).valueOf() - new Date(a.timestamp).valueOf()
   );
 
-  useEffect(() => {
-    if (successMessage) {
-      setIsLoading(true);
-      Router.push(`${ROUTE_HOME}/${thisContact?.id}`);
-      setIsLoading(false);
-    }
-  }, [successMessage]);
-
-  useEffect(() => {
-    if (contactRemovedSuccessMessage) {
-      setIsLoading(true);
-      Router.push(ROUTE_HOME);
-      setIsLoading(false);
-    }
-  }, [contactRemovedSuccessMessage]);
+  const { mutate: deleteLogMutation, isLoading: deleteLogIsLoading } =
+    useDeleteLog();
+  const { mutate: deleteContactMutation, isLoading: deleteContactIsLoading } =
+    useDeleteContact();
 
   const onRemoveLogHandler = async () => {
     if (logToBeRemoved) {
-      setIsLoading(true);
-
-      const { error, status } = await supabase
-        .from("log")
-        .delete()
-        .eq("user_id", logToBeRemoved.user_id)
-        .eq("id", logToBeRemoved?.id);
+      deleteLogMutation(logToBeRemoved, {
+        onSuccess: (status: number) => {
+          if (status === 200) {
+            setSuccessMessage("Your log was successfully removed.");
+          }
+        },
+        onError: (error) => {
+          setErrorMessage((error as Error).message);
+        },
+      });
 
       setLogToBeRemoved(undefined);
-      setIsLoading(false);
-
-      if (error) {
-        setErrorMessage(error.message);
-      } else if (status === 200) {
-        setSuccessMessage("Your log was successfully removed.");
-      }
     }
   };
 
   const onRemoveContactHandler = async () => {
     if (contactToBeRemoved) {
-      setIsLoading(true);
-
-      const { error, status } = await supabase
-        .from("contact")
-        .delete()
-        .eq("id", contactToBeRemoved?.id);
+      deleteContactMutation(contactToBeRemoved, {
+        onSuccess: (status: number) => {
+          if (status === 200) {
+            setContactRemovedSuccessMessage(
+              "Your contact and associated logs were successfully removed."
+            );
+            Router.push(ROUTE_HOME);
+            setContactRemovedSuccessMessage(undefined);
+          }
+        },
+        onError: (error) => {
+          setErrorMessage((error as Error).message);
+        },
+      });
 
       setContactToBeRemoved(undefined);
-      setIsLoading(false);
-
-      if (error) {
-        setErrorMessage(error.message);
-      } else if (status === 200) {
-        setContactRemovedSuccessMessage(
-          "Your contact and associated logs were successfully removed."
-        );
-      }
     }
   };
 
@@ -166,7 +154,7 @@ const ContactDetailsPage = () => {
           onRemoveLog={setLogToBeRemoved}
         />
 
-        {loading || (isLoading && <SpinnerFullPage />)}
+        {(loading || isLoading || deleteLogIsLoading) && <SpinnerFullPage />}
       </Layout>
     )
   );
