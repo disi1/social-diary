@@ -51,7 +51,7 @@ const ContactDetailsPage = () => {
   const thisContactLogs = logs?.filter(
     (log) => log.contact_id === thisContact?.id
   ) as Log[];
-  thisContactLogs.sort(
+  thisContactLogs?.sort(
     (a, b) => new Date(b.timestamp).valueOf() - new Date(a.timestamp).valueOf()
   );
 
